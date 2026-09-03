@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "iterationId": "WS-001",
-  "stage": "AWAITING_BUILD_APPROVAL",
+  "stage": "RELEASE_READY",
   "concept": {
     "slug": "qualified-tender-change-intelligence",
     "name": "Qualified Tender Change Intelligence",
@@ -10,11 +10,11 @@
     "centralClaim": "A provenance-preserving pipeline can distinguish material field changes from republication noise and apply deterministic qualification rules to produce an explainable review queue."
   },
   "authorizedScope": "Build only the smallest vertical proof: bounded Find a Tender sample acquisition or recorded fixtures, ingest allowlist, consecutive-snapshot diff over declared fields, deterministic qualification profile, reason-coded output, provenance, tests, and a recorded run report. No scheduled production monitoring, document/PDF reconciliation, deployment, or marketing claims.",
-  "nextAction": "Human decision required: authorize a bounded sanitized live-source evidence pass and reviewer artifacts, request revisions, or hold WS-001 at the completed fixture proof.",
+  "nextAction": "Human review of draft pull request 1; if approved, merge to main, create immutable tag ws-001-v1.0.0, publish the GitHub Release, and link the specific project evidence from the portfolio.",
   "humanApproval": {
     "status": "approved",
     "date": "2026-09-03",
-    "basis": "User directed the workflow to stop waiting and proceed after reviewing the proposed Codex migration and revised WS-001 direction."
+    "basis": "User approved the bounded fixture proof on 2026-09-03 and then explicitly directed the live-evidence and reviewer-artifact phase to proceed."
   },
   "fatalBlockers": [],
   "repairableConditions": [
@@ -25,7 +25,7 @@
   ],
   "limitations": [
     "Current demand evidence is Upwork-adjacent rather than a verified sample of current logged-in Upwork postings.",
-    "The vertical proof does not claim production-scale, real-time, or complete amendment monitoring.",
+    "The live evidence is a deliberately selected two-record sample and does not claim source-wide prevalence, production scale, real-time operation, or complete amendment monitoring.",
     "Document and PDF reconciliation is reserved for a later distinct portfolio iteration."
   ],
   "requiredFiles": [

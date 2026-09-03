@@ -62,6 +62,7 @@ def normalize_release(
     lots.sort(key=lambda item: (str(item.get("id")), str(item.get("status"))))
 
     tags = release.get("tag") if isinstance(release.get("tag"), list) else []
+    source_fingerprint = release.get("sourceFingerprint") or _fingerprint(release)
     return {
         "ocid": release.get("ocid"),
         "release_id": release.get("id"),
@@ -77,7 +78,7 @@ def normalize_release(
         "provenance": {
             "source_url": source_url,
             "retrieved_at": retrieved_at,
-            "content_fingerprint": _fingerprint(release),
+            "content_fingerprint": source_fingerprint,
             "release_id": release.get("id"),
             "ocid": release.get("ocid"),
             "process_id": release.get("ocid"),

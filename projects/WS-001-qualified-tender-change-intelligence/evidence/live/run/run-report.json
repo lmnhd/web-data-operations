@@ -1,0 +1,144 @@
+{
+  "summary": {
+    "input_releases": 7,
+    "processes": 1,
+    "comparisons": 6,
+    "update_tagged_comparisons": 6,
+    "material_change_comparisons": 0,
+    "accepted": 0,
+    "rejected": 6,
+    "review_needed": 0
+  },
+  "queues": {
+    "accepted": [],
+    "rejected": [
+      {
+        "ocid": "ocds-h6vhtk-06d396",
+        "previous_release_id": "070437-2026",
+        "current_release_id": "070826-2026",
+        "source_tags": [
+          "tenderUpdate"
+        ],
+        "changes": [],
+        "decision": "rejected",
+        "reason_codes": [
+          "NO_MATERIAL_CHANGE"
+        ],
+        "provenance": {
+          "source_url": "https://www.find-tender.service.gov.uk/api/1.0/ocdsRecordPackages/ocds-h6vhtk-06d396",
+          "retrieved_at": "2026-09-03T00:00:00Z",
+          "content_fingerprint": "ded94901da726ab05af81f9167d0399ef21150a7f0600a08ddb93ac7a18a4f4b",
+          "release_id": "070826-2026",
+          "ocid": "ocds-h6vhtk-06d396",
+          "process_id": "ocds-h6vhtk-06d396"
+        }
+      },
+      {
+        "ocid": "ocds-h6vhtk-06d396",
+        "previous_release_id": "070826-2026",
+        "current_release_id": "071753-2026",
+        "source_tags": [
+          "tenderUpdate"
+        ],
+        "changes": [],
+        "decision": "rejected",
+        "reason_codes": [
+          "NO_MATERIAL_CHANGE"
+        ],
+        "provenance": {
+          "source_url": "https://www.find-tender.service.gov.uk/api/1.0/ocdsRecordPackages/ocds-h6vhtk-06d396",
+          "retrieved_at": "2026-09-03T00:00:00Z",
+          "content_fingerprint": "8f606632f2c80971311b13a6b4a3318b5aeaccddb25a7a821216344408faba40",
+          "release_id": "071753-2026",
+          "ocid": "ocds-h6vhtk-06d396",
+          "process_id": "ocds-h6vhtk-06d396"
+        }
+      },
+      {
+        "ocid": "ocds-h6vhtk-06d396",
+        "previous_release_id": "071753-2026",
+        "current_release_id": "072233-2026",
+        "source_tags": [
+          "tenderUpdate"
+        ],
+        "changes": [],
+        "decision": "rejected",
+        "reason_codes": [
+          "NO_MATERIAL_CHANGE"
+        ],
+        "provenance": {
+          "source_url": "https://www.find-tender.service.gov.uk/api/1.0/ocdsRecordPackages/ocds-h6vhtk-06d396",
+          "retrieved_at": "2026-09-03T00:00:00Z",
+          "content_fingerprint": "b0ac1e3424874af29b4c75c7344980fed02b1d8c41ebaa4b9cd693f2224aa383",
+          "release_id": "072233-2026",
+          "ocid": "ocds-h6vhtk-06d396",
+          "process_id": "ocds-h6vhtk-06d396"
+        }
+      },
+      {
+        "ocid": "ocds-h6vhtk-06d396",
+        "previous_release_id": "072233-2026",
+        "current_release_id": "073810-2026",
+        "source_tags": [
+          "tenderUpdate"
+        ],
+        "changes": [],
+        "decision": "rejected",
+        "reason_codes": [
+          "NO_MATERIAL_CHANGE"
+        ],
+        "provenance": {
+          "source_url": "https://www.find-tender.service.gov.uk/api/1.0/ocdsRecordPackages/ocds-h6vhtk-06d396",
+          "retrieved_at": "2026-09-03T00:00:00Z",
+          "content_fingerprint": "13d4aa90a5871e235a49545acf3d0aa54c2ab91eb315f50b824838040bd5b8b0",
+          "release_id": "073810-2026",
+          "ocid": "ocds-h6vhtk-06d396",
+          "process_id": "ocds-h6vhtk-06d396"
+        }
+      },
+      {
+        "ocid": "ocds-h6vhtk-06d396",
+        "previous_release_id": "073810-2026",
+        "current_release_id": "074894-2026",
+        "source_tags": [
+          "tenderUpdate"
+        ],
+        "changes": [],
+        "decision": "rejected",
+        "reason_codes": [
+          "NO_MATERIAL_CHANGE"
+        ],
+        "provenance": {
+          "source_url": "https://www.find-tender.service.gov.uk/api/1.0/ocdsRecordPackages/ocds-h6vhtk-06d396",
+          "retrieved_at": "2026-09-03T00:00:00Z",
+          "content_fingerprint": "286e3e4ede4ed6eb77340fc7ee46b086bfa554cb61361edbbd0345c612d7ebf4",
+          "release_id": "074894-2026",
+          "ocid": "ocds-h6vhtk-06d396",
+          "process_id": "ocds-h6vhtk-06d396"
+        }
+      },
+      {
+        "ocid": "ocds-h6vhtk-06d396",
+        "previous_release_id": "074894-2026",
+        "current_release_id": "076158-2026",
+        "source_tags": [
+          "tenderUpdate"
+        ],
+        "changes": [],
+        "decision": "rejected",
+        "reason_codes": [
+          "NO_MATERIAL_CHANGE"
+        ],
+        "provenance": {
+          "source_url": "https://www.find-tender.service.gov.uk/api/1.0/ocdsRecordPackages/ocds-h6vhtk-06d396",
+          "retrieved_at": "2026-09-03T00:00:00Z",
+          "content_fingerprint": "bd5d8fd85a6d102468dec2417c1ee2cb74c51af37a2c4614bc062a1506ad5f80",
+          "release_id": "076158-2026",
+          "ocid": "ocds-h6vhtk-06d396",
+          "process_id": "ocds-h6vhtk-06d396"
+        }
+      }
+    ],
+    "review-needed": []
+  }
+}

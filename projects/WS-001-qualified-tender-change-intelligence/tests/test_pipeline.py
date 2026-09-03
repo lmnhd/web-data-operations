@@ -9,6 +9,7 @@ from pathlib import Path
 PROJECT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT / "src"))
 
+from fetch_sanitized_record import sanitize_package  # noqa: E402
 from tender_pipeline import extract_releases, normalize_release, run_pipeline  # noqa: E402
 
 
@@ -62,6 +63,19 @@ class TenderPipelineTests(unittest.TestCase):
         self.assertEqual(4, self.result["summary"]["update_tagged_comparisons"])
         self.assertEqual(3, self.result["summary"]["material_change_comparisons"])
         self.assertEqual(4, self.result["summary"]["comparisons"])
+
+    def test_sanitized_capture_is_replayable_without_excluded_fields(self) -> None:
+        sanitized = sanitize_package(
+            self.payload,
+            "https://www.find-tender.service.gov.uk/api/1.0/ocdsRecordPackages/example",
+            "2026-09-03T00:00:00Z",
+        )
+        persisted_records = json.dumps(sanitized["records"])
+        self.assertNotIn("Excluded Person", persisted_records)
+        self.assertNotIn("contactPoint", persisted_records)
+        self.assertEqual(1, sanitized["capture"]["requestCount"])
+        replay = run_pipeline(sanitized, self.profile, sanitized["capture"]["sourceUrl"], sanitized["capture"]["retrievedAt"])
+        self.assertEqual(self.result["summary"], replay["summary"])
 
 
 if __name__ == "__main__":

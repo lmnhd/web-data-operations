@@ -14,13 +14,16 @@ def main() -> int:
     parser.add_argument("--input", required=True, type=Path)
     parser.add_argument("--profile", required=True, type=Path)
     parser.add_argument("--output-dir", required=True, type=Path)
-    parser.add_argument("--source-url", default="fixture://ws-001/release-package")
-    parser.add_argument("--retrieved-at", default="2026-09-03T00:00:00Z")
+    parser.add_argument("--source-url")
+    parser.add_argument("--retrieved-at")
     args = parser.parse_args()
 
     payload = json.loads(args.input.read_text(encoding="utf-8"))
     profile = json.loads(args.profile.read_text(encoding="utf-8"))
-    result = run_pipeline(payload, profile, args.source_url, args.retrieved_at)
+    capture = payload.get("capture", {}) if isinstance(payload.get("capture"), dict) else {}
+    source_url = args.source_url or capture.get("sourceUrl") or "fixture://ws-001/release-package"
+    retrieved_at = args.retrieved_at or capture.get("retrievedAt") or "not-recorded"
+    result = run_pipeline(payload, profile, source_url, retrieved_at)
     write_outputs(result, args.output_dir)
     print(json.dumps(result["summary"], indent=2))
     return 0

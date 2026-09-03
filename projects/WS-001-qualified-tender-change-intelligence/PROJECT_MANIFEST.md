@@ -4,7 +4,7 @@
 
 - **Iteration:** WS-001
 - **Project:** Qualified Tender Change Intelligence
-- **Status:** AWAITING_BUILD_APPROVAL
+- **Status:** RELEASE_READY
 - **Reviewer audience:** Upwork clients and technical interviewers evaluating web-data and workflow-automation ability
 
 ## Why this project was chosen
@@ -25,7 +25,9 @@ The original Claude workflow supplied source research and adversarial findings b
 
 The bounded vertical proof passed on a deliberately small synthetic fixture. It processed 8 releases across 4 procurement processes and made 4 consecutive-release comparisons. All 4 current releases carried an update tag, but direct field comparison found only 3 material changes. The system routed 1 qualified change to `accepted`, 1 unqualified change and 1 unchanged republication to `rejected`, and 1 incomplete record to `review-needed`. Six automated tests passed.
 
-These are fixture results, not claims about live-source prevalence, production coverage, or business impact. A bounded sanitized live capture, benchmark report, reviewer artifacts, and release approval remain future build decisions.
+The approved expansion added two bounded sanitized live records. In the first, 6 update-tagged comparisons contained zero declared material changes. In the second, a cancellation surfaced 5 declared changes and was routed to review because the new release lacked qualification evidence. The live result validates both noise suppression and the missing-evidence boundary without claiming source-wide prevalence, production coverage, or business impact.
+
+A three-page reviewer work sample now presents the result, architecture, verification matrix, compliance boundary, and limitations. Release approval and default-branch integration remain pending.
 
 ## What the proof demonstrates
 

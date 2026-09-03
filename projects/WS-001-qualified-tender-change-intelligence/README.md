@@ -31,11 +31,24 @@ Run the tests:
 python -m unittest discover -s projects/WS-001-qualified-tender-change-intelligence/tests -v
 ```
 
+## Bounded live evidence
+
+The acquisition helper makes exactly one request for one validated procurement-process ID. It does not paginate, retry, probe a rate ceiling, or persist the raw response. Only the declared tender fields and a one-way source fingerprint are written:
+
+```powershell
+python projects/WS-001-qualified-tender-change-intelligence/src/fetch_sanitized_record.py `
+  --ocid ocds-h6vhtk-06d396 `
+  --output projects/WS-001-qualified-tender-change-intelligence/evidence/live/sanitized-record.json
+```
+
+The saved package can then be replayed through `run_pipeline.py`. Public evidence must retain the source attribution and clearly separate observed live results from synthetic fixture results.
+
 ## Reviewer path
 
-1. Read the summary in `evidence/latest-run/run-report.json`.
-2. Compare `accepted.csv`, `rejected.csv`, and `review-needed.csv`.
-3. Inspect `src/tender_pipeline.py` for the allowlist, diff, and qualification logic.
-4. Run the fixture tests to reproduce the result.
+1. Read `evidence/live/LIVE_EVIDENCE_REPORT.md` for the two observed live cases and claim boundaries.
+2. Open `output/pdf/WS-001-qualified-tender-change-intelligence.pdf` from the repository root for the three-page client work sample.
+3. Compare the JSON and CSV outputs under `evidence/live/run-06d396` and `evidence/live/run-06bb7d`.
+4. Inspect `src/tender_pipeline.py` for the allowlist, diff, and qualification logic.
+5. Run the automated tests to reproduce the deterministic controls.
 
-The included fixture is synthetic and deliberately small. Its scenarios are derived from the live-source defect found during discovery, but its values are not presented as a captured government dataset. A bounded sanitized live evidence capture remains a separate proof step.
+The synthetic fixture remains deliberately small and supports repeatable edge-case tests. The separate live evidence contains two sanitized records and is labeled independently; neither evidence set is presented as a representative source-wide sample.
