@@ -7,6 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_ROOT_FILES = (
+    "ACTIVE_ITERATION.json",
     "README.md",
     "PORTFOLIO_TRACKING_LOG.md",
     "PROJECT_MANIFEST_TEMPLATE.md",
@@ -37,8 +38,23 @@ def validate_projects() -> list[str]:
     return errors
 
 
+def validate_active_state() -> list[str]:
+    import json
+
+    state_path = ROOT / "ACTIVE_ITERATION.json"
+    if not state_path.is_file():
+        return ["Missing ACTIVE_ITERATION.json"]
+    try:
+        state = json.loads(state_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as error:
+        return [f"Invalid ACTIVE_ITERATION.json: {error}"]
+
+    required = ("iterationId", "stage", "concept", "authorizedScope", "nextAction", "agentBudget")
+    return [f"ACTIVE_ITERATION.json missing {key}" for key in required if key not in state]
+
+
 def main() -> int:
-    errors = validate_root() + validate_projects()
+    errors = validate_root() + validate_projects() + validate_active_state()
     if errors:
         print("Archive validation failed:")
         for error in errors:

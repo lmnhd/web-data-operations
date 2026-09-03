@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "iterationId": "WS-001",
+  "stage": "AWAITING_BUILD_APPROVAL",
+  "concept": {
+    "slug": "qualified-tender-change-intelligence",
+    "name": "Qualified Tender Change Intelligence",
+    "targetBuyer": "Small contractor or bid-development team reviewing public procurement opportunities",
+    "buyerProblem": "Teams waste time reviewing irrelevant republications and can miss material changes to opportunities they are actually qualified to pursue.",
+    "centralClaim": "A provenance-preserving pipeline can distinguish material field changes from republication noise and apply deterministic qualification rules to produce an explainable review queue."
+  },
+  "authorizedScope": "Build only the smallest vertical proof: bounded Find a Tender sample acquisition or recorded fixtures, ingest allowlist, consecutive-snapshot diff over declared fields, deterministic qualification profile, reason-coded output, provenance, tests, and a recorded run report. No scheduled production monitoring, document/PDF reconciliation, deployment, or marketing claims.",
+  "nextAction": "Human decision required: authorize a bounded sanitized live-source evidence pass and reviewer artifacts, request revisions, or hold WS-001 at the completed fixture proof.",
+  "humanApproval": {
+    "status": "approved",
+    "date": "2026-09-03",
+    "basis": "User directed the workflow to stop waiting and proceed after reviewing the proposed Codex migration and revised WS-001 direction."
+  },
+  "fatalBlockers": [],
+  "repairableConditions": [
+    "Replace tag-count metrics with a diff-derived denominator over a declared field set.",
+    "Use a conservative fixed acquisition cadence and never probe for an undocumented rate ceiling.",
+    "Drop contactPoint and free-text fields before persistence through an explicit ingest allowlist.",
+    "Add a deterministic qualification profile distinct from change-event classification."
+  ],
+  "limitations": [
+    "Current demand evidence is Upwork-adjacent rather than a verified sample of current logged-in Upwork postings.",
+    "The vertical proof does not claim production-scale, real-time, or complete amendment monitoring.",
+    "Document and PDF reconciliation is reserved for a later distinct portfolio iteration."
+  ],
+  "requiredFiles": [
+    "README.md",
+    "SOURCE_CONTROL_AND_PUBLIC_ARCHIVE.md",
+    "iterations/ws-001/CODEX_VERTICAL_PROOF_BRIEF.md",
+    "design/SOURCE_AND_COMPLIANCE_LEDGER.md"
+  ],
+  "agentBudget": {
+    "stageLimit": 4,
+    "used": 0,
+    "unit": "delegated agent turns",
+    "additionalUseRequiresHumanApproval": true
+  }
+}

@@ -88,6 +88,12 @@ Demand signals and prior portfolio state
 
 The pipeline may be orchestrated by Claude, Codex, or another capable agent system, but its state and decisions must remain in repository files rather than inside one vendor's conversation history.
 
+### Active Codex workflow
+
+The active bounded workflow is the repository skill at [`.agents/skills/web-data-shipping/SKILL.md`](./.agents/skills/web-data-shipping/SKILL.md). Agents begin with [`ACTIVE_ITERATION.json`](./ACTIVE_ITERATION.json), not the complete historical tracking log. This keeps current scope, approval, blockers, required evidence, and delegated-turn budget compact.
+
+The earlier `.claude/workflows/` implementation is retained as historical process evidence but paused by default. See [`docs/shipping-pipeline/CODEX_MIGRATION.md`](./docs/shipping-pipeline/CODEX_MIGRATION.md).
+
 ## Common source control and public archive
 
 All approved web-data iterations should be developed and released from one domain-focused public repository:
@@ -227,12 +233,16 @@ Use these standard states:
 1. `PROPOSED` - recorded but not yet researched.
 2. `RESEARCHING` - demand, source, feasibility, and uniqueness evidence is being collected.
 3. `AWAITING_APPROVAL` - scorecard and recommendation are ready for human review.
-4. `APPROVED` - concept and minimum viable evidence are authorized.
-5. `BUILDING` - the vertical proof or integrated system is being implemented.
-6. `VERIFYING` - implementation is frozen except for verified fixes.
-7. `RELEASED` - the Manifest, evidence package, and reviewer-facing project are complete and published or ready for use.
-8. `REJECTED` - concept failed a gate; retain the reason to prevent rediscovery.
-9. `ARCHIVED` - previously released or paused work is retained but no longer active.
+4. `APPROVED` - the concept and a bounded vertical-proof scope are authorized.
+5. `PROVING` - the smallest end-to-end proof is being implemented and measured.
+6. `AWAITING_BUILD_APPROVAL` - proof results are ready for a human expansion decision.
+7. `BUILDING` - the approved portfolio-grade system is being implemented.
+8. `REPAIRING` - one bounded correction pass is active.
+9. `VERIFYING` - implementation is frozen except for verified fixes.
+10. `RELEASE_READY` - evidence is complete and awaiting release authorization.
+11. `RELEASED` - the Manifest, evidence package, and reviewer-facing project are complete and published or ready for use.
+12. `REJECTED` - concept failed a fatal gate; retain the reason to prevent rediscovery.
+13. `ARCHIVED` - previously released or paused work is retained but no longer active.
 
 Only the orchestrator may move an iteration across an approval or release boundary. Agents must not present `BUILDING` work as completed portfolio evidence.
 
