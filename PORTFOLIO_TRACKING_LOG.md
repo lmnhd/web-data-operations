@@ -63,7 +63,7 @@ Use `PLANNED`, `IN_PROGRESS`, `VERIFIED`, or `SUPERSEDED`. A capability is `VERI
 | Reproducible exports and run report | PLANNED | WS-001 | TBD | TBD |
 | Benchmark and claim verification | PLANNED | WS-001 | TBD | TBD |
 | Reviewer-facing Project Manifest | PLANNED | WS-001 | Completed Manifest reconciled with approval and verification records | TBD |
-| Common GitHub archive and release history | IN_PROGRESS | WS-000 | Public remote verified; protected integration flow, passing checks, and first tagged release remain pending | TBD |
+| Common GitHub archive and release history | IN_PROGRESS | WS-000 | Public remote and archive-integrity workflow verified; branch protection and first tagged project release remain pending | TBD |
 
 ## Iteration decision and handoff log
 
@@ -77,6 +77,7 @@ Append entries in chronological order. Use UTC timestamps and preserve earlier e
 - **Current outcome:** Workflow contract and initial tracking structures created; no delivery-efficiency claim is verified yet.
 - **Source-control decision:** Use the dedicated `lmnhd/web-data-operations` public monorepo as the implementation archive; keep `halimede-web` as the presentation layer.
 - **Repository event:** Public remote `https://github.com/lmnhd/web-data-operations` created and verified on 2026-09-02. Initial archive checks are included; branch protection and the first project release remain pending.
+- **Verification event:** Initial commit `378a50613853988bbb5c5f27770c458e3271ae95` passed GitHub Actions workflow `Archive integrity` in run `33704337759`.
 - **Next decision:** Complete the WS-001 demand and candidate evaluation before approving the first vertical build.
 
 ## Per-iteration entry template
