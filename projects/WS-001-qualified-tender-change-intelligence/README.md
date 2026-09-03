@@ -1,6 +1,8 @@
-# Qualified Tender Change Intelligence
+# Government Contract Change Monitor
 
-WS-001 is a bounded vertical proof for turning public procurement release histories into an explainable review queue. It distinguishes material field changes from update-tagged republications, then applies deterministic qualification rules so a bid team can focus on relevant changes.
+This portfolio project shows how a contractor or bid team can stop reopening meaningless government-contract updates. It compares versions of an opportunity, identifies important changes, applies the client's qualification rules, and produces separate act, ignore, and review lists.
+
+The internal engineering name is **Qualified Tender Change Intelligence**. The public-facing name is intentionally simpler: **Government Contract Change Monitor**.
 
 ## What this proves
 
@@ -46,7 +48,7 @@ The saved package can then be replayed through `run_pipeline.py`. Public evidenc
 ## Reviewer path
 
 1. Read `evidence/live/LIVE_EVIDENCE_REPORT.md` for the two observed live cases and claim boundaries.
-2. Open `output/pdf/WS-001-qualified-tender-change-intelligence.pdf` from the repository root for the three-page client work sample.
+2. Open `output/pdf/Government-Contract-Change-Monitor.pdf` from the repository root for the three-page client work sample.
 3. Compare the JSON and CSV outputs under `evidence/live/run-06d396` and `evidence/live/run-06bb7d`.
 4. Inspect `src/tender_pipeline.py` for the allowlist, diff, and qualification logic.
 5. Run the automated tests to reproduce the deterministic controls.

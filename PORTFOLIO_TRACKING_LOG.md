@@ -10,12 +10,13 @@ Do not erase rejected concepts or superseded decisions. Their history prevents r
 
 [`ACTIVE_ITERATION.json`](./ACTIVE_ITERATION.json) is the compact source of truth for current execution. When an older catalog row or historical decision below conflicts with it, the active state and [`iterations/ws-001/CODEX_VERTICAL_PROOF_BRIEF.md`](./iterations/ws-001/CODEX_VERTICAL_PROOF_BRIEF.md) control until the next handoff reconciles the archive.
 
-- **WS-001 concept:** Qualified Tender Change Intelligence
+- **WS-001 public project:** Government Contract Change Monitor
+- **Internal engineering name:** Qualified Tender Change Intelligence
 - **Status:** RELEASE_READY after a passing bounded live-evidence and reviewer-artifact verification
 - **Decision:** Stop the automatic candidate-promotion/refutation cycle and migrate execution to the Codex `web-data-shipping` skill.
 - **Recorded result:** 8 synthetic releases, 4 comparisons, 4 update-tagged comparisons, 3 actual material changes, and three explainable queues; 6 automated tests passed. No delegated agent turns were used.
 - **Live evidence:** Two isolated record-package requests produced 7 comparisons. Six update-tagged comparisons contained no declared material changes; one cancellation comparison surfaced 5 changes and routed to review for missing qualification evidence.
-- **Reviewer artifact:** A three-page PDF covers result, architecture, verification, compliance, and limitations.
+- **Reviewer artifact:** A three-page PDF now leads with the client problem and deliverables, explains the workflow in plain English, and places implementation details last. It does not describe the separate continuous-development process.
 - **Verification:** 7 automated tests passed; both live captures passed excluded-field checks; expected live metrics were reproduced; archive validation passed; the three-page PDF rendered without visible defects.
 - **Next decision:** Human review of draft pull request 1. No default-branch merge, tag, GitHub Release, or portfolio publication is automatic.
 - **Legacy history:** All earlier candidate failures remain preserved below as research evidence. Their candidate-register suggestions are not mandatory requirements for the revised build.

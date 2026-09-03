@@ -5,6 +5,7 @@
   "concept": {
     "slug": "qualified-tender-change-intelligence",
     "name": "Qualified Tender Change Intelligence",
+    "publicName": "Government Contract Change Monitor",
     "targetBuyer": "Small contractor or bid-development team reviewing public procurement opportunities",
     "buyerProblem": "Teams waste time reviewing irrelevant republications and can miss material changes to opportunities they are actually qualified to pursue.",
     "centralClaim": "A provenance-preserving pipeline can distinguish material field changes from republication noise and apply deterministic qualification rules to produce an explainable review queue."

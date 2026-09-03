@@ -12,7 +12,7 @@ import fitz
 ROOT = Path(__file__).resolve().parents[1]
 PROJECT = ROOT / "projects" / "WS-001-qualified-tender-change-intelligence"
 LIVE = PROJECT / "evidence" / "live"
-PDF = ROOT / "output" / "pdf" / "WS-001-qualified-tender-change-intelligence.pdf"
+PDF = ROOT / "output" / "pdf" / "Government-Contract-Change-Monitor.pdf"
 EXCLUDED_RECORD_KEYS = {"contactPoint", "description", "unstructuredChanges"}
 
 
