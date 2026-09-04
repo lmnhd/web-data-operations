@@ -1,6 +1,6 @@
-# Upwork portfolio publication draft
+# Upwork portfolio publication record
 
-Status: approved content; upload and publication not yet performed. Waiting for Upwork human verification and the Vercel public demo URL. Never label this as a client engagement or production monitoring service.
+Status: PUBLISHED, verified 2026-09-04 UTC. Upwork confirmed "Your portfolio project is published!" and that anyone viewing the profile can see it. Profile: https://www.upwork.com/freelancers/~010d1d69f81d197489 . The three-page PDF uploaded successfully; its first page supplies the thumbnail. The entry links to https://contract-monitor-proof-lab.vercel.app/ . Never label this as a client engagement or production monitoring service.
 
 ## Title
 
@@ -21,7 +21,7 @@ Python; Data Extraction; Data Processing; API Integration; Automation.
 ## Attachments
 
 - Repository-root `output/pdf/Government-Contract-Change-Monitor.pdf` (approved three-page sample).
-- Working public Vercel demo URL after verification.
-- Actual screenshot `evidence/proof-lab/cancellation-result.png` if a cover is required.
+- Verified public demo: https://contract-monitor-proof-lab.vercel.app/ .
+- Thumbnail: first PDF page selected by Upwork.
 
-The PDF records the earlier 17-test local run; the hosted adaptation has 22 full-suite tests, with 14 core tests executable from the public page. Update the PDF's hosting link and current test-count wording before the final upload so readers are not sent only to localhost.
+The uploaded PDF includes the public demo link and current test counts: 22 full-suite tests and 14 core tests executable from the public page. It is also attached to https://github.com/lmnhd/web-data-operations/releases/tag/ws-001-v1.0.0 .

@@ -2,6 +2,8 @@
 
 ## Purpose
 
+**Released WS-001:** [GitHub release and PDF](https://github.com/lmnhd/web-data-operations/releases/tag/ws-001-v1.0.0) | [Project Manifest](projects/WS-001-qualified-tender-change-intelligence/PROJECT_MANIFEST.md) | [Upwork profile](https://www.upwork.com/freelancers/~010d1d69f81d197489). Published as "Web Data Pipeline: Contract Changes, Qualification & Exports" with the live demo and three-page work sample.
+
 **Try the current project:** [Government Contract Change Monitor - live Proof Lab](https://contract-monitor-proof-lab.vercel.app). Run the real Python pipeline, edit a rule, inspect the difference and export the result. [Source and local launch instructions](projects/WS-001-qualified-tender-change-intelligence/demo/README.md).
 
 Build a continuously expanding collection of employer- and client-facing portfolio projects that prove more than the ability to retrieve web pages. Each project must demonstrate that Nathaniel can design, operate, validate, and explain a dependable data-collection workflow for a real business use case.
