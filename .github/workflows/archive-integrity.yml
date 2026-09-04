@@ -23,6 +23,9 @@ jobs:
       - name: Validate archive structure
         run: python scripts/validate_archive.py
 
+      - name: Test independent validation gate
+        run: python -m unittest discover -s scripts/tests -v
+
       - name: Run WS-001 pipeline and Proof Lab tests
         run: |
           pip install -r projects/WS-001-qualified-tender-change-intelligence/requirements.txt

@@ -4,12 +4,15 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[4]
 STATE_PATH = ROOT / "ACTIVE_ITERATION.json"
+sys.path.insert(0, str(ROOT / "scripts"))
+from validation_gate import check as check_independent_validation
 
 TRANSITIONS = {
     "PROPOSED": {"RESEARCHING", "REJECTED"},
@@ -17,7 +20,7 @@ TRANSITIONS = {
     "AWAITING_APPROVAL": {"APPROVED", "RESEARCHING", "REJECTED"},
     "APPROVED": {"PROVING", "REJECTED"},
     "PROVING": {"AWAITING_BUILD_APPROVAL", "REPAIRING", "REJECTED"},
-    "REPAIRING": {"PROVING", "AWAITING_APPROVAL", "REJECTED"},
+    "REPAIRING": {"PROVING", "VERIFYING", "AWAITING_APPROVAL", "REJECTED"},
     "AWAITING_BUILD_APPROVAL": {"BUILDING", "REPAIRING", "REJECTED"},
     "BUILDING": {"VERIFYING", "REPAIRING"},
     "VERIFYING": {"RELEASE_READY", "REPAIRING"},
@@ -49,7 +52,7 @@ def load_state() -> dict[str, Any]:
     return json.loads(STATE_PATH.read_text(encoding="utf-8"))
 
 
-def validate(state: dict[str, Any]) -> list[str]:
+def validate(state: dict[str, Any], enforce_release: bool = True) -> list[str]:
     errors = [f"Missing required key: {key}" for key in sorted(REQUIRED_KEYS - state.keys())]
     stage = state.get("stage")
     if stage not in TRANSITIONS:
@@ -79,7 +82,7 @@ def validate(state: dict[str, Any]) -> list[str]:
     if stage not in {"REJECTED", "ARCHIVED"} and state.get("fatalBlockers"):
         errors.append("An active iteration cannot proceed with fatalBlockers")
 
-    return errors
+    return errors + (check_independent_validation(state, ROOT) if enforce_release else [])
 
 
 def write_state(state: dict[str, Any]) -> None:
@@ -114,7 +117,9 @@ def main() -> int:
 
     try:
         state = load_state()
-        errors = validate(state)
+        # A stale report must block release, not prevent returning to repairs.
+        repairing = args.command == "transition" and args.to == "REPAIRING"
+        errors = validate(state, enforce_release=not repairing)
         if errors:
             raise ValueError("\n".join(errors))
 
@@ -127,6 +132,8 @@ def main() -> int:
             if args.to not in TRANSITIONS[current]:
                 raise ValueError(f"Illegal transition: {current} -> {args.to}")
             state["stage"] = args.to
+            if args.to == "ARCHIVED":
+                state["archivedFrom"] = current
             state["nextAction"] = args.next_action
             state["agentBudget"]["used"] = 0
             new_errors = validate(state)

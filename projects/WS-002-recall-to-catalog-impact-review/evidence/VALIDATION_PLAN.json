@@ -1,0 +1,57 @@
+{
+  "iterationId": "WS-002",
+  "planStatus": "retroactive-existing-build-frozen-before-separate-validation",
+  "planRationale": "WS-002 reached VERIFYING before the independent-validation protocol was added. This plan freezes the already-approved product, hosting adapter and release evidence before a fresh non-builder validator receives the candidate commit.",
+  "builderAgentIds": [
+    "01a06a50-ddfb-7b71-b8f0-f085710b32f2"
+  ],
+  "artifactPaths": [
+    "README.md",
+    "scripts/build_ws002_work_sample.py",
+    "output/pdf/Product-Recall-Match-Desk.pdf"
+  ],
+  "checks": [
+    {
+      "id": "tests-full-suite",
+      "category": "tests",
+      "procedure": "From projects/WS-002-recall-to-catalog-impact-review run: python -B -m unittest discover -s tests -v. Assess whether tests exercise matcher decisions, provenance, determinism, local HTTP behavior, hosted adapter behavior and security boundaries.",
+      "expected": "Exactly 21 tests run and pass, including the 20-label expansion benchmark and hosted adapter checks. No test failure or error is accepted."
+    },
+    {
+      "id": "demo-contrasting-run",
+      "category": "demo",
+      "procedure": "Operate the deployed signed-out demo recorded in PROJECT_MANIFEST.md. Run the default CAT-005 row, then choose Add decisive evidence and rerun. Inspect reasons, counts, source trail and input hashes.",
+      "expected": "Default CAT-005 is review_needed with 6 match, 1 review and 1 no_match overall. Clarified CAT-005 matches D-0709-2026 with 7 match, 0 review and 1 no_match. Input SHA-256 changes while the engine SHA-256 remains unchanged."
+    },
+    {
+      "id": "edge-ambiguous-and-rejected-input",
+      "category": "edge_case",
+      "procedure": "Confirm the shared-UPC 100 mcg row retains both conflicting source candidates and routes to review. Send an unexpected catalog field and a cross-site POST using the test client or an equivalent direct request.",
+      "expected": "Ambiguity is never promoted to match; unexpected input returns HTTP 400 and cross-site POST returns HTTP 403 without executing a result."
+    },
+    {
+      "id": "exports-executed-result",
+      "category": "exports",
+      "procedure": "Execute the default demo case, download or request its JSON and CSV exports, and compare CAT-005 plus the run identifier with the displayed execution.",
+      "expected": "Both exports succeed for the executed run; CSV contains CAT-005,review_needed and JSON preserves the same run ID, classification, reasons and provenance shown by the demo."
+    },
+    {
+      "id": "pdf-three-page-visual",
+      "category": "pdf_visual",
+      "procedure": "Render output/pdf/Product-Recall-Match-Desk.pdf at 144 dpi and visually inspect every page. Check legibility, clipping, overlaps, screenshot authenticity, page order and the clickable deployed-demo/repository links on page 3.",
+      "expected": "Exactly three readable client-facing pages render without clipping or overlap; screenshots match the app; page 3 contains working HTTPS demo and repository links."
+    },
+    {
+      "id": "claims-trace-to-evidence",
+      "category": "claims",
+      "procedure": "Compare README.md, PROJECT_MANIFEST.md, the PDF and release checklist with evidence/benchmark/run-report.json, the test output and source fixture provenance.",
+      "expected": "All quantitative claims agree on 20/20 labels, 13 match, 1 no_match, 6 review_needed, 21 local tests and one recorded source request. Limitations distinguish fixture performance from production accuracy."
+    },
+    {
+      "id": "boundaries-public-safe",
+      "category": "boundaries",
+      "procedure": "Inspect SOURCE_CONTRACT.md, public fixtures, hosted routes and reviewer copy for restricted fields, live acquisition, credentials, arbitrary file or URL access, medical advice, public-alert claims, current-status claims and recall-lifecycle claims.",
+      "expected": "Only declared public enforcement fields and synthetic catalog data are exposed; no credentials or private data exist; the demo performs no live FDA request and makes none of the prohibited medical, alert, status, lifecycle, coverage or production claims."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {"catalog_id":"CAT-001","classification":"match","matched_recall_number":"D-0766-2026"},
+  {"catalog_id":"CAT-002","classification":"match","matched_recall_number":"D-0733-2026"},
+  {"catalog_id":"CAT-003","classification":"match","matched_recall_number":"D-0722-2026"},
+  {"catalog_id":"CAT-004","classification":"match","matched_recall_number":"D-0738-2026"},
+  {"catalog_id":"CAT-005","classification":"review_needed","matched_recall_number":null},
+  {"catalog_id":"CAT-006","classification":"no_match","matched_recall_number":null},
+  {"catalog_id":"CAT-007","classification":"match","matched_recall_number":"D-0731-2026"},
+  {"catalog_id":"CAT-008","classification":"match","matched_recall_number":"D-0773-2026"},
+  {"catalog_id":"CAT-009","classification":"match","matched_recall_number":"D-0739-2026"},
+  {"catalog_id":"CAT-010","classification":"match","matched_recall_number":"D-0737-2026"},
+  {"catalog_id":"CAT-011","classification":"review_needed","matched_recall_number":null},
+  {"catalog_id":"CAT-012","classification":"review_needed","matched_recall_number":null},
+  {"catalog_id":"CAT-013","classification":"match","matched_recall_number":"D-0722-2026"},
+  {"catalog_id":"CAT-014","classification":"review_needed","matched_recall_number":null},
+  {"catalog_id":"CAT-015","classification":"match","matched_recall_number":"D-0766-2026"},
+  {"catalog_id":"CAT-016","classification":"match","matched_recall_number":"D-0709-2026"},
+  {"catalog_id":"CAT-017","classification":"match","matched_recall_number":"D-0711-2026"},
+  {"catalog_id":"CAT-018","classification":"review_needed","matched_recall_number":null},
+  {"catalog_id":"CAT-019","classification":"match","matched_recall_number":"D-0773-2026"},
+  {"catalog_id":"CAT-020","classification":"review_needed","matched_recall_number":null}
+]

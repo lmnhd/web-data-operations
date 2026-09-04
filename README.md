@@ -2,7 +2,11 @@
 
 ## Purpose
 
+**Start another project:** use [START_NEXT_ITERATION.md](START_NEXT_ITERATION.md), the reusable project-wide prompt. Every new iteration must meet the [reviewer evidence standard](docs/shipping-pipeline/REVIEWER_EVIDENCE_STANDARD.md): runnable demo, visual plain-English PDF, creative problem-solving evidence and artifact-linked verification. This standard supersedes the looser live-or-recorded demonstration wording below; recordings supplement runnable evidence.
+
 **Released WS-001:** [GitHub release and PDF](https://github.com/lmnhd/web-data-operations/releases/tag/ws-001-v1.0.0) | [Project Manifest](projects/WS-001-qualified-tender-change-intelligence/PROJECT_MANIFEST.md) | [Upwork profile](https://www.upwork.com/freelancers/~010d1d69f81d197489). Published as "Web Data Pipeline: Contract Changes, Qualification & Exports" with the live demo and three-page work sample.
+
+**WS-002 publication candidate:** [Product Recall Match Desk - live demo](https://product-recall-match-desk.vercel.app) | [Project Manifest](projects/WS-002-recall-to-catalog-impact-review/PROJECT_MANIFEST.md). It demonstrates explainable product matching and an explicit ambiguity-review boundary using synthetic catalog rows and a recorded openFDA fixture.
 
 **Try the current project:** [Government Contract Change Monitor - live Proof Lab](https://contract-monitor-proof-lab.vercel.app). Run the real Python pipeline, edit a rule, inspect the difference and export the result. [Source and local launch instructions](projects/WS-001-qualified-tender-change-intelligence/demo/README.md).
 
@@ -93,6 +97,8 @@ Demand signals and prior portfolio state
 The pipeline may be orchestrated by Claude, Codex, or another capable agent system, but its state and decisions must remain in repository files rather than inside one vendor's conversation history.
 
 ### Active Codex workflow
+
+**Mandatory independent validation:** WS-002 onward uses the [separate-validator protocol](docs/shipping-pipeline/INDEPENDENT_VALIDATION.md). A non-builder agent executes predefined checks and reviews the demo/PDF; state transitions and CI reject missing, failed or stale evidence. WS-001 retains its documented historical same-agent verification status.
 
 The active bounded workflow is the repository skill at [`.agents/skills/web-data-shipping/SKILL.md`](./.agents/skills/web-data-shipping/SKILL.md). Agents begin with [`ACTIVE_ITERATION.json`](./ACTIVE_ITERATION.json), not the complete historical tracking log. This keeps current scope, approval, blockers, required evidence, and delegated-turn budget compact.
 

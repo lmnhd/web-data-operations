@@ -1,0 +1,10 @@
+[
+  {"catalog_id": "CAT-001", "classification": "match", "matched_recall_number": "D-0766-2026"},
+  {"catalog_id": "CAT-002", "classification": "match", "matched_recall_number": "D-0733-2026"},
+  {"catalog_id": "CAT-003", "classification": "match", "matched_recall_number": "D-0722-2026"},
+  {"catalog_id": "CAT-004", "classification": "match", "matched_recall_number": "D-0738-2026"},
+  {"catalog_id": "CAT-005", "classification": "review_needed", "matched_recall_number": null},
+  {"catalog_id": "CAT-006", "classification": "no_match", "matched_recall_number": null},
+  {"catalog_id": "CAT-007", "classification": "match", "matched_recall_number": "D-0731-2026"},
+  {"catalog_id": "CAT-008", "classification": "match", "matched_recall_number": "D-0773-2026"}
+]

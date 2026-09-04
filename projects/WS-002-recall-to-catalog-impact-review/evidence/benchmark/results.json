@@ -1,0 +1,1151 @@
+[
+  {
+    "candidate_provenance": [
+      {
+        "content_fingerprint": "de7725061c76df521bcfdfe5b9fb8cfd65fa739662109546fc569da0e63f82be",
+        "recall_number": "D-0766-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      }
+    ],
+    "candidate_recall_numbers": [
+      "D-0766-2026"
+    ],
+    "catalog_id": "CAT-001",
+    "classification": "match",
+    "content_fingerprint": "de7725061c76df521bcfdfe5b9fb8cfd65fa739662109546fc569da0e63f82be",
+    "matched_recall_number": "D-0766-2026",
+    "pair_evidence": [
+      {
+        "decision": "match",
+        "reasons": [
+          "exact_upc",
+          "exact_ndc_family",
+          "exact_lot_code",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0766-2026",
+        "score": 200
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0709-2026",
+        "score": 0
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0711-2026",
+        "score": 0
+      }
+    ],
+    "reasons": [
+      "exact_upc",
+      "exact_ndc_family",
+      "exact_lot_code",
+      "manufacturer_overlap",
+      "strong_product_text_overlap",
+      "strength_match"
+    ],
+    "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+    "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12",
+    "top_score": 200
+  },
+  {
+    "candidate_provenance": [
+      {
+        "content_fingerprint": "9a19afeb1407e60cab332a0e4054aa17c775b93fde871b0b4216895d49ce48c9",
+        "recall_number": "D-0733-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      }
+    ],
+    "candidate_recall_numbers": [
+      "D-0733-2026"
+    ],
+    "catalog_id": "CAT-002",
+    "classification": "match",
+    "content_fingerprint": "9a19afeb1407e60cab332a0e4054aa17c775b93fde871b0b4216895d49ce48c9",
+    "matched_recall_number": "D-0733-2026",
+    "pair_evidence": [
+      {
+        "decision": "match",
+        "reasons": [
+          "exact_upc",
+          "exact_ndc_family",
+          "exact_lot_code",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0733-2026",
+        "score": 200
+      },
+      {
+        "decision": "no_match",
+        "reasons": [
+          "partial_product_text_overlap"
+        ],
+        "recall_number": "D-0722-2026",
+        "score": 10
+      },
+      {
+        "decision": "no_match",
+        "reasons": [
+          "partial_product_text_overlap"
+        ],
+        "recall_number": "D-0766-2026",
+        "score": 10
+      }
+    ],
+    "reasons": [
+      "exact_upc",
+      "exact_ndc_family",
+      "exact_lot_code",
+      "manufacturer_overlap",
+      "strong_product_text_overlap",
+      "strength_match"
+    ],
+    "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+    "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12",
+    "top_score": 200
+  },
+  {
+    "candidate_provenance": [
+      {
+        "content_fingerprint": "9ff4daad25fde7b5d8ea1e489dd51635e2c6d00c96ce4f67ccbab4c36076b0d7",
+        "recall_number": "D-0722-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      }
+    ],
+    "candidate_recall_numbers": [
+      "D-0722-2026"
+    ],
+    "catalog_id": "CAT-003",
+    "classification": "match",
+    "content_fingerprint": "9ff4daad25fde7b5d8ea1e489dd51635e2c6d00c96ce4f67ccbab4c36076b0d7",
+    "matched_recall_number": "D-0722-2026",
+    "pair_evidence": [
+      {
+        "decision": "match",
+        "reasons": [
+          "exact_upc",
+          "exact_ndc_family",
+          "exact_lot_code",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0722-2026",
+        "score": 200
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0709-2026",
+        "score": 0
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0711-2026",
+        "score": 0
+      }
+    ],
+    "reasons": [
+      "exact_upc",
+      "exact_ndc_family",
+      "exact_lot_code",
+      "manufacturer_overlap",
+      "strong_product_text_overlap",
+      "strength_match"
+    ],
+    "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+    "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12",
+    "top_score": 200
+  },
+  {
+    "candidate_provenance": [
+      {
+        "content_fingerprint": "91b4805786cfe201289cde306c0d643d9605c45396130c7f810cd7468de684b8",
+        "recall_number": "D-0738-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      }
+    ],
+    "candidate_recall_numbers": [
+      "D-0738-2026"
+    ],
+    "catalog_id": "CAT-004",
+    "classification": "match",
+    "content_fingerprint": "91b4805786cfe201289cde306c0d643d9605c45396130c7f810cd7468de684b8",
+    "matched_recall_number": "D-0738-2026",
+    "pair_evidence": [
+      {
+        "decision": "match",
+        "reasons": [
+          "exact_upc",
+          "exact_ndc_family",
+          "exact_lot_code",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0738-2026",
+        "score": 200
+      },
+      {
+        "decision": "match",
+        "reasons": [
+          "exact_upc",
+          "exact_ndc_family",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0739-2026",
+        "score": 165
+      },
+      {
+        "decision": "review_needed",
+        "reasons": [
+          "exact_upc",
+          "exact_ndc_family",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_conflict"
+        ],
+        "recall_number": "D-0737-2026",
+        "score": 75
+      }
+    ],
+    "reasons": [
+      "exact_upc",
+      "exact_ndc_family",
+      "exact_lot_code",
+      "manufacturer_overlap",
+      "strong_product_text_overlap",
+      "strength_match"
+    ],
+    "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+    "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12",
+    "top_score": 200
+  },
+  {
+    "candidate_provenance": [
+      {
+        "content_fingerprint": "42083fe0f5b1a9c2c7a977d20924392cbea51434e4c5cb32ecde1f3f5877dc4a",
+        "recall_number": "D-0709-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      },
+      {
+        "content_fingerprint": "76157026552e513cbf217356984941a382b25704279211bb1bd3b3e9dee9b2f2",
+        "recall_number": "D-0711-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      }
+    ],
+    "candidate_recall_numbers": [
+      "D-0709-2026",
+      "D-0711-2026"
+    ],
+    "catalog_id": "CAT-005",
+    "classification": "review_needed",
+    "content_fingerprint": null,
+    "matched_recall_number": null,
+    "pair_evidence": [
+      {
+        "decision": "review_needed",
+        "reasons": [
+          "exact_upc",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_conflict"
+        ],
+        "recall_number": "D-0709-2026",
+        "score": 50
+      },
+      {
+        "decision": "review_needed",
+        "reasons": [
+          "exact_upc",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_conflict"
+        ],
+        "recall_number": "D-0711-2026",
+        "score": 50
+      },
+      {
+        "decision": "no_match",
+        "reasons": [
+          "manufacturer_overlap"
+        ],
+        "recall_number": "D-0737-2026",
+        "score": 15
+      }
+    ],
+    "reasons": [
+      "exact_upc",
+      "manufacturer_overlap",
+      "strength_conflict",
+      "strong_product_text_overlap"
+    ],
+    "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+    "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12",
+    "top_score": 50
+  },
+  {
+    "candidate_provenance": [],
+    "candidate_recall_numbers": [],
+    "catalog_id": "CAT-006",
+    "classification": "no_match",
+    "content_fingerprint": null,
+    "matched_recall_number": null,
+    "pair_evidence": [
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0709-2026",
+        "score": 0
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0711-2026",
+        "score": 0
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0731-2026",
+        "score": 0
+      }
+    ],
+    "reasons": [
+      "no_candidate_reached_review_threshold"
+    ],
+    "retrieved_at": null,
+    "source_url": null,
+    "top_score": 0
+  },
+  {
+    "candidate_provenance": [
+      {
+        "content_fingerprint": "549f7a02ad148231b315784c2e0cce41b5db8f33a3032862e25179432c8a9fbc",
+        "recall_number": "D-0731-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      }
+    ],
+    "candidate_recall_numbers": [
+      "D-0731-2026"
+    ],
+    "catalog_id": "CAT-007",
+    "classification": "match",
+    "content_fingerprint": "549f7a02ad148231b315784c2e0cce41b5db8f33a3032862e25179432c8a9fbc",
+    "matched_recall_number": "D-0731-2026",
+    "pair_evidence": [
+      {
+        "decision": "match",
+        "reasons": [
+          "exact_upc",
+          "exact_ndc_family",
+          "exact_lot_code",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0731-2026",
+        "score": 200
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0709-2026",
+        "score": 0
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0711-2026",
+        "score": 0
+      }
+    ],
+    "reasons": [
+      "exact_upc",
+      "exact_ndc_family",
+      "exact_lot_code",
+      "manufacturer_overlap",
+      "strong_product_text_overlap",
+      "strength_match"
+    ],
+    "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+    "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12",
+    "top_score": 200
+  },
+  {
+    "candidate_provenance": [
+      {
+        "content_fingerprint": "91900d336f858feca8aaf870feaf15ba28a2db0c254cb82d6ed853537eb1ab0d",
+        "recall_number": "D-0773-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      }
+    ],
+    "candidate_recall_numbers": [
+      "D-0773-2026"
+    ],
+    "catalog_id": "CAT-008",
+    "classification": "match",
+    "content_fingerprint": "91900d336f858feca8aaf870feaf15ba28a2db0c254cb82d6ed853537eb1ab0d",
+    "matched_recall_number": "D-0773-2026",
+    "pair_evidence": [
+      {
+        "decision": "match",
+        "reasons": [
+          "exact_upc",
+          "exact_ndc_family",
+          "exact_lot_code",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0773-2026",
+        "score": 200
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0709-2026",
+        "score": 0
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0711-2026",
+        "score": 0
+      }
+    ],
+    "reasons": [
+      "exact_upc",
+      "exact_ndc_family",
+      "exact_lot_code",
+      "manufacturer_overlap",
+      "strong_product_text_overlap",
+      "strength_match"
+    ],
+    "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+    "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12",
+    "top_score": 200
+  },
+  {
+    "candidate_provenance": [
+      {
+        "content_fingerprint": "14fc95b3c35e7c776462ee6b90921a2025b759f7a3ea94b2648244a8bef77c6f",
+        "recall_number": "D-0739-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      }
+    ],
+    "candidate_recall_numbers": [
+      "D-0739-2026"
+    ],
+    "catalog_id": "CAT-009",
+    "classification": "match",
+    "content_fingerprint": "14fc95b3c35e7c776462ee6b90921a2025b759f7a3ea94b2648244a8bef77c6f",
+    "matched_recall_number": "D-0739-2026",
+    "pair_evidence": [
+      {
+        "decision": "match",
+        "reasons": [
+          "exact_upc",
+          "exact_ndc_family",
+          "exact_lot_code",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0739-2026",
+        "score": 200
+      },
+      {
+        "decision": "match",
+        "reasons": [
+          "exact_upc",
+          "exact_ndc_family",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0738-2026",
+        "score": 165
+      },
+      {
+        "decision": "review_needed",
+        "reasons": [
+          "exact_upc",
+          "exact_ndc_family",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_conflict"
+        ],
+        "recall_number": "D-0737-2026",
+        "score": 75
+      }
+    ],
+    "reasons": [
+      "exact_upc",
+      "exact_ndc_family",
+      "exact_lot_code",
+      "manufacturer_overlap",
+      "strong_product_text_overlap",
+      "strength_match"
+    ],
+    "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+    "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12",
+    "top_score": 200
+  },
+  {
+    "candidate_provenance": [
+      {
+        "content_fingerprint": "a84e9e00ec07989fe92254245500f14f5a6201a1fd320c62039e52e72fd8da82",
+        "recall_number": "D-0737-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      }
+    ],
+    "candidate_recall_numbers": [
+      "D-0737-2026"
+    ],
+    "catalog_id": "CAT-010",
+    "classification": "match",
+    "content_fingerprint": "a84e9e00ec07989fe92254245500f14f5a6201a1fd320c62039e52e72fd8da82",
+    "matched_recall_number": "D-0737-2026",
+    "pair_evidence": [
+      {
+        "decision": "match",
+        "reasons": [
+          "exact_upc",
+          "exact_ndc_family",
+          "exact_lot_code",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0737-2026",
+        "score": 200
+      },
+      {
+        "decision": "review_needed",
+        "reasons": [
+          "exact_upc",
+          "exact_ndc_family",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_conflict"
+        ],
+        "recall_number": "D-0738-2026",
+        "score": 75
+      },
+      {
+        "decision": "review_needed",
+        "reasons": [
+          "exact_upc",
+          "exact_ndc_family",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_conflict"
+        ],
+        "recall_number": "D-0739-2026",
+        "score": 75
+      }
+    ],
+    "reasons": [
+      "exact_upc",
+      "exact_ndc_family",
+      "exact_lot_code",
+      "manufacturer_overlap",
+      "strong_product_text_overlap",
+      "strength_match"
+    ],
+    "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+    "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12",
+    "top_score": 200
+  },
+  {
+    "candidate_provenance": [
+      {
+        "content_fingerprint": "91b4805786cfe201289cde306c0d643d9605c45396130c7f810cd7468de684b8",
+        "recall_number": "D-0738-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      },
+      {
+        "content_fingerprint": "14fc95b3c35e7c776462ee6b90921a2025b759f7a3ea94b2648244a8bef77c6f",
+        "recall_number": "D-0739-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      }
+    ],
+    "candidate_recall_numbers": [
+      "D-0738-2026",
+      "D-0739-2026"
+    ],
+    "catalog_id": "CAT-011",
+    "classification": "review_needed",
+    "content_fingerprint": null,
+    "matched_recall_number": null,
+    "pair_evidence": [
+      {
+        "decision": "review_needed",
+        "reasons": [
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0738-2026",
+        "score": 45
+      },
+      {
+        "decision": "review_needed",
+        "reasons": [
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0739-2026",
+        "score": 45
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0722-2026",
+        "score": 0
+      }
+    ],
+    "reasons": [
+      "manufacturer_overlap",
+      "strength_match",
+      "strong_product_text_overlap"
+    ],
+    "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+    "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12",
+    "top_score": 45
+  },
+  {
+    "candidate_provenance": [
+      {
+        "content_fingerprint": "de7725061c76df521bcfdfe5b9fb8cfd65fa739662109546fc569da0e63f82be",
+        "recall_number": "D-0766-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      }
+    ],
+    "candidate_recall_numbers": [
+      "D-0766-2026"
+    ],
+    "catalog_id": "CAT-012",
+    "classification": "review_needed",
+    "content_fingerprint": null,
+    "matched_recall_number": null,
+    "pair_evidence": [
+      {
+        "decision": "review_needed",
+        "reasons": [
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0766-2026",
+        "score": 45
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0709-2026",
+        "score": 0
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0711-2026",
+        "score": 0
+      }
+    ],
+    "reasons": [
+      "manufacturer_overlap",
+      "strength_match",
+      "strong_product_text_overlap"
+    ],
+    "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+    "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12",
+    "top_score": 45
+  },
+  {
+    "candidate_provenance": [
+      {
+        "content_fingerprint": "9ff4daad25fde7b5d8ea1e489dd51635e2c6d00c96ce4f67ccbab4c36076b0d7",
+        "recall_number": "D-0722-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      }
+    ],
+    "candidate_recall_numbers": [
+      "D-0722-2026"
+    ],
+    "catalog_id": "CAT-013",
+    "classification": "match",
+    "content_fingerprint": "9ff4daad25fde7b5d8ea1e489dd51635e2c6d00c96ce4f67ccbab4c36076b0d7",
+    "matched_recall_number": "D-0722-2026",
+    "pair_evidence": [
+      {
+        "decision": "match",
+        "reasons": [
+          "exact_upc",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0722-2026",
+        "score": 115
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0709-2026",
+        "score": 0
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0711-2026",
+        "score": 0
+      }
+    ],
+    "reasons": [
+      "exact_upc",
+      "manufacturer_overlap",
+      "strong_product_text_overlap",
+      "strength_match"
+    ],
+    "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+    "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12",
+    "top_score": 115
+  },
+  {
+    "candidate_provenance": [
+      {
+        "content_fingerprint": "549f7a02ad148231b315784c2e0cce41b5db8f33a3032862e25179432c8a9fbc",
+        "recall_number": "D-0731-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      }
+    ],
+    "candidate_recall_numbers": [
+      "D-0731-2026"
+    ],
+    "catalog_id": "CAT-014",
+    "classification": "review_needed",
+    "content_fingerprint": null,
+    "matched_recall_number": null,
+    "pair_evidence": [
+      {
+        "decision": "review_needed",
+        "reasons": [
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0731-2026",
+        "score": 30
+      },
+      {
+        "decision": "no_match",
+        "reasons": [
+          "partial_product_text_overlap"
+        ],
+        "recall_number": "D-0766-2026",
+        "score": 10
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0709-2026",
+        "score": 0
+      }
+    ],
+    "reasons": [
+      "strength_match",
+      "strong_product_text_overlap"
+    ],
+    "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+    "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12",
+    "top_score": 30
+  },
+  {
+    "candidate_provenance": [
+      {
+        "content_fingerprint": "de7725061c76df521bcfdfe5b9fb8cfd65fa739662109546fc569da0e63f82be",
+        "recall_number": "D-0766-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      }
+    ],
+    "candidate_recall_numbers": [
+      "D-0766-2026"
+    ],
+    "catalog_id": "CAT-015",
+    "classification": "match",
+    "content_fingerprint": "de7725061c76df521bcfdfe5b9fb8cfd65fa739662109546fc569da0e63f82be",
+    "matched_recall_number": "D-0766-2026",
+    "pair_evidence": [
+      {
+        "decision": "match",
+        "reasons": [
+          "exact_ndc_family",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0766-2026",
+        "score": 95
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0709-2026",
+        "score": 0
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0711-2026",
+        "score": 0
+      }
+    ],
+    "reasons": [
+      "exact_ndc_family",
+      "manufacturer_overlap",
+      "strong_product_text_overlap",
+      "strength_match"
+    ],
+    "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+    "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12",
+    "top_score": 95
+  },
+  {
+    "candidate_provenance": [
+      {
+        "content_fingerprint": "42083fe0f5b1a9c2c7a977d20924392cbea51434e4c5cb32ecde1f3f5877dc4a",
+        "recall_number": "D-0709-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      }
+    ],
+    "candidate_recall_numbers": [
+      "D-0709-2026"
+    ],
+    "catalog_id": "CAT-016",
+    "classification": "match",
+    "content_fingerprint": "42083fe0f5b1a9c2c7a977d20924392cbea51434e4c5cb32ecde1f3f5877dc4a",
+    "matched_recall_number": "D-0709-2026",
+    "pair_evidence": [
+      {
+        "decision": "match",
+        "reasons": [
+          "exact_upc",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0709-2026",
+        "score": 115
+      },
+      {
+        "decision": "review_needed",
+        "reasons": [
+          "exact_upc",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_conflict"
+        ],
+        "recall_number": "D-0711-2026",
+        "score": 50
+      },
+      {
+        "decision": "no_match",
+        "reasons": [
+          "manufacturer_overlap",
+          "partial_product_text_overlap"
+        ],
+        "recall_number": "D-0738-2026",
+        "score": 25
+      }
+    ],
+    "reasons": [
+      "exact_upc",
+      "manufacturer_overlap",
+      "strong_product_text_overlap",
+      "strength_match"
+    ],
+    "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+    "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12",
+    "top_score": 115
+  },
+  {
+    "candidate_provenance": [
+      {
+        "content_fingerprint": "76157026552e513cbf217356984941a382b25704279211bb1bd3b3e9dee9b2f2",
+        "recall_number": "D-0711-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      }
+    ],
+    "candidate_recall_numbers": [
+      "D-0711-2026"
+    ],
+    "catalog_id": "CAT-017",
+    "classification": "match",
+    "content_fingerprint": "76157026552e513cbf217356984941a382b25704279211bb1bd3b3e9dee9b2f2",
+    "matched_recall_number": "D-0711-2026",
+    "pair_evidence": [
+      {
+        "decision": "match",
+        "reasons": [
+          "exact_upc",
+          "exact_ndc_family",
+          "exact_lot_code",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0711-2026",
+        "score": 200
+      },
+      {
+        "decision": "review_needed",
+        "reasons": [
+          "exact_upc",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_conflict"
+        ],
+        "recall_number": "D-0709-2026",
+        "score": 50
+      },
+      {
+        "decision": "no_match",
+        "reasons": [
+          "manufacturer_overlap",
+          "partial_product_text_overlap"
+        ],
+        "recall_number": "D-0737-2026",
+        "score": 25
+      }
+    ],
+    "reasons": [
+      "exact_upc",
+      "exact_ndc_family",
+      "exact_lot_code",
+      "manufacturer_overlap",
+      "strong_product_text_overlap",
+      "strength_match"
+    ],
+    "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+    "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12",
+    "top_score": 200
+  },
+  {
+    "candidate_provenance": [
+      {
+        "content_fingerprint": "91b4805786cfe201289cde306c0d643d9605c45396130c7f810cd7468de684b8",
+        "recall_number": "D-0738-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      },
+      {
+        "content_fingerprint": "14fc95b3c35e7c776462ee6b90921a2025b759f7a3ea94b2648244a8bef77c6f",
+        "recall_number": "D-0739-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      },
+      {
+        "content_fingerprint": "a84e9e00ec07989fe92254245500f14f5a6201a1fd320c62039e52e72fd8da82",
+        "recall_number": "D-0737-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      }
+    ],
+    "candidate_recall_numbers": [
+      "D-0738-2026",
+      "D-0739-2026",
+      "D-0737-2026"
+    ],
+    "catalog_id": "CAT-018",
+    "classification": "review_needed",
+    "content_fingerprint": null,
+    "matched_recall_number": null,
+    "pair_evidence": [
+      {
+        "decision": "match",
+        "reasons": [
+          "exact_upc",
+          "exact_ndc_family",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0738-2026",
+        "score": 165
+      },
+      {
+        "decision": "match",
+        "reasons": [
+          "exact_upc",
+          "exact_ndc_family",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0739-2026",
+        "score": 165
+      },
+      {
+        "decision": "review_needed",
+        "reasons": [
+          "exact_upc",
+          "exact_ndc_family",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_conflict"
+        ],
+        "recall_number": "D-0737-2026",
+        "score": 75
+      }
+    ],
+    "reasons": [
+      "exact_ndc_family",
+      "exact_upc",
+      "manufacturer_overlap",
+      "strength_conflict",
+      "strength_match",
+      "strong_product_text_overlap"
+    ],
+    "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+    "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12",
+    "top_score": 165
+  },
+  {
+    "candidate_provenance": [
+      {
+        "content_fingerprint": "91900d336f858feca8aaf870feaf15ba28a2db0c254cb82d6ed853537eb1ab0d",
+        "recall_number": "D-0773-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      }
+    ],
+    "candidate_recall_numbers": [
+      "D-0773-2026"
+    ],
+    "catalog_id": "CAT-019",
+    "classification": "match",
+    "content_fingerprint": "91900d336f858feca8aaf870feaf15ba28a2db0c254cb82d6ed853537eb1ab0d",
+    "matched_recall_number": "D-0773-2026",
+    "pair_evidence": [
+      {
+        "decision": "match",
+        "reasons": [
+          "exact_ndc_family",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match"
+        ],
+        "recall_number": "D-0773-2026",
+        "score": 95
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0731-2026",
+        "score": 0
+      },
+      {
+        "decision": "no_match",
+        "reasons": [
+          "strength_conflict"
+        ],
+        "recall_number": "D-0709-2026",
+        "score": -80
+      }
+    ],
+    "reasons": [
+      "exact_ndc_family",
+      "manufacturer_overlap",
+      "strong_product_text_overlap",
+      "strength_match"
+    ],
+    "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+    "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12",
+    "top_score": 95
+  },
+  {
+    "candidate_provenance": [
+      {
+        "content_fingerprint": "91900d336f858feca8aaf870feaf15ba28a2db0c254cb82d6ed853537eb1ab0d",
+        "recall_number": "D-0773-2026",
+        "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+        "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12"
+      }
+    ],
+    "candidate_recall_numbers": [
+      "D-0773-2026"
+    ],
+    "catalog_id": "CAT-020",
+    "classification": "review_needed",
+    "content_fingerprint": null,
+    "matched_recall_number": null,
+    "pair_evidence": [
+      {
+        "decision": "review_needed",
+        "reasons": [
+          "exact_upc",
+          "manufacturer_overlap",
+          "strong_product_text_overlap",
+          "strength_match",
+          "strength_conflict"
+        ],
+        "recall_number": "D-0773-2026",
+        "score": 50
+      },
+      {
+        "decision": "no_match",
+        "reasons": [],
+        "recall_number": "D-0731-2026",
+        "score": 0
+      },
+      {
+        "decision": "no_match",
+        "reasons": [
+          "strength_conflict"
+        ],
+        "recall_number": "D-0709-2026",
+        "score": -80
+      }
+    ],
+    "reasons": [
+      "exact_upc",
+      "manufacturer_overlap",
+      "strength_conflict",
+      "strength_match",
+      "strong_product_text_overlap"
+    ],
+    "retrieved_at": "2026-09-04T03:06:10.1206316Z",
+    "source_url": "https://api.fda.gov/drug/enforcement.json?search=openfda.upc:*&sort=report_date:desc&limit=12",
+    "top_score": 50
+  }
+]

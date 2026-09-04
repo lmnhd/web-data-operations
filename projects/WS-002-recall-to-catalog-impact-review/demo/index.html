@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Product Recall Match Desk</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<header><div class="brand"><span class="mark">RM</span><div>PRODUCT RECALL MATCH DESK<small>Runnable evidence / WS-002</small></div></div><span class="local">REAL PYTHON MATCHING</span></header>
+<main>
+  <section class="intro"><p class="eyebrow">CATALOG IMPACT REVIEW</p><h1>An identifier hit is evidence.<br>It is not always a safe match.</h1><p>Edit one product row, run the matcher, and inspect why it matched or stopped for review.</p></section>
+  <div class="workspace">
+    <aside>
+      <div><p class="step">01 / EDIT THE CATALOG EVIDENCE</p><h2>Levothyroxine catalog row</h2></div>
+      <form id="catalog-form">
+        <label>Product name<input id="product_name" required maxlength="160"></label>
+        <label>Manufacturer<input id="manufacturer" maxlength="160"></label>
+        <label>UPC<input id="upc" maxlength="160"></label>
+        <label>NDC family<input id="ndc" maxlength="160"></label>
+        <label>Lot code<input id="lot_code" maxlength="160"></label>
+        <button class="primary" id="run" type="submit">Run the matcher <span>-></span></button>
+      </form>
+      <div class="presets"><button id="ambiguous" type="button">Load ambiguous row</button><button id="clarified" type="button">Add decisive evidence</button></div>
+      <p class="boundary">Recorded, allowlisted openFDA data. No new FDA request occurs. Not medical advice, a public alert, or current recall status.</p>
+      <button id="verify" class="secondary" type="button">Run automated checks</button><p id="verify-status">Checks have not run in this session.</p>
+    </aside>
+    <section class="workbench">
+      <div class="section-top"><div><p class="step">02 / INSPECT THE DECISION</p><h2 id="decision-title">Ready to run</h2></div><span id="decision-pill" class="pill">Not executed</span></div>
+      <p id="runline" class="runline">The Run button sends this row to the local Python engine.</p><p id="error" role="alert" hidden></p>
+      <div id="result" hidden>
+        <div id="counts" class="counts"></div>
+        <div id="decision-card" class="decision-card"></div>
+        <div class="section-top evidence-head"><div><p class="step">03 / FOLLOW THE EVIDENCE</p><h2>Top source candidates</h2></div><span>Every reason is deterministic</span></div>
+        <div id="candidates" class="candidates"></div>
+        <details open><summary>Source trail and fingerprints</summary><div id="provenance" class="provenance"></div></details>
+        <div class="downloads"><button id="download-json" class="secondary">Download run JSON</button><button id="download-csv" class="secondary">Download queue CSV</button></div>
+      </div>
+      <details><summary>Show the actual Python evidence ladder</summary><pre id="code"></pre></details>
+      <details id="test-panel" hidden><summary>Automated check output</summary><pre id="test-output"></pre></details>
+    </section>
+  </div>
+  <footer><strong>Measured proof:</strong> 20 independently declared labels reproduced in the expansion benchmark. This interface replays 8 catalog rows against 10 selected recall records; it does not claim source-wide coverage, medical correctness, production accuracy, or business impact.</footer>
+</main>
+</body>
+</html>
