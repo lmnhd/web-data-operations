@@ -19,8 +19,8 @@ Evidence assembled 2026-09-04 UTC. Status is **not RELEASE_READY** while the blo
 | Local reproduction instructions | PASS | [README](../README.md) and [Manifest walkthrough](../PROJECT_MANIFEST.md) |
 | Independent verification | PASS | Fresh non-builder validator `/root/ws002_independent_validation` passed all 7 frozen checks and recertified the portable 54-file map at `f7f78f7`; prior FAIL is preserved in validation-runs |
 | Public signed-out demo | PASS | [Public demo](https://product-recall-match-desk.vercel.app) returned anonymous HTTP 200; page and `/api/config` loaded without credentials on 2026-09-04 |
-| Reviewed source integration | BLOCKED | Commit, pull request, default-branch integration and immutable tag are not yet authorized/recorded |
-| Release authorization/publication | PASS | User authorized publication on 2026-09-04; GitHub release publication proceeds only after PR integration |
+| Reviewed source integration | PASS | [Pull request 3](https://github.com/lmnhd/web-data-operations/pull/3) merged to `main` at `262eda5`; annotated tag `ws-002-v1.0.0` points to the reviewed merge |
+| Release authorization/publication | PASS | User authorized publication on 2026-09-04; [GitHub release ws-002-v1.0.0](https://github.com/lmnhd/web-data-operations/releases/tag/ws-002-v1.0.0) is published with the PDF asset |
 
 ## Artifact integrity
 
