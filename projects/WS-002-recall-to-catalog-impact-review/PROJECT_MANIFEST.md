@@ -6,10 +6,11 @@
 - **Release candidate:** v1.0.0 candidate
 - **Status:** Public demo deployed; independent review and source integration in progress
 - **Prepared:** 2026-09-03/04 UTC
-- **Repository candidate:** [iteration/ws-002-discovery at 46deae7](https://github.com/lmnhd/web-data-operations/tree/46deae7e11e2423424cc02b6d557c5cacd6025db)
+- **Source review:** [Pull request #3](https://github.com/lmnhd/web-data-operations/pull/3)
+- **Planned immutable release:** [ws-002-v1.0.0](https://github.com/lmnhd/web-data-operations/releases/tag/ws-002-v1.0.0), created only after the validation gate passes and pull request #3 is integrated
 - **Public demo:** [product-recall-match-desk.vercel.app](https://product-recall-match-desk.vercel.app)
 - **Local demo:** `python -B src/demo_server.py`, then open `http://127.0.0.1:8766`
-- **Reviewed commit, pull request and tag:** Pending publication authorization and source integration
+- **Reviewed commit and tag:** Pending independent validation, source integration and release publication
 - **Primary reviewer:** E-commerce, wholesale or distribution catalog operations buyer
 
 ## 2. Executive declaration
@@ -58,9 +59,10 @@ The browser workbench edits only five fields on one fixture row and sends a boun
 | Role | Bounded responsibility | Recorded output | Control |
 |---|---|---|---|
 | Human approver | Select concept; approve proof, expansion and publication | Approval in `ACTIVE_ITERATION.json` | Paid services and production use remain withheld |
-| Codex root agent | Source contract, fixture, matcher, tests, UI, benchmark, PDF and evidence | This project and iteration records | Same-agent verification only |
+| Codex root agent | Source contract, fixture, matcher, tests, UI, benchmark, PDF and builder evidence | This project and iteration records | Cannot issue the independent validation decision |
+| Fresh non-builder validator | Execute the frozen plan against the committed candidate | `evidence/INDEPENDENT_VALIDATION.json` and validation logs | Cannot modify product artifacts or waive failures |
 
-No subagents were used. Consequential concept, expansion and publication decisions were not treated as autonomous.
+No subagent participated in building the product. A fresh non-builder validator is required after the candidate is frozen. Consequential concept, expansion and publication decisions were not treated as autonomous.
 
 | Date | Planned outcome | Material result | Evidence |
 |---|---|---|---|
@@ -107,7 +109,7 @@ Matcher SHA-256: `18f5455515c86c193d433975bcae82fa208c9cc91424d47972c197b5e77c92
 - The selected openFDA fixture cannot establish recall completeness, currency or lifecycle state.
 - Matching reasons support catalog review; they do not determine medical risk, safety or legal obligations.
 - No production accuracy, business impact, customer savings, scale or uptime claim is made.
-- Browser, implementation and test verification were performed by the same agent and are not an independent audit.
+- Builder browser, implementation and test checks are not an independent audit; the separate validation report is the release gate.
 
 ## 10. Five-minute reviewer walkthrough
 
