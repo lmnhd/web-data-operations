@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CATEGORIES = {"tests", "demo", "edge_case", "exports", "pdf_visual", "claims", "boundaries"}
-TEXT_SUFFIXES = {".cfg", ".csv", ".html", ".ini", ".js", ".json", ".md", ".py", ".toml", ".txt", ".yaml", ".yml"}
+TEXT_SUFFIXES = {".cfg", ".css", ".csv", ".html", ".ini", ".js", ".json", ".md", ".py", ".toml", ".txt", ".yaml", ".yml"}
 TEXT_NAMES = {".gitignore", ".vercelignore"}
 
 

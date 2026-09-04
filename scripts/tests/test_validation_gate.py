@@ -49,6 +49,18 @@ class GateTests(unittest.TestCase):
         (self.project / 'app.py').write_bytes(b"print('example')\r\nprint('done')\r\n")
         self.assertEqual(check(self.state, self.root), [])
 
+    def test_css_is_portable_but_binary_hashes_remain_exact(self):
+        css_lf = self.root / 'lf.css'
+        css_crlf = self.root / 'crlf.css'
+        pdf_lf = self.root / 'lf.pdf'
+        pdf_crlf = self.root / 'crlf.pdf'
+        css_lf.write_bytes(b"body { color: black; }\n")
+        css_crlf.write_bytes(b"body { color: black; }\r\n")
+        pdf_lf.write_bytes(b"binary\nbytes")
+        pdf_crlf.write_bytes(b"binary\r\nbytes")
+        self.assertEqual(digest(css_lf), digest(css_crlf))
+        self.assertNotEqual(digest(pdf_lf), digest(pdf_crlf))
+
     def test_missing(self):
         self.report_path.unlink()
         self.assertTrue(check(self.state, self.root))
