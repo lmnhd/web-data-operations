@@ -10,8 +10,8 @@
     "buyerProblem": "Teams waste time reviewing irrelevant republications and can miss material changes to opportunities they are actually qualified to pursue.",
     "centralClaim": "A provenance-preserving pipeline can distinguish material field changes from republication noise and apply deterministic qualification rules to produce an explainable review queue."
   },
-  "authorizedScope": "User approved publication of the accepted Proof Lab, source archive and PDF. Integrate the reviewed iteration through PR 1 and publish a versioned source/PDF release. Preserve actual Python execution when hosting the demo; hosting destination is being confirmed. No paid plan, new source collection or scheduled monitoring is authorized.",
-  "nextAction": "Publish approved source/PDF archive; confirm Python hosting destination for the interactive demo.",
+  "authorizedScope": "User approved Vercel hosting on the existing account, Upwork portfolio publication with the PDF and demo link, and the supporting GitHub source/PDF release. Preserve the Python engine. No new paid plan, new source collection or scheduled monitoring is authorized.",
+  "nextAction": "Complete Vercel CLI reauthentication and Upwork human verification, deploy the tested Flask adapter, verify public access, and publish the portfolio entry.",
   "humanApproval": {
     "status": "approved",
     "date": "2026-09-03",

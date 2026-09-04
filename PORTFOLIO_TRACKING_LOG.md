@@ -8,6 +8,8 @@ Do not erase rejected concepts or superseded decisions. Their history prevents r
 
 ## Current controlling state - 2026-09-03
 
+**Vercel/Upwork handoff:** The user clarified that publication primarily means the Upwork portfolio entry and PDF, then approved a supporting live demo on the existing Vercel account. A Flask adapter preserves the Python engine; downloads use the returned report rather than server-instance memory. Full suite: 22 tests; hosted button: 14 fixed core tests, no subprocess. Deployment waits for CLI reauthentication and Upwork waits for the human-verification challenge. No deployment or Upwork publication is claimed until verified. Root owns adapter, tests, hosting docs and upload draft; no delegated agents used.
+
 **Publication approval:** After reviewing the local Proof Lab and revised PDF, the user stated, "This is now acceptable and can be published." The root agent owns release documentation, PR integration and source/PDF publication. The public interactive host is being confirmed so the approved Python behavior is preserved. No paid hosting commitment or new acquisition is included. Earlier approval-pending entries below are historical.
 
 **Proof Lab expansion approved:** The user requested an interactive demonstration rather than claims of proof and said "Proceed." The root agent owns `src/demo_server.py`, `demo/`, tests, screenshots and the PDF revision. Work remains on the WS-001 iteration branch. The local demo will execute the existing Python pipeline; hosting and release remain separate decisions. Prior and active concepts reviewed; this strengthens WS-001 rather than inventing another project.
