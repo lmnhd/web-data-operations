@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "iterationId": "WS-001",
-  "stage": "BUILDING",
+  "stage": "RELEASED",
   "concept": {
     "slug": "qualified-tender-change-intelligence",
     "name": "Qualified Tender Change Intelligence",
@@ -11,7 +11,7 @@
     "centralClaim": "A provenance-preserving pipeline can distinguish material field changes from republication noise and apply deterministic qualification rules to produce an explainable review queue."
   },
   "authorizedScope": "User approved Vercel hosting on the existing account, Upwork portfolio publication with the PDF and demo link, and the supporting GitHub source/PDF release. Preserve the Python engine. No new paid plan, new source collection or scheduled monitoring is authorized.",
-  "nextAction": "Complete Vercel CLI reauthentication and Upwork human verification, deploy the tested Flask adapter, verify public access, and publish the portfolio entry.",
+  "nextAction": "WS-001 is published on Upwork, Vercel and GitHub. Await the user's next distinct iteration; do not resume the rejected-candidate loop or republish WS-001. Release: https://github.com/lmnhd/web-data-operations/releases/tag/ws-001-v1.0.0",
   "humanApproval": {
     "status": "approved",
     "date": "2026-09-03",

@@ -51,6 +51,8 @@ This is implementation-agent verification, not an independent audit. The earlier
 
 ### Publication verification
 
+Released as [ws-001-v1.0.0](https://github.com/lmnhd/web-data-operations/releases/tag/ws-001-v1.0.0), targeting merged commit `759d1971645505f898b491d63a6360c08d60bdf4` from [PR #1](https://github.com/lmnhd/web-data-operations/pull/1). Upwork publication was confirmed on 2026-09-04 UTC with the live link and updated three-page PDF; see [publication record](evidence/UPWORK_PUBLICATION.md). The user explicitly approved publication after reviewing the demo and revised PDF.
+
 Vercel production deployment `dpl_8xetoYvaEhM9kivL2XWrx3z9Pppy` serves the Flask adapter from the approved existing team. Anonymous HTTP checks returned 200, executed the real noise-case pipeline with six ignored comparisons and zero tracked changes, and passed all 14 hosted core checks. The complete local/CI suite has 22 tests. No paid add-ons were selected. Usage remains subject to the existing account's quotas and billing. The PDF now includes the public demo link. Prior local-only statements record earlier development phases, not current hosting status.
 
 - Upwork-specific demand evidence is not yet a verified current sample.
