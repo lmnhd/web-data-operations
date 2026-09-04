@@ -5,7 +5,7 @@
 - **Iteration:** WS-001
 - **Public project name:** Government Contract Change Monitor
 - **Internal engineering name:** Qualified Tender Change Intelligence
-- **Status:** AWAITING_BUILD_APPROVAL for any public-hosting expansion; local Proof Lab implemented and checked
+- **Status:** Publication approved by the human reviewer; source/PDF release proceeding, public interactive host pending selection
 - **Reviewer audience:** Upwork clients and technical interviewers evaluating web-data and workflow-automation ability
 
 ## Why this project was chosen

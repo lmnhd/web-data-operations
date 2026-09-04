@@ -22,3 +22,6 @@ jobs:
 
       - name: Validate archive structure
         run: python scripts/validate_archive.py
+
+      - name: Run WS-001 pipeline and Proof Lab tests
+        run: python -m unittest discover -s projects/WS-001-qualified-tender-change-intelligence/tests -v

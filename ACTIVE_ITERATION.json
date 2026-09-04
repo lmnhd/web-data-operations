@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "iterationId": "WS-001",
-  "stage": "AWAITING_BUILD_APPROVAL",
+  "stage": "BUILDING",
   "concept": {
     "slug": "qualified-tender-change-intelligence",
     "name": "Qualified Tender Change Intelligence",
@@ -10,12 +10,12 @@
     "buyerProblem": "Teams waste time reviewing irrelevant republications and can miss material changes to opportunities they are actually qualified to pursue.",
     "centralClaim": "A provenance-preserving pipeline can distinguish material field changes from republication noise and apply deterministic qualification rules to produce an explainable review queue."
   },
-  "authorizedScope": "Build the approved local Proof Lab: actual Python execution on fixed sanitized captures and labeled synthetic scenarios, visible input/diff/routing, editable qualification rules, downloads, tests, browser screenshots, recorded walkthrough and revised PDF. No new source collection, scheduled monitoring, public deployment, main merge or release without approval.",
-  "nextAction": "Review the local Proof Lab; decide whether to authorize public hosting. Main merge and release remain pending.",
+  "authorizedScope": "User approved publication of the accepted Proof Lab, source archive and PDF. Integrate the reviewed iteration through PR 1 and publish a versioned source/PDF release. Preserve actual Python execution when hosting the demo; hosting destination is being confirmed. No paid plan, new source collection or scheduled monitoring is authorized.",
+  "nextAction": "Publish approved source/PDF archive; confirm Python hosting destination for the interactive demo.",
   "humanApproval": {
     "status": "approved",
     "date": "2026-09-03",
-    "basis": "User approved the bounded fixture proof on 2026-09-03 and then explicitly directed the live-evidence and reviewer-artifact phase to proceed."
+    "basis": "After reviewing the working Proof Lab and revised PDF, the user stated: This is now acceptable and can be published. This authorizes publication; a paid hosting commitment remains a separate decision."
   },
   "fatalBlockers": [],
   "repairableConditions": [

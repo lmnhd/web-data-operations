@@ -8,6 +8,8 @@ Do not erase rejected concepts or superseded decisions. Their history prevents r
 
 ## Current controlling state - 2026-09-03
 
+**Publication approval:** After reviewing the local Proof Lab and revised PDF, the user stated, "This is now acceptable and can be published." The root agent owns release documentation, PR integration and source/PDF publication. The public interactive host is being confirmed so the approved Python behavior is preserved. No paid hosting commitment or new acquisition is included. Earlier approval-pending entries below are historical.
+
 **Proof Lab expansion approved:** The user requested an interactive demonstration rather than claims of proof and said "Proceed." The root agent owns `src/demo_server.py`, `demo/`, tests, screenshots and the PDF revision. Work remains on the WS-001 iteration branch. The local demo will execute the existing Python pipeline; hosting and release remain separate decisions. Prior and active concepts reviewed; this strengthens WS-001 rather than inventing another project.
 
 [`ACTIVE_ITERATION.json`](./ACTIVE_ITERATION.json) is the compact source of truth for current execution. When an older catalog row or historical decision below conflicts with it, the active state and [`iterations/ws-001/CODEX_VERTICAL_PROOF_BRIEF.md`](./iterations/ws-001/CODEX_VERTICAL_PROOF_BRIEF.md) control until the next handoff reconciles the archive.
