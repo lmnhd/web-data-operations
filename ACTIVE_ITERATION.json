@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "iterationId": "WS-002",
-  "stage": "REPAIRING",
+  "stage": "RELEASE_READY",
   "concept": {
     "slug": "recall-to-catalog-impact-review",
     "name": "Recall-to-Catalog Impact Review",
@@ -11,7 +11,7 @@
     "centralClaim": "A provenance-preserving matcher can compare a bounded synthetic catalog with selected openFDA enforcement records and reproduce an independently labeled match, no-match and review-needed queue using explicit field evidence."
   },
   "authorizedScope": "Human approved the reviewer interface, larger benchmark, visual PDF, Manifest, independent validation, source integration, public hosting and publication on 2026-09-04. Paid services, production operational use, public alerts, medical decisions and recall-lifecycle tracking remain unauthorized.",
-  "nextAction": "Make validation hashes portable across Git line-ending normalization, obtain independent hash-map recertification, and return to RELEASE_READY only after local and Linux CI gates pass.",
+  "nextAction": "Require green Linux CI on pull request 3, then merge, tag ws-002-v1.0.0, publish the PDF release asset, and record final state.",
   "humanApproval": {
     "status": "approved",
     "date": "2026-09-04",
