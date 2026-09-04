@@ -1,5 +1,7 @@
 # Proof Lab: run it, do not just read about it
 
+**Public demo:** https://contract-monitor-proof-lab.vercel.app - no login required. The Vercel adapter executes the same Python engine. Its button runs 14 core checks; the full local/CI suite contains 22 tests. Browser downloads save the exact returned report without relying on server-instance memory. Older local-only instructions below describe the original transport; see [current hosting details](HOSTING.md).
+
 From the repository root, with Python 3.10 or newer:
 
 ```powershell

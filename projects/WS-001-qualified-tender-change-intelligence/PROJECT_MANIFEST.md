@@ -5,7 +5,8 @@
 - **Iteration:** WS-001
 - **Public project name:** Government Contract Change Monitor
 - **Internal engineering name:** Qualified Tender Change Intelligence
-- **Status:** Publication approved by the human reviewer; source/PDF release proceeding, public interactive host pending selection
+- **Status:** Public Vercel demo deployed and verified; Upwork PDF upload in progress
+- **Public demo:** https://contract-monitor-proof-lab.vercel.app
 - **Reviewer audience:** Upwork clients and technical interviewers evaluating web-data and workflow-automation ability
 
 ## Why this project was chosen
@@ -47,6 +48,10 @@ This is implementation-agent verification, not an independent audit. The earlier
 - Contact and free-text fields are excluded by the normalization allowlist.
 
 ## Known limitations
+
+### Publication verification
+
+Vercel production deployment `dpl_8xetoYvaEhM9kivL2XWrx3z9Pppy` serves the Flask adapter from the approved existing team. Anonymous HTTP checks returned 200, executed the real noise-case pipeline with six ignored comparisons and zero tracked changes, and passed all 14 hosted core checks. The complete local/CI suite has 22 tests. No paid add-ons were selected. Usage remains subject to the existing account's quotas and billing. The PDF now includes the public demo link. Prior local-only statements record earlier development phases, not current hosting status.
 
 - Upwork-specific demand evidence is not yet a verified current sample.
 - No scheduled live monitoring is included.

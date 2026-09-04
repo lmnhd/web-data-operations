@@ -94,21 +94,20 @@ def main():
     screenshot(c, 'sandbox-act.png', 582, 290, width=260)
     screenshot(c, 'sandbox-ignore.png', 582, 290, width=260, x=314)
     text(c, '<b>Reproduce it in about a minute</b><br/>'
-             '1. Get the iteration branch from the repository linked below.<br/>'
-             '2. From the repository root, run the command below (Python 3.10+).<br/>'
-             '3. Open http://127.0.0.1:8765 and choose an example. Click Run.<br/>'
+             '1. Open the public demo using the link below. No login required.<br/>'
+             '2. Choose a historical record or the labeled synthetic example.<br/>'
+             '3. Click Run to execute the Python comparison engine.<br/>'
              '4. Change a rule and rerun. Download JSON/CSV; compare input hashes.<br/>'
-             '5. Click Run automated checks to execute the 17-test suite yourself.', 283, 10)
+             '5. Click Run automated checks to execute 14 core tests yourself.', 283, 10)
     c.setFillColor(INK)
     c.setFont('Courier', 8)
-    c.drawString(38, 168, 'python projects/WS-001-qualified-tender-change-intelligence/')
-    c.drawString(38, 156, '       src/demo_server.py')
-    text(c, 'Command above wraps for readability: join it into one line without spaces around the slash.', 143, 8)
-    text(c, '<b>17 tests passed during browser verification.</b> Tests cover real execution, repeatability, '
+    text(c, '<link href="https://contract-monitor-proof-lab.vercel.app" color="#007C78"><u><b>Try it: contract-monitor-proof-lab.vercel.app</b></u></link>', 170, 12)
+    text(c, 'The repository also includes instructions for running the complete project locally.', 143, 8)
+    text(c, '<b>22 full-suite tests pass; 14 core checks run on the public page.</b> Tests cover real execution, repeatability, '
              'changed rules, missing data, exports and local access boundaries. Implementation and browser checks '
              'were performed by the same agent; this is not an independent audit.', 119, 9)
     text(c, '<link href="'+REPO+'" color="#007C78"><u>Open code, data, tests and launch instructions on GitHub</u></link>', 69, 9)
-    text(c, 'Local replay, not a hosted live feed. No scheduling, source-wide coverage, customer savings or production readiness is claimed. '
+    text(c, 'Hosted replay of saved records, not a live data feed. No scheduling, source-wide coverage, customer savings or production readiness is claimed. '
              'The PDF is a tour; the executable project is the evidence.', 48, 8)
     c.save()
     print(OUTPUT)

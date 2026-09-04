@@ -8,6 +8,8 @@ Do not erase rejected concepts or superseded decisions. Their history prevents r
 
 ## Current controlling state - 2026-09-03
 
+**Public deployment verified:** https://contract-monitor-proof-lab.vercel.app is live on the existing Vercel team. Anonymous page/API checks passed, including expected six unchanged comparisons and 14 hosted core tests. The PDF links directly to the live demo. Upwork project details are entered; its PDF upload requires Chrome extension file-URL permission. No new subscription or add-on selected. The CLI-created `.env.local` is ignored and must never be committed.
+
 **Vercel/Upwork handoff:** The user clarified that publication primarily means the Upwork portfolio entry and PDF, then approved a supporting live demo on the existing Vercel account. A Flask adapter preserves the Python engine; downloads use the returned report rather than server-instance memory. Full suite: 22 tests; hosted button: 14 fixed core tests, no subprocess. Deployment waits for CLI reauthentication and Upwork waits for the human-verification challenge. No deployment or Upwork publication is claimed until verified. Root owns adapter, tests, hosting docs and upload draft; no delegated agents used.
 
 **Publication approval:** After reviewing the local Proof Lab and revised PDF, the user stated, "This is now acceptable and can be published." The root agent owns release documentation, PR integration and source/PDF publication. The public interactive host is being confirmed so the approved Python behavior is preserved. No paid hosting commitment or new acquisition is included. Earlier approval-pending entries below are historical.
