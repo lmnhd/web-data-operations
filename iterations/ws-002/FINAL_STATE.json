@@ -10,12 +10,12 @@
     "buyerProblem": "Recall records and internal catalog rows often describe the same product with incomplete or inconsistent identifiers, forcing staff to compare them manually and risking unsupported matches.",
     "centralClaim": "A provenance-preserving matcher can compare a bounded synthetic catalog with selected openFDA enforcement records and reproduce an independently labeled match, no-match and review-needed queue using explicit field evidence."
   },
-  "authorizedScope": "Human approved the reviewer interface, larger benchmark, visual PDF, Manifest, independent validation, source integration, public hosting and publication on 2026-09-04. Paid services, production operational use, public alerts, medical decisions and recall-lifecycle tracking remain unauthorized.",
-  "nextAction": "WS-002 is published on Vercel and GitHub. Preserve this final state and begin no new iteration until separately authorized. Release: https://github.com/lmnhd/web-data-operations/releases/tag/ws-002-v1.0.0",
+  "authorizedScope": "Human approved the reviewer interface, larger benchmark, visual PDF, Manifest, independent validation, source integration, public hosting, GitHub release and Upwork portfolio publication on 2026-09-04. Paid services, production operational use, public alerts, medical decisions and recall-lifecycle tracking remain unauthorized.",
+  "nextAction": "WS-002 is published on Vercel, GitHub and Upwork. Preserve this final state and begin no new iteration until separately authorized. Release: https://github.com/lmnhd/web-data-operations/releases/tag/ws-002-v1.0.0; portfolio: https://www.upwork.com/freelancers/~010d1d69f81d197489",
   "humanApproval": {
     "status": "approved",
     "date": "2026-09-04",
-    "basis": "The user approved the bounded proof and expansion, then explicitly replied 'Approved, please publish.' This authorizes independent validation, reviewed source integration, public hosting, signed-out verification, immutable tagging and publication for WS-002. It does not authorize paid services or production operational use."
+    "basis": "The user approved the bounded proof and expansion, explicitly replied 'Approved, please publish,' and later confirmed the final Upwork Publish action. This authorizes independent validation, reviewed source integration, public hosting, signed-out verification, immutable tagging, GitHub publication and Upwork portfolio publication for WS-002. It does not authorize paid services or production operational use."
   },
   "fatalBlockers": [],
   "repairableConditions": [],
@@ -55,6 +55,8 @@
     "mergeCommit": "262eda5e3430ddd0642a6dc95b6bac8ce2b762a3",
     "tag": "ws-002-v1.0.0",
     "githubRelease": "https://github.com/lmnhd/web-data-operations/releases/tag/ws-002-v1.0.0",
-    "pdfAsset": "Product-Recall-Match-Desk.pdf"
+    "pdfAsset": "Product-Recall-Match-Desk.pdf",
+    "upworkProfile": "https://www.upwork.com/freelancers/~010d1d69f81d197489",
+    "upworkPortfolioTitle": "Product Recall Match Desk | Matching, Review & Exports"
   }
 }
