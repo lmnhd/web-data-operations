@@ -4,9 +4,10 @@
 
 - **Iteration:** WS-002 - Recall-to-Catalog Impact Review
 - **Release candidate:** v1.0.0 candidate
-- **Status:** Publication approved; independent review, deployment and source integration in progress
+- **Status:** Public demo deployed; independent review and source integration in progress
 - **Prepared:** 2026-09-03/04 UTC
-- **Repository:** [web-data-operations](https://github.com/lmnhd/web-data-operations)
+- **Repository candidate:** [iteration/ws-002-discovery at 46deae7](https://github.com/lmnhd/web-data-operations/tree/46deae7e11e2423424cc02b6d557c5cacd6025db)
+- **Public demo:** [product-recall-match-desk.vercel.app](https://product-recall-match-desk.vercel.app)
 - **Local demo:** `python -B src/demo_server.py`, then open `http://127.0.0.1:8766`
 - **Reviewed commit, pull request and tag:** Pending publication authorization and source integration
 - **Primary reviewer:** E-commerce, wholesale or distribution catalog operations buyer
@@ -124,7 +125,7 @@ Matcher SHA-256: `18f5455515c86c193d433975bcae82fa208c9cc91424d47972c197b5e77c92
 - [x] Recorded source data is allowlisted; catalog inputs are synthetic.
 - [x] Local demo, changed input, exports, tests and rendered PDF were checked.
 - [ ] Independent verification or an explicit human-approved exception is recorded.
-- [ ] A public demo is approved, deployed and checked signed out, or a reviewer-runnable alternative is explicitly approved.
+- [x] The public demo was approved, deployed and returned HTTP 200 in an anonymous check.
 - [ ] Reviewed commit, pull request, default-branch integration and immutable tag are recorded.
 - [ ] Final release authorization and actual publication are recorded.
 

@@ -25,7 +25,7 @@ MUTED = HexColor("#52666A")
 PALE = HexColor("#EEF5F2")
 AMBER = HexColor("#B56722")
 REPO = "https://github.com/lmnhd/web-data-operations"
-LOCAL_DEMO = "http://127.0.0.1:8766"
+PUBLIC_DEMO = "https://product-recall-match-desk.vercel.app"
 
 
 def paragraph(c, words, y, size=10, color=MUTED, x=38, width=536, leading=None):
@@ -150,13 +150,13 @@ def main():
     paragraph(
         c,
         "<b>Try it locally in about one minute</b><br/>"
-        "1. In the project folder, run <font name='Courier'>python -B src/demo_server.py</font>.<br/>"
-        "2. Open the local link below and click Run the matcher.<br/>"
+        "1. Open the public demo below - no login is required.<br/>"
+        "2. Click Run the matcher on the default 100 mcg row.<br/>"
         "3. Click Add decisive evidence, rerun, and compare the reasons and input hash.<br/>"
         "4. Download JSON/CSV and click Run automated checks.",
         266, 9,
     )
-    paragraph(c, f'<link href="{LOCAL_DEMO}" color="#0B7963"><u><b>Local working demo: 127.0.0.1:8766</b></u></link>', 154, 11, INK)
+    paragraph(c, f'<link href="{PUBLIC_DEMO}" color="#0B7963"><u><b>Working demo: product-recall-match-desk.vercel.app</b></u></link>', 154, 11, INK)
     paragraph(c, f'<link href="{REPO}" color="#0B7963"><u>Repository, data, evidence and launch instructions</u></link>', 128, 9)
     paragraph(
         c,

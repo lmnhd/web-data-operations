@@ -1,6 +1,6 @@
 # Reviewer workbench browser verification
 
-Verified 2026-09-04 UTC against the local server at `http://127.0.0.1:8766`.
+Verified 2026-09-04 UTC against both the local server at `http://127.0.0.1:8766` and a fresh signed-out browser at `https://product-recall-match-desk.vercel.app`.
 
 ## PASS - actual execution
 
@@ -19,8 +19,10 @@ Verified 2026-09-04 UTC against the local server at `http://127.0.0.1:8766`.
 ## PASS - runnable checks and responsive layout
 
 - The in-page **Run automated checks** control returned `Passed`.
+- The signed-out public run executed 13 hosted matcher and demo-engine checks successfully.
 - At 390 x 844 CSS pixels, CAT-005 remained executable and no horizontal document overflow was detected.
 - Desktop evidence: `ambiguous.png`, `clarified.png`.
 - Mobile evidence: `mobile-clarified.png`.
+- Signed-out public evidence: `public-ambiguous.png`, `public-clarified.png`, `public-hosted-checks.png`.
 
-The implementation and browser checks were performed by the same agent. Public signed-out availability was not tested because hosting and publication remain unauthorized.
+The public page, default and clarified POST executions, and hosted checks required no login. The implementation and these browser checks were performed by the builder agent; a separate non-builder validation is still required before release.

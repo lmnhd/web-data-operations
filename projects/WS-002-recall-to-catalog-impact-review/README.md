@@ -4,6 +4,8 @@ Bounded WS-002 reviewer workbench that compares a synthetic product catalog with
 
 This is not medical advice, a public alert, a current recall-status determination or a production recall-monitoring service.
 
+**Public demo:** [Product Recall Match Desk](https://product-recall-match-desk.vercel.app) - no login required.
+
 ## Launch the reviewer workbench
 
 From this project directory:
@@ -12,7 +14,7 @@ From this project directory:
 python -B src/demo_server.py
 ```
 
-Open `http://127.0.0.1:8766`. Run the ambiguous 100 mcg example, then choose **Use clarified fields** and run again. The same Python matcher used by the command-line proof changes `CAT-005` from `review_needed` to a single explainable match. JSON and CSV exports are generated from the executed result.
+Open `http://127.0.0.1:8766`. Run the ambiguous 100 mcg example, then choose **Add decisive evidence** and run again. The same Python matcher used by the command-line proof changes `CAT-005` from `review_needed` to a single explainable match. JSON and CSV exports are generated from the executed result.
 
 ## Run the proof
 
