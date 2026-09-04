@@ -17,7 +17,7 @@ class GateTests(unittest.TestCase):
         self.project = self.root / "projects/WS-999-test"
         self.evidence = self.project / "evidence"
         self.evidence.mkdir(parents=True)
-        (self.project / "app.py").write_text("print('example')")
+        (self.project / "app.py").write_text("print('example')\nprint('done')\n")
         (self.project / "sample.pdf").write_bytes(b"test-fixture-only")
         self.plan = {"iterationId": "WS-999", "builderAgentIds": ["builder"],
                      "artifactPaths": ["projects/WS-999-test/sample.pdf"],
@@ -43,6 +43,10 @@ class GateTests(unittest.TestCase):
 
     def test_machine_local_environment_file_is_excluded(self):
         (self.project / '.env.local').write_text('VERCEL_OIDC_TOKEN=secret-not-validation-evidence')
+        self.assertEqual(check(self.state, self.root), [])
+
+    def test_text_hashes_are_portable_across_line_endings(self):
+        (self.project / 'app.py').write_bytes(b"print('example')\r\nprint('done')\r\n")
         self.assertEqual(check(self.state, self.root), [])
 
     def test_missing(self):

@@ -6,10 +6,17 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CATEGORIES = {"tests", "demo", "edge_case", "exports", "pdf_visual", "claims", "boundaries"}
+TEXT_SUFFIXES = {".cfg", ".csv", ".html", ".ini", ".js", ".json", ".md", ".py", ".toml", ".txt", ".yaml", ".yml"}
+TEXT_NAMES = {".gitignore", ".vercelignore"}
 
 
 def digest(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    content = path.read_bytes()
+    # Git normalizes text to LF in repository objects and Linux CI. Hash the
+    # same logical text on Windows while retaining byte-exact binary hashes.
+    if path.suffix.lower() in TEXT_SUFFIXES or path.name in TEXT_NAMES:
+        content = content.replace(b"\r\n", b"\n")
+    return hashlib.sha256(content).hexdigest()
 
 
 def local(root, name):
