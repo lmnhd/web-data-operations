@@ -13,6 +13,7 @@
 - Validator `/root/ws002_independent_validation` returned FAIL on frozen candidate `69ef14bbf026c93853057e8c7d12dcaf5acdb850` after finding an ignored Vercel-generated `.env.local` credential inside the project. The value was never displayed or committed.
 - The exact local file was removed. `scripts/validation_gate.py` now excludes machine-local `.env.*.local` files from portable artifact coverage, with a regression test proving `.env.local` cannot contaminate the report map.
 - Repair checks: 14/14 validation-gate regressions passed, 21/21 WS-002 tests passed and archive validation passed. Stage is REPAIRING until the repair commit is frozen, then the same independent validator receives the single permitted recheck.
+- **Repair freeze and recheck dispatch:** Repair commit `851f9fdc73436d3e6d2ef9129bbcba8f5677ede6` preserves the initial FAIL report and its evidence. The state returned REPAIRING -> VERIFYING, and the same non-builder validator is authorized for one recheck. Two delegated turns are charged in total: initial validation and repair recheck.
 
 ## Purpose
 

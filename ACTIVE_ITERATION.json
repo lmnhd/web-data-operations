@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "iterationId": "WS-002",
-  "stage": "REPAIRING",
+  "stage": "VERIFYING",
   "concept": {
     "slug": "recall-to-catalog-impact-review",
     "name": "Recall-to-Catalog Impact Review",
@@ -11,7 +11,7 @@
     "centralClaim": "A provenance-preserving matcher can compare a bounded synthetic catalog with selected openFDA enforcement records and reproduce an independently labeled match, no-match and review-needed queue using explicit field evidence."
   },
   "authorizedScope": "Human approved the reviewer interface, larger benchmark, visual PDF, Manifest, independent validation, source integration, public hosting and publication on 2026-09-04. Paid services, production operational use, public alerts, medical decisions and recall-lifecycle tracking remain unauthorized.",
-  "nextAction": "Commit the bounded local-credential/gate repair, return to VERIFYING for the one permitted independent recheck, then integrate pull request 3, tag ws-002-v1.0.0 and publish the GitHub release if the gate passes.",
+  "nextAction": "Run the single permitted independent recheck against repaired commit 851f9fdc73436d3e6d2ef9129bbcba8f5677ede6, then integrate pull request 3 and publish ws-002-v1.0.0 only if the gate passes.",
   "humanApproval": {
     "status": "approved",
     "date": "2026-09-04",
@@ -19,7 +19,7 @@
   },
   "fatalBlockers": [],
   "repairableConditions": [
-    "Independent validation returned FAIL because a Vercel-generated .env.local credential was present and validation artifact discovery did not exclude it. The exact local file was removed and a bounded gate regression repair awaits recheck.",
+    "Independent validation returned FAIL because a Vercel-generated .env.local credential was present and validation artifact discovery did not exclude it. The exact local file was removed, the bounded gate regression repair is committed, and one independent recheck is authorized.",
     "Pull request 3 is open, but default-branch integration and the immutable release tag remain unrecorded."
   ],
   "limitations": [
@@ -47,7 +47,7 @@
   ],
   "agentBudget": {
     "stageLimit": 4,
-    "used": 1,
+    "used": 2,
     "unit": "delegated agent turns",
     "additionalUseRequiresHumanApproval": true
   }
