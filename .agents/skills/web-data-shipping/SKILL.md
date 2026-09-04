@@ -14,11 +14,12 @@ Ship credible portfolio evidence with bounded agent use. Optimize for a small ve
 3. Read the full tracking log only when resolving a referenced historical claim or collision. Do not send the whole log to every agent.
 4. Confirm the current stage, authorized scope, next action, and remaining delegated-turn budget.
 5. Preserve unrelated working-tree changes and follow `SOURCE_CONTROL_AND_PUBLIC_ARCHIVE.md`.
+6. For new iteration planning, build verification or release, read `docs/shipping-pipeline/REVIEWER_EVIDENCE_STANDARD.md` from the repository root. Add it to the new active state's `requiredFiles` and carry its runnable-demo, visual-PDF and creative-problem-solving requirements into the brief. Use `START_NEXT_ITERATION.md` when initializing a new iteration.
 
 ## Operating rules
 
 - The root agent owns the decision and integration. Delegated agents receive one bounded question and the minimum evidence packet.
-- Default to no delegation for deterministic inspection, state transitions, validation, file assembly, or straightforward implementation.
+- Default to no delegation for mechanical inspection, state transitions or file assembly. Release validation always requires a separate non-builder agent.
 - Use at most two research agents in parallel during discovery, one consolidated critic, three bounded build agents, and one independent verifier per iteration. The active-state budget is authoritative. More delegation requires explicit human approval.
 - Do not create separate agents to restate another agent's answer, rewrite logs, or perform mechanical schema checks.
 - Use deterministic scripts for state, scoring arithmetic, schema validation, fixture comparison, and release checks.
@@ -60,12 +61,13 @@ Record other weaknesses as repairable conditions or limitations. Missing optiona
 ### Build and verification
 
 - Expand only from a passing vertical proof.
-- Keep implementation and independent verification distinct.
+- Follow `docs/shipping-pipeline/INDEPENDENT_VALIDATION.md` from planning through release: freeze acceptance checks, reserve validator/recheck budget, and dispatch a fresh-context non-builder validator. No same-agent exception satisfies this gate.
 - Metrics remain `TBD` until a recorded run produces them.
 - Treat adversarial findings as severity-classified issues, not automatic rejection votes.
 
 ### Release
 
+- Require the artifact-linked `evidence/RELEASE_CHECKLIST.md` specified by the reviewer evidence standard. State validation alone does not certify the PDF, demo or publication.
 - Require a completed Manifest, reproducible evidence, sanitized public data, passing checks, reviewed default-branch integration, and a release tag.
 - Verify reviewer links while signed out.
 - Append the durable outcome to the tracking log, then reset `ACTIVE_ITERATION.json` for the next iteration.

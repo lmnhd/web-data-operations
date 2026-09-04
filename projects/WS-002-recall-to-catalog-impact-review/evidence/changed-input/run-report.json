@@ -1,0 +1,55 @@
+{
+  "catalog_rows": 8,
+  "classification_counts": {
+    "match": 7,
+    "no_match": 1
+  },
+  "evaluation": {
+    "comparisons": [
+      {
+        "catalog_id": "CAT-001",
+        "passed": true
+      },
+      {
+        "catalog_id": "CAT-002",
+        "passed": true
+      },
+      {
+        "catalog_id": "CAT-003",
+        "passed": true
+      },
+      {
+        "catalog_id": "CAT-004",
+        "passed": true
+      },
+      {
+        "catalog_id": "CAT-005",
+        "passed": true
+      },
+      {
+        "catalog_id": "CAT-006",
+        "passed": true
+      },
+      {
+        "catalog_id": "CAT-007",
+        "passed": true
+      },
+      {
+        "catalog_id": "CAT-008",
+        "passed": true
+      }
+    ],
+    "exact_label_rate": 1.0,
+    "labels_failed": 0,
+    "labels_passed": 8,
+    "labels_total": 8
+  },
+  "generated_at": "2026-09-04T03:12:08.756611+00:00",
+  "limitations": [
+    "Fixture proof only; no production coverage or scale claim.",
+    "Not medical advice, a public alert, or a current recall-status determination.",
+    "Synthetic catalog rows do not prove integration with private retailer data."
+  ],
+  "recall_records": 10,
+  "source_request_count": 1
+}

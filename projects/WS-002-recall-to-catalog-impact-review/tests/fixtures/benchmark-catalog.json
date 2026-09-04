@@ -1,0 +1,22 @@
+[
+  {"catalog_id":"CAT-001","product_name":"Clear Eyes Maximum Itchy Eye Relief 15 mL","manufacturer":"Prestige Brands Holdings","upc":"678112659203","ndc":"67172-999","lot_code":"2552A"},
+  {"catalog_id":"CAT-002","product_name":"Dicyclomine Hydrochloride 10 mg capsules","manufacturer":"Aurobindo Pharma","upc":"0359651719015","ndc":"59651-719","lot_code":"DMC125018A"},
+  {"catalog_id":"CAT-003","product_name":"Rohto Cooling Eye Drops 13 mL","manufacturer":"Mentholatum","upc":"310742010749","ndc":"10742-8141","lot_code":"4G1V"},
+  {"catalog_id":"CAT-004","product_name":"Dabigatran Etexilate 75 mg 60-count","manufacturer":"Major Pharmaceuticals","upc":"0309047253043","ndc":"0904-7253","lot_code":"25141585"},
+  {"catalog_id":"CAT-005","product_name":"Levothyroxine Sodium 100 mcg","manufacturer":"Major Pharmaceuticals","upc":"0055154356305","ndc":"","lot_code":""},
+  {"catalog_id":"CAT-006","product_name":"Everyday Saline Nasal Spray 30 mL","manufacturer":"Example House Brand","upc":"999999999999","ndc":"","lot_code":""},
+  {"catalog_id":"CAT-007","product_name":"Azelaic Acid Gel 15% 50 gram","manufacturer":"Glenmark Pharmaceuticals","upc":"0368462626528","ndc":"68462-626","lot_code":"19260937A"},
+  {"catalog_id":"CAT-008","product_name":"Optiray 350 Ioversol 500 mL","manufacturer":"Liebel-Flarsheim","upc":"0300191333650","ndc":"0019-1333","lot_code":"25ZF3670"},
+  {"catalog_id":"CAT-009","product_name":"Dabigatran Etexilate 75 mg 30-count","manufacturer":"Major Pharmaceuticals","upc":"0309047253043","ndc":"0904-7253","lot_code":"25141586"},
+  {"catalog_id":"CAT-010","product_name":"Dabigatran Etexilate 150 mg 60-count","manufacturer":"Major Pharmaceuticals","upc":"0309047255108","ndc":"0904-7255","lot_code":"25141583"},
+  {"catalog_id":"CAT-011","product_name":"Dabigatran Etexilate 75 mg 60-count","manufacturer":"Major Pharmaceuticals","upc":"","ndc":"","lot_code":""},
+  {"catalog_id":"CAT-012","product_name":"Clear Eyes Maximum Itchy Eye Relief 15 mL","manufacturer":"Prestige Brands Holdings","upc":"","ndc":"","lot_code":""},
+  {"catalog_id":"CAT-013","product_name":"Rohto Cooling Eye Drops 13 mL","manufacturer":"Mentholatum","upc":"0310742010749","ndc":"","lot_code":""},
+  {"catalog_id":"CAT-014","product_name":"Azelaic Acid Gel 15%","manufacturer":"","upc":"","ndc":"","lot_code":""},
+  {"catalog_id":"CAT-015","product_name":"Clear Eyes Maximum Itchy Eye Relief 15 mL","manufacturer":"Prestige Brands Holdings","upc":"111111111111","ndc":"67172-999","lot_code":""},
+  {"catalog_id":"CAT-016","product_name":"Levothyroxine Sodium 75 mcg","manufacturer":"Major Pharmaceuticals","upc":"0055154356305","ndc":"","lot_code":""},
+  {"catalog_id":"CAT-017","product_name":"Levothyroxine Sodium 150 mcg","manufacturer":"Major Pharmaceuticals","upc":"0055154356305","ndc":"55154-3563","lot_code":"N02167A"},
+  {"catalog_id":"CAT-018","product_name":"Dabigatran Etexilate 75 mg","manufacturer":"Major Pharmaceuticals","upc":"0309047253043","ndc":"0904-7253","lot_code":""},
+  {"catalog_id":"CAT-019","product_name":"Optiray Ioversol 350 mg/mL 500 mL","manufacturer":"Liebel-Flarsheim","upc":"","ndc":"0019-1333","lot_code":""},
+  {"catalog_id":"CAT-020","product_name":"Optiray Ioversol 320 mg/mL 500 mL","manufacturer":"Liebel-Flarsheim","upc":"0300191333650","ndc":"","lot_code":""}
+]

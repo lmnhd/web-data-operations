@@ -157,6 +157,8 @@ TBD
 
 TBD
 
+For WS-002 onward, link `evidence/VALIDATION_PLAN.json` and `evidence/INDEPENDENT_VALIDATION.json`, identify builder and separate validator agent IDs, and reference the frozen artifact hashes. Follow the repository's `docs/shipping-pipeline/INDEPENDENT_VALIDATION.md`; same-agent review is not release sign-off.
+
 Every public quantitative claim must trace to an entry in this section or its linked evidence.
 
 ## 10. Limitations and non-goals
@@ -190,6 +192,7 @@ Target a five-minute first review, with deeper evidence available for technical 
 
 ## 13. Declaration integrity checklist
 
+- [ ] The [reviewer evidence standard](../../docs/shipping-pipeline/REVIEWER_EVIDENCE_STANDARD.md) is satisfied and `evidence/RELEASE_CHECKLIST.md` links the runnable demo, rendered-PDF inspection and problem-solving evidence. Resolve this relative link for the final project's location.
 - [ ] Project-selection claims match the candidate scorecard and approval record.
 - [ ] Demand claims link to dated evidence.
 - [ ] Agent roles and handoffs match the global tracking log.

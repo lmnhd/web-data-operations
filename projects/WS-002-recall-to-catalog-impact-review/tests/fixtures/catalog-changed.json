@@ -1,0 +1,10 @@
+[
+  {"catalog_id": "CAT-001", "product_name": "Clear Eyes Maximum Itchy Eye Relief 15 mL", "manufacturer": "Prestige Brands Holdings", "upc": "678112659203", "ndc": "67172-999", "lot_code": "2552A"},
+  {"catalog_id": "CAT-002", "product_name": "Dicyclomine Hydrochloride 10 mg capsules", "manufacturer": "Aurobindo Pharma", "upc": "0359651719015", "ndc": "59651-719", "lot_code": "DMC125018A"},
+  {"catalog_id": "CAT-003", "product_name": "Rohto Cooling Eye Drops 13 mL", "manufacturer": "Mentholatum", "upc": "310742010749", "ndc": "10742-8141", "lot_code": "4G1V"},
+  {"catalog_id": "CAT-004", "product_name": "Dabigatran Etexilate 75 mg 60-count", "manufacturer": "Major Pharmaceuticals", "upc": "0309047253043", "ndc": "0904-7253", "lot_code": "25141585"},
+  {"catalog_id": "CAT-005", "product_name": "Levothyroxine Sodium 75 mcg", "manufacturer": "Major Pharmaceuticals", "upc": "0055154356305", "ndc": "55154-3560", "lot_code": "N02172A"},
+  {"catalog_id": "CAT-006", "product_name": "Everyday Saline Nasal Spray 30 mL", "manufacturer": "Example House Brand", "upc": "999999999999", "ndc": "", "lot_code": ""},
+  {"catalog_id": "CAT-007", "product_name": "Azelaic Acid Gel 15% 50 gram", "manufacturer": "Glenmark Pharmaceuticals", "upc": "0368462626528", "ndc": "68462-626", "lot_code": "19260937A"},
+  {"catalog_id": "CAT-008", "product_name": "Optiray 350 Ioversol 500 mL", "manufacturer": "Liebel-Flarsheim", "upc": "0300191333650", "ndc": "0019-1333", "lot_code": "25ZF3670"}
+]

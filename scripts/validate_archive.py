@@ -50,7 +50,16 @@ def validate_active_state() -> list[str]:
         return [f"Invalid ACTIVE_ITERATION.json: {error}"]
 
     required = ("iterationId", "stage", "concept", "authorizedScope", "nextAction", "agentBudget")
-    return [f"ACTIVE_ITERATION.json missing {key}" for key in required if key not in state]
+    from validation_gate import check
+    errors = [f"ACTIVE_ITERATION.json missing {key}" for key in required if key not in state]
+    errors.extend(check(state, ROOT))
+    # Retained final states remain gated after the active iteration changes.
+    for final in (ROOT / "iterations").glob("*/FINAL_STATE.json"):
+        try:
+            errors.extend(check(json.loads(final.read_text(encoding="utf-8")), ROOT))
+        except (OSError, ValueError) as error:
+            errors.append(f"Invalid archived state {final}: {error}")
+    return errors
 
 
 def main() -> int:
