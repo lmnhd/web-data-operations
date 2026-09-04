@@ -21,7 +21,7 @@
   "repairableConditions": [],
   "limitations": [
     "No client posting was supplied; current Upwork evidence supports product matching and data quality generally, not this exact recall-review product.",
-    "The proof will use a synthetic catalog and cannot establish production coverage, current recall status, medical correctness, business impact or real-time operation.",
+    "The proof uses a synthetic catalog and cannot establish production coverage, current recall status, medical correctness, business impact or real-time operation.",
     "openFDA data must not be used for public alerts, medical decisions or recall-lifecycle claims."
   ],
   "requiredFiles": [
@@ -38,6 +38,7 @@
     "projects/WS-002-recall-to-catalog-impact-review/evidence/reviewer/BROWSER_VERIFICATION.md",
     "projects/WS-002-recall-to-catalog-impact-review/evidence/RELEASE_CHECKLIST.md",
     "projects/WS-002-recall-to-catalog-impact-review/evidence/VALIDATION_PLAN.json",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/INDEPENDENT_VALIDATION.json",
     "output/pdf/Product-Recall-Match-Desk.pdf",
     "design/SOURCE_AND_COMPLIANCE_LEDGER.md",
     "docs/shipping-pipeline/REVIEWER_EVIDENCE_STANDARD.md"
@@ -47,5 +48,13 @@
     "used": 3,
     "unit": "delegated agent turns",
     "additionalUseRequiresHumanApproval": true
+  },
+  "release": {
+    "publicDemo": "https://product-recall-match-desk.vercel.app",
+    "pullRequest": "https://github.com/lmnhd/web-data-operations/pull/3",
+    "mergeCommit": "262eda5e3430ddd0642a6dc95b6bac8ce2b762a3",
+    "tag": "ws-002-v1.0.0",
+    "githubRelease": "https://github.com/lmnhd/web-data-operations/releases/tag/ws-002-v1.0.0",
+    "pdfAsset": "Product-Recall-Match-Desk.pdf"
   }
 }
