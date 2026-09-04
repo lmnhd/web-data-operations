@@ -18,6 +18,16 @@ It does **not** claim complete amendment recall, production monitoring, real-tim
 
 ## Run the proof
 
+**Start with the interactive [Proof Lab](demo/README.md).** It executes the actual Python pipeline for each click, shows before/after fields and decision reasons, lets you edit business rules, exports the run, and runs the automated tests.
+
+```powershell
+python projects/WS-001-qualified-tender-change-intelligence/src/demo_server.py
+```
+
+Then open http://127.0.0.1:8765. This is a local replay using two sanitized historical records and one labeled synthetic scenario, not an always-on public feed. See the [recorded screenshot walkthrough](evidence/proof-lab/WALKTHROUGH.md).
+
+### Command-line alternative
+
 From the repository root:
 
 ```powershell

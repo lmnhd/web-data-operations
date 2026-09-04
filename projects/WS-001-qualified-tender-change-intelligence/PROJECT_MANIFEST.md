@@ -5,7 +5,7 @@
 - **Iteration:** WS-001
 - **Public project name:** Government Contract Change Monitor
 - **Internal engineering name:** Qualified Tender Change Intelligence
-- **Status:** RELEASE_READY
+- **Status:** AWAITING_BUILD_APPROVAL for any public-hosting expansion; local Proof Lab implemented and checked
 - **Reviewer audience:** Upwork clients and technical interviewers evaluating web-data and workflow-automation ability
 
 ## Why this project was chosen
@@ -31,6 +31,14 @@ The approved expansion added two bounded sanitized live records. In the first, 6
 A three-page reviewer work sample now presents the client problem, deliverables, simple operating flow, live proof, trust boundaries, and technical handoff. It deliberately excludes the separate continuous-development workflow. Release approval and default-branch integration remain pending.
 
 ## What the proof demonstrates
+
+### Interactive expansion - 2026-09-03 US Eastern
+
+The user rejected a presentation-only claim of proof and approved a local executable demonstration. One implementing agent reused the existing pipeline, added a loopback Python server and browser workbench, and verified real interactions without additional research agents. Every Run invokes the existing Python function; no canned run reports power the UI. Reviewers can change qualification rules, inspect all declared fields, download a run and execute tests themselves.
+
+Seventeen current automated tests passed. Browser checks reproduced both historical cases and showed the synthetic 400,000 GBP opportunity switching from Act to Ignore when the maximum changed from 5,000,000 to 300,000. The screenshot walkthrough records those executions. The revised three-page PDF uses those screenshots and an actual code excerpt, and explains how to reproduce the behavior.
+
+This is implementation-agent verification, not an independent audit. The earlier six- and seven-test counts above refer to earlier phases. No public hosting, main merge or release has been approved by these checks. See `demo/README.md` and `evidence/proof-lab/BROWSER_VERIFICATION.md` for the exact current boundaries.
 
 - Source update tags are retained as metadata but do not determine whether a change occurred.
 - Qualification is evaluated separately from change detection.

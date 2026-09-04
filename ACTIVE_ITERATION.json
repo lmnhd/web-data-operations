@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "iterationId": "WS-001",
-  "stage": "RELEASE_READY",
+  "stage": "AWAITING_BUILD_APPROVAL",
   "concept": {
     "slug": "qualified-tender-change-intelligence",
     "name": "Qualified Tender Change Intelligence",
@@ -10,8 +10,8 @@
     "buyerProblem": "Teams waste time reviewing irrelevant republications and can miss material changes to opportunities they are actually qualified to pursue.",
     "centralClaim": "A provenance-preserving pipeline can distinguish material field changes from republication noise and apply deterministic qualification rules to produce an explainable review queue."
   },
-  "authorizedScope": "Build only the smallest vertical proof: bounded Find a Tender sample acquisition or recorded fixtures, ingest allowlist, consecutive-snapshot diff over declared fields, deterministic qualification profile, reason-coded output, provenance, tests, and a recorded run report. No scheduled production monitoring, document/PDF reconciliation, deployment, or marketing claims.",
-  "nextAction": "Human review of draft pull request 1; if approved, merge to main, create immutable tag ws-001-v1.0.0, publish the GitHub Release, and link the specific project evidence from the portfolio.",
+  "authorizedScope": "Build the approved local Proof Lab: actual Python execution on fixed sanitized captures and labeled synthetic scenarios, visible input/diff/routing, editable qualification rules, downloads, tests, browser screenshots, recorded walkthrough and revised PDF. No new source collection, scheduled monitoring, public deployment, main merge or release without approval.",
+  "nextAction": "Review the local Proof Lab; decide whether to authorize public hosting. Main merge and release remain pending.",
   "humanApproval": {
     "status": "approved",
     "date": "2026-09-03",

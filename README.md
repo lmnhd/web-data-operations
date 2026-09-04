@@ -2,6 +2,8 @@
 
 ## Purpose
 
+**Try the current project:** [Government Contract Change Monitor - interactive Proof Lab](projects/WS-001-qualified-tender-change-intelligence/demo/README.md). Run the real pipeline, edit a rule, inspect the difference and export the result. Local demo available on the WS-001 iteration branch; public release pending.
+
 Build a continuously expanding collection of employer- and client-facing portfolio projects that prove more than the ability to retrieve web pages. Each project must demonstrate that Nathaniel can design, operate, validate, and explain a dependable data-collection workflow for a real business use case.
 
 The collection is produced through a reusable multi-agent **Shipping Pipeline**. The pipeline is also part of the portfolio evidence: it demonstrates structured agentic development, coordinated handoffs, quality gates, measured delivery, and continuous improvement across multiple releases.

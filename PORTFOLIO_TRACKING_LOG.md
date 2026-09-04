@@ -8,16 +8,18 @@ Do not erase rejected concepts or superseded decisions. Their history prevents r
 
 ## Current controlling state - 2026-09-03
 
+**Proof Lab expansion approved:** The user requested an interactive demonstration rather than claims of proof and said "Proceed." The root agent owns `src/demo_server.py`, `demo/`, tests, screenshots and the PDF revision. Work remains on the WS-001 iteration branch. The local demo will execute the existing Python pipeline; hosting and release remain separate decisions. Prior and active concepts reviewed; this strengthens WS-001 rather than inventing another project.
+
 [`ACTIVE_ITERATION.json`](./ACTIVE_ITERATION.json) is the compact source of truth for current execution. When an older catalog row or historical decision below conflicts with it, the active state and [`iterations/ws-001/CODEX_VERTICAL_PROOF_BRIEF.md`](./iterations/ws-001/CODEX_VERTICAL_PROOF_BRIEF.md) control until the next handoff reconciles the archive.
 
 - **WS-001 public project:** Government Contract Change Monitor
 - **Internal engineering name:** Qualified Tender Change Intelligence
-- **Status:** RELEASE_READY after a passing bounded live-evidence and reviewer-artifact verification
+- **Status:** Local Proof Lab verified; AWAITING_BUILD_APPROVAL for a public-hosting expansion. Prior RELEASE_READY referred to the earlier PDF-only package.
 - **Decision:** Stop the automatic candidate-promotion/refutation cycle and migrate execution to the Codex `web-data-shipping` skill.
 - **Recorded result:** 8 synthetic releases, 4 comparisons, 4 update-tagged comparisons, 3 actual material changes, and three explainable queues; 6 automated tests passed. No delegated agent turns were used.
 - **Live evidence:** Two isolated record-package requests produced 7 comparisons. Six update-tagged comparisons contained no declared material changes; one cancellation comparison surfaced 5 changes and routed to review for missing qualification evidence.
 - **Reviewer artifact:** A three-page PDF now leads with the client problem and deliverables, explains the workflow in plain English, and places implementation details last. It does not describe the separate continuous-development process.
-- **Verification:** 7 automated tests passed; both live captures passed excluded-field checks; expected live metrics were reproduced; archive validation passed; the three-page PDF rendered without visible defects.
+- **Verification:** Current suite: 17 tests passed, including real HTTP execution and exports. Browser replay reproduced noise suppression, cancellation review and editable synthetic qualification. Actual screenshots and a recorded step walkthrough now accompany the three-page PDF. Same-agent verification, not an independent audit.
 - **Next decision:** Human review of draft pull request 1. No default-branch merge, tag, GitHub Release, or portfolio publication is automatic.
 - **Legacy history:** All earlier candidate failures remain preserved below as research evidence. Their candidate-register suggestions are not mandatory requirements for the revised build.
 
