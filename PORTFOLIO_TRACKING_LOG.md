@@ -1,5 +1,19 @@
 # Portfolio Tracking Log
 
+## 2026-09-04 - WS-002 publication and independent-validation dispatch
+
+- **Publication approval:** The user explicitly approved GitHub/Vercel publication and confirmed the stated destination and payload. Paid services, Upwork publication and production operational use remain outside scope.
+- **Public deployment:** `https://product-recall-match-desk.vercel.app` is live on the existing Vercel team. Anonymous page/API checks, the default review-needed case, the clarified match case and 13 hosted checks passed without login.
+- **Source review:** Pull request 3 is open at `https://github.com/lmnhd/web-data-operations/pull/3`. Frozen validation candidate: `69ef14bbf026c93853057e8c7d12dcaf5acdb850` on `iteration/ws-002-discovery`.
+- **Independent validator dispatch:** Fresh-context non-builder agent `/root/ws002_independent_validation` was dispatched after the candidate freeze with the approved brief, evidence standard, public demo, validation plan and exact build commit. One delegated agent turn is charged to the WS-002 budget. The agent may write validation evidence only and cannot repair product artifacts.
+- **Current gate:** VERIFYING. Merge, tag and GitHub release wait for a valid PASS report and the repository validation gate.
+
+### Independent validation FAIL and bounded repair
+
+- Validator `/root/ws002_independent_validation` returned FAIL on frozen candidate `69ef14bbf026c93853057e8c7d12dcaf5acdb850` after finding an ignored Vercel-generated `.env.local` credential inside the project. The value was never displayed or committed.
+- The exact local file was removed. `scripts/validation_gate.py` now excludes machine-local `.env.*.local` files from portable artifact coverage, with a regression test proving `.env.local` cannot contaminate the report map.
+- Repair checks: 14/14 validation-gate regressions passed, 21/21 WS-002 tests passed and archive validation passed. Stage is REPAIRING until the repair commit is frozen, then the same independent validator receives the single permitted recheck.
+
 ## Purpose
 
 This file is the durable coordination record for the Web Scraping and Data Operations portfolio and its multi-agent Shipping Pipeline. Every participating agent must read it before beginning an iteration or accepting a major task, and must update the relevant entry at handoff.

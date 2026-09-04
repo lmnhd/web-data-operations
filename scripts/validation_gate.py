@@ -68,6 +68,10 @@ def check(state, root=ROOT):
             rel = path.relative_to(project)
             if any(part in ignored for part in rel.parts):
                 continue
+            # Hosting CLIs can materialize ignored, machine-local credentials.
+            # They are neither portable review artifacts nor safe report content.
+            if path.name == ".env.local" or (path.name.startswith(".env.") and path.name.endswith(".local")):
+                continue
             if rel.as_posix() in {"evidence/" + name for name in excluded} or rel.parts[:2] == ("evidence", "validation-runs"):
                 continue
             if path.is_file():

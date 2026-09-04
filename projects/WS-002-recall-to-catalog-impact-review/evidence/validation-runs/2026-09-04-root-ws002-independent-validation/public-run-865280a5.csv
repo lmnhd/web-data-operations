@@ -1,0 +1,9 @@
+catalog_id,classification,matched_recall_number,candidates,reasons
+CAT-001,match,D-0766-2026,D-0766-2026,exact_upc|exact_ndc_family|exact_lot_code|manufacturer_overlap|strong_product_text_overlap|strength_match
+CAT-002,match,D-0733-2026,D-0733-2026,exact_upc|exact_ndc_family|exact_lot_code|manufacturer_overlap|strong_product_text_overlap|strength_match
+CAT-003,match,D-0722-2026,D-0722-2026,exact_upc|exact_ndc_family|exact_lot_code|manufacturer_overlap|strong_product_text_overlap|strength_match
+CAT-004,match,D-0738-2026,D-0738-2026,exact_upc|exact_ndc_family|exact_lot_code|manufacturer_overlap|strong_product_text_overlap|strength_match
+CAT-005,review_needed,,D-0709-2026|D-0711-2026,exact_upc|manufacturer_overlap|strength_conflict|strong_product_text_overlap
+CAT-006,no_match,,,no_candidate_reached_review_threshold
+CAT-007,match,D-0731-2026,D-0731-2026,exact_upc|exact_ndc_family|exact_lot_code|manufacturer_overlap|strong_product_text_overlap|strength_match
+CAT-008,match,D-0773-2026,D-0773-2026,exact_upc|exact_ndc_family|exact_lot_code|manufacturer_overlap|strong_product_text_overlap|strength_match

@@ -1,0 +1,117 @@
+{
+  "iterationId": "WS-002",
+  "validatorAgentId": "/root/ws002_independent_validation",
+  "verdict": "FAIL",
+  "unresolvedFindings": [
+    "BLOCKER: projects/WS-002-recall-to-catalog-impact-review/.env.local contains a VERCEL_OIDC_TOKEN. The file is Git-ignored and absent from frozen commit 69ef14bbf026c93853057e8c7d12dcaf5acdb850, but it exists inside the current project tree and scripts/validation_gate.py does not exclude it from artifact coverage. An authorized owner must remove the local credential, revoke it if still valid, and request a fresh independent recheck."
+  ],
+  "planSha256": "95dd6b2ef925bc0708136a16c4a5d03d9da7a2cb6b64a95237db0c4edc963044",
+  "artifactSha256": {
+    "output/pdf/Product-Recall-Match-Desk.pdf": "2bac7387ba7da1688c2b7995c5daa17b086a0dfc332dc034abdf330757afae1e",
+    "projects/WS-002-recall-to-catalog-impact-review/.env.local": "6f81e0e91b71d2d337f6482f19baeac181eaaff748837bc018a09b151a2e635f",
+    "projects/WS-002-recall-to-catalog-impact-review/.gitignore": "5342d590b785dfca844cf341379d0556a23225f09dbdcbc9fa5879544897a1bb",
+    "projects/WS-002-recall-to-catalog-impact-review/.vercelignore": "81ed1016e6085036e0dc3b0fe1f7f3705796acdfe28c03e33af6e87a34086dde",
+    "projects/WS-002-recall-to-catalog-impact-review/app.py": "02f772c2a4dae4e3cff2027ef62c32c05d9394a3bc22edf7e758e22805937934",
+    "projects/WS-002-recall-to-catalog-impact-review/demo/app.js": "c3a05f263dd6bcef39e442adb18b3752acdcae0eee679c52b88e7f4bf3a4a5d7",
+    "projects/WS-002-recall-to-catalog-impact-review/demo/index.html": "936d4219e23350a59e9fceba53657d1daa2b4f1f306787f30dc8bef13c653050",
+    "projects/WS-002-recall-to-catalog-impact-review/demo/style.css": "661ab855c72c20bbdb3aa32d4c06f717929b81a590a731d315cd2253f588ae49",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/benchmark/matches.csv": "a15f41743d03cde726ec320152de69c40dd9aba5713edad04ef4ae3cd6c77708",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/benchmark/no-matches.csv": "bd1b3ac7234065edac8f9c942f21494f5a9c435eba23cae54a3cf66984a51b9b",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/benchmark/results.json": "be2d83ea438e4d74ad9043d26a1801fc8c738aa6f1982868ddfda9b0569d48f8",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/benchmark/review-needed.csv": "623f4383954831cb410b03d65237c636fe96704ab11ba84e89df2d7a831aad4e",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/benchmark/run-report.json": "89035bba92d94034c4ecccd1626752a0db8a7dbee5a19b13d08d1bf44a6b7f75",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/changed-input/matches.csv": "322ea1ada84584bf506b0ed6c684d80e9f327887056f2b18d0f133e5473210dc",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/changed-input/no-matches.csv": "bd1b3ac7234065edac8f9c942f21494f5a9c435eba23cae54a3cf66984a51b9b",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/changed-input/results.json": "e6e9c7c91d8802bcd333aec769ef7a41b40823c8e9db333f51449d225a248338",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/changed-input/review-needed.csv": "a54887df0a2e95b2751dbf64f840d0990ee4b74fa1f1764ac11d59a567b8c463",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/changed-input/run-report.json": "7cc0b6ce95c927f9649ce2d4c06f36cc06baf461fb98b2b4934bea5d88724e54",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/EXPANSION_REPAIR.md": "9423687253566859c06adcd2dc0b58e728a4193d0a8c66c1c86645a79df7830d",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/latest-run/matches.csv": "575954cc756887d04139872de2915f4deb464c49a82a188ff8e947fc7a80f009",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/latest-run/no-matches.csv": "bd1b3ac7234065edac8f9c942f21494f5a9c435eba23cae54a3cf66984a51b9b",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/latest-run/results.json": "1ff97e8a7495c91f55119b6b0cea5b260eb79382b92f2c0c7da752c28b8621a9",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/latest-run/review-needed.csv": "46e3131c06a288839da595ea9f312f410fd7d34f2d8169604af7865c5b5303c3",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/latest-run/run-report.json": "1516babfdf0964763dc353da1ad51d3120c42dabad4626c8364ee5f98b00660a",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/PROOF_REPORT.md": "bb122e973171460b05dc37543427c5c00c190594a4aa7e73149ef511a643445f",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/reviewer/ambiguous-pdf-crop.png": "eba548a3e7db0b99fc9d29d5b509cec282ecbdee8803d68f7e4df1efc24faf2c",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/reviewer/ambiguous.png": "77a7369ed616eaf86fe49661c8a647bff3f43609a4b12305894d0dbf6087c045",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/reviewer/BROWSER_VERIFICATION.md": "1ba7887d4f206b939de8db591d231996c570ded0b977ba8675fe67686c48266b",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/reviewer/clarified-pdf-crop.png": "f88191585e0d0c602add5aa5208925533bbabce5290b7484a98473d99d7616c6",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/reviewer/clarified.png": "4243c5f835b27f54cb3c98ad50d1d70d2d3cb21fccb7daa7325af50bce7771a0",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/reviewer/mobile-clarified.png": "876f0dde1adef0cbadbfda6c7323c7896e7eadf2d8ace3984af0e30459ac365a",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/reviewer/public-ambiguous.png": "020194eaf6c0cb16422abc4eabf2cc895ddb50335d653c2af8b8ec81445feb59",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/reviewer/public-clarified.png": "65757a6fb8d27146c106283b3580e44d6b4c456559ca29599a27f2ef0a70811f",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/reviewer/public-hosted-checks.png": "c02e8c8a0bd3cbd288a1e933239f5e420df923bf696a51d648a9fac3809b333e",
+    "projects/WS-002-recall-to-catalog-impact-review/evidence/VALIDATION_PLAN.json": "95dd6b2ef925bc0708136a16c4a5d03d9da7a2cb6b64a95237db0c4edc963044",
+    "projects/WS-002-recall-to-catalog-impact-review/PROJECT_MANIFEST.md": "33c270712b627a4fa20646888ff64e2f8dd57114e9d2b85bdae98ec458979989",
+    "projects/WS-002-recall-to-catalog-impact-review/README.md": "741e6d0e58dcc1ca317a4d7da3ef6b1dcf016754aefb1940e9eddbaf0afbdfe8",
+    "projects/WS-002-recall-to-catalog-impact-review/requirements.txt": "6979faed9b4726634bb0ff2b36f3e5a080e4d89a162dc1f264fce99bae332a8a",
+    "projects/WS-002-recall-to-catalog-impact-review/SOURCE_CONTRACT.md": "b7bf7ad178ca74a239fcf02f8374d4351aae312588d6119a77e8313c7310fc97",
+    "projects/WS-002-recall-to-catalog-impact-review/src/catalog_matcher.py": "18f5455515c86c193d433975bcae82fa208c9cc91424d47972c197b5e77c9248",
+    "projects/WS-002-recall-to-catalog-impact-review/src/demo_server.py": "9fe4f448431c99797c4e6d82e41eab213c368f329eb091ddba3d415151479c0b",
+    "projects/WS-002-recall-to-catalog-impact-review/src/run_proof.py": "1eb7d10f6fcd1ef062f049a2da2844a2a03d154ec4c1c0f1f713608a3977be72",
+    "projects/WS-002-recall-to-catalog-impact-review/tests/fixtures/benchmark-catalog.json": "74b247e59698197bca3abecd4c76db633efc4ad7500e8e67de838965fddcb127",
+    "projects/WS-002-recall-to-catalog-impact-review/tests/fixtures/benchmark-labels.json": "1c6c8e4a1470c3b15599bce6e444c2236ed0b3f4427a2fb97202543f4588da67",
+    "projects/WS-002-recall-to-catalog-impact-review/tests/fixtures/catalog-changed.json": "2c55750a543738f7935064dfc4aa41c7f036e8a93531247cc410d09497706dfb",
+    "projects/WS-002-recall-to-catalog-impact-review/tests/fixtures/catalog.json": "844c96686f94b2863100deabffcc1873eaae910c8d44ff05125189f7120492d6",
+    "projects/WS-002-recall-to-catalog-impact-review/tests/fixtures/expected-labels-changed.json": "0f5354c62087f2abf178323ecfc91cbd6f57e12f7126cac3bf757312e36a651d",
+    "projects/WS-002-recall-to-catalog-impact-review/tests/fixtures/expected-labels.json": "83d38c4a5cc10d1cf71c434cebb64be2316f5448a1cd81c2f44da3be9fdfc4b7",
+    "projects/WS-002-recall-to-catalog-impact-review/tests/fixtures/recalls.json": "0cc43bf475ae0b35d6ec774a3e8b7608bb8297e2b4532f4a8a0df239830817b5",
+    "projects/WS-002-recall-to-catalog-impact-review/tests/test_demo_server.py": "292d3cfd24ebcc648e9865f91f254f1de0538fdf582147677d92f5de283c3a67",
+    "projects/WS-002-recall-to-catalog-impact-review/tests/test_matcher.py": "aa2a8180f3926d040ad7f38305b45df17824073e28be8b9c869dcba2cd9b4dc0",
+    "projects/WS-002-recall-to-catalog-impact-review/tests/test_public_app.py": "b62e4c729848bf9a46aabe9edb540c5933833a91fca939dcbc6fbe42bbbd8565",
+    "projects/WS-002-recall-to-catalog-impact-review/vercel.json": "fe334fb8fe1bde438a6b4091799038bc45aa920549adc488db6ce258eff944d4",
+    "README.md": "e52a2ddcba0cb9a93fa64025e00cc2ecb69c69655acaf1aab9c759feb1116d30",
+    "scripts/build_ws002_work_sample.py": "2276e9d64106fbb0bdc451bdc5166e8886a3bbb2628c6114ba4462aece6d7cfb"
+  },
+  "checks": [
+    {
+      "id": "tests-full-suite",
+      "status": "PASS",
+      "observed": "Exactly 21 tests ran and passed in 0.685 seconds. The suite meaningfully exercised matcher decisions, the 20-label oracle, provenance, determinism, local HTTP behavior, hosted adapter behavior, exports and security boundaries. A non-failing ResourceWarning from test response cleanup was recorded.",
+      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-validation/tests-full-suite.md",
+      "evidenceSha256": "462ef82bbc52525daa2bf30c5c8fda7c1761698ecc76d0ba00e4f99bccd81aea"
+    },
+    {
+      "id": "demo-contrasting-run",
+      "status": "PASS",
+      "observed": "The no-login public demo produced default CAT-005 review_needed with 6/1/1 counts and clarified CAT-005 match to D-0709-2026 with 7/0/1 counts. The input hash changed, engine hash remained unchanged, provenance remained visible and 13 hosted checks passed.",
+      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-validation/demo-contrasting-run.md",
+      "evidenceSha256": "cfcef7a0128443759eef4c312f2bbbad389312382009bf3ad65a2892c1caf6ff"
+    },
+    {
+      "id": "edge-ambiguous-and-rejected-input",
+      "status": "PASS",
+      "observed": "The shared-UPC 100 mcg row retained D-0709-2026 and D-0711-2026 and stayed review_needed. Unexpected input returned 400, cross-site POST returned 403, whitespace-only product input failed closed in the public demo and an added unknown-export request returned 404.",
+      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-validation/edge-ambiguous-and-rejected-input.md",
+      "evidenceSha256": "3aa136d53581f855fb41db4d5b621278702295a25723beb0b5006503a2dbc47b"
+    },
+    {
+      "id": "exports-executed-result",
+      "status": "PASS",
+      "observed": "Public JSON and CSV downloads for displayed run 865280a5 completed. JSON preserved full run ID, CAT-005 classification, reasons, hashes and provenance; CSV preserved CAT-005,review_needed, both candidate recall numbers and the same reasons. Direct adapter exports also returned 200 and matched their execution.",
+      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-validation/exports-executed-result.md",
+      "evidenceSha256": "967bdb30a09d192b6476be78b3c9d59f80b4d219b69fa78fd4ff48d11031cd25"
+    },
+    {
+      "id": "pdf-three-page-visual",
+      "status": "PASS",
+      "observed": "Exactly three pages rendered at 144 dpi equivalent and were visually inspected. All pages were readable with coherent order, no overlap or page-edge clipping, authentic app screenshots and matching metrics. Page 3 contained working HTTPS demo and public repository links.",
+      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-validation/pdf-three-page-visual.md",
+      "evidenceSha256": "c96a0f9676033d6797450292232923fcd3872c59859c3df96b21f848024d8d22"
+    },
+    {
+      "id": "claims-trace-to-evidence",
+      "status": "PASS",
+      "observed": "README, Manifest, PDF, checklist, recorded benchmark, fresh 21-test run, source fixture and independent benchmark replay agree on 20/20, 13/1/6, 21 tests and one recorded request. All surfaces distinguish fixture results from production accuracy and prohibited use claims.",
+      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-validation/claims-trace-to-evidence.md",
+      "evidenceSha256": "fd718770d8f387f6db5b88e3c2c2695b5c5694add6b42eda9c0c56f4a4e82bce"
+    },
+    {
+      "id": "boundaries-public-safe",
+      "status": "FAIL",
+      "observed": "Committed/public source fields, routes, fixtures and claims satisfied the bounded behavior, but the current project tree contains an ignored .env.local with a VERCEL_OIDC_TOKEN. The gate includes this file in artifact coverage, so the no-credentials expectation and portable evidence requirement are not met.",
+      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-validation/boundaries-public-safe.md",
+      "evidenceSha256": "fcdf49a76ea552319ea0de84784d02319d81b07e6c67f98823955257ec858750"
+    }
+  ]
+}

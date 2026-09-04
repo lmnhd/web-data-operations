@@ -41,6 +41,10 @@ class GateTests(unittest.TestCase):
     def test_valid(self):
         self.assertEqual(check(self.state, self.root), [])
 
+    def test_machine_local_environment_file_is_excluded(self):
+        (self.project / '.env.local').write_text('VERCEL_OIDC_TOKEN=secret-not-validation-evidence')
+        self.assertEqual(check(self.state, self.root), [])
+
     def test_missing(self):
         self.report_path.unlink()
         self.assertTrue(check(self.state, self.root))
