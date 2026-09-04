@@ -1,0 +1,2 @@
+process_id,ocid,previous_release_id,current_release_id,source_tags,changed_fields,decision,reason_codes,source_url,retrieved_at,content_fingerprint
+ocds-h6vhtk-06bb7d,ocds-h6vhtk-06bb7d,059143-2026,076161-2026,tenderCancellation,tender.status|tender.tenderPeriod.endDate|tender.value.amount|tender.value.currency|tender.lots,review-needed,MISSING_CLASSIFICATION|MISSING_VALUE|MISSING_DEADLINE,https://www.find-tender.service.gov.uk/api/1.0/ocdsRecordPackages/ocds-h6vhtk-06bb7d,2026-09-03T20:43:30Z,344a4dbdc7d6ecc164ba3c7bcb554c75d4b30358a66402e5ce13afda93fb3fb5

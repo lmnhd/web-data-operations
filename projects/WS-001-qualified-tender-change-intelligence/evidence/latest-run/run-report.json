@@ -1,0 +1,122 @@
+{
+  "summary": {
+    "input_releases": 8,
+    "processes": 4,
+    "comparisons": 4,
+    "update_tagged_comparisons": 4,
+    "material_change_comparisons": 3,
+    "accepted": 1,
+    "rejected": 2,
+    "review_needed": 1
+  },
+  "queues": {
+    "accepted": [
+      {
+        "ocid": "ocds-demo-qualified-change",
+        "previous_release_id": "qualified-1",
+        "current_release_id": "qualified-2",
+        "source_tags": [
+          "tenderUpdate"
+        ],
+        "changes": [
+          {
+            "field": "tender.tenderPeriod.endDate",
+            "old": "2026-09-18T12:00:00Z",
+            "new": "2026-09-25T12:00:00Z"
+          }
+        ],
+        "decision": "accepted",
+        "reason_codes": [
+          "QUALIFICATION_RULES_PASSED"
+        ],
+        "provenance": {
+          "source_url": "fixture://synthetic-fts-release-package",
+          "retrieved_at": "2026-09-03T16:00:00Z",
+          "content_fingerprint": "3ec6d1241cb991d8a515370c6b77ef2303ccb734386e80cb03496839a32d6b76",
+          "release_id": "qualified-2",
+          "ocid": "ocds-demo-qualified-change",
+          "process_id": "ocds-demo-qualified-change"
+        }
+      }
+    ],
+    "rejected": [
+      {
+        "ocid": "ocds-demo-unchanged",
+        "previous_release_id": "unchanged-1",
+        "current_release_id": "unchanged-2",
+        "source_tags": [
+          "tenderUpdate"
+        ],
+        "changes": [],
+        "decision": "rejected",
+        "reason_codes": [
+          "NO_MATERIAL_CHANGE"
+        ],
+        "provenance": {
+          "source_url": "fixture://synthetic-fts-release-package",
+          "retrieved_at": "2026-09-03T16:00:00Z",
+          "content_fingerprint": "94647b73e7d3d98512536a6a213d65cf1bf55bc8626b5c2be653d5f5317d5fd1",
+          "release_id": "unchanged-2",
+          "ocid": "ocds-demo-unchanged",
+          "process_id": "ocds-demo-unchanged"
+        }
+      },
+      {
+        "ocid": "ocds-demo-unqualified-change",
+        "previous_release_id": "unqualified-1",
+        "current_release_id": "unqualified-2",
+        "source_tags": [
+          "tenderUpdate"
+        ],
+        "changes": [
+          {
+            "field": "tender.tenderPeriod.endDate",
+            "old": "2026-09-22T12:00:00Z",
+            "new": "2026-09-24T12:00:00Z"
+          }
+        ],
+        "decision": "rejected",
+        "reason_codes": [
+          "CLASSIFICATION_NOT_ALLOWED"
+        ],
+        "provenance": {
+          "source_url": "fixture://synthetic-fts-release-package",
+          "retrieved_at": "2026-09-03T16:00:00Z",
+          "content_fingerprint": "06b1cbaa9b4b43cff3278d5b5336fee84dc8a579afae34b59ce51f77ed2faa4d",
+          "release_id": "unqualified-2",
+          "ocid": "ocds-demo-unqualified-change",
+          "process_id": "ocds-demo-unqualified-change"
+        }
+      }
+    ],
+    "review-needed": [
+      {
+        "ocid": "ocds-demo-review-change",
+        "previous_release_id": "review-1",
+        "current_release_id": "review-2",
+        "source_tags": [
+          "tenderUpdate"
+        ],
+        "changes": [
+          {
+            "field": "tender.status",
+            "old": "planning",
+            "new": "active"
+          }
+        ],
+        "decision": "review-needed",
+        "reason_codes": [
+          "MISSING_CLASSIFICATION"
+        ],
+        "provenance": {
+          "source_url": "fixture://synthetic-fts-release-package",
+          "retrieved_at": "2026-09-03T16:00:00Z",
+          "content_fingerprint": "e9f21a7910ea968f183d640e1e571fa429ffb7a6f43fe6407e3396735f8a5ed6",
+          "release_id": "review-2",
+          "ocid": "ocds-demo-review-change",
+          "process_id": "ocds-demo-review-change"
+        }
+      }
+    ]
+  }
+}

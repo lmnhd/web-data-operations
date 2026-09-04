@@ -1,0 +1,218 @@
+{
+  "capture": {
+    "sourceUrl": "https://www.find-tender.service.gov.uk/api/1.0/ocdsRecordPackages/ocds-h6vhtk-06d396",
+    "retrievedAt": "2026-09-03T20:42:46Z",
+    "requestCount": 1,
+    "rawPayloadPersisted": false,
+    "excludedFieldClasses": [
+      "contactPoint",
+      "description",
+      "unstructured free text"
+    ],
+    "sourceLicense": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "attribution": "Contains public sector information licensed under the Open Government Licence v3.0."
+  },
+  "records": [
+    {
+      "ocid": "ocds-h6vhtk-06d396",
+      "releases": [
+        {
+          "ocid": "ocds-h6vhtk-06d396",
+          "id": "070437-2026",
+          "date": "2026-07-24T15:51:20+01:00",
+          "tag": [
+            "tender"
+          ],
+          "tender": {
+            "status": "active",
+            "tenderPeriod": {
+              "endDate": "2026-08-17T09:00:00+01:00"
+            },
+            "value": {
+              "amount": 41666,
+              "currency": "GBP"
+            },
+            "classification": {
+              "id": null
+            },
+            "lots": [
+              {
+                "id": "1",
+                "status": "active"
+              }
+            ]
+          },
+          "sourceFingerprint": "8f1085520cd8384ec32632e58e49836278a9f29a44b9afcb284325dd12aa4030"
+        },
+        {
+          "ocid": "ocds-h6vhtk-06d396",
+          "id": "070826-2026",
+          "date": "2026-07-27T14:26:53+01:00",
+          "tag": [
+            "tenderUpdate"
+          ],
+          "tender": {
+            "status": "active",
+            "tenderPeriod": {
+              "endDate": "2026-08-17T09:00:00+01:00"
+            },
+            "value": {
+              "amount": 41666,
+              "currency": "GBP"
+            },
+            "classification": {
+              "id": null
+            },
+            "lots": [
+              {
+                "id": "1",
+                "status": "active"
+              }
+            ]
+          },
+          "sourceFingerprint": "ded94901da726ab05af81f9167d0399ef21150a7f0600a08ddb93ac7a18a4f4b"
+        },
+        {
+          "ocid": "ocds-h6vhtk-06d396",
+          "id": "071753-2026",
+          "date": "2026-07-29T14:24:52+01:00",
+          "tag": [
+            "tenderUpdate"
+          ],
+          "tender": {
+            "status": "active",
+            "tenderPeriod": {
+              "endDate": "2026-08-17T09:00:00+01:00"
+            },
+            "value": {
+              "amount": 41666,
+              "currency": "GBP"
+            },
+            "classification": {
+              "id": null
+            },
+            "lots": [
+              {
+                "id": "1",
+                "status": "active"
+              }
+            ]
+          },
+          "sourceFingerprint": "8f606632f2c80971311b13a6b4a3318b5aeaccddb25a7a821216344408faba40"
+        },
+        {
+          "ocid": "ocds-h6vhtk-06d396",
+          "id": "072233-2026",
+          "date": "2026-07-30T14:20:11+01:00",
+          "tag": [
+            "tenderUpdate"
+          ],
+          "tender": {
+            "status": "active",
+            "tenderPeriod": {
+              "endDate": "2026-08-17T09:00:00+01:00"
+            },
+            "value": {
+              "amount": 41666,
+              "currency": "GBP"
+            },
+            "classification": {
+              "id": null
+            },
+            "lots": [
+              {
+                "id": "1",
+                "status": "active"
+              }
+            ]
+          },
+          "sourceFingerprint": "b0ac1e3424874af29b4c75c7344980fed02b1d8c41ebaa4b9cd693f2224aa383"
+        },
+        {
+          "ocid": "ocds-h6vhtk-06d396",
+          "id": "073810-2026",
+          "date": "2026-08-04T15:28:20+01:00",
+          "tag": [
+            "tenderUpdate"
+          ],
+          "tender": {
+            "status": "active",
+            "tenderPeriod": {
+              "endDate": "2026-08-17T09:00:00+01:00"
+            },
+            "value": {
+              "amount": 41666,
+              "currency": "GBP"
+            },
+            "classification": {
+              "id": null
+            },
+            "lots": [
+              {
+                "id": "1",
+                "status": "active"
+              }
+            ]
+          },
+          "sourceFingerprint": "13d4aa90a5871e235a49545acf3d0aa54c2ab91eb315f50b824838040bd5b8b0"
+        },
+        {
+          "ocid": "ocds-h6vhtk-06d396",
+          "id": "074894-2026",
+          "date": "2026-08-06T15:42:57+01:00",
+          "tag": [
+            "tenderUpdate"
+          ],
+          "tender": {
+            "status": "active",
+            "tenderPeriod": {
+              "endDate": "2026-08-17T09:00:00+01:00"
+            },
+            "value": {
+              "amount": 41666,
+              "currency": "GBP"
+            },
+            "classification": {
+              "id": null
+            },
+            "lots": [
+              {
+                "id": "1",
+                "status": "active"
+              }
+            ]
+          },
+          "sourceFingerprint": "286e3e4ede4ed6eb77340fc7ee46b086bfa554cb61361edbbd0345c612d7ebf4"
+        },
+        {
+          "ocid": "ocds-h6vhtk-06d396",
+          "id": "076158-2026",
+          "date": "2026-08-11T11:54:32+01:00",
+          "tag": [
+            "tenderUpdate"
+          ],
+          "tender": {
+            "status": "active",
+            "tenderPeriod": {
+              "endDate": "2026-08-17T09:00:00+01:00"
+            },
+            "value": {
+              "amount": 41666,
+              "currency": "GBP"
+            },
+            "classification": {
+              "id": null
+            },
+            "lots": [
+              {
+                "id": "1",
+                "status": "active"
+              }
+            ]
+          },
+          "sourceFingerprint": "bd5d8fd85a6d102468dec2417c1ee2cb74c51af37a2c4614bc062a1506ad5f80"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "capture": {
+    "sourceUrl": "https://www.find-tender.service.gov.uk/api/1.0/ocdsRecordPackages/ocds-h6vhtk-06bb7d",
+    "retrievedAt": "2026-09-03T20:43:30Z",
+    "requestCount": 1,
+    "rawPayloadPersisted": false,
+    "excludedFieldClasses": [
+      "contactPoint",
+      "description",
+      "unstructured free text"
+    ],
+    "sourceLicense": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "attribution": "Contains public sector information licensed under the Open Government Licence v3.0."
+  },
+  "records": [
+    {
+      "ocid": "ocds-h6vhtk-06bb7d",
+      "releases": [
+        {
+          "ocid": "ocds-h6vhtk-06bb7d",
+          "id": "059143-2026",
+          "date": "2026-06-23T16:43:47+01:00",
+          "tag": [
+            "tender"
+          ],
+          "tender": {
+            "status": "active",
+            "tenderPeriod": {
+              "endDate": "2026-07-07T12:00:00+01:00"
+            },
+            "value": {
+              "amount": 800000,
+              "currency": "GBP"
+            },
+            "classification": {
+              "id": null
+            },
+            "lots": [
+              {
+                "id": "1",
+                "status": "active"
+              }
+            ]
+          },
+          "sourceFingerprint": "a4d2f5b4d4c9f6439ce7e6cc381f399465f619e9c8185b42758a2cb4a6cd9065"
+        },
+        {
+          "ocid": "ocds-h6vhtk-06bb7d",
+          "id": "076161-2026",
+          "date": "2026-08-11T11:56:01+01:00",
+          "tag": [
+            "tenderCancellation"
+          ],
+          "tender": {
+            "status": "complete",
+            "tenderPeriod": {
+              "endDate": null
+            },
+            "value": {
+              "amount": null,
+              "currency": null
+            },
+            "classification": {
+              "id": null
+            },
+            "lots": [
+              {
+                "id": "1",
+                "status": "complete"
+              }
+            ]
+          },
+          "sourceFingerprint": "344a4dbdc7d6ecc164ba3c7bcb554c75d4b30358a66402e5ce13afda93fb3fb5"
+        }
+      ]
+    }
+  ]
+}

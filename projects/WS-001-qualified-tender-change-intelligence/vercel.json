@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "flask",
+  "functions": {
+    "app.py": {
+      "maxDuration": 15,
+      "excludeFiles": "{evidence/proof-lab/**,evidence/live/run-*/**,evidence/latest-run/**,**/__pycache__/**,.venv/**}"
+    }
+  }
+}

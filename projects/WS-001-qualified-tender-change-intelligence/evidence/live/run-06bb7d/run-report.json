@@ -1,0 +1,77 @@
+{
+  "summary": {
+    "input_releases": 2,
+    "processes": 1,
+    "comparisons": 1,
+    "update_tagged_comparisons": 0,
+    "material_change_comparisons": 1,
+    "accepted": 0,
+    "rejected": 0,
+    "review_needed": 1
+  },
+  "queues": {
+    "accepted": [],
+    "rejected": [],
+    "review-needed": [
+      {
+        "ocid": "ocds-h6vhtk-06bb7d",
+        "previous_release_id": "059143-2026",
+        "current_release_id": "076161-2026",
+        "source_tags": [
+          "tenderCancellation"
+        ],
+        "changes": [
+          {
+            "field": "tender.status",
+            "old": "active",
+            "new": "complete"
+          },
+          {
+            "field": "tender.tenderPeriod.endDate",
+            "old": "2026-07-07T12:00:00+01:00",
+            "new": null
+          },
+          {
+            "field": "tender.value.amount",
+            "old": 800000,
+            "new": null
+          },
+          {
+            "field": "tender.value.currency",
+            "old": "GBP",
+            "new": null
+          },
+          {
+            "field": "tender.lots",
+            "old": [
+              {
+                "id": "1",
+                "status": "active"
+              }
+            ],
+            "new": [
+              {
+                "id": "1",
+                "status": "complete"
+              }
+            ]
+          }
+        ],
+        "decision": "review-needed",
+        "reason_codes": [
+          "MISSING_CLASSIFICATION",
+          "MISSING_VALUE",
+          "MISSING_DEADLINE"
+        ],
+        "provenance": {
+          "source_url": "https://www.find-tender.service.gov.uk/api/1.0/ocdsRecordPackages/ocds-h6vhtk-06bb7d",
+          "retrieved_at": "2026-09-03T20:43:30Z",
+          "content_fingerprint": "344a4dbdc7d6ecc164ba3c7bcb554c75d4b30358a66402e5ce13afda93fb3fb5",
+          "release_id": "076161-2026",
+          "ocid": "ocds-h6vhtk-06bb7d",
+          "process_id": "ocds-h6vhtk-06bb7d"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "allowedClassificationPrefixes": ["45", "72"],
+  "minimumValue": 50000,
+  "maximumValue": 5000000,
+  "deadlineOnOrAfter": "2026-09-10T00:00:00Z"
+}

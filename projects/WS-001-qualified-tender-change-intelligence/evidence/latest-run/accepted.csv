@@ -1,0 +1,2 @@
+process_id,ocid,previous_release_id,current_release_id,source_tags,changed_fields,decision,reason_codes,source_url,retrieved_at,content_fingerprint
+ocds-demo-qualified-change,ocds-demo-qualified-change,qualified-1,qualified-2,tenderUpdate,tender.tenderPeriod.endDate,accepted,QUALIFICATION_RULES_PASSED,fixture://synthetic-fts-release-package,2026-09-03T16:00:00Z,3ec6d1241cb991d8a515370c6b77ef2303ccb734386e80cb03496839a32d6b76
