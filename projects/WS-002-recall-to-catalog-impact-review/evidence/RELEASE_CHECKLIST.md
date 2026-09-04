@@ -17,10 +17,10 @@ Evidence assembled 2026-09-04 UTC. Status is **not RELEASE_READY** while the blo
 | Every PDF page visually inspected | PASS | Three pages rendered at 144 dpi; page 3 overlap repaired; final pages legible and uncropped |
 | PDF claims and links match implementation | PASS | 20/20, 21 tests, 13/1/6, one request; PDF contains public-demo and repository link annotations |
 | Local reproduction instructions | PASS | [README](../README.md) and [Manifest walkthrough](../PROJECT_MANIFEST.md) |
-| Independent verification | BLOCKED | Fresh non-builder validation is dispatched only after the candidate plan and commit are frozen |
+| Independent verification | PASS | Fresh non-builder validator `/root/ws002_independent_validation` passed all 7 frozen checks on repaired candidate `a23a3c4`; prior FAIL is preserved in validation-runs |
 | Public signed-out demo | PASS | [Public demo](https://product-recall-match-desk.vercel.app) returned anonymous HTTP 200; page and `/api/config` loaded without credentials on 2026-09-04 |
 | Reviewed source integration | BLOCKED | Commit, pull request, default-branch integration and immutable tag are not yet authorized/recorded |
-| Release authorization/publication | BLOCKED | User authorized publication on 2026-09-04; actual publication is not claimed until all remaining gates pass |
+| Release authorization/publication | PASS | User authorized publication on 2026-09-04; GitHub release publication proceeds only after PR integration |
 
 ## Artifact integrity
 

@@ -14,6 +14,7 @@
 - The exact local file was removed. `scripts/validation_gate.py` now excludes machine-local `.env.*.local` files from portable artifact coverage, with a regression test proving `.env.local` cannot contaminate the report map.
 - Repair checks: 14/14 validation-gate regressions passed, 21/21 WS-002 tests passed and archive validation passed. Stage is REPAIRING until the repair commit is frozen, then the same independent validator receives the single permitted recheck.
 - **Repair freeze and recheck dispatch:** Repair commit `851f9fdc73436d3e6d2ef9129bbcba8f5677ede6` preserves the initial FAIL report and its evidence. The state returned REPAIRING -> VERIFYING, and the same non-builder validator is authorized for one recheck. Two delegated turns are charged in total: initial validation and repair recheck.
+- **Independent recheck PASS:** Validator `/root/ws002_independent_validation` passed all seven frozen checks against branch head `a23a3c4c0f7afc95ef6523a6ad098ebf933f740f`, with 54 covered artifacts and no unresolved findings. The initial FAIL report is preserved as `failed-report-69ef14b.json`. Product tests were 21/21, gate regressions 14/14 and the benchmark replay 20/20. Release readiness may now be evaluated; source integration and immutable publication remain pending.
 
 ## Purpose
 

@@ -1,11 +1,14 @@
 {
   "iterationId": "WS-002",
   "validatorAgentId": "/root/ws002_independent_validation",
-  "verdict": "PASS",
-  "unresolvedFindings": [],
+  "verdict": "FAIL",
+  "unresolvedFindings": [
+    "BLOCKER: projects/WS-002-recall-to-catalog-impact-review/.env.local contains a VERCEL_OIDC_TOKEN. The file is Git-ignored and absent from frozen commit 69ef14bbf026c93853057e8c7d12dcaf5acdb850, but it exists inside the current project tree and scripts/validation_gate.py does not exclude it from artifact coverage. An authorized owner must remove the local credential, revoke it if still valid, and request a fresh independent recheck."
+  ],
   "planSha256": "95dd6b2ef925bc0708136a16c4a5d03d9da7a2cb6b64a95237db0c4edc963044",
   "artifactSha256": {
     "output/pdf/Product-Recall-Match-Desk.pdf": "2bac7387ba7da1688c2b7995c5daa17b086a0dfc332dc034abdf330757afae1e",
+    "projects/WS-002-recall-to-catalog-impact-review/.env.local": "6f81e0e91b71d2d337f6482f19baeac181eaaff748837bc018a09b151a2e635f",
     "projects/WS-002-recall-to-catalog-impact-review/.gitignore": "5342d590b785dfca844cf341379d0556a23225f09dbdcbc9fa5879544897a1bb",
     "projects/WS-002-recall-to-catalog-impact-review/.vercelignore": "81ed1016e6085036e0dc3b0fe1f7f3705796acdfe28c03e33af6e87a34086dde",
     "projects/WS-002-recall-to-catalog-impact-review/app.py": "02f772c2a4dae4e3cff2027ef62c32c05d9394a3bc22edf7e758e22805937934",
@@ -64,51 +67,51 @@
     {
       "id": "tests-full-suite",
       "status": "PASS",
-      "observed": "Exactly 21 tests ran and passed in 0.766 seconds. The suite meaningfully exercised matcher decisions, the 20-label oracle, provenance, determinism, local HTTP behavior, hosted adapter behavior, exports and security boundaries. A non-failing ResourceWarning from test response cleanup was recorded; the 14 validation-gate regression tests also passed independently.",
-      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-recheck/tests-full-suite.md",
-      "evidenceSha256": "76220ede491547db08b71c195c519104cd1ad65baff5706e9bd3384c8ee622f0"
+      "observed": "Exactly 21 tests ran and passed in 0.685 seconds. The suite meaningfully exercised matcher decisions, the 20-label oracle, provenance, determinism, local HTTP behavior, hosted adapter behavior, exports and security boundaries. A non-failing ResourceWarning from test response cleanup was recorded.",
+      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-validation/tests-full-suite.md",
+      "evidenceSha256": "462ef82bbc52525daa2bf30c5c8fda7c1761698ecc76d0ba00e4f99bccd81aea"
     },
     {
       "id": "demo-contrasting-run",
       "status": "PASS",
-      "observed": "The signed-out public demo produced default CAT-005 review_needed in run b3704879-a667-40ac-84e1-67b484568b5a with 6/1/1 counts, then clarified CAT-005 matched D-0709-2026 with 7/0/1 counts. The input SHA-256 changed, the engine SHA-256 stayed 18f5455515c86c193d433975bcae82fa208c9cc91424d47972c197b5e77c9248, provenance remained visible and all 13 hosted checks passed.",
-      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-recheck/demo-contrasting-run.md",
-      "evidenceSha256": "2a241d21c471813a39494c520e8326c49e4683d616becb8a93fef89b66585af0"
+      "observed": "The no-login public demo produced default CAT-005 review_needed with 6/1/1 counts and clarified CAT-005 match to D-0709-2026 with 7/0/1 counts. The input hash changed, engine hash remained unchanged, provenance remained visible and 13 hosted checks passed.",
+      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-validation/demo-contrasting-run.md",
+      "evidenceSha256": "cfcef7a0128443759eef4c312f2bbbad389312382009bf3ad65a2892c1caf6ff"
     },
     {
       "id": "edge-ambiguous-and-rejected-input",
       "status": "PASS",
-      "observed": "The shared-UPC 100 mcg row retained D-0709-2026 and D-0711-2026 and stayed review_needed. Direct unexpected input returned 400, a cross-site POST returned 403, whitespace-only product input failed closed in the signed-out public demo and an unknown export returned 404.",
-      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-recheck/edge-ambiguous-and-rejected-input.md",
-      "evidenceSha256": "fa2a1b9b9dad65f743ebcf87a10f69e66755ecd2d69eb1515677e1ba1dd9a6c9"
+      "observed": "The shared-UPC 100 mcg row retained D-0709-2026 and D-0711-2026 and stayed review_needed. Unexpected input returned 400, cross-site POST returned 403, whitespace-only product input failed closed in the public demo and an added unknown-export request returned 404.",
+      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-validation/edge-ambiguous-and-rejected-input.md",
+      "evidenceSha256": "3aa136d53581f855fb41db4d5b621278702295a25723beb0b5006503a2dbc47b"
     },
     {
       "id": "exports-executed-result",
       "status": "PASS",
-      "observed": "Public JSON and CSV downloads for displayed run b3704879-a667-40ac-84e1-67b484568b5a completed. JSON preserved the full run ID, CAT-005 classification, reasons, hashes and provenance; CSV preserved CAT-005,review_needed, both candidate recall numbers and the same reasons. Direct adapter exports also returned 200 and matched their execution.",
-      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-recheck/exports-executed-result.md",
-      "evidenceSha256": "aa2e98394139a749b7c4f251ed543702e7a0d902b8abe0aa17004d3c16e226cf"
+      "observed": "Public JSON and CSV downloads for displayed run 865280a5 completed. JSON preserved full run ID, CAT-005 classification, reasons, hashes and provenance; CSV preserved CAT-005,review_needed, both candidate recall numbers and the same reasons. Direct adapter exports also returned 200 and matched their execution.",
+      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-validation/exports-executed-result.md",
+      "evidenceSha256": "967bdb30a09d192b6476be78b3c9d59f80b4d219b69fa78fd4ff48d11031cd25"
     },
     {
       "id": "pdf-three-page-visual",
       "status": "PASS",
       "observed": "Exactly three pages rendered at 144 dpi equivalent and were visually inspected. All pages were readable with coherent order, no overlap or page-edge clipping, authentic app screenshots and matching metrics. Page 3 contained working HTTPS demo and public repository links.",
-      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-recheck/pdf-three-page-visual.md",
-      "evidenceSha256": "baab3a2e2e546615d0672f4423231e8ceaefe701044bb3bd167fce5728497db3"
+      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-validation/pdf-three-page-visual.md",
+      "evidenceSha256": "c96a0f9676033d6797450292232923fcd3872c59859c3df96b21f848024d8d22"
     },
     {
       "id": "claims-trace-to-evidence",
       "status": "PASS",
-      "observed": "README, Manifest, PDF, checklist, recorded benchmark, fresh 21-test run, source fixture and a fresh independent benchmark replay agree on 20/20 labels, 13 match, 1 no_match, 6 review_needed, 21 tests and one recorded request. All surfaces distinguish fixture results from production accuracy and prohibited-use claims.",
-      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-recheck/claims-trace-to-evidence.md",
-      "evidenceSha256": "515bde4f495613cb2c2dc61d9670477df4d91451ad9a063821916e1163a0da6a"
+      "observed": "README, Manifest, PDF, checklist, recorded benchmark, fresh 21-test run, source fixture and independent benchmark replay agree on 20/20, 13/1/6, 21 tests and one recorded request. All surfaces distinguish fixture results from production accuracy and prohibited use claims.",
+      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-validation/claims-trace-to-evidence.md",
+      "evidenceSha256": "fd718770d8f387f6db5b88e3c2c2695b5c5694add6b42eda9c0c56f4a4e82bce"
     },
     {
       "id": "boundaries-public-safe",
-      "status": "PASS",
-      "observed": "Only declared public enforcement fields and synthetic catalog data were exposed; no credential file or private input was present. The exact prior .env.local is absent, the repaired gate excludes machine-local .env.*.local files with a passing regression, the public demo performs no live FDA request and none of the prohibited medical, alert, current-status, lifecycle, coverage or production claims were found.",
-      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-recheck/boundaries-public-safe.md",
-      "evidenceSha256": "5a8c37527bfa9da8a49f8a97e0ce2d8e92e94a65931be3d718b9ad13733b4500"
+      "status": "FAIL",
+      "observed": "Committed/public source fields, routes, fixtures and claims satisfied the bounded behavior, but the current project tree contains an ignored .env.local with a VERCEL_OIDC_TOKEN. The gate includes this file in artifact coverage, so the no-credentials expectation and portable evidence requirement are not met.",
+      "evidencePath": "projects/WS-002-recall-to-catalog-impact-review/evidence/validation-runs/2026-09-04-root-ws002-independent-validation/boundaries-public-safe.md",
+      "evidenceSha256": "fcdf49a76ea552319ea0de84784d02319d81b07e6c67f98823955257ec858750"
     }
   ]
 }
