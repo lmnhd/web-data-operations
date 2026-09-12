@@ -62,6 +62,17 @@ class TestFlaskAdapter(unittest.TestCase):
         self.assertEqual(response.status_code, 400)
         self.assertIn(b"Unknown SLA rule categories", response.data)
 
+    def test_falsey_non_object_rules_are_rejected(self) -> None:
+        for invalid_rules in ([], "", False, 0, None):
+            with self.subTest(rules=invalid_rules):
+                response = self.client.post(
+                    "/api/run",
+                    json={"rules": invalid_rules},
+                    headers={"Origin": "http://localhost"},
+                )
+                self.assertEqual(response.status_code, 400)
+                self.assertIn(b"Rules must be an object", response.data)
+
 
 if __name__ == "__main__":
     unittest.main()

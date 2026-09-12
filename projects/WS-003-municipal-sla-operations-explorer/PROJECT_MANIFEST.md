@@ -109,9 +109,9 @@ Shared Shipping Pipeline gates and WS-001 presentation structure were reused. Th
 | Synthetic oracle agreement | 15/15 | `evidence/evaluated_run.json` | Deterministic fixture agreement, not production accuracy |
 | Status counts | 8 / 1 / 5 / 1 | `evidence/evaluated_run.json` | Compliant / at-risk / breached / review in the scenario |
 | Scenario ward rate | 40.0% | `evidence/evaluated_run.json` | Fictional Ward 01 scenario, not a City metric |
-| Automated tests | 14/14 | Independent validation test log | Engine and Flask adapter scope only |
+| Automated tests | 15/15 | Independent validation test log | Engine and Flask adapter scope only |
 
-The changed-rule scenario reclassifies synthetic `SR-311-001`; malformed timestamps, reversed chronology, future creation dates, and unmapped categories route safely to review. Fractional and unknown rule overrides are rejected. `evidence/VALIDATION_PLAN.json` freezes the seven required validation categories. `evidence/INDEPENDENT_VALIDATION.json` is valid only when its fresh non-builder verdict is PASS and the executable hash gate passes.
+The changed-rule scenario reclassifies synthetic `SR-311-001`; malformed timestamps, reversed chronology, future creation dates, and unmapped categories route safely to review. Fractional, unknown, and falsey non-object rule overrides are rejected. `evidence/VALIDATION_PLAN.json` freezes the seven required validation categories. `evidence/INDEPENDENT_VALIDATION.json` is valid only when its fresh non-builder verdict is PASS and the executable hash gate passes.
 
 ## 10. Limitations and non-goals
 

@@ -77,8 +77,12 @@ def code():
 
 @app.post("/api/run")
 def run():
-    data = request.get_json(silent=True) or {}
-    rules_override = data.get("rules")
+    data = request.get_json(silent=True)
+    if not isinstance(data, dict):
+        return jsonify(error="Request body must be a JSON object."), 400
+    rules_override = data.get("rules") if "rules" in data else {}
+    if not isinstance(rules_override, dict):
+        return jsonify(error="Rules must be an object."), 400
     try:
         result = demo.run_demo(rules_override=rules_override)
     except (ValueError, TypeError) as error:

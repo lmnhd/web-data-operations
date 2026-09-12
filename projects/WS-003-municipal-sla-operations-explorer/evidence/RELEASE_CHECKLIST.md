@@ -9,12 +9,12 @@ Closeout resumed 2026-09-12 UTC. Statuses remain fail-closed until evidence is r
 | Meaningful rule change | PASS | Hypothetical Pothole target 5d -> 3d reclassifies synthetic `SR-311-001` |
 | Edge/safe state | PASS | Malformed creation timestamp routes to `INCOMPLETE_DATA_REVIEW` |
 | JSON/CSV exports | PASS | Labeled rows with reason codes and fingerprints |
-| Builder-side automated tests | PASS | `python -m unittest discover projects/WS-003-municipal-sla-operations-explorer/tests`: 14/14 on 2026-09-12 |
+| Builder-side automated tests | PASS | `python -m unittest discover projects/WS-003-municipal-sla-operations-explorer/tests`: 15/15 on 2026-09-12, including falsey non-object rule payloads |
 | Official source contract | PASS | 2026 ZIP columns verified; missing target/closure timestamps disclosed |
 | Visual three-page PDF | PASS | Rebuilt after title-overlap repair; synthetic boundaries visible |
 | Actual working-output screenshot | PASS | `evidence/reviewer/working-demo.png` and `evidence/reviewer/working-demo-pdf.png`, captured from the corrected local demo on 2026-09-12 |
-| Independent verification | FAIL | `/root/ws003_release_validator` failed repair candidate `2addbb6`; falsey non-object `rules` payloads bypass validation |
-| Executable hash gate | FAIL | Hash-bound report is complete but verdict is FAIL; the release-stage gate rejects it |
+| Independent verification | BLOCKED | Prior FAIL reports are preserved; fresh `/root/ws003_final_validator` PASS is required for the additional repair candidate |
+| Executable hash gate | BLOCKED | Run after the fresh independent report covers the final candidate hashes |
 | Signed-out public demo | PASS | Production alias redeployed 2026-09-12; anonymous page/config/default/strict/fractional-rule checks passed and expose `synthetic_sla_scenario` |
 | Upwork publication | PASS | User confirms item number 3 is published; corrected copy/PDF refresh remains |
 | Reviewed source integration | BLOCKED | Pull request/default-branch integration required |

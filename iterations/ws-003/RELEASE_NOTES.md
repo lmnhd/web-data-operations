@@ -9,7 +9,7 @@ WS-003 demonstrates an adapter-ready service-response evaluation workflow over 1
 - Timestamp normalization, lifecycle mapping, and explicit review routing.
 - Synthetic ward scenario aggregation.
 - Machine-readable `synthetic_sla_scenario` labels in JSON/CSV exports.
-- Predeclared fixture-label agreement of 15/15 and fourteen automated tests, including adversarial timestamp, chronology, category, and rule-input regressions.
+- Predeclared fixture-label agreement of 15/15 and fifteen automated tests, including adversarial timestamp, chronology, category, and falsey-rule-input regressions.
 - Three-page plain-English case study with a screenshot of the working output.
 - Fresh-context independent validation and SHA-256 artifact coverage.
 

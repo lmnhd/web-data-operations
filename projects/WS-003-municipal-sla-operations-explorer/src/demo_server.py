@@ -56,7 +56,7 @@ def validate_rules_override(rules: object) -> dict[str, int]:
 
 def run_demo(rules_override: dict[str, int] | None = None, ref_now_str: str | None = None) -> dict:
     records = load_fixture()
-    rules = validate_rules_override(rules_override or {})
+    rules = validate_rules_override({} if rules_override is None else rules_override)
     ref_dt = sla_engine.parse_iso_timestamp(ref_now_str or default_reference_now())
 
     started = time.perf_counter()
