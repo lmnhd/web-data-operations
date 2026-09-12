@@ -46,7 +46,7 @@
   ],
   "agentBudget": {
     "stageLimit": 4,
-    "used": 1,
+    "used": 2,
     "unit": "delegated agent turns",
     "additionalUseRequiresHumanApproval": true
   }
