@@ -26,6 +26,7 @@ DEFAULT_CATEGORY_SLA_DAYS: dict[str, int] = {
 
 AT_RISK_THRESHOLD_DAYS = 1.0  # Open/In-progress items with <= 1 day remaining are AT_RISK
 FIXTURE_KIND = "synthetic_sla_scenario"
+VALID_STATUSES = {"OPEN", "IN_PROGRESS", "CLOSED"}
 
 
 def parse_iso_timestamp(ts_str: str | None) -> datetime | None:
@@ -118,10 +119,16 @@ def evaluate_record(
 
     if raw_closed not in (None, "") and closed_dt is None:
         return review("INVALID_CLOSED_TIMESTAMP", sla_target_days)
+    if raw_status not in VALID_STATUSES:
+        return review("UNKNOWN_STATUS", sla_target_days)
     if raw_status == "CLOSED" and closed_dt is None:
         return review("MISSING_CLOSED_TIMESTAMP", sla_target_days)
+    if raw_status != "CLOSED" and closed_dt is not None:
+        return review("STATUS_CLOSED_DATE_CONFLICT", sla_target_days)
     if closed_dt is not None and closed_dt < created_dt:
         return review("CLOSED_BEFORE_CREATED", sla_target_days)
+    if closed_dt is not None and closed_dt > reference_now:
+        return review("CLOSED_AFTER_REFERENCE_TIME", sla_target_days)
     if closed_dt is None and reference_now < created_dt:
         return review("CREATED_AFTER_REFERENCE_TIME", sla_target_days)
 

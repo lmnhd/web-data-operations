@@ -84,7 +84,7 @@ def header(c, page, title, subtitle):
     paragraph(c, subtitle, title_bottom - 2, 8.5, white, leading=10)
     c.setFillColor(MUTED)
     c.setFont("Helvetica", 8)
-    c.drawRightString(574, 16, f"WS-003 / {page} of 3")
+    c.drawRightString(560, 20, f"WS-003 / {page} of 3")
 
 
 def metric(c, x, y, value, label, color=GREEN):
@@ -191,7 +191,7 @@ def main():
     paragraph(c, "<b>Actual code excerpt: explicit fixture label and failure route</b>", y - 20, 10, INK, x=50, width=510)
 
     source_lines = inspect.getsource(sla_engine.evaluate_record).splitlines()
-    excerpt_start = next(i for i, line in enumerate(source_lines) if "created_dt =" in line)
+    excerpt_start = next(i for i, line in enumerate(source_lines) if "closed_dt =" in line)
     code_lines = source_lines[excerpt_start : excerpt_start + 16]
     c.setFillColor(INK)
     c.setFont("Courier", 7.2)
@@ -201,7 +201,7 @@ def main():
     y = y - 230
 
     metric(c, 38, y - 60, "15/15", "synthetic labels reproduced")
-    metric(c, 178, y - 60, "15/15", "unit & integration tests passed")
+    metric(c, 178, y - 60, "17/17", "unit & integration tests passed")
     metric(c, 318, y - 60, "1", "malformed record isolated")
     metric(c, 458, y - 60, "SHA-256", "content fingerprinting")
 
@@ -227,7 +227,7 @@ def main():
     metric(c, 38, 610, "15", "records evaluated")
     metric(c, 178, 610, "3", "city wards analyzed")
     metric(c, 318, 610, "8/1/5/1", "compliant / risk / breach / error")
-    metric(c, 458, 610, "15/15", "automated tests passing")
+    metric(c, 458, 610, "17/17", "automated tests passing")
 
     y = paragraph(
         c,

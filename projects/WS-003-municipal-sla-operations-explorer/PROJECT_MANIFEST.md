@@ -72,7 +72,7 @@ The bundled browser workbench runs the real engine, exposes rule changes, shows 
 | Role/agent | Bounded responsibility | Recorded outputs | Handoff/approval |
 |---|---|---|---|
 | Root builder/orchestrator | Engine integration, demo, evidence correction, PDF, release assembly | Project files and tracking entries | Human approvals on 2026-09-08 and 2026-09-12 |
-| `/root/ws003_release_validator` | Fresh-context execution of the frozen plan; no implementation | Validation logs and `INDEPENDENT_VALIDATION.json` | PASS required before release |
+| `/root/ws003_remediation_validator` | Fresh-context execution of the final frozen plan; no implementation | Validation logs and `INDEPENDENT_VALIDATION.json` | PASS required before release |
 | Human owner | Concept, expansion, publication, and closeout authority | Approval record and existing Upwork publication | Consequential gates remain human-controlled |
 
 ### Iteration history
@@ -109,9 +109,9 @@ Shared Shipping Pipeline gates and WS-001 presentation structure were reused. Th
 | Synthetic oracle agreement | 15/15 | `evidence/evaluated_run.json` | Deterministic fixture agreement, not production accuracy |
 | Status counts | 8 / 1 / 5 / 1 | `evidence/evaluated_run.json` | Compliant / at-risk / breached / review in the scenario |
 | Scenario ward rate | 40.0% | `evidence/evaluated_run.json` | Fictional Ward 01 scenario, not a City metric |
-| Automated tests | 15/15 | Independent validation test log | Engine and Flask adapter scope only |
+| Automated tests | 17/17 builder precheck | Independent validation test log pending | Engine and Flask adapter scope only |
 
-The changed-rule scenario reclassifies synthetic `SR-311-001`; malformed timestamps, reversed chronology, future creation dates, and unmapped categories route safely to review. Fractional, unknown, and falsey non-object rule overrides are rejected. `evidence/VALIDATION_PLAN.json` freezes the seven required validation categories. `evidence/INDEPENDENT_VALIDATION.json` is valid only when its fresh non-builder verdict is PASS and the executable hash gate passes.
+The changed-rule scenario reclassifies synthetic `SR-311-001`; malformed timestamps, reversed chronology, future creation or closure dates, unknown statuses, status/closure contradictions, and unmapped categories route safely to review. Fractional, unknown, and falsey non-object rule overrides are rejected, and the HTTPS deployment rejects same-host HTTP origins. `evidence/VALIDATION_PLAN.json` freezes the seven required validation categories. `evidence/INDEPENDENT_VALIDATION.json` is valid only when its fresh non-builder verdict is PASS and the executable hash gate passes.
 
 ## 10. Limitations and non-goals
 
@@ -147,6 +147,6 @@ WS-003 adds a reusable pattern for separating licensed public context from an au
 ## 14. Release approval
 
 - **Manifest prepared by:** Root orchestrator/builder
-- **Evidence verified by:** `/root/ws003_release_validator` after candidate freeze
+- **Evidence verified by:** `/root/ws003_remediation_validator` after the final candidate freeze
 - **Release approved by:** Human owner; original publication approval 2026-09-08, closeout approval 2026-09-12
 - **Tracking-log entry:** `PORTFOLIO_TRACKING_LOG.md`, WS-003 closeout section

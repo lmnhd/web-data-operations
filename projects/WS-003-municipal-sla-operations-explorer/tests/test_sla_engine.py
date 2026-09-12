@@ -174,6 +174,29 @@ class TestSLAEngine(unittest.TestCase):
         self.assertEqual(evaluated["sla_status"], "INCOMPLETE_DATA_REVIEW")
         self.assertEqual(evaluated["reason_code"], "INVALID_TARGET_TIMESTAMP")
 
+    def test_lifecycle_status_consistency_routes_to_review(self) -> None:
+        base = {
+            "service_name": "Pothole Repair",
+            "ward": "Ward Edge",
+            "created_date": "2026-08-01T12:00:00Z",
+            "target_date": "2026-08-06T12:00:00Z",
+        }
+        cases = (
+            ({"status": "NONSENSE", "closed_date": None}, "UNKNOWN_STATUS"),
+            ({"status": "OPEN", "closed_date": "2026-08-02T12:00:00Z"}, "STATUS_CLOSED_DATE_CONFLICT"),
+            ({"status": "IN_PROGRESS", "closed_date": "2026-08-02T12:00:00Z"}, "STATUS_CLOSED_DATE_CONFLICT"),
+            ({"status": "CLOSED", "closed_date": "2026-08-09T12:00:00Z"}, "CLOSED_AFTER_REFERENCE_TIME"),
+        )
+        reference_now = parse_iso_timestamp("2026-08-08T12:00:00Z")
+        for index, (changes, expected_reason) in enumerate(cases):
+            with self.subTest(reason=expected_reason):
+                record = {**base, **changes, "service_request_id": f"SR-LIFECYCLE-{index}"}
+                evaluated = evaluate_record(record, reference_now=reference_now)
+                self.assertEqual(evaluated["sla_status"], "INCOMPLETE_DATA_REVIEW")
+                self.assertEqual(evaluated["lifecycle_state"], "DATA_ERROR")
+                self.assertEqual(evaluated["reason_code"], expected_reason)
+                self.assertIsNone(evaluated["duration_days"])
+
     def test_csv_and_json_export(self) -> None:
         sample_path = FIXTURES_DIR / "toronto_311_sample.json"
         oracle_path = FIXTURES_DIR / "benchmark_oracle.json"

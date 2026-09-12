@@ -73,6 +73,15 @@ class TestFlaskAdapter(unittest.TestCase):
                 self.assertEqual(response.status_code, 400)
                 self.assertIn(b"Rules must be an object", response.data)
 
+    def test_origin_scheme_mismatch_is_rejected(self) -> None:
+        response = self.client.post(
+            "/api/run",
+            json={"rules": {}},
+            headers={"Origin": "https://localhost"},
+        )
+        self.assertEqual(response.status_code, 403)
+        self.assertIn(b"Use the demo from its own page", response.data)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -9,13 +9,13 @@ Closeout resumed 2026-09-12 UTC. Statuses remain fail-closed until evidence is r
 | Meaningful rule change | PASS | Hypothetical Pothole target 5d -> 3d reclassifies synthetic `SR-311-001` |
 | Edge/safe state | PASS | Malformed creation timestamp routes to `INCOMPLETE_DATA_REVIEW` |
 | JSON/CSV exports | PASS | Labeled rows with reason codes and fingerprints |
-| Builder-side automated tests | PASS | `python -m unittest discover projects/WS-003-municipal-sla-operations-explorer/tests`: 15/15 on 2026-09-12, including falsey non-object rule payloads |
+| Builder-side automated tests | PASS | `python -m unittest discover projects/WS-003-municipal-sla-operations-explorer/tests`: 17/17 on 2026-09-12, including lifecycle consistency, post-reference closure, cross-scheme Origin, and falsey non-object rule regressions |
 | Official source contract | PASS | 2026 ZIP columns verified; missing target/closure timestamps disclosed |
-| Visual three-page PDF | FAIL | Fresh validator found page 2 code and footer clipping in the 15/15-test rebuild |
+| Visual three-page PDF | PENDING | Builder remediation moves the footer inward and removes the clipped code line; fresh independent visual inspection required |
 | Actual working-output screenshot | PASS | `evidence/reviewer/working-demo.png` and `evidence/reviewer/working-demo-pdf.png`, captured from the corrected local demo on 2026-09-12 |
-| Independent verification | FAIL | `/root/ws003_final_validator` reports 5 PASS, 2 FAIL and four unresolved findings for candidate `3f9f274` |
+| Independent verification | PENDING | Prior `/root/ws003_final_validator` FAIL is preserved; reserved `/root/ws003_remediation_validator` must validate the frozen repair candidate |
 | Executable hash gate | FAIL | The 29-artifact report is hash-complete, but the release-stage gate rejects its FAIL verdict |
-| Signed-out public demo | FAIL | Functional checks pass, but the HTTPS endpoint accepts an equivalent HTTP Origin because only host is compared |
+| Signed-out public demo | PENDING | Scheme-and-host Origin comparison is implemented locally; corrected deployment and signed-out verification required |
 | Upwork publication | PASS | User confirms item number 3 is published; corrected copy/PDF refresh remains |
 | Reviewed source integration | BLOCKED | Independent PASS is absent; pull request/default-branch integration is prohibited |
 | Immutable release | BLOCKED | `ws-003-v1.0.0` tag and GitHub release required |

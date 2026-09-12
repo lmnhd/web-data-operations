@@ -32,7 +32,12 @@ def same_origin_guard():
     if request.method == "POST":
         origin = request.headers.get("Origin")
         cross_site = request.headers.get("Sec-Fetch-Site") == "cross-site"
-        if cross_site or (origin and urlsplit(origin).netloc != request.host):
+        origin_parts = urlsplit(origin) if origin else None
+        origin_mismatch = bool(
+            origin_parts
+            and (origin_parts.scheme != request.scheme or origin_parts.netloc != request.host)
+        )
+        if cross_site or origin_mismatch:
             return jsonify(error="Use the demo from its own page."), 403
         if not request.is_json:
             return jsonify(error="Send a small JSON request."), 400

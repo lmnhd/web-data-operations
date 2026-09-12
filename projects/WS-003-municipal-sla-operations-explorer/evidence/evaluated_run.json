@@ -150,15 +150,15 @@
       "ward": "Ward 10 - Spadina-Fort York",
       "created_date": "2026-08-07T07:00:00+00:00",
       "target_date": "2026-08-09T07:00:00+00:00",
-      "closed_date": "2026-08-08T15:00:00+00:00",
+      "closed_date": "2026-08-08T11:00:00+00:00",
       "status": "CLOSED",
-      "duration_days": 1.33,
+      "duration_days": 1.17,
       "sla_target_days": 2,
-      "margin_days": 0.67,
+      "margin_days": 0.83,
       "lifecycle_state": "CLOSED_ON_TIME",
       "sla_status": "COMPLIANT",
       "reason_code": "CLOSED_BEFORE_SLA_TARGET",
-      "fingerprint": "2d2354737b010898"
+      "fingerprint": "3c19c0243dc53df1"
     },
     {
       "fixture_kind": "synthetic_sla_scenario",

@@ -35,7 +35,7 @@ python projects/WS-003-municipal-sla-operations-explorer/src/sla_engine.py `
   --output-csv tmp/ws003-run.csv
 ```
 
-Expected tests: 15 passed. Expected baseline: 15 records with `8/1/5/1` status counts. The API must reject fractional, unknown, and falsey non-object rule overrides with HTTP 400. Each evaluated row must include `fixture_kind=synthetic_sla_scenario`, a reason code, and a fingerprint.
+Expected tests: 17 passed. Expected baseline: 15 records with `8/1/5/1` status counts. Unknown statuses, lifecycle/closure contradictions, and post-reference closure dates must route to `INCOMPLETE_DATA_REVIEW`; the API must reject fractional, unknown, and falsey non-object rule overrides with HTTP 400; and the HTTPS deployment must reject an equivalent HTTP Origin. Each evaluated row must include `fixture_kind=synthetic_sla_scenario`, a reason code, and a fingerprint.
 
 ## Evidence
 
