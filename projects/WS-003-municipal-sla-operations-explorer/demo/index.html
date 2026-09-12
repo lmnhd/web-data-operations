@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Municipal 311 SLA Operations Desk</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <span class="mark">SLA</span>
+    <div>MUNICIPAL 311 SLA OPERATIONS DESK<small>Runnable evidence / WS-003</small></div>
+  </div>
+  <span class="local">REAL ENGINE / SYNTHETIC SCENARIO</span>
+</header>
+<main>
+  <section class="intro">
+    <p class="eyebrow">MUNICIPAL SERVICE OPERATIONS</p>
+    <h1>Detect SLA response breaches.<br>Identify ward bottlenecks.</h1>
+    <p>Adjust hypothetical service-response thresholds, evaluate a synthetic 311-style scenario, and inspect how the decision queue changes.</p>
+  </section>
+
+  <div class="workspace">
+    <aside>
+      <div>
+        <p class="step">01 / ADJUST SLA THRESHOLD RULES</p>
+        <h2>Category Target Days</h2>
+      </div>
+      <form id="rules-form">
+        <label>Pothole Repair (Days)<input id="rule_pothole" type="number" min="1" max="30" required value="5"></label>
+        <label>Streetlight Maintenance (Days)<input id="rule_streetlight" type="number" min="1" max="30" required value="3"></label>
+        <label>Tree Trimming (Days)<input id="rule_tree" type="number" min="1" max="30" required value="10"></label>
+        <label>Garbage Collection (Days)<input id="rule_garbage" type="number" min="1" max="30" required value="2"></label>
+        <button class="primary" id="run" type="submit">Evaluate SLA Engine <span>-></span></button>
+      </form>
+      <div class="presets">
+        <button id="preset-default" type="button">Reset Standard Rules (5/3/10/2)</button>
+        <button id="preset-strict" type="button">Apply Strict Rules (3/2/5/1)</button>
+      </div>
+      <p class="boundary">Synthetic SLA scenario inspired by Toronto's licensed public 311 schema. The public export does not include target or closure timestamps. Zero personal data processed.</p>
+    </aside>
+
+    <section class="workbench">
+      <div class="section-top">
+        <div>
+          <p class="step">02 / OPERATIONAL SUMMARY</p>
+          <h2 id="decision-title">Ready to run</h2>
+        </div>
+        <span id="decision-pill" class="pill">Not executed</span>
+      </div>
+      <p id="runline" class="runline">Click "Evaluate SLA Engine" to process 15 explicitly synthetic scenario records.</p>
+      <p id="error" role="alert" hidden></p>
+
+      <div id="result" hidden>
+        <div id="summary-cards" class="counts"></div>
+        
+        <div class="section-top">
+          <div>
+            <p class="step">03 / WARD BOTTLENECK ANALYTICS</p>
+            <h2>Ward Compliance Rankings</h2>
+          </div>
+        </div>
+        <div id="ward-table-container" class="ward-table-container"></div>
+
+        <div class="section-top evidence-head">
+          <div>
+            <p class="step">04 / EVALUATED SERVICE REQUEST QUEUE</p>
+            <h2>Filtered Records & Audit Reasons</h2>
+          </div>
+        </div>
+        <div id="records-list" class="records-list"></div>
+
+        <div class="downloads">
+          <button id="download-json" class="secondary">Download Run JSON</button>
+          <button id="download-csv" class="secondary">Download Queue CSV</button>
+        </div>
+      </div>
+
+      <details>
+        <summary>Show Python SLA engine code</summary>
+        <pre id="code"></pre>
+      </details>
+    </section>
+  </div>
+
+  <footer>
+    <strong>Measured proof:</strong> all 15 predeclared synthetic benchmark labels reproduced. This demonstrates engine behavior, not official Toronto SLA performance.
+  </footer>
+</main>
+</body>
+</html>

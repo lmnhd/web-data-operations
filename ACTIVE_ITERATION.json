@@ -1,50 +1,52 @@
 {
   "schemaVersion": 1,
-  "iterationId": "WS-002",
-  "stage": "RELEASED",
+  "iterationId": "WS-003",
+  "stage": "REPAIRING",
   "concept": {
-    "slug": "recall-to-catalog-impact-review",
-    "name": "Recall-to-Catalog Impact Review",
-    "publicName": "Product Recall Match Desk",
-    "targetBuyer": "Small e-commerce, wholesale or distribution catalog operations team",
-    "buyerProblem": "Recall records and internal catalog rows often describe the same product with incomplete or inconsistent identifiers, forcing staff to compare them manually and risking unsupported matches.",
-    "centralClaim": "A provenance-preserving matcher can compare a bounded synthetic catalog with selected openFDA enforcement records and reproduce an independently labeled match, no-match and review-needed queue using explicit field evidence."
+    "slug": "municipal-sla-operations-explorer",
+    "name": "Municipal SLA & Service Bottleneck Operations Explorer",
+    "publicName": "Municipal 311 SLA Operations Desk",
+    "targetBuyer": "Municipal operations managers, public works team leads, or service contractors",
+    "buyerProblem": "Public 311 exports can omit the target and closure timestamps needed for SLA review, so operations teams need an explicit adapter boundary and a safe way to evaluate authorized enriched records without treating missing fields as evidence.",
+    "centralClaim": "Given an explicitly synthetic, adapter-ready service-request fixture with created, target, and closure timestamps, the engine can reproducibly calculate scenario margins, route malformed inputs to review, aggregate ward scenarios, and export auditable results without claiming official municipal performance."
   },
-  "authorizedScope": "Human approved the reviewer interface, larger benchmark, visual PDF, Manifest, independent validation, source integration, public hosting, GitHub release and Upwork portfolio publication on 2026-09-04. Paid services, production operational use, public alerts, medical decisions and recall-lifecycle tracking remain unauthorized.",
-  "nextAction": "WS-002 is published on Vercel, GitHub and Upwork. Preserve this final state and begin no new iteration until separately authorized. Release: https://github.com/lmnhd/web-data-operations/releases/tag/ws-002-v1.0.0; portfolio: https://www.upwork.com/freelancers/~010d1d69f81d197489",
+  "authorizedScope": "Human approved the web UI, visual 3-page PDF, Project Manifest, independent validation, Vercel hosting, GitHub release, and Upwork portfolio publication on 2026-09-08. Paid services, live municipal dispatch integration, and legal SLA certifications remain unauthorized.",
+  "nextAction": "Reconcile the current PDF with the frozen validation plan, verify the runnable demo and reviewer evidence, commit a stable WS-003 candidate, dispatch one fresh-context non-builder validator, pass the executable hash gate, then integrate and create the immutable release. Preserve the existing Upwork publication and do not initialize WS-004.",
   "humanApproval": {
     "status": "approved",
-    "date": "2026-09-04",
-    "basis": "The user approved the bounded proof and expansion, explicitly replied 'Approved, please publish,' and later confirmed the final Upwork Publish action. This authorizes independent validation, reviewed source integration, public hosting, signed-out verification, immutable tagging, GitHub publication and Upwork portfolio publication for WS-002. It does not authorize paid services or production operational use."
+    "date": "2026-09-08",
+    "basis": "The user approved the publication request on 2026-09-08 ('Approve.'). This authorizes independent validation, source integration, public hosting, release tagging, GitHub publication, and Upwork portfolio publication for WS-003."
   },
   "fatalBlockers": [],
   "repairableConditions": [],
   "limitations": [
-    "No client posting was supplied; current Upwork evidence supports product matching and data quality generally, not this exact recall-review product.",
-    "The proof will use a synthetic catalog and cannot establish production coverage, current recall status, medical correctness, business impact or real-time operation.",
-    "openFDA data must not be used for public alerts, medical decisions or recall-lifecycle claims."
+    "No client posting was supplied; demand evidence is based on general operational dashboard and monitoring signals.",
+    "The proof uses 15 synthetic 311-style records; it is not a recorded Toronto extract and does not estimate production accuracy.",
+    "Toronto's current public 311 export does not expose target or closure timestamps, so production calculations require an authorized internal adapter.",
+    "The scenario calculations do not constitute official municipal performance metrics, staffing instructions, dispatch commands, or legal certifications."
   ],
   "requiredFiles": [
     "README.md",
     "START_NEXT_ITERATION.md",
     "SOURCE_CONTROL_AND_PUBLIC_ARCHIVE.md",
-    "iterations/ws-002/CONCEPT_RECOMMENDATION.md",
-    "iterations/ws-002/CODEX_VERTICAL_PROOF_BRIEF.md",
-    "projects/WS-002-recall-to-catalog-impact-review/README.md",
-    "projects/WS-002-recall-to-catalog-impact-review/SOURCE_CONTRACT.md",
-    "projects/WS-002-recall-to-catalog-impact-review/evidence/PROOF_REPORT.md",
-    "projects/WS-002-recall-to-catalog-impact-review/PROJECT_MANIFEST.md",
-    "projects/WS-002-recall-to-catalog-impact-review/evidence/benchmark/run-report.json",
-    "projects/WS-002-recall-to-catalog-impact-review/evidence/reviewer/BROWSER_VERIFICATION.md",
-    "projects/WS-002-recall-to-catalog-impact-review/evidence/RELEASE_CHECKLIST.md",
-    "projects/WS-002-recall-to-catalog-impact-review/evidence/VALIDATION_PLAN.json",
-    "output/pdf/Product-Recall-Match-Desk.pdf",
+    "iterations/ws-003/CONCEPT_RECOMMENDATION.md",
+    "iterations/ws-003/CODEX_VERTICAL_PROOF_BRIEF.md",
+    "projects/WS-003-municipal-sla-operations-explorer/README.md",
+    "projects/WS-003-municipal-sla-operations-explorer/SOURCE_CONTRACT.md",
+    "projects/WS-003-municipal-sla-operations-explorer/PROJECT_MANIFEST.md",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/PROOF_REPORT.md",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/FIXTURE_PROVENANCE.md",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/VALIDATION_PLAN.json",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/INDEPENDENT_VALIDATION.json",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/RELEASE_CHECKLIST.md",
+    "output/pdf/Municipal-311-SLA-Operations-Desk.pdf",
     "design/SOURCE_AND_COMPLIANCE_LEDGER.md",
-    "docs/shipping-pipeline/REVIEWER_EVIDENCE_STANDARD.md"
+    "docs/shipping-pipeline/REVIEWER_EVIDENCE_STANDARD.md",
+    "docs/shipping-pipeline/INDEPENDENT_VALIDATION.md"
   ],
   "agentBudget": {
     "stageLimit": 4,
-    "used": 3,
+    "used": 0,
     "unit": "delegated agent turns",
     "additionalUseRequiresHumanApproval": true
   }
