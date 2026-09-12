@@ -1,0 +1,10 @@
+{
+  "iterationId": "WS-003",
+  "validatorAgentId": "/root/ws003_release_validator",
+  "verdict": "FAIL",
+  "unresolvedFindings": [
+    "Candidate 9685067 failed independent validation; the full immutable report is preserved at evidence/validation-runs/failed-report-9685067.json.",
+    "The single bounded repair is awaiting independent recheck."
+  ],
+  "supersededFullReport": "evidence/validation-runs/failed-report-9685067.json"
+}

@@ -102,6 +102,78 @@ class TestSLAEngine(unittest.TestCase):
         self.assertEqual(evaluated["lifecycle_state"], "DATA_ERROR")
         self.assertEqual(evaluated["reason_code"], "INVALID_CREATED_TIMESTAMP")
 
+    def test_malformed_closed_timestamp_routes_to_review(self) -> None:
+        record = {
+            "service_request_id": "SR-BAD-CLOSED",
+            "service_name": "Pothole Repair",
+            "ward": "Ward 10 - Spadina-Fort York",
+            "created_date": "2026-08-01T12:00:00Z",
+            "target_date": "2026-08-06T12:00:00Z",
+            "closed_date": "NOT-A-TIMESTAMP",
+            "status": "CLOSED",
+        }
+        evaluated = evaluate_record(record)
+        self.assertEqual(evaluated["sla_status"], "INCOMPLETE_DATA_REVIEW")
+        self.assertEqual(evaluated["reason_code"], "INVALID_CLOSED_TIMESTAMP")
+
+    def test_closure_before_creation_routes_to_review(self) -> None:
+        record = {
+            "service_request_id": "SR-REVERSED",
+            "service_name": "Pothole Repair",
+            "ward": "Ward 10 - Spadina-Fort York",
+            "created_date": "2026-08-02T12:00:00Z",
+            "target_date": "2026-08-07T12:00:00Z",
+            "closed_date": "2026-08-01T12:00:00Z",
+            "status": "CLOSED",
+        }
+        evaluated = evaluate_record(record)
+        self.assertEqual(evaluated["sla_status"], "INCOMPLETE_DATA_REVIEW")
+        self.assertEqual(evaluated["reason_code"], "CLOSED_BEFORE_CREATED")
+        self.assertIsNone(evaluated["duration_days"])
+
+    def test_unknown_category_routes_to_review(self) -> None:
+        record = {
+            "service_request_id": "SR-UNKNOWN",
+            "service_name": "Unmapped Service",
+            "ward": "Ward 10 - Spadina-Fort York",
+            "created_date": "2026-08-01T12:00:00Z",
+            "target_date": None,
+            "closed_date": None,
+            "status": "OPEN",
+        }
+        evaluated = evaluate_record(record, reference_now=parse_iso_timestamp("2026-08-02T12:00:00Z"))
+        self.assertEqual(evaluated["sla_status"], "INCOMPLETE_DATA_REVIEW")
+        self.assertEqual(evaluated["reason_code"], "UNKNOWN_SERVICE_CATEGORY")
+        self.assertIsNone(evaluated["sla_target_days"])
+
+    def test_future_creation_routes_to_review(self) -> None:
+        record = {
+            "service_request_id": "SR-FUTURE",
+            "service_name": "Pothole Repair",
+            "ward": "Ward 10 - Spadina-Fort York",
+            "created_date": "2026-08-03T12:00:00Z",
+            "target_date": None,
+            "closed_date": None,
+            "status": "OPEN",
+        }
+        evaluated = evaluate_record(record, reference_now=parse_iso_timestamp("2026-08-02T12:00:00Z"))
+        self.assertEqual(evaluated["sla_status"], "INCOMPLETE_DATA_REVIEW")
+        self.assertEqual(evaluated["reason_code"], "CREATED_AFTER_REFERENCE_TIME")
+
+    def test_invalid_target_timestamp_routes_to_review(self) -> None:
+        record = {
+            "service_request_id": "SR-BAD-TARGET",
+            "service_name": "Pothole Repair",
+            "ward": "Ward 10 - Spadina-Fort York",
+            "created_date": "2026-08-01T12:00:00Z",
+            "target_date": "NOT-A-TIMESTAMP",
+            "closed_date": None,
+            "status": "OPEN",
+        }
+        evaluated = evaluate_record(record, reference_now=parse_iso_timestamp("2026-08-02T12:00:00Z"))
+        self.assertEqual(evaluated["sla_status"], "INCOMPLETE_DATA_REVIEW")
+        self.assertEqual(evaluated["reason_code"], "INVALID_TARGET_TIMESTAMP")
+
     def test_csv_and_json_export(self) -> None:
         sample_path = FIXTURES_DIR / "toronto_311_sample.json"
         oracle_path = FIXTURES_DIR / "benchmark_oracle.json"

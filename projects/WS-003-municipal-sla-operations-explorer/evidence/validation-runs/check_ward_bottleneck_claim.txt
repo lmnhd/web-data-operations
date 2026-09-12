@@ -1,0 +1,17 @@
+Independent validator: /root/ws003_release_validator
+Candidate: 968506742e7219515dc81d6e1459922efef47124
+Date: 2026-09-12
+
+Candidate calculation:
+- Ward 01 - Etobicoke North has 5 total/evaluable synthetic records.
+- 2 are COMPLIANT, 0 AT_RISK, and 3 SLA_BREACHED.
+- 2 / 5 * 100 = 40.0%.
+
+Candidate labels:
+- README, SOURCE_CONTRACT, Manifest, UI, exports, screenshots, and PDF call this a synthetic scenario/fixture result and disclaim official Toronto performance.
+- Official City of Toronto CKAN metadata was checked live on 2026-09-12: package 2e54bc0e-4399-4076-b717-351df5918ae7, metadata_modified 2026-09-08T20:18:01.580149, 2026 ZIP resource 99b7f283-7345-4f5a-a126-d078ed4f3419, datastore_active=false, 5,501,248 bytes.
+- The in-memory ZIP inspection found SR2026.csv with header: Creation Date, Status, First 3 Chars of Postal Code, Intersection Street 1, Intersection Street 2, Ward, Service Request Type, Division, Section.
+- Target and closure timestamps and official SLA rules are absent; no official performance claim is supportable.
+
+FAIL reason:
+The public Vercel page linked by the candidate presents its ward output as evaluation of recorded Toronto 311 records rather than a synthetic scenario. Therefore the reviewer-facing claim boundary is not consistently maintained, even though the candidate's local calculation and artifact copy are correct.

@@ -30,7 +30,7 @@ Open `http://127.0.0.1:5000`.
 python -m unittest discover projects/WS-003-municipal-sla-operations-explorer/tests
 ```
 
-Expected result: 7 tests, 0 failures, 0 errors.
+Expected result: 14 tests, 0 failures, 0 errors. The suite includes invalid chronology, malformed timestamps, unmapped categories, and API rule-validation regressions.
 
 ## CLI and exports
 

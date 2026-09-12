@@ -69,8 +69,7 @@ def evaluate_record(
 
     fingerprint = calculate_record_fingerprint(record)
 
-    created_dt = parse_iso_timestamp(raw_created)
-    if created_dt is None:
+    def review(reason_code: str, sla_target_days: int | None = None) -> dict[str, Any]:
         return {
             "fixture_kind": FIXTURE_KIND,
             "service_request_id": s_id,
@@ -81,16 +80,29 @@ def evaluate_record(
             "closed_date": raw_closed,
             "status": raw_status,
             "duration_days": None,
-            "sla_target_days": rules.get(s_name, 5),
+            "sla_target_days": sla_target_days,
             "margin_days": None,
             "lifecycle_state": "DATA_ERROR",
             "sla_status": "INCOMPLETE_DATA_REVIEW",
-            "reason_code": "INVALID_CREATED_TIMESTAMP",
+            "reason_code": reason_code,
             "fingerprint": fingerprint,
         }
 
-    sla_target_days = rules.get(s_name, 5)
+    if s_name not in rules:
+        return review("UNKNOWN_SERVICE_CATEGORY")
+
+    sla_target_days = rules[s_name]
+    if isinstance(sla_target_days, bool) or not isinstance(sla_target_days, int) or not 1 <= sla_target_days <= 30:
+        return review("INVALID_SLA_RULE")
+
+    created_dt = parse_iso_timestamp(raw_created)
+    if created_dt is None:
+        return review("INVALID_CREATED_TIMESTAMP", sla_target_days)
+
     parsed_raw_target = parse_iso_timestamp(raw_target)
+
+    if raw_target not in (None, "") and parsed_raw_target is None:
+        return review("INVALID_TARGET_TIMESTAMP", sla_target_days)
 
     if parsed_raw_target is not None and rules == DEFAULT_CATEGORY_SLA_DAYS:
         target_dt = parsed_raw_target
@@ -99,7 +111,19 @@ def evaluate_record(
         target_dt = datetime.fromtimestamp(created_dt.timestamp() + (sla_target_days * 86400), tz=timezone.utc)
         target_derived = (parsed_raw_target is None)
 
+    if target_dt < created_dt:
+        return review("TARGET_BEFORE_CREATED", sla_target_days)
+
     closed_dt = parse_iso_timestamp(raw_closed)
+
+    if raw_closed not in (None, "") and closed_dt is None:
+        return review("INVALID_CLOSED_TIMESTAMP", sla_target_days)
+    if raw_status == "CLOSED" and closed_dt is None:
+        return review("MISSING_CLOSED_TIMESTAMP", sla_target_days)
+    if closed_dt is not None and closed_dt < created_dt:
+        return review("CLOSED_BEFORE_CREATED", sla_target_days)
+    if closed_dt is None and reference_now < created_dt:
+        return review("CREATED_AFTER_REFERENCE_TIME", sla_target_days)
 
     if closed_dt is not None:
         duration_sec = (closed_dt - created_dt).total_seconds()

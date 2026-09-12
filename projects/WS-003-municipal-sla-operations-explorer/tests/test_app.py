@@ -44,6 +44,24 @@ class TestFlaskAdapter(unittest.TestCase):
         self.assertIn("ward_analytics", data)
         self.assertIn("evaluated_records", data)
 
+    def test_fractional_rule_is_rejected(self) -> None:
+        response = self.client.post(
+            "/api/run",
+            json={"rules": {"Pothole Repair": 1.5}},
+            headers={"Origin": "http://localhost"},
+        )
+        self.assertEqual(response.status_code, 400)
+        self.assertIn(b"integer between 1 and 30", response.data)
+
+    def test_unknown_rule_category_is_rejected(self) -> None:
+        response = self.client.post(
+            "/api/run",
+            json={"rules": {"Unmapped Service": 5}},
+            headers={"Origin": "http://localhost"},
+        )
+        self.assertEqual(response.status_code, 400)
+        self.assertIn(b"Unknown SLA rule categories", response.data)
+
 
 if __name__ == "__main__":
     unittest.main()

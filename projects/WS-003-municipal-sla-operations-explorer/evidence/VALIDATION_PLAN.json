@@ -19,7 +19,7 @@
       "id": "check_automated_tests",
       "category": "tests",
       "procedure": "Execute `python -m unittest discover projects/WS-003-municipal-sla-operations-explorer/tests` in repository root.",
-      "expected": "7 passed tests in 0 failures."
+      "expected": "14 passed tests with 0 failures, including malformed closure, reversed chronology, unknown category, future-created, invalid target, fractional-rule, and unknown-rule-key regressions."
     },
     {
       "id": "check_benchmark_reproduction",
@@ -30,8 +30,8 @@
     {
       "id": "check_invalid_timestamp_routing",
       "category": "edge_case",
-      "procedure": "Evaluate record with malformed date timestamp.",
-      "expected": "Routed to INCOMPLETE_DATA_REVIEW with reason INVALID_CREATED_TIMESTAMP."
+      "procedure": "Evaluate malformed creation/closure/target timestamps, closure-before-creation, future-created open records, and unmapped service categories; submit fractional and unknown API rule overrides.",
+      "expected": "Every invalid record routes to INCOMPLETE_DATA_REVIEW with a specific reason code; fractional or unknown rule overrides return HTTP 400 instead of being truncated or ignored."
     },
     {
       "id": "check_csv_json_export_structure",

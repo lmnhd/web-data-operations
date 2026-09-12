@@ -201,7 +201,7 @@ def main():
     y = y - 230
 
     metric(c, 38, y - 60, "15/15", "synthetic labels reproduced")
-    metric(c, 178, y - 60, "7/7", "unit & integration tests passed")
+    metric(c, 178, y - 60, "14/14", "unit & integration tests passed")
     metric(c, 318, y - 60, "1", "malformed record isolated")
     metric(c, 458, y - 60, "SHA-256", "content fingerprinting")
 
@@ -227,7 +227,7 @@ def main():
     metric(c, 38, 610, "15", "records evaluated")
     metric(c, 178, 610, "3", "city wards analyzed")
     metric(c, 318, 610, "8/1/5/1", "compliant / risk / breach / error")
-    metric(c, 458, 610, "7/7", "automated tests passing")
+    metric(c, 458, 610, "14/14", "automated tests passing")
 
     y = paragraph(
         c,

@@ -1,0 +1,28 @@
+Independent validator: /root/ws003_release_validator
+Candidate: 968506742e7219515dc81d6e1459922efef47124
+Date: 2026-09-12
+
+Command:
+python projects/WS-003-municipal-sla-operations-explorer/src/sla_engine.py
+
+Observed:
+- Reference Now: 2026-08-08T12:00:00+00:00
+- Total Records: 15
+- Status Summary: COMPLIANT 8; AT_RISK 1; SLA_BREACHED 5; INCOMPLETE_DATA_REVIEW 1
+- Ward 10 - Spadina-Fort York: 5 total, 3 compliant, 1 breached, 1 data error, 75.0%
+- Ward 01 - Etobicoke North: 5 total, 2 compliant, 3 breached, 0 data error, 40.0%
+- Ward 14 - Toronto-Danforth: 5 total, 3 compliant, 1 at risk, 1 breached, 60.0%
+
+Independent consistency checks:
+- Evidence and test fixture copies have identical canonical SHA-256 b631f76883fc8010d50b0e48bc67b278cb4c91dc9150513be0d8fc2a4685cf3b.
+- Evidence and test oracle copies have identical canonical SHA-256 087528439acd409be6fe2fcddbe9b3868f858dfc31a1e44bf37876aefe8b0a7b.
+- Fresh JSON exactly matches evidence/evaluated_run.json at canonical SHA-256 29655afbf6f1d3aeba64201e56bbd388c3c617495e2f8d42549b0ade23af7903.
+- Fresh CSV exactly matches evidence/evaluated_run.csv at canonical SHA-256 cd5a49a2fa68bb8f0d673a8341d52f2f9ea8a3fc6e78e416cd71a2d4eaec3391.
+
+Live local browser operation:
+- Initial automatic run displayed 15 records and 8/1/5/1.
+- Applying Strict Rules (3/2/5/1) displayed 0/1/13/1.
+- SR-311-001 changed from COMPLIANT / CLOSED_BEFORE_SLA_TARGET to SLA_BREACHED / CLOSED_AFTER_SLA_TARGET with margin -0.23 days.
+- Reset Standard Rules restored 8/1/5/1.
+
+Boundary observed in the candidate UI: REAL ENGINE / SYNTHETIC SCENARIO; the public export does not include target or closure timestamps.

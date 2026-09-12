@@ -18,7 +18,7 @@ https://municipal-311-sla-operations-desk.vercel.app
 
 Built an adapter-ready Python workbench that demonstrates configurable service-response rules, timestamp normalization, explicit review routing, scenario ward aggregation, and auditable JSON/CSV exports.
 
-The runnable proof processes 15 clearly labeled synthetic 311-style records. It reproduces all 15 predeclared fixture labels, includes seven automated tests, shows how a changed rule reclassifies the queue, and isolates malformed timestamps instead of assuming compliance.
+The runnable proof processes 15 clearly labeled synthetic 311-style records. It reproduces all 15 predeclared fixture labels, includes fourteen automated tests, shows how a changed rule reclassifies the queue, and routes malformed timestamps, reversed chronology, and unmapped categories to review instead of assuming compliance.
 
 City of Toronto open data is cited as licensed schema context only. Its current public 311 export does not include the target and closure timestamps required for these calculations, so the project makes no claim about official Toronto SLA performance. Portfolio demonstration only; no personal data, dispatch automation, or legal certification.
 

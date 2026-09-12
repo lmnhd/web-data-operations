@@ -1,0 +1,28 @@
+Independent validator: /root/ws003_release_validator
+Candidate: 968506742e7219515dc81d6e1459922efef47124
+Date: 2026-09-12
+
+PDF: output/pdf/Municipal-311-SLA-Operations-Desk.pdf
+Binary SHA-256: f2b926e71f2762e1386db37422c90925ea074af9e47f4e0e364f0b477c6c2edb
+Metadata: 3 pages; Letter 612 x 792 pt; unencrypted; no JavaScript; 73,402 bytes.
+
+Render command:
+pdftoppm -png -r 150 output/pdf/Municipal-311-SLA-Operations-Desk.pdf projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/pdf-render/page
+
+Rendered pages:
+- page-1.png, 242,847 bytes, SHA-256 8e9ea6410750eaa7e7afabd92709319ea486fe1d73215908cef74e7f7495a7a0
+- page-2.png, 184,980 bytes, SHA-256 9018bd0aede5acc5c54e6a35d89267737ec0022a1ba683761574fee5f5aafea5
+- page-3.png, 179,504 bytes, SHA-256 42aabfceff1f5f91086d8297b17f305990c8c7e87df3d07ee42c9fcde0cb8365
+
+Page-by-page visual inspection:
+- Page 1: clean and legible; no title/subtitle overlap; screenshot is present, sharp enough to read, and matches the current local default UI (15 records, 8/1/5/1, Ward 01 40%). Synthetic/source boundary is explicit.
+- Page 2: clean and legible; code excerpt is readable and correctly shows the invalid-created failure route; no clipping or overlap.
+- Page 3: clean and legible; strict-rule scenario, ward arithmetic, local/public try-it path, and two underlined links are visible; no clipping or overlap.
+
+PDF link annotations:
+- https://municipal-311-sla-operations-desk.vercel.app
+- https://github.com/lmnhd/web-data-operations
+Both URLs returned HTTP 200 signed out on 2026-09-12.
+
+FAIL reason:
+The PDF calls the Vercel destination a working web demo, but that live destination is not the reviewed candidate. Its visible HTML says it evaluates "recorded Toronto 311 records" and claims "100%" over those records; /api/config says "Recorded City of Toronto 311 Open Data fixture"; /api/run omits fixture_kind. The link resolves but leads to stale, materially misleading content, so the expected "correct links and metrics" condition is not met.

@@ -41,13 +41,16 @@ def default_reference_now() -> str:
 def validate_rules_override(rules: object) -> dict[str, int]:
     if not isinstance(rules, dict):
         raise ValueError("Rules must be an object.")
+    unknown = sorted(set(rules) - set(EDITABLE_CATEGORIES))
+    if unknown:
+        raise ValueError(f"Unknown SLA rule categories: {', '.join(unknown)}.")
     clean_rules = dict(sla_engine.DEFAULT_CATEGORY_SLA_DAYS)
     for cat in EDITABLE_CATEGORIES:
         if cat in rules:
             val = rules[cat]
-            if not isinstance(val, (int, float)) or val < 1 or val > 30:
+            if isinstance(val, bool) or not isinstance(val, int) or val < 1 or val > 30:
                 raise ValueError(f"SLA target for {cat} must be an integer between 1 and 30 days.")
-            clean_rules[cat] = int(val)
+            clean_rules[cat] = val
     return clean_rules
 
 

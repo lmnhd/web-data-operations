@@ -1,0 +1,18 @@
+Independent validator: /root/ws003_release_validator
+Candidate: 968506742e7219515dc81d6e1459922efef47124
+Date: 2026-09-12
+
+Command:
+python projects/WS-003-municipal-sla-operations-explorer/src/sla_engine.py --output-json projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/independent-export.json --output-csv projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/independent-export.csv
+
+Observed:
+- JSON total_records: 15
+- CSV data rows: 15
+- JSON and CSV fixture kinds: synthetic_sla_scenario only
+- Every CSV row has a non-empty reason_code.
+- Every CSV row has a 16-character fingerprint.
+- Headers: fixture_kind, service_request_id, service_name, ward, created_date, target_date, closed_date, status, duration_days, sla_target_days, margin_days, lifecycle_state, sla_status, reason_code, fingerprint
+- Status summary: COMPLIANT 8; AT_RISK 1; SLA_BREACHED 5; INCOMPLETE_DATA_REVIEW 1
+- Fresh exports are byte-for-byte equivalent under canonical LF hashing to the committed evaluated_run.json and evaluated_run.csv.
+
+Browser note: both download controls were present and enabled. The in-app browser did not emit a download event for the Blob URL within 10 seconds, so the frozen CLI export procedure above is the authoritative export check.
