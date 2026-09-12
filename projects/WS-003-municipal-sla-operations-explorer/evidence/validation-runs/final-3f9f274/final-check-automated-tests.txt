@@ -1,0 +1,20 @@
+WS-003 final independent validation - automated tests
+Validator: /root/ws003_final_validator
+Candidate: 3f9f2749c5605c1d8dc06fe8e92a92c130f50607
+Date: 2026-09-12 UTC
+
+Exact frozen command:
+python -m unittest discover projects/WS-003-municipal-sla-operations-explorer/tests
+
+Result outside the managed filesystem sandbox:
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.031s
+
+OK
+
+An earlier verbose sandboxed execution discovered all 15 tests but the CSV export test could not write Python's TemporaryDirectory under C:\Users\cclem\AppData\Local\Temp and ended with PermissionError. The identical suite was rerun outside that sandbox, where it passed. This is an environment restriction, not a product failure.
+
+Meaningfulness assessment:
+- The suite meaningfully covers the 15-record oracle, changed-rule SR-311-001 behavior, malformed target/closure/creation timestamps, reversed closure chronology, future-created open records, unknown categories, CSV/JSON generation, fractional and unknown rules, and all five falsey non-object rule payloads.
+- It does not cover unknown lifecycle status values, status/closed_date contradictions, or closure timestamps after the fixed reference time. Those cases were added independently and produced release-blocking findings in final-adversarial-results.json.

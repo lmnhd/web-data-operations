@@ -1,10 +1,122 @@
 {
   "iterationId": "WS-003",
-  "validatorAgentId": "/root/ws003_release_validator",
+  "candidateCommit": "3f9f2749c5605c1d8dc06fe8e92a92c130f50607",
+  "validatorAgentId": "/root/ws003_final_validator",
+  "validatedAt": "2026-09-12T18:30:20Z",
+  "productionUrl": "https://municipal-311-sla-operations-desk.vercel.app",
+  "productionDeploymentId": "dpl_8fHVBNaNYgwfZCq6h4bMbYkMghYj",
   "verdict": "FAIL",
   "unresolvedFindings": [
-    "Candidate 2addbb6 failed independent validation; the full immutable report is preserved at evidence/validation-runs/failed-report-2addbb6.json.",
-    "The explicitly approved narrow repair is awaiting fresh independent validation."
+    {
+      "id": "F-001",
+      "severity": "HIGH",
+      "summary": "The engine accepts unknown lifecycle statuses, status/closed_date contradictions, and post-reference closure timestamps as decision output instead of routing them to INCOMPLETE_DATA_REVIEW.",
+      "evidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/final-3f9f274/final-adversarial-findings.txt"
+    },
+    {
+      "id": "F-002",
+      "severity": "MEDIUM",
+      "summary": "Fresh PDF rendering shows page 2 clipped: the code expression ends after `(sla_target_days * 8` and the footer ends at `2 of`.",
+      "evidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/final-3f9f274/final-check-pdf-visual.txt"
+    },
+    {
+      "id": "F-003",
+      "severity": "MEDIUM",
+      "summary": "PROJECT_MANIFEST.md names /root/ws003_release_validator as final validator and evidence verifier, but the actual controlling validator is /root/ws003_final_validator.",
+      "evidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/final-3f9f274/final-adversarial-findings.txt"
+    },
+    {
+      "id": "F-004",
+      "severity": "LOW",
+      "summary": "The HTTPS production endpoint accepts an HTTP Origin with the same host because the origin guard compares only netloc rather than the complete origin tuple.",
+      "evidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/final-3f9f274/final-adversarial-findings.txt"
+    }
   ],
-  "supersededFullReport": "evidence/validation-runs/failed-report-2addbb6.json"
+  "planSha256": "6ee5d5f8a691885cf86e3ea002b70bb340bea43cf0920a1762720c91b26408ab",
+  "artifactCount": 29,
+  "artifactSha256": {
+    "output/pdf/Municipal-311-SLA-Operations-Desk.pdf": "b881708823cae2acdf6f4169e6ad22eaaf2a2bede2ea667bffaad570aa9b2ff0",
+    "projects/WS-003-municipal-sla-operations-explorer/.gitignore": "a4d3111877fb9f9215871a06274f37a3bd696c93db34a313690915180e66b176",
+    "projects/WS-003-municipal-sla-operations-explorer/.vercelignore": "81ed1016e6085036e0dc3b0fe1f7f3705796acdfe28c03e33af6e87a34086dde",
+    "projects/WS-003-municipal-sla-operations-explorer/PROJECT_MANIFEST.md": "a7ef7db86a6065a24e9adccd5d13384e06e90ebf4a72e521135c7213d6daee92",
+    "projects/WS-003-municipal-sla-operations-explorer/README.md": "94b172bbab99321d74b88528fe07b8cfce3b0c9a63b62f9bfd1310da57ce1708",
+    "projects/WS-003-municipal-sla-operations-explorer/SOURCE_CONTRACT.md": "867ee734b6e896700a4f299632063324347f1b0d9a27d519da1cc7b9e7ad93ad",
+    "projects/WS-003-municipal-sla-operations-explorer/app.py": "67f321144a781f4c07afccd5716e47863de90539f30a8a932d8bf188f27e92ea",
+    "projects/WS-003-municipal-sla-operations-explorer/demo/app.js": "a79396e3b55085f80498976ece97c4d2163d142a1b60f0ff9c21829f6c396419",
+    "projects/WS-003-municipal-sla-operations-explorer/demo/index.html": "4650c9ec4ea2b8d29d9db5477e50a8791c74c677efc704848ea6133d5e0d90a0",
+    "projects/WS-003-municipal-sla-operations-explorer/demo/style.css": "0838661f7b11b7cbe764ad5dd3be3c237c59c69c943f5ae0dafeb480ee5bb053",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/FIXTURE_PROVENANCE.md": "53ac1c2ec970a709c9423089e61ef864df72872e6462a22c4eeb020a6609e756",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/PROOF_REPORT.md": "3ca958639a216a59a6bd53f837b11d40561d9e4a7386485bf1349c687cdbc439",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/UPWORK_PUBLICATION.md": "a03cbba21e92def89efd47443df82fd8fba24694664e5c109eca15dbc398b2ce",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/VALIDATION_PLAN.json": "6ee5d5f8a691885cf86e3ea002b70bb340bea43cf0920a1762720c91b26408ab",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/evaluated_run.csv": "cd5a49a2fa68bb8f0d673a8341d52f2f9ea8a3fc6e78e416cd71a2d4eaec3391",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/evaluated_run.json": "29655afbf6f1d3aeba64201e56bbd388c3c617495e2f8d42549b0ade23af7903",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/fixtures/benchmark_oracle.json": "087528439acd409be6fe2fcddbe9b3868f858dfc31a1e44bf37876aefe8b0a7b",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/fixtures/toronto_311_sample.json": "b631f76883fc8010d50b0e48bc67b278cb4c91dc9150513be0d8fc2a4685cf3b",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/reviewer/working-demo-pdf.png": "771855ed0204bc7afe754258f6bb381366a33f144de1b7a29fbbfe3798bdc70d",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/reviewer/working-demo.png": "c404722036f9d830aae2d579b055008e11ce5088f7dcdc2fab98a87b248c742a",
+    "projects/WS-003-municipal-sla-operations-explorer/requirements.txt": "6979faed9b4726634bb0ff2b36f3e5a080e4d89a162dc1f264fce99bae332a8a",
+    "projects/WS-003-municipal-sla-operations-explorer/src/demo_server.py": "66bfbbc0cf1693005e02d7953eb5338917276253a9faeae61ea134b4a13d7d10",
+    "projects/WS-003-municipal-sla-operations-explorer/src/sla_engine.py": "6fa9a472303b7930d658cd713b0ec8cff45ec8e63fff6d1a51adbcb721dbf0ef",
+    "projects/WS-003-municipal-sla-operations-explorer/tests/fixtures/benchmark_oracle.json": "087528439acd409be6fe2fcddbe9b3868f858dfc31a1e44bf37876aefe8b0a7b",
+    "projects/WS-003-municipal-sla-operations-explorer/tests/fixtures/toronto_311_sample.json": "b631f76883fc8010d50b0e48bc67b278cb4c91dc9150513be0d8fc2a4685cf3b",
+    "projects/WS-003-municipal-sla-operations-explorer/tests/test_app.py": "ae34202cbf70d23cc1c3411c3bfd03caf83a14f5b93e8abd4c74e503271d401e",
+    "projects/WS-003-municipal-sla-operations-explorer/tests/test_sla_engine.py": "fd7e80fe185d6c4a73d4e01050d20c24f4cc0aab68d005e1e6fde2ca4c2475b6",
+    "projects/WS-003-municipal-sla-operations-explorer/vercel.json": "fe334fb8fe1bde438a6b4091799038bc45aa920549adc488db6ce258eff944d4",
+    "scripts/build_ws003_work_sample.py": "105786b4f8b420dcdad7f2b83d15677fc81d443edb7a4c1ed7577e8e703e4a5d"
+  },
+  "checks": [
+    {
+      "id": "check_automated_tests",
+      "status": "PASS",
+      "observed": "The exact frozen command discovered and passed all 15 tests with zero failures in 0.031 seconds. Coverage is meaningful for the oracle, exports, timestamp and rule regressions, but omits the independently discovered lifecycle-consistency cases.",
+      "evidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/final-3f9f274/final-check-automated-tests.txt",
+      "evidenceSha256": "38bc0725851c2bb5d79e9f267201d041ef833b895ff07ac890df372961dc7652"
+    },
+    {
+      "id": "check_benchmark_reproduction",
+      "status": "PASS",
+      "observed": "CLI, local UI, and anonymous production UI reproduced 15 synthetic records at 8 COMPLIANT, 1 AT_RISK, 5 SLA_BREACHED, and 1 INCOMPLETE_DATA_REVIEW. Strict rules produced 0/1/13/1, and SR-311-001 became SLA_BREACHED / CLOSED_AFTER_SLA_TARGET. Production code and static assets matched the frozen candidate under the recorded hashes.",
+      "evidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/final-3f9f274/final-check-benchmark.txt",
+      "evidenceSha256": "66dc54e442058e2d212c4a1821f2d3a71702bc97bd41dedc9904165b51c52f62"
+    },
+    {
+      "id": "check_invalid_timestamp_routing",
+      "status": "FAIL",
+      "observed": "All frozen timestamp, category, rules, malformed-body, size, and cross-site probes produced their safe expected responses. Independent nearby cases did not: unknown status, OPEN/IN_PROGRESS with closed_date, and CLOSED after reference_now were accepted as ordinary decision output. The HTTPS endpoint also accepted an HTTP Origin with the same host.",
+      "evidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/final-3f9f274/final-check-edge-cases.txt",
+      "evidenceSha256": "12b4f178507f842736ef71f31aeecb55e24d57ca352f3612ec47e803fb9c7d60"
+    },
+    {
+      "id": "check_csv_json_export_structure",
+      "status": "PASS",
+      "observed": "Fresh JSON and CSV exports contain 15 records/rows plus required fixture_kind, reason_code, and fingerprint fields. Fingerprints are deterministic, unique for the fixture, stable across rule changes, and change with source-record input.",
+      "evidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/final-3f9f274/final-check-exports.txt",
+      "evidenceSha256": "154979346e3077cd14a92264b21e75c5ed4dbc0e82b6d0bface12cd7aaa34c0c"
+    },
+    {
+      "id": "check_pdf_visual_study",
+      "status": "FAIL",
+      "observed": "All three pages were freshly rendered at 150 DPI and inspected. Pages 1 and 3 are clean, but page 2 is visibly cropped: the code expression ends after `(sla_target_days * 8` and its footer ends at `2 of`. Both page-3 links resolved signed out; the production link was operated successfully and the repository link opened publicly.",
+      "evidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/final-3f9f274/final-check-pdf-visual.txt",
+      "evidenceSha256": "815f1338c07f6b838693952124d348c6119e42b2277206bc82ab392a17208c56"
+    },
+    {
+      "id": "check_ward_bottleneck_claim",
+      "status": "PASS",
+      "observed": "Ward 01 - Etobicoke North is exactly 2 compliant of 5 total, or 40.0%, and is consistently labeled a synthetic scenario rather than an official Toronto rate. A fresh official 2026 resource download confirmed that the public header lacks target, closure/completion, and stable request-ID fields.",
+      "evidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/final-3f9f274/final-check-ward-claims.txt",
+      "evidenceSha256": "8795d252272134967cb26ab7d5aefbcd6066bca628d6b5440c47fc54e5413ea5"
+    },
+    {
+      "id": "check_privacy_boundary",
+      "status": "PASS",
+      "observed": "Fresh exports contain no resident names, private addresses, postal/intersection data, email-like values, phone numbers, or contact fields. All output preserves fixture_kind=synthetic_sla_scenario, and public-facing surfaces explicitly disclose the official-source timestamp limitation.",
+      "evidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/final-3f9f274/final-check-privacy-boundary.txt",
+      "evidenceSha256": "099b60eb52676b227b07965d143f19b1cf9e2b36b66d81e986babc09ac7daf65"
+    }
+  ],
+  "adversarialEvidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/final-3f9f274/final-adversarial-findings.txt",
+  "adversarialEvidenceSha256": "57980df6a41bafd4e56281c5e684fa8ba0b3f3d72cf380adaca538b0c72eeecc",
+  "validatorStatement": "This report records an independent non-builder validation of the frozen candidate. No product, plan, PDF, screenshot, manifest, checklist, release-copy, or prior failed-evidence artifact was modified by the validator."
 }

@@ -1,0 +1,1306 @@
+{
+  "base": "https://municipal-311-sla-operations-desk.vercel.app",
+  "cases": [
+    {
+      "body": {
+        "error": "Rules must be an object."
+      },
+      "name": "rules_empty_array",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "Rules must be an object."
+      },
+      "name": "rules_empty_string",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "Rules must be an object."
+      },
+      "name": "rules_false",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "Rules must be an object."
+      },
+      "name": "rules_zero",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "Rules must be an object."
+      },
+      "name": "rules_null",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "Rules must be an object."
+      },
+      "name": "rules_truthy_array",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "Rules must be an object."
+      },
+      "name": "rules_truthy_string",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "Rules must be an object."
+      },
+      "name": "rules_truthy_number",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "Rules must be an object."
+      },
+      "name": "rules_truthy_boolean",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "SLA target for Pothole Repair must be an integer between 1 and 30 days."
+      },
+      "name": "rule_fractional",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "SLA target for Pothole Repair must be an integer between 1 and 30 days."
+      },
+      "name": "rule_boolean_true",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "SLA target for Pothole Repair must be an integer between 1 and 30 days."
+      },
+      "name": "rule_boolean_false",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "SLA target for Pothole Repair must be an integer between 1 and 30 days."
+      },
+      "name": "rule_zero",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "SLA target for Pothole Repair must be an integer between 1 and 30 days."
+      },
+      "name": "rule_negative",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "SLA target for Pothole Repair must be an integer between 1 and 30 days."
+      },
+      "name": "rule_31",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "SLA target for Pothole Repair must be an integer between 1 and 30 days."
+      },
+      "name": "rule_string",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "SLA target for Pothole Repair must be an integer between 1 and 30 days."
+      },
+      "name": "rule_value_null",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "Unknown SLA rule categories: Unmapped Service."
+      },
+      "name": "rule_unknown",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "Request body must be a JSON object."
+      },
+      "name": "malformed_json",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "Request body must be a JSON object."
+      },
+      "name": "empty_json_body",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "Request body must be a JSON object."
+      },
+      "name": "top_level_array",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "Request body must be a JSON object."
+      },
+      "name": "top_level_string",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "Request body must be a JSON object."
+      },
+      "name": "top_level_false",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "Send a small JSON request."
+      },
+      "name": "non_json_content_type",
+      "status": 400
+    },
+    {
+      "body": {
+        "error": "Request exceeds the 8 KB limit."
+      },
+      "name": "oversized_json",
+      "status": 413
+    },
+    {
+      "body": {
+        "error": "Use the demo from its own page."
+      },
+      "name": "cross_origin",
+      "status": 403
+    },
+    {
+      "body": {
+        "error": "Use the demo from its own page."
+      },
+      "name": "sec_fetch_cross_site",
+      "status": 403
+    },
+    {
+      "body": {
+        "csv": "fixture_kind,service_request_id,service_name,ward,created_date,target_date,closed_date,status,duration_days,sla_target_days,margin_days,lifecycle_state,sla_status,reason_code,fingerprint\r\nsynthetic_sla_scenario,SR-311-001,Pothole Repair,Ward 10 - Spadina-Fort York,2026-08-01T09:00:00+00:00,2026-08-06T09:00:00+00:00,2026-08-04T14:30:00+00:00,CLOSED,3.23,5,1.77,CLOSED_ON_TIME,COMPLIANT,CLOSED_BEFORE_SLA_TARGET,10a0ab798f4ef3a8\r\nsynthetic_sla_scenario,SR-311-002,Pothole Repair,Ward 10 - Spadina-Fort York,2026-08-01T10:00:00+00:00,2026-08-06T10:00:00+00:00,2026-08-08T11:00:00+00:00,CLOSED,7.04,5,-2.04,CLOSED_OVERDUE,SLA_BREACHED,CLOSED_AFTER_SLA_TARGET,58c36d53d886f11f\r\nsynthetic_sla_scenario,SR-311-003,Streetlight Maintenance,Ward 01 - Etobicoke North,2026-08-01T08:00:00+00:00,2026-08-04T08:00:00+00:00,,OPEN,7.17,3,-4.17,OPEN_OVERDUE,SLA_BREACHED,OPEN_PAST_SLA_TARGET,76eb09a4f1388c7d\r\nsynthetic_sla_scenario,SR-311-004,Streetlight Maintenance,Ward 01 - Etobicoke North,2026-08-05T08:00:00+00:00,2026-08-08T08:00:00+00:00,2026-08-07T12:00:00+00:00,CLOSED,2.17,3,0.83,CLOSED_ON_TIME,COMPLIANT,CLOSED_BEFORE_SLA_TARGET,cc0e07e0803d95ef\r\nsynthetic_sla_scenario,SR-311-005,Tree Trimming,Ward 14 - Toronto-Danforth,2026-07-20T10:00:00+00:00,2026-07-30T10:00:00+00:00,2026-08-02T16:00:00+00:00,CLOSED,13.25,10,-3.25,CLOSED_OVERDUE,SLA_BREACHED,CLOSED_AFTER_SLA_TARGET,5689ea501ac6e0af\r\nsynthetic_sla_scenario,SR-311-006,Tree Trimming,Ward 14 - Toronto-Danforth,2026-08-01T09:00:00+00:00,2026-08-11T09:00:00+00:00,,IN_PROGRESS,7.12,10,2.88,IN_PROGRESS,COMPLIANT,IN_PROGRESS_WITHIN_SLA,1d1fe281e1f723eb\r\nsynthetic_sla_scenario,SR-311-007,Garbage Collection,Ward 10 - Spadina-Fort York,2026-08-07T07:00:00+00:00,2026-08-09T07:00:00+00:00,2026-08-08T15:00:00+00:00,CLOSED,1.33,2,0.67,CLOSED_ON_TIME,COMPLIANT,CLOSED_BEFORE_SLA_TARGET,2d2354737b010898\r\nsynthetic_sla_scenario,SR-311-008,Garbage Collection,Ward 01 - Etobicoke North,2026-08-04T07:00:00+00:00,2026-08-06T07:00:00+00:00,,OPEN,4.21,2,-2.21,OPEN_OVERDUE,SLA_BREACHED,OPEN_PAST_SLA_TARGET,ba908b209efdd234\r\nsynthetic_sla_scenario,SR-311-009,Pothole Repair,Ward 14 - Toronto-Danforth,2026-08-05T12:00:00+00:00,2026-08-10T12:00:00+00:00,,OPEN,3.0,5,2.0,OPEN,COMPLIANT,OPEN_TARGET_DERIVED_WITHIN_SLA,57f3f536358fc666\r\nsynthetic_sla_scenario,SR-311-010,Streetlight Maintenance,Ward 10 - Spadina-Fort York,INVALID_DATE_FORMAT,2026-08-05T08:00:00Z,,OPEN,,3,,DATA_ERROR,INCOMPLETE_DATA_REVIEW,INVALID_CREATED_TIMESTAMP,4875cbe5e632d920\r\nsynthetic_sla_scenario,SR-311-011,Pothole Repair,Ward 01 - Etobicoke North,2026-08-03T11:00:00+00:00,2026-08-08T11:00:00+00:00,2026-08-07T10:00:00+00:00,CLOSED,3.96,5,1.04,CLOSED_ON_TIME,COMPLIANT,CLOSED_BEFORE_SLA_TARGET,936c1d52363b8c9e\r\nsynthetic_sla_scenario,SR-311-012,Tree Trimming,Ward 01 - Etobicoke North,2026-07-15T09:00:00+00:00,2026-07-25T09:00:00+00:00,,OPEN,24.12,10,-14.12,OPEN_OVERDUE,SLA_BREACHED,OPEN_PAST_SLA_TARGET,bf2942c9485ac0a6\r\nsynthetic_sla_scenario,SR-311-013,Garbage Collection,Ward 14 - Toronto-Danforth,2026-08-06T08:00:00+00:00,2026-08-08T08:00:00+00:00,2026-08-08T07:30:00+00:00,CLOSED,1.98,2,0.02,CLOSED_ON_TIME,COMPLIANT,CLOSED_BEFORE_SLA_TARGET,9280b252ef8cef77\r\nsynthetic_sla_scenario,SR-311-014,Pothole Repair,Ward 10 - Spadina-Fort York,2026-08-02T14:00:00+00:00,2026-08-07T14:00:00+00:00,2026-08-07T13:00:00+00:00,CLOSED,4.96,5,0.04,CLOSED_ON_TIME,COMPLIANT,CLOSED_BEFORE_SLA_TARGET,96b3197f2cf92d2d\r\nsynthetic_sla_scenario,SR-311-015,Streetlight Maintenance,Ward 14 - Toronto-Danforth,2026-08-06T10:00:00+00:00,2026-08-09T10:00:00+00:00,,IN_PROGRESS,2.08,3,0.92,IN_PROGRESS,AT_RISK,IN_PROGRESS_SLA_MARGIN_EXPIRING,f37b099d147893cd\r\n",
+        "elapsed_ms": 0.548,
+        "engine": "sla_engine.evaluate_dataset (Python)",
+        "engine_sha256": "58f4df9f05cde2c92cc3dcb8ffba6ac536651264ceba1eadc5aac1a6327c58a2",
+        "evaluated_records": [
+          {
+            "closed_date": "2026-08-04T14:30:00+00:00",
+            "created_date": "2026-08-01T09:00:00+00:00",
+            "duration_days": 3.23,
+            "fingerprint": "10a0ab798f4ef3a8",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_ON_TIME",
+            "margin_days": 1.77,
+            "reason_code": "CLOSED_BEFORE_SLA_TARGET",
+            "service_name": "Pothole Repair",
+            "service_request_id": "SR-311-001",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 5,
+            "status": "CLOSED",
+            "target_date": "2026-08-06T09:00:00+00:00",
+            "ward": "Ward 10 - Spadina-Fort York"
+          },
+          {
+            "closed_date": "2026-08-08T11:00:00+00:00",
+            "created_date": "2026-08-01T10:00:00+00:00",
+            "duration_days": 7.04,
+            "fingerprint": "58c36d53d886f11f",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_OVERDUE",
+            "margin_days": -2.04,
+            "reason_code": "CLOSED_AFTER_SLA_TARGET",
+            "service_name": "Pothole Repair",
+            "service_request_id": "SR-311-002",
+            "sla_status": "SLA_BREACHED",
+            "sla_target_days": 5,
+            "status": "CLOSED",
+            "target_date": "2026-08-06T10:00:00+00:00",
+            "ward": "Ward 10 - Spadina-Fort York"
+          },
+          {
+            "closed_date": null,
+            "created_date": "2026-08-01T08:00:00+00:00",
+            "duration_days": 7.17,
+            "fingerprint": "76eb09a4f1388c7d",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "OPEN_OVERDUE",
+            "margin_days": -4.17,
+            "reason_code": "OPEN_PAST_SLA_TARGET",
+            "service_name": "Streetlight Maintenance",
+            "service_request_id": "SR-311-003",
+            "sla_status": "SLA_BREACHED",
+            "sla_target_days": 3,
+            "status": "OPEN",
+            "target_date": "2026-08-04T08:00:00+00:00",
+            "ward": "Ward 01 - Etobicoke North"
+          },
+          {
+            "closed_date": "2026-08-07T12:00:00+00:00",
+            "created_date": "2026-08-05T08:00:00+00:00",
+            "duration_days": 2.17,
+            "fingerprint": "cc0e07e0803d95ef",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_ON_TIME",
+            "margin_days": 0.83,
+            "reason_code": "CLOSED_BEFORE_SLA_TARGET",
+            "service_name": "Streetlight Maintenance",
+            "service_request_id": "SR-311-004",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 3,
+            "status": "CLOSED",
+            "target_date": "2026-08-08T08:00:00+00:00",
+            "ward": "Ward 01 - Etobicoke North"
+          },
+          {
+            "closed_date": "2026-08-02T16:00:00+00:00",
+            "created_date": "2026-07-20T10:00:00+00:00",
+            "duration_days": 13.25,
+            "fingerprint": "5689ea501ac6e0af",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_OVERDUE",
+            "margin_days": -3.25,
+            "reason_code": "CLOSED_AFTER_SLA_TARGET",
+            "service_name": "Tree Trimming",
+            "service_request_id": "SR-311-005",
+            "sla_status": "SLA_BREACHED",
+            "sla_target_days": 10,
+            "status": "CLOSED",
+            "target_date": "2026-07-30T10:00:00+00:00",
+            "ward": "Ward 14 - Toronto-Danforth"
+          },
+          {
+            "closed_date": null,
+            "created_date": "2026-08-01T09:00:00+00:00",
+            "duration_days": 7.12,
+            "fingerprint": "1d1fe281e1f723eb",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "IN_PROGRESS",
+            "margin_days": 2.88,
+            "reason_code": "IN_PROGRESS_WITHIN_SLA",
+            "service_name": "Tree Trimming",
+            "service_request_id": "SR-311-006",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 10,
+            "status": "IN_PROGRESS",
+            "target_date": "2026-08-11T09:00:00+00:00",
+            "ward": "Ward 14 - Toronto-Danforth"
+          },
+          {
+            "closed_date": "2026-08-08T15:00:00+00:00",
+            "created_date": "2026-08-07T07:00:00+00:00",
+            "duration_days": 1.33,
+            "fingerprint": "2d2354737b010898",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_ON_TIME",
+            "margin_days": 0.67,
+            "reason_code": "CLOSED_BEFORE_SLA_TARGET",
+            "service_name": "Garbage Collection",
+            "service_request_id": "SR-311-007",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 2,
+            "status": "CLOSED",
+            "target_date": "2026-08-09T07:00:00+00:00",
+            "ward": "Ward 10 - Spadina-Fort York"
+          },
+          {
+            "closed_date": null,
+            "created_date": "2026-08-04T07:00:00+00:00",
+            "duration_days": 4.21,
+            "fingerprint": "ba908b209efdd234",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "OPEN_OVERDUE",
+            "margin_days": -2.21,
+            "reason_code": "OPEN_PAST_SLA_TARGET",
+            "service_name": "Garbage Collection",
+            "service_request_id": "SR-311-008",
+            "sla_status": "SLA_BREACHED",
+            "sla_target_days": 2,
+            "status": "OPEN",
+            "target_date": "2026-08-06T07:00:00+00:00",
+            "ward": "Ward 01 - Etobicoke North"
+          },
+          {
+            "closed_date": null,
+            "created_date": "2026-08-05T12:00:00+00:00",
+            "duration_days": 3.0,
+            "fingerprint": "57f3f536358fc666",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "OPEN",
+            "margin_days": 2.0,
+            "reason_code": "OPEN_TARGET_DERIVED_WITHIN_SLA",
+            "service_name": "Pothole Repair",
+            "service_request_id": "SR-311-009",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 5,
+            "status": "OPEN",
+            "target_date": "2026-08-10T12:00:00+00:00",
+            "ward": "Ward 14 - Toronto-Danforth"
+          },
+          {
+            "closed_date": null,
+            "created_date": "INVALID_DATE_FORMAT",
+            "duration_days": null,
+            "fingerprint": "4875cbe5e632d920",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "DATA_ERROR",
+            "margin_days": null,
+            "reason_code": "INVALID_CREATED_TIMESTAMP",
+            "service_name": "Streetlight Maintenance",
+            "service_request_id": "SR-311-010",
+            "sla_status": "INCOMPLETE_DATA_REVIEW",
+            "sla_target_days": 3,
+            "status": "OPEN",
+            "target_date": "2026-08-05T08:00:00Z",
+            "ward": "Ward 10 - Spadina-Fort York"
+          },
+          {
+            "closed_date": "2026-08-07T10:00:00+00:00",
+            "created_date": "2026-08-03T11:00:00+00:00",
+            "duration_days": 3.96,
+            "fingerprint": "936c1d52363b8c9e",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_ON_TIME",
+            "margin_days": 1.04,
+            "reason_code": "CLOSED_BEFORE_SLA_TARGET",
+            "service_name": "Pothole Repair",
+            "service_request_id": "SR-311-011",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 5,
+            "status": "CLOSED",
+            "target_date": "2026-08-08T11:00:00+00:00",
+            "ward": "Ward 01 - Etobicoke North"
+          },
+          {
+            "closed_date": null,
+            "created_date": "2026-07-15T09:00:00+00:00",
+            "duration_days": 24.12,
+            "fingerprint": "bf2942c9485ac0a6",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "OPEN_OVERDUE",
+            "margin_days": -14.12,
+            "reason_code": "OPEN_PAST_SLA_TARGET",
+            "service_name": "Tree Trimming",
+            "service_request_id": "SR-311-012",
+            "sla_status": "SLA_BREACHED",
+            "sla_target_days": 10,
+            "status": "OPEN",
+            "target_date": "2026-07-25T09:00:00+00:00",
+            "ward": "Ward 01 - Etobicoke North"
+          },
+          {
+            "closed_date": "2026-08-08T07:30:00+00:00",
+            "created_date": "2026-08-06T08:00:00+00:00",
+            "duration_days": 1.98,
+            "fingerprint": "9280b252ef8cef77",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_ON_TIME",
+            "margin_days": 0.02,
+            "reason_code": "CLOSED_BEFORE_SLA_TARGET",
+            "service_name": "Garbage Collection",
+            "service_request_id": "SR-311-013",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 2,
+            "status": "CLOSED",
+            "target_date": "2026-08-08T08:00:00+00:00",
+            "ward": "Ward 14 - Toronto-Danforth"
+          },
+          {
+            "closed_date": "2026-08-07T13:00:00+00:00",
+            "created_date": "2026-08-02T14:00:00+00:00",
+            "duration_days": 4.96,
+            "fingerprint": "96b3197f2cf92d2d",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_ON_TIME",
+            "margin_days": 0.04,
+            "reason_code": "CLOSED_BEFORE_SLA_TARGET",
+            "service_name": "Pothole Repair",
+            "service_request_id": "SR-311-014",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 5,
+            "status": "CLOSED",
+            "target_date": "2026-08-07T14:00:00+00:00",
+            "ward": "Ward 10 - Spadina-Fort York"
+          },
+          {
+            "closed_date": null,
+            "created_date": "2026-08-06T10:00:00+00:00",
+            "duration_days": 2.08,
+            "fingerprint": "f37b099d147893cd",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "IN_PROGRESS",
+            "margin_days": 0.92,
+            "reason_code": "IN_PROGRESS_SLA_MARGIN_EXPIRING",
+            "service_name": "Streetlight Maintenance",
+            "service_request_id": "SR-311-015",
+            "sla_status": "AT_RISK",
+            "sla_target_days": 3,
+            "status": "IN_PROGRESS",
+            "target_date": "2026-08-09T10:00:00+00:00",
+            "ward": "Ward 14 - Toronto-Danforth"
+          }
+        ],
+        "executed_at": "2026-09-12T18:29:14.106684+00:00",
+        "fixture_kind": "synthetic_sla_scenario",
+        "reference_now": "2026-08-08T12:00:00+00:00",
+        "rules_applied": {
+          "Garbage Collection": 2,
+          "Pothole Repair": 5,
+          "Streetlight Maintenance": 3,
+          "Tree Trimming": 10
+        },
+        "run_id": "40d9ed50-7f3c-4678-9a02-4f3369a044d3",
+        "status_summary": {
+          "AT_RISK": 1,
+          "COMPLIANT": 8,
+          "INCOMPLETE_DATA_REVIEW": 1,
+          "SLA_BREACHED": 5
+        },
+        "total_records": 15,
+        "ward_analytics": {
+          "Ward 01 - Etobicoke North": {
+            "at_risk": 0,
+            "breached": 3,
+            "compliance_rate_pct": 40.0,
+            "compliant": 2,
+            "data_error": 0,
+            "total_requests": 5
+          },
+          "Ward 10 - Spadina-Fort York": {
+            "at_risk": 0,
+            "breached": 1,
+            "compliance_rate_pct": 75.0,
+            "compliant": 3,
+            "data_error": 1,
+            "total_requests": 5
+          },
+          "Ward 14 - Toronto-Danforth": {
+            "at_risk": 1,
+            "breached": 1,
+            "compliance_rate_pct": 60.0,
+            "compliant": 3,
+            "data_error": 0,
+            "total_requests": 5
+          }
+        }
+      },
+      "name": "same_origin",
+      "status": 200,
+      "status_summary": {
+        "AT_RISK": 1,
+        "COMPLIANT": 8,
+        "INCOMPLETE_DATA_REVIEW": 1,
+        "SLA_BREACHED": 5
+      }
+    },
+    {
+      "body": {
+        "csv": "fixture_kind,service_request_id,service_name,ward,created_date,target_date,closed_date,status,duration_days,sla_target_days,margin_days,lifecycle_state,sla_status,reason_code,fingerprint\r\nsynthetic_sla_scenario,SR-311-001,Pothole Repair,Ward 10 - Spadina-Fort York,2026-08-01T09:00:00+00:00,2026-08-06T09:00:00+00:00,2026-08-04T14:30:00+00:00,CLOSED,3.23,5,1.77,CLOSED_ON_TIME,COMPLIANT,CLOSED_BEFORE_SLA_TARGET,10a0ab798f4ef3a8\r\nsynthetic_sla_scenario,SR-311-002,Pothole Repair,Ward 10 - Spadina-Fort York,2026-08-01T10:00:00+00:00,2026-08-06T10:00:00+00:00,2026-08-08T11:00:00+00:00,CLOSED,7.04,5,-2.04,CLOSED_OVERDUE,SLA_BREACHED,CLOSED_AFTER_SLA_TARGET,58c36d53d886f11f\r\nsynthetic_sla_scenario,SR-311-003,Streetlight Maintenance,Ward 01 - Etobicoke North,2026-08-01T08:00:00+00:00,2026-08-04T08:00:00+00:00,,OPEN,7.17,3,-4.17,OPEN_OVERDUE,SLA_BREACHED,OPEN_PAST_SLA_TARGET,76eb09a4f1388c7d\r\nsynthetic_sla_scenario,SR-311-004,Streetlight Maintenance,Ward 01 - Etobicoke North,2026-08-05T08:00:00+00:00,2026-08-08T08:00:00+00:00,2026-08-07T12:00:00+00:00,CLOSED,2.17,3,0.83,CLOSED_ON_TIME,COMPLIANT,CLOSED_BEFORE_SLA_TARGET,cc0e07e0803d95ef\r\nsynthetic_sla_scenario,SR-311-005,Tree Trimming,Ward 14 - Toronto-Danforth,2026-07-20T10:00:00+00:00,2026-07-30T10:00:00+00:00,2026-08-02T16:00:00+00:00,CLOSED,13.25,10,-3.25,CLOSED_OVERDUE,SLA_BREACHED,CLOSED_AFTER_SLA_TARGET,5689ea501ac6e0af\r\nsynthetic_sla_scenario,SR-311-006,Tree Trimming,Ward 14 - Toronto-Danforth,2026-08-01T09:00:00+00:00,2026-08-11T09:00:00+00:00,,IN_PROGRESS,7.12,10,2.88,IN_PROGRESS,COMPLIANT,IN_PROGRESS_WITHIN_SLA,1d1fe281e1f723eb\r\nsynthetic_sla_scenario,SR-311-007,Garbage Collection,Ward 10 - Spadina-Fort York,2026-08-07T07:00:00+00:00,2026-08-09T07:00:00+00:00,2026-08-08T15:00:00+00:00,CLOSED,1.33,2,0.67,CLOSED_ON_TIME,COMPLIANT,CLOSED_BEFORE_SLA_TARGET,2d2354737b010898\r\nsynthetic_sla_scenario,SR-311-008,Garbage Collection,Ward 01 - Etobicoke North,2026-08-04T07:00:00+00:00,2026-08-06T07:00:00+00:00,,OPEN,4.21,2,-2.21,OPEN_OVERDUE,SLA_BREACHED,OPEN_PAST_SLA_TARGET,ba908b209efdd234\r\nsynthetic_sla_scenario,SR-311-009,Pothole Repair,Ward 14 - Toronto-Danforth,2026-08-05T12:00:00+00:00,2026-08-10T12:00:00+00:00,,OPEN,3.0,5,2.0,OPEN,COMPLIANT,OPEN_TARGET_DERIVED_WITHIN_SLA,57f3f536358fc666\r\nsynthetic_sla_scenario,SR-311-010,Streetlight Maintenance,Ward 10 - Spadina-Fort York,INVALID_DATE_FORMAT,2026-08-05T08:00:00Z,,OPEN,,3,,DATA_ERROR,INCOMPLETE_DATA_REVIEW,INVALID_CREATED_TIMESTAMP,4875cbe5e632d920\r\nsynthetic_sla_scenario,SR-311-011,Pothole Repair,Ward 01 - Etobicoke North,2026-08-03T11:00:00+00:00,2026-08-08T11:00:00+00:00,2026-08-07T10:00:00+00:00,CLOSED,3.96,5,1.04,CLOSED_ON_TIME,COMPLIANT,CLOSED_BEFORE_SLA_TARGET,936c1d52363b8c9e\r\nsynthetic_sla_scenario,SR-311-012,Tree Trimming,Ward 01 - Etobicoke North,2026-07-15T09:00:00+00:00,2026-07-25T09:00:00+00:00,,OPEN,24.12,10,-14.12,OPEN_OVERDUE,SLA_BREACHED,OPEN_PAST_SLA_TARGET,bf2942c9485ac0a6\r\nsynthetic_sla_scenario,SR-311-013,Garbage Collection,Ward 14 - Toronto-Danforth,2026-08-06T08:00:00+00:00,2026-08-08T08:00:00+00:00,2026-08-08T07:30:00+00:00,CLOSED,1.98,2,0.02,CLOSED_ON_TIME,COMPLIANT,CLOSED_BEFORE_SLA_TARGET,9280b252ef8cef77\r\nsynthetic_sla_scenario,SR-311-014,Pothole Repair,Ward 10 - Spadina-Fort York,2026-08-02T14:00:00+00:00,2026-08-07T14:00:00+00:00,2026-08-07T13:00:00+00:00,CLOSED,4.96,5,0.04,CLOSED_ON_TIME,COMPLIANT,CLOSED_BEFORE_SLA_TARGET,96b3197f2cf92d2d\r\nsynthetic_sla_scenario,SR-311-015,Streetlight Maintenance,Ward 14 - Toronto-Danforth,2026-08-06T10:00:00+00:00,2026-08-09T10:00:00+00:00,,IN_PROGRESS,2.08,3,0.92,IN_PROGRESS,AT_RISK,IN_PROGRESS_SLA_MARGIN_EXPIRING,f37b099d147893cd\r\n",
+        "elapsed_ms": 0.439,
+        "engine": "sla_engine.evaluate_dataset (Python)",
+        "engine_sha256": "58f4df9f05cde2c92cc3dcb8ffba6ac536651264ceba1eadc5aac1a6327c58a2",
+        "evaluated_records": [
+          {
+            "closed_date": "2026-08-04T14:30:00+00:00",
+            "created_date": "2026-08-01T09:00:00+00:00",
+            "duration_days": 3.23,
+            "fingerprint": "10a0ab798f4ef3a8",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_ON_TIME",
+            "margin_days": 1.77,
+            "reason_code": "CLOSED_BEFORE_SLA_TARGET",
+            "service_name": "Pothole Repair",
+            "service_request_id": "SR-311-001",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 5,
+            "status": "CLOSED",
+            "target_date": "2026-08-06T09:00:00+00:00",
+            "ward": "Ward 10 - Spadina-Fort York"
+          },
+          {
+            "closed_date": "2026-08-08T11:00:00+00:00",
+            "created_date": "2026-08-01T10:00:00+00:00",
+            "duration_days": 7.04,
+            "fingerprint": "58c36d53d886f11f",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_OVERDUE",
+            "margin_days": -2.04,
+            "reason_code": "CLOSED_AFTER_SLA_TARGET",
+            "service_name": "Pothole Repair",
+            "service_request_id": "SR-311-002",
+            "sla_status": "SLA_BREACHED",
+            "sla_target_days": 5,
+            "status": "CLOSED",
+            "target_date": "2026-08-06T10:00:00+00:00",
+            "ward": "Ward 10 - Spadina-Fort York"
+          },
+          {
+            "closed_date": null,
+            "created_date": "2026-08-01T08:00:00+00:00",
+            "duration_days": 7.17,
+            "fingerprint": "76eb09a4f1388c7d",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "OPEN_OVERDUE",
+            "margin_days": -4.17,
+            "reason_code": "OPEN_PAST_SLA_TARGET",
+            "service_name": "Streetlight Maintenance",
+            "service_request_id": "SR-311-003",
+            "sla_status": "SLA_BREACHED",
+            "sla_target_days": 3,
+            "status": "OPEN",
+            "target_date": "2026-08-04T08:00:00+00:00",
+            "ward": "Ward 01 - Etobicoke North"
+          },
+          {
+            "closed_date": "2026-08-07T12:00:00+00:00",
+            "created_date": "2026-08-05T08:00:00+00:00",
+            "duration_days": 2.17,
+            "fingerprint": "cc0e07e0803d95ef",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_ON_TIME",
+            "margin_days": 0.83,
+            "reason_code": "CLOSED_BEFORE_SLA_TARGET",
+            "service_name": "Streetlight Maintenance",
+            "service_request_id": "SR-311-004",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 3,
+            "status": "CLOSED",
+            "target_date": "2026-08-08T08:00:00+00:00",
+            "ward": "Ward 01 - Etobicoke North"
+          },
+          {
+            "closed_date": "2026-08-02T16:00:00+00:00",
+            "created_date": "2026-07-20T10:00:00+00:00",
+            "duration_days": 13.25,
+            "fingerprint": "5689ea501ac6e0af",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_OVERDUE",
+            "margin_days": -3.25,
+            "reason_code": "CLOSED_AFTER_SLA_TARGET",
+            "service_name": "Tree Trimming",
+            "service_request_id": "SR-311-005",
+            "sla_status": "SLA_BREACHED",
+            "sla_target_days": 10,
+            "status": "CLOSED",
+            "target_date": "2026-07-30T10:00:00+00:00",
+            "ward": "Ward 14 - Toronto-Danforth"
+          },
+          {
+            "closed_date": null,
+            "created_date": "2026-08-01T09:00:00+00:00",
+            "duration_days": 7.12,
+            "fingerprint": "1d1fe281e1f723eb",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "IN_PROGRESS",
+            "margin_days": 2.88,
+            "reason_code": "IN_PROGRESS_WITHIN_SLA",
+            "service_name": "Tree Trimming",
+            "service_request_id": "SR-311-006",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 10,
+            "status": "IN_PROGRESS",
+            "target_date": "2026-08-11T09:00:00+00:00",
+            "ward": "Ward 14 - Toronto-Danforth"
+          },
+          {
+            "closed_date": "2026-08-08T15:00:00+00:00",
+            "created_date": "2026-08-07T07:00:00+00:00",
+            "duration_days": 1.33,
+            "fingerprint": "2d2354737b010898",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_ON_TIME",
+            "margin_days": 0.67,
+            "reason_code": "CLOSED_BEFORE_SLA_TARGET",
+            "service_name": "Garbage Collection",
+            "service_request_id": "SR-311-007",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 2,
+            "status": "CLOSED",
+            "target_date": "2026-08-09T07:00:00+00:00",
+            "ward": "Ward 10 - Spadina-Fort York"
+          },
+          {
+            "closed_date": null,
+            "created_date": "2026-08-04T07:00:00+00:00",
+            "duration_days": 4.21,
+            "fingerprint": "ba908b209efdd234",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "OPEN_OVERDUE",
+            "margin_days": -2.21,
+            "reason_code": "OPEN_PAST_SLA_TARGET",
+            "service_name": "Garbage Collection",
+            "service_request_id": "SR-311-008",
+            "sla_status": "SLA_BREACHED",
+            "sla_target_days": 2,
+            "status": "OPEN",
+            "target_date": "2026-08-06T07:00:00+00:00",
+            "ward": "Ward 01 - Etobicoke North"
+          },
+          {
+            "closed_date": null,
+            "created_date": "2026-08-05T12:00:00+00:00",
+            "duration_days": 3.0,
+            "fingerprint": "57f3f536358fc666",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "OPEN",
+            "margin_days": 2.0,
+            "reason_code": "OPEN_TARGET_DERIVED_WITHIN_SLA",
+            "service_name": "Pothole Repair",
+            "service_request_id": "SR-311-009",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 5,
+            "status": "OPEN",
+            "target_date": "2026-08-10T12:00:00+00:00",
+            "ward": "Ward 14 - Toronto-Danforth"
+          },
+          {
+            "closed_date": null,
+            "created_date": "INVALID_DATE_FORMAT",
+            "duration_days": null,
+            "fingerprint": "4875cbe5e632d920",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "DATA_ERROR",
+            "margin_days": null,
+            "reason_code": "INVALID_CREATED_TIMESTAMP",
+            "service_name": "Streetlight Maintenance",
+            "service_request_id": "SR-311-010",
+            "sla_status": "INCOMPLETE_DATA_REVIEW",
+            "sla_target_days": 3,
+            "status": "OPEN",
+            "target_date": "2026-08-05T08:00:00Z",
+            "ward": "Ward 10 - Spadina-Fort York"
+          },
+          {
+            "closed_date": "2026-08-07T10:00:00+00:00",
+            "created_date": "2026-08-03T11:00:00+00:00",
+            "duration_days": 3.96,
+            "fingerprint": "936c1d52363b8c9e",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_ON_TIME",
+            "margin_days": 1.04,
+            "reason_code": "CLOSED_BEFORE_SLA_TARGET",
+            "service_name": "Pothole Repair",
+            "service_request_id": "SR-311-011",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 5,
+            "status": "CLOSED",
+            "target_date": "2026-08-08T11:00:00+00:00",
+            "ward": "Ward 01 - Etobicoke North"
+          },
+          {
+            "closed_date": null,
+            "created_date": "2026-07-15T09:00:00+00:00",
+            "duration_days": 24.12,
+            "fingerprint": "bf2942c9485ac0a6",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "OPEN_OVERDUE",
+            "margin_days": -14.12,
+            "reason_code": "OPEN_PAST_SLA_TARGET",
+            "service_name": "Tree Trimming",
+            "service_request_id": "SR-311-012",
+            "sla_status": "SLA_BREACHED",
+            "sla_target_days": 10,
+            "status": "OPEN",
+            "target_date": "2026-07-25T09:00:00+00:00",
+            "ward": "Ward 01 - Etobicoke North"
+          },
+          {
+            "closed_date": "2026-08-08T07:30:00+00:00",
+            "created_date": "2026-08-06T08:00:00+00:00",
+            "duration_days": 1.98,
+            "fingerprint": "9280b252ef8cef77",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_ON_TIME",
+            "margin_days": 0.02,
+            "reason_code": "CLOSED_BEFORE_SLA_TARGET",
+            "service_name": "Garbage Collection",
+            "service_request_id": "SR-311-013",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 2,
+            "status": "CLOSED",
+            "target_date": "2026-08-08T08:00:00+00:00",
+            "ward": "Ward 14 - Toronto-Danforth"
+          },
+          {
+            "closed_date": "2026-08-07T13:00:00+00:00",
+            "created_date": "2026-08-02T14:00:00+00:00",
+            "duration_days": 4.96,
+            "fingerprint": "96b3197f2cf92d2d",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_ON_TIME",
+            "margin_days": 0.04,
+            "reason_code": "CLOSED_BEFORE_SLA_TARGET",
+            "service_name": "Pothole Repair",
+            "service_request_id": "SR-311-014",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 5,
+            "status": "CLOSED",
+            "target_date": "2026-08-07T14:00:00+00:00",
+            "ward": "Ward 10 - Spadina-Fort York"
+          },
+          {
+            "closed_date": null,
+            "created_date": "2026-08-06T10:00:00+00:00",
+            "duration_days": 2.08,
+            "fingerprint": "f37b099d147893cd",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "IN_PROGRESS",
+            "margin_days": 0.92,
+            "reason_code": "IN_PROGRESS_SLA_MARGIN_EXPIRING",
+            "service_name": "Streetlight Maintenance",
+            "service_request_id": "SR-311-015",
+            "sla_status": "AT_RISK",
+            "sla_target_days": 3,
+            "status": "IN_PROGRESS",
+            "target_date": "2026-08-09T10:00:00+00:00",
+            "ward": "Ward 14 - Toronto-Danforth"
+          }
+        ],
+        "executed_at": "2026-09-12T18:29:14.391337+00:00",
+        "fixture_kind": "synthetic_sla_scenario",
+        "reference_now": "2026-08-08T12:00:00+00:00",
+        "rules_applied": {
+          "Garbage Collection": 2,
+          "Pothole Repair": 5,
+          "Streetlight Maintenance": 3,
+          "Tree Trimming": 10
+        },
+        "run_id": "4ee2b696-ed86-4b40-a95c-bad97c49ba4e",
+        "status_summary": {
+          "AT_RISK": 1,
+          "COMPLIANT": 8,
+          "INCOMPLETE_DATA_REVIEW": 1,
+          "SLA_BREACHED": 5
+        },
+        "total_records": 15,
+        "ward_analytics": {
+          "Ward 01 - Etobicoke North": {
+            "at_risk": 0,
+            "breached": 3,
+            "compliance_rate_pct": 40.0,
+            "compliant": 2,
+            "data_error": 0,
+            "total_requests": 5
+          },
+          "Ward 10 - Spadina-Fort York": {
+            "at_risk": 0,
+            "breached": 1,
+            "compliance_rate_pct": 75.0,
+            "compliant": 3,
+            "data_error": 1,
+            "total_requests": 5
+          },
+          "Ward 14 - Toronto-Danforth": {
+            "at_risk": 1,
+            "breached": 1,
+            "compliance_rate_pct": 60.0,
+            "compliant": 3,
+            "data_error": 0,
+            "total_requests": 5
+          }
+        }
+      },
+      "name": "origin_absent",
+      "status": 200,
+      "status_summary": {
+        "AT_RISK": 1,
+        "COMPLIANT": 8,
+        "INCOMPLETE_DATA_REVIEW": 1,
+        "SLA_BREACHED": 5
+      }
+    },
+    {
+      "body": {
+        "csv": "fixture_kind,service_request_id,service_name,ward,created_date,target_date,closed_date,status,duration_days,sla_target_days,margin_days,lifecycle_state,sla_status,reason_code,fingerprint\r\nsynthetic_sla_scenario,SR-311-001,Pothole Repair,Ward 10 - Spadina-Fort York,2026-08-01T09:00:00+00:00,2026-08-06T09:00:00+00:00,2026-08-04T14:30:00+00:00,CLOSED,3.23,5,1.77,CLOSED_ON_TIME,COMPLIANT,CLOSED_BEFORE_SLA_TARGET,10a0ab798f4ef3a8\r\nsynthetic_sla_scenario,SR-311-002,Pothole Repair,Ward 10 - Spadina-Fort York,2026-08-01T10:00:00+00:00,2026-08-06T10:00:00+00:00,2026-08-08T11:00:00+00:00,CLOSED,7.04,5,-2.04,CLOSED_OVERDUE,SLA_BREACHED,CLOSED_AFTER_SLA_TARGET,58c36d53d886f11f\r\nsynthetic_sla_scenario,SR-311-003,Streetlight Maintenance,Ward 01 - Etobicoke North,2026-08-01T08:00:00+00:00,2026-08-04T08:00:00+00:00,,OPEN,7.17,3,-4.17,OPEN_OVERDUE,SLA_BREACHED,OPEN_PAST_SLA_TARGET,76eb09a4f1388c7d\r\nsynthetic_sla_scenario,SR-311-004,Streetlight Maintenance,Ward 01 - Etobicoke North,2026-08-05T08:00:00+00:00,2026-08-08T08:00:00+00:00,2026-08-07T12:00:00+00:00,CLOSED,2.17,3,0.83,CLOSED_ON_TIME,COMPLIANT,CLOSED_BEFORE_SLA_TARGET,cc0e07e0803d95ef\r\nsynthetic_sla_scenario,SR-311-005,Tree Trimming,Ward 14 - Toronto-Danforth,2026-07-20T10:00:00+00:00,2026-07-30T10:00:00+00:00,2026-08-02T16:00:00+00:00,CLOSED,13.25,10,-3.25,CLOSED_OVERDUE,SLA_BREACHED,CLOSED_AFTER_SLA_TARGET,5689ea501ac6e0af\r\nsynthetic_sla_scenario,SR-311-006,Tree Trimming,Ward 14 - Toronto-Danforth,2026-08-01T09:00:00+00:00,2026-08-11T09:00:00+00:00,,IN_PROGRESS,7.12,10,2.88,IN_PROGRESS,COMPLIANT,IN_PROGRESS_WITHIN_SLA,1d1fe281e1f723eb\r\nsynthetic_sla_scenario,SR-311-007,Garbage Collection,Ward 10 - Spadina-Fort York,2026-08-07T07:00:00+00:00,2026-08-09T07:00:00+00:00,2026-08-08T15:00:00+00:00,CLOSED,1.33,2,0.67,CLOSED_ON_TIME,COMPLIANT,CLOSED_BEFORE_SLA_TARGET,2d2354737b010898\r\nsynthetic_sla_scenario,SR-311-008,Garbage Collection,Ward 01 - Etobicoke North,2026-08-04T07:00:00+00:00,2026-08-06T07:00:00+00:00,,OPEN,4.21,2,-2.21,OPEN_OVERDUE,SLA_BREACHED,OPEN_PAST_SLA_TARGET,ba908b209efdd234\r\nsynthetic_sla_scenario,SR-311-009,Pothole Repair,Ward 14 - Toronto-Danforth,2026-08-05T12:00:00+00:00,2026-08-10T12:00:00+00:00,,OPEN,3.0,5,2.0,OPEN,COMPLIANT,OPEN_TARGET_DERIVED_WITHIN_SLA,57f3f536358fc666\r\nsynthetic_sla_scenario,SR-311-010,Streetlight Maintenance,Ward 10 - Spadina-Fort York,INVALID_DATE_FORMAT,2026-08-05T08:00:00Z,,OPEN,,3,,DATA_ERROR,INCOMPLETE_DATA_REVIEW,INVALID_CREATED_TIMESTAMP,4875cbe5e632d920\r\nsynthetic_sla_scenario,SR-311-011,Pothole Repair,Ward 01 - Etobicoke North,2026-08-03T11:00:00+00:00,2026-08-08T11:00:00+00:00,2026-08-07T10:00:00+00:00,CLOSED,3.96,5,1.04,CLOSED_ON_TIME,COMPLIANT,CLOSED_BEFORE_SLA_TARGET,936c1d52363b8c9e\r\nsynthetic_sla_scenario,SR-311-012,Tree Trimming,Ward 01 - Etobicoke North,2026-07-15T09:00:00+00:00,2026-07-25T09:00:00+00:00,,OPEN,24.12,10,-14.12,OPEN_OVERDUE,SLA_BREACHED,OPEN_PAST_SLA_TARGET,bf2942c9485ac0a6\r\nsynthetic_sla_scenario,SR-311-013,Garbage Collection,Ward 14 - Toronto-Danforth,2026-08-06T08:00:00+00:00,2026-08-08T08:00:00+00:00,2026-08-08T07:30:00+00:00,CLOSED,1.98,2,0.02,CLOSED_ON_TIME,COMPLIANT,CLOSED_BEFORE_SLA_TARGET,9280b252ef8cef77\r\nsynthetic_sla_scenario,SR-311-014,Pothole Repair,Ward 10 - Spadina-Fort York,2026-08-02T14:00:00+00:00,2026-08-07T14:00:00+00:00,2026-08-07T13:00:00+00:00,CLOSED,4.96,5,0.04,CLOSED_ON_TIME,COMPLIANT,CLOSED_BEFORE_SLA_TARGET,96b3197f2cf92d2d\r\nsynthetic_sla_scenario,SR-311-015,Streetlight Maintenance,Ward 14 - Toronto-Danforth,2026-08-06T10:00:00+00:00,2026-08-09T10:00:00+00:00,,IN_PROGRESS,2.08,3,0.92,IN_PROGRESS,AT_RISK,IN_PROGRESS_SLA_MARGIN_EXPIRING,f37b099d147893cd\r\n",
+        "elapsed_ms": 0.401,
+        "engine": "sla_engine.evaluate_dataset (Python)",
+        "engine_sha256": "58f4df9f05cde2c92cc3dcb8ffba6ac536651264ceba1eadc5aac1a6327c58a2",
+        "evaluated_records": [
+          {
+            "closed_date": "2026-08-04T14:30:00+00:00",
+            "created_date": "2026-08-01T09:00:00+00:00",
+            "duration_days": 3.23,
+            "fingerprint": "10a0ab798f4ef3a8",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_ON_TIME",
+            "margin_days": 1.77,
+            "reason_code": "CLOSED_BEFORE_SLA_TARGET",
+            "service_name": "Pothole Repair",
+            "service_request_id": "SR-311-001",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 5,
+            "status": "CLOSED",
+            "target_date": "2026-08-06T09:00:00+00:00",
+            "ward": "Ward 10 - Spadina-Fort York"
+          },
+          {
+            "closed_date": "2026-08-08T11:00:00+00:00",
+            "created_date": "2026-08-01T10:00:00+00:00",
+            "duration_days": 7.04,
+            "fingerprint": "58c36d53d886f11f",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_OVERDUE",
+            "margin_days": -2.04,
+            "reason_code": "CLOSED_AFTER_SLA_TARGET",
+            "service_name": "Pothole Repair",
+            "service_request_id": "SR-311-002",
+            "sla_status": "SLA_BREACHED",
+            "sla_target_days": 5,
+            "status": "CLOSED",
+            "target_date": "2026-08-06T10:00:00+00:00",
+            "ward": "Ward 10 - Spadina-Fort York"
+          },
+          {
+            "closed_date": null,
+            "created_date": "2026-08-01T08:00:00+00:00",
+            "duration_days": 7.17,
+            "fingerprint": "76eb09a4f1388c7d",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "OPEN_OVERDUE",
+            "margin_days": -4.17,
+            "reason_code": "OPEN_PAST_SLA_TARGET",
+            "service_name": "Streetlight Maintenance",
+            "service_request_id": "SR-311-003",
+            "sla_status": "SLA_BREACHED",
+            "sla_target_days": 3,
+            "status": "OPEN",
+            "target_date": "2026-08-04T08:00:00+00:00",
+            "ward": "Ward 01 - Etobicoke North"
+          },
+          {
+            "closed_date": "2026-08-07T12:00:00+00:00",
+            "created_date": "2026-08-05T08:00:00+00:00",
+            "duration_days": 2.17,
+            "fingerprint": "cc0e07e0803d95ef",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_ON_TIME",
+            "margin_days": 0.83,
+            "reason_code": "CLOSED_BEFORE_SLA_TARGET",
+            "service_name": "Streetlight Maintenance",
+            "service_request_id": "SR-311-004",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 3,
+            "status": "CLOSED",
+            "target_date": "2026-08-08T08:00:00+00:00",
+            "ward": "Ward 01 - Etobicoke North"
+          },
+          {
+            "closed_date": "2026-08-02T16:00:00+00:00",
+            "created_date": "2026-07-20T10:00:00+00:00",
+            "duration_days": 13.25,
+            "fingerprint": "5689ea501ac6e0af",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_OVERDUE",
+            "margin_days": -3.25,
+            "reason_code": "CLOSED_AFTER_SLA_TARGET",
+            "service_name": "Tree Trimming",
+            "service_request_id": "SR-311-005",
+            "sla_status": "SLA_BREACHED",
+            "sla_target_days": 10,
+            "status": "CLOSED",
+            "target_date": "2026-07-30T10:00:00+00:00",
+            "ward": "Ward 14 - Toronto-Danforth"
+          },
+          {
+            "closed_date": null,
+            "created_date": "2026-08-01T09:00:00+00:00",
+            "duration_days": 7.12,
+            "fingerprint": "1d1fe281e1f723eb",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "IN_PROGRESS",
+            "margin_days": 2.88,
+            "reason_code": "IN_PROGRESS_WITHIN_SLA",
+            "service_name": "Tree Trimming",
+            "service_request_id": "SR-311-006",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 10,
+            "status": "IN_PROGRESS",
+            "target_date": "2026-08-11T09:00:00+00:00",
+            "ward": "Ward 14 - Toronto-Danforth"
+          },
+          {
+            "closed_date": "2026-08-08T15:00:00+00:00",
+            "created_date": "2026-08-07T07:00:00+00:00",
+            "duration_days": 1.33,
+            "fingerprint": "2d2354737b010898",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_ON_TIME",
+            "margin_days": 0.67,
+            "reason_code": "CLOSED_BEFORE_SLA_TARGET",
+            "service_name": "Garbage Collection",
+            "service_request_id": "SR-311-007",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 2,
+            "status": "CLOSED",
+            "target_date": "2026-08-09T07:00:00+00:00",
+            "ward": "Ward 10 - Spadina-Fort York"
+          },
+          {
+            "closed_date": null,
+            "created_date": "2026-08-04T07:00:00+00:00",
+            "duration_days": 4.21,
+            "fingerprint": "ba908b209efdd234",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "OPEN_OVERDUE",
+            "margin_days": -2.21,
+            "reason_code": "OPEN_PAST_SLA_TARGET",
+            "service_name": "Garbage Collection",
+            "service_request_id": "SR-311-008",
+            "sla_status": "SLA_BREACHED",
+            "sla_target_days": 2,
+            "status": "OPEN",
+            "target_date": "2026-08-06T07:00:00+00:00",
+            "ward": "Ward 01 - Etobicoke North"
+          },
+          {
+            "closed_date": null,
+            "created_date": "2026-08-05T12:00:00+00:00",
+            "duration_days": 3.0,
+            "fingerprint": "57f3f536358fc666",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "OPEN",
+            "margin_days": 2.0,
+            "reason_code": "OPEN_TARGET_DERIVED_WITHIN_SLA",
+            "service_name": "Pothole Repair",
+            "service_request_id": "SR-311-009",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 5,
+            "status": "OPEN",
+            "target_date": "2026-08-10T12:00:00+00:00",
+            "ward": "Ward 14 - Toronto-Danforth"
+          },
+          {
+            "closed_date": null,
+            "created_date": "INVALID_DATE_FORMAT",
+            "duration_days": null,
+            "fingerprint": "4875cbe5e632d920",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "DATA_ERROR",
+            "margin_days": null,
+            "reason_code": "INVALID_CREATED_TIMESTAMP",
+            "service_name": "Streetlight Maintenance",
+            "service_request_id": "SR-311-010",
+            "sla_status": "INCOMPLETE_DATA_REVIEW",
+            "sla_target_days": 3,
+            "status": "OPEN",
+            "target_date": "2026-08-05T08:00:00Z",
+            "ward": "Ward 10 - Spadina-Fort York"
+          },
+          {
+            "closed_date": "2026-08-07T10:00:00+00:00",
+            "created_date": "2026-08-03T11:00:00+00:00",
+            "duration_days": 3.96,
+            "fingerprint": "936c1d52363b8c9e",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_ON_TIME",
+            "margin_days": 1.04,
+            "reason_code": "CLOSED_BEFORE_SLA_TARGET",
+            "service_name": "Pothole Repair",
+            "service_request_id": "SR-311-011",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 5,
+            "status": "CLOSED",
+            "target_date": "2026-08-08T11:00:00+00:00",
+            "ward": "Ward 01 - Etobicoke North"
+          },
+          {
+            "closed_date": null,
+            "created_date": "2026-07-15T09:00:00+00:00",
+            "duration_days": 24.12,
+            "fingerprint": "bf2942c9485ac0a6",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "OPEN_OVERDUE",
+            "margin_days": -14.12,
+            "reason_code": "OPEN_PAST_SLA_TARGET",
+            "service_name": "Tree Trimming",
+            "service_request_id": "SR-311-012",
+            "sla_status": "SLA_BREACHED",
+            "sla_target_days": 10,
+            "status": "OPEN",
+            "target_date": "2026-07-25T09:00:00+00:00",
+            "ward": "Ward 01 - Etobicoke North"
+          },
+          {
+            "closed_date": "2026-08-08T07:30:00+00:00",
+            "created_date": "2026-08-06T08:00:00+00:00",
+            "duration_days": 1.98,
+            "fingerprint": "9280b252ef8cef77",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_ON_TIME",
+            "margin_days": 0.02,
+            "reason_code": "CLOSED_BEFORE_SLA_TARGET",
+            "service_name": "Garbage Collection",
+            "service_request_id": "SR-311-013",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 2,
+            "status": "CLOSED",
+            "target_date": "2026-08-08T08:00:00+00:00",
+            "ward": "Ward 14 - Toronto-Danforth"
+          },
+          {
+            "closed_date": "2026-08-07T13:00:00+00:00",
+            "created_date": "2026-08-02T14:00:00+00:00",
+            "duration_days": 4.96,
+            "fingerprint": "96b3197f2cf92d2d",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "CLOSED_ON_TIME",
+            "margin_days": 0.04,
+            "reason_code": "CLOSED_BEFORE_SLA_TARGET",
+            "service_name": "Pothole Repair",
+            "service_request_id": "SR-311-014",
+            "sla_status": "COMPLIANT",
+            "sla_target_days": 5,
+            "status": "CLOSED",
+            "target_date": "2026-08-07T14:00:00+00:00",
+            "ward": "Ward 10 - Spadina-Fort York"
+          },
+          {
+            "closed_date": null,
+            "created_date": "2026-08-06T10:00:00+00:00",
+            "duration_days": 2.08,
+            "fingerprint": "f37b099d147893cd",
+            "fixture_kind": "synthetic_sla_scenario",
+            "lifecycle_state": "IN_PROGRESS",
+            "margin_days": 0.92,
+            "reason_code": "IN_PROGRESS_SLA_MARGIN_EXPIRING",
+            "service_name": "Streetlight Maintenance",
+            "service_request_id": "SR-311-015",
+            "sla_status": "AT_RISK",
+            "sla_target_days": 3,
+            "status": "IN_PROGRESS",
+            "target_date": "2026-08-09T10:00:00+00:00",
+            "ward": "Ward 14 - Toronto-Danforth"
+          }
+        ],
+        "executed_at": "2026-09-12T18:29:14.628784+00:00",
+        "fixture_kind": "synthetic_sla_scenario",
+        "reference_now": "2026-08-08T12:00:00+00:00",
+        "rules_applied": {
+          "Garbage Collection": 2,
+          "Pothole Repair": 5,
+          "Streetlight Maintenance": 3,
+          "Tree Trimming": 10
+        },
+        "run_id": "87e609da-b8e7-470c-924b-f4a07616bdf9",
+        "status_summary": {
+          "AT_RISK": 1,
+          "COMPLIANT": 8,
+          "INCOMPLETE_DATA_REVIEW": 1,
+          "SLA_BREACHED": 5
+        },
+        "total_records": 15,
+        "ward_analytics": {
+          "Ward 01 - Etobicoke North": {
+            "at_risk": 0,
+            "breached": 3,
+            "compliance_rate_pct": 40.0,
+            "compliant": 2,
+            "data_error": 0,
+            "total_requests": 5
+          },
+          "Ward 10 - Spadina-Fort York": {
+            "at_risk": 0,
+            "breached": 1,
+            "compliance_rate_pct": 75.0,
+            "compliant": 3,
+            "data_error": 1,
+            "total_requests": 5
+          },
+          "Ward 14 - Toronto-Danforth": {
+            "at_risk": 1,
+            "breached": 1,
+            "compliance_rate_pct": 60.0,
+            "compliant": 3,
+            "data_error": 0,
+            "total_requests": 5
+          }
+        }
+      },
+      "name": "scheme_mismatch_same_host",
+      "status": 200,
+      "status_summary": {
+        "AT_RISK": 1,
+        "COMPLIANT": 8,
+        "INCOMPLETE_DATA_REVIEW": 1,
+        "SLA_BREACHED": 5
+      }
+    }
+  ],
+  "expected_status_checks": {
+    "cross_origin": 403,
+    "empty_json_body": 400,
+    "malformed_json": 400,
+    "non_json_content_type": 400,
+    "origin_absent": 200,
+    "oversized_json": 413,
+    "rule_31": 400,
+    "rule_boolean_false": 400,
+    "rule_boolean_true": 400,
+    "rule_fractional": 400,
+    "rule_negative": 400,
+    "rule_string": 400,
+    "rule_unknown": 400,
+    "rule_value_null": 400,
+    "rule_zero": 400,
+    "rules_empty_array": 400,
+    "rules_empty_string": 400,
+    "rules_false": 400,
+    "rules_null": 400,
+    "rules_truthy_array": 400,
+    "rules_truthy_boolean": 400,
+    "rules_truthy_number": 400,
+    "rules_truthy_string": 400,
+    "rules_zero": 400,
+    "same_origin": 200,
+    "scheme_mismatch_same_host": 200,
+    "sec_fetch_cross_site": 403,
+    "top_level_array": 400,
+    "top_level_false": 400,
+    "top_level_string": 400
+  },
+  "gets": {
+    "/": {
+      "body": null,
+      "bytes": 3742,
+      "cache_control": "no-store",
+      "content_security_policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'",
+      "local_canonical_lf_sha256": "4650c9ec4ea2b8d29d9db5477e50a8791c74c677efc704848ea6133d5e0d90a0",
+      "local_sha256": "54435e6c11c6f47fdacddcf9afec23bea9e31bec84b5c72ec121f020e78e87b9",
+      "matches_local_bytes": false,
+      "matches_local_canonical_lf": true,
+      "production_canonical_lf_sha256": "4650c9ec4ea2b8d29d9db5477e50a8791c74c677efc704848ea6133d5e0d90a0",
+      "sha256": "4650c9ec4ea2b8d29d9db5477e50a8791c74c677efc704848ea6133d5e0d90a0",
+      "status": 200,
+      "x_content_type_options": "nosniff"
+    },
+    "/api/code": {
+      "body": {
+        "excerpt": "def evaluate_record(\n    record: dict[str, Any],\n    rules: dict[str, int] | None = None,\n    reference_now: datetime | None = None,\n) -> dict[str, Any]:\n    if rules is None:\n        rules = DEFAULT_CATEGORY_SLA_DAYS\n    if reference_now is None:\n        reference_now = datetime.now(timezone.utc)\n    elif reference_now.tzinfo is None:\n        reference_now = reference_now.replace(tzinfo=timezone.utc)\n\n    s_id = str(record.get(\"service_request_id\", \"UNKNOWN\"))\n    s_name = str(record.get(\"service_name\", \"Uncategorized\"))\n    ward = str(record.get(\"ward\", \"Unknown Ward\"))\n    raw_created = record.get(\"created_date\")\n    raw_target = record.get(\"target_date\")\n    raw_closed = record.get(\"closed_date\")\n    raw_status = str(record.get(\"status\", \"OPEN\")).upper()\n\n    fingerprint = calculate_record_fingerprint(record)\n\n    def review(reason_code: str, sla_target_days: int | None = None) -> dict[str, Any]:\n        return {\n            \"fixture_kind\": FIXTURE_KIND,\n            \"service_request_id\": s_id,\n            \"service_name\": s_name,\n            \"ward\": ward,\n            \"created_date\": raw_created,\n            \"target_date\": raw_target,\n            \"closed_date\": raw_closed,\n            \"status\": raw_status,\n            \"duration_days\": None,\n            \"sla_target_days\": sla_target_days,\n            \"margin_days\": None,\n            \"lifecycle_state\": \"DATA_ERROR\",\n            \"sla_status\": \"INCOMPLETE_DATA_REVIEW\",\n            \"reason_code\": reason_code,\n            \"fingerprint\": fingerprint,\n        }\n\n    if s_name not in rules:\n        return review(\"UNKNOWN_SERVICE_CATEGORY\")\n\n    sla_target_days = rules[s_name]\n    if isinstance(sla_target_days, bool) or not isinstance(sla_target_days, int) or not 1 <= sla_target_days <= 30:\n        return review(\"INVALID_SLA_RULE\")\n\n    created_dt = parse_iso_timestamp(raw_created)\n    if created_dt is None:\n        return review(\"INVALID_CREATED_TIMESTAMP\", sla_target_days)\n\n    parsed_raw_target = parse_iso_timestamp(raw_target)\n\n    if raw_target not in (None, \"\") and parsed_raw_target is None:\n        return review(\"INVALID_TARGET_TIMESTAMP\", sla_target_days)\n\n    if parsed_raw_target is not None and rules == DEFAULT_CATEGORY_SLA_DAYS:\n        target_dt = parsed_raw_target\n        target_derived = False\n    else:\n        target_dt = datetime.fromtimestamp(created_dt.timestamp() + (sla_target_days * 86400), tz=timezone.utc)\n        target_derived = (parsed_raw_target is None)\n\n    if target_dt < created_dt:\n        return review(\"TARGET_BEFORE_CREATED\", sla_target_days)\n\n    closed_dt = parse_iso_timestamp(raw_closed)\n\n    if raw_closed not in (None, \"\") and closed_dt is None:\n        return review(\"INVALID_CLOSED_TIMESTAMP\", sla_target_days)\n    if raw_status == \"CLOSED\" and closed_dt is None:\n        return review(\"MISSING_CLOSED_TIMESTAMP\", sla_target_days)\n    if closed_dt is not None and closed_dt < created_dt:\n        return review(\"CLOSED_BEFORE_CREATED\", sla_target_days)\n    if closed_dt is None and reference_now < created_dt:\n        return review(\"CREATED_AFTER_REFERENCE_TIME\", sla_target_days)\n\n    if closed_dt is not None:\n        duration_sec = (closed_dt - created_dt).total_seconds()\n        duration_days = round(duration_sec / 86400.0, 2)\n        margin_sec = (target_dt - closed_dt).total_seconds()\n        margin_days = round(margin_sec / 86400.0, 2)\n\n        if margin_days >= 0:\n            lifecycle_state = \"CLOSED_ON_TIME\"\n            sla_status = \"COMPLIANT\"\n            reason_code = \"CLOSED_BEFORE_SLA_TARGET\"\n        else:\n            lifecycle_state = \"CLOSED_OVERDUE\"\n            sla_status = \"SLA_BREACHED\"\n            reason_code = \"CLOSED_AFTER_SLA_TARGET\"\n    else:\n        duration_sec = (reference_now - created_dt).total_seconds()\n        duration_days = round(duration_sec / 86400.0, 2)\n        margin_sec = (target_dt - reference_now).total_seconds()\n        margin_days = round(margin_sec / 86400.0, 2)\n\n        if margin_days < 0:\n            lifecycle_state = \"OPEN_OVERDUE\"\n            sla_status = \"SLA_BREACHED\"\n            reason_code = \"OPEN_PAST_SLA_TARGET\"\n        elif margin_days <= AT_RISK_THRESHOLD_DAYS:\n            lifecycle_state = \"IN_PROGRESS\" if raw_status == \"IN_PROGRESS\" else \"OPEN\"\n            sla_status = \"AT_RISK\"\n            reason_code = \"IN_PROGRESS_SLA_MARGIN_EXPIRING\"\n        else:\n            lifecycle_state = \"IN_PROGRESS\" if raw_status == \"IN_PROGRESS\" else \"OPEN\"\n            sla_status = \"COMPLIANT\"\n            reason_code = \"OPEN_TARGET_DERIVED_WITHIN_SLA\" if target_derived else \"IN_PROGRESS_WITHIN_SLA\"\n\n    return {\n        \"fixture_kind\": FIXTURE_KIND,\n        \"service_request_id\": s_id,\n        \"service_name\": s_name,\n        \"ward\": ward,\n        \"created_date\": created_dt.isoformat(),\n        \"target_date\": target_dt.isoformat(),\n        \"closed_date\": closed_dt.isoformat() if closed_dt else None,\n        \"status\": raw_status,\n        \"duration_days\": duration_days,\n        \"sla_target_days\": sla_target_days,\n        \"margin_days\": margin_days,\n        \"lifecycle_state\": lifecycle_state,\n        \"sla_status\": sla_status,\n        \"reason_code\": reason_code,\n        \"fingerprint\": fingerprint,\n    }\n",
+        "file": "src/sla_engine.py"
+      },
+      "bytes": 5518,
+      "cache_control": "no-store",
+      "content_security_policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'",
+      "sha256": "0749c260455c8a65aad58ed6e887eac115447690a21703332180d429efc74774",
+      "status": 200,
+      "x_content_type_options": "nosniff"
+    },
+    "/api/config": {
+      "body": {
+        "boundary": "Synthetic SLA scenario inspired by the City of Toronto 311 public schema. The public export does not provide target or closure timestamps.",
+        "default_rules": {
+          "Garbage Collection": 2,
+          "Pothole Repair": 5,
+          "Streetlight Maintenance": 3,
+          "Tree Trimming": 10
+        },
+        "reference_now": "2026-08-08T12:00:00Z"
+      },
+      "bytes": 300,
+      "cache_control": "no-store",
+      "content_security_policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'",
+      "sha256": "aae17052dfd19336ffc351d83fa0689795cdfefc6813a808b85f889db8e94c6f",
+      "status": 200,
+      "x_content_type_options": "nosniff"
+    },
+    "/app.js": {
+      "body": null,
+      "bytes": 7265,
+      "cache_control": "no-store",
+      "content_security_policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'",
+      "local_canonical_lf_sha256": "a79396e3b55085f80498976ece97c4d2163d142a1b60f0ff9c21829f6c396419",
+      "local_sha256": "27650cc83b65a613c38b4de0c09b41eebc51105e2467d10ab8a805d6abcc41ce",
+      "matches_local_bytes": false,
+      "matches_local_canonical_lf": true,
+      "production_canonical_lf_sha256": "a79396e3b55085f80498976ece97c4d2163d142a1b60f0ff9c21829f6c396419",
+      "sha256": "a79396e3b55085f80498976ece97c4d2163d142a1b60f0ff9c21829f6c396419",
+      "status": 200,
+      "x_content_type_options": "nosniff"
+    },
+    "/style.css": {
+      "body": null,
+      "bytes": 5314,
+      "cache_control": "no-store",
+      "content_security_policy": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'",
+      "local_canonical_lf_sha256": "0838661f7b11b7cbe764ad5dd3be3c237c59c69c943f5ae0dafeb480ee5bb053",
+      "local_sha256": "460884443c75506576d3271d56f92a3cd5a304951a1715988f8d373a6bb988b4",
+      "matches_local_bytes": false,
+      "matches_local_canonical_lf": true,
+      "production_canonical_lf_sha256": "0838661f7b11b7cbe764ad5dd3be3c237c59c69c943f5ae0dafeb480ee5bb053",
+      "sha256": "0838661f7b11b7cbe764ad5dd3be3c237c59c69c943f5ae0dafeb480ee5bb053",
+      "status": 200,
+      "x_content_type_options": "nosniff"
+    }
+  },
+  "local_engine_sha256": "58f4df9f05cde2c92cc3dcb8ffba6ac536651264ceba1eadc5aac1a6327c58a2",
+  "production_engine_matches_local": true,
+  "scenarios": {
+    "default": {
+      "all_fingerprints_present": true,
+      "all_reason_codes_present": true,
+      "all_rows_synthetic": true,
+      "engine_sha256": "58f4df9f05cde2c92cc3dcb8ffba6ac536651264ceba1eadc5aac1a6327c58a2",
+      "fixture_kind": "synthetic_sla_scenario",
+      "sr_311_001": {
+        "fingerprint": "10a0ab798f4ef3a8",
+        "reason_code": "CLOSED_BEFORE_SLA_TARGET",
+        "sla_status": "COMPLIANT"
+      },
+      "status": 200,
+      "status_summary": {
+        "AT_RISK": 1,
+        "COMPLIANT": 8,
+        "INCOMPLETE_DATA_REVIEW": 1,
+        "SLA_BREACHED": 5
+      },
+      "ward_01": {
+        "at_risk": 0,
+        "breached": 3,
+        "compliance_rate_pct": 40.0,
+        "compliant": 2,
+        "data_error": 0,
+        "total_requests": 5
+      }
+    },
+    "strict": {
+      "all_fingerprints_present": true,
+      "all_reason_codes_present": true,
+      "all_rows_synthetic": true,
+      "engine_sha256": "58f4df9f05cde2c92cc3dcb8ffba6ac536651264ceba1eadc5aac1a6327c58a2",
+      "fixture_kind": "synthetic_sla_scenario",
+      "sr_311_001": {
+        "fingerprint": "10a0ab798f4ef3a8",
+        "reason_code": "CLOSED_AFTER_SLA_TARGET",
+        "sla_status": "SLA_BREACHED"
+      },
+      "status": 200,
+      "status_summary": {
+        "AT_RISK": 1,
+        "COMPLIANT": 0,
+        "INCOMPLETE_DATA_REVIEW": 1,
+        "SLA_BREACHED": 13
+      },
+      "ward_01": {
+        "at_risk": 0,
+        "breached": 5,
+        "compliance_rate_pct": 0.0,
+        "compliant": 0,
+        "data_error": 0,
+        "total_requests": 5
+      }
+    }
+  }
+}

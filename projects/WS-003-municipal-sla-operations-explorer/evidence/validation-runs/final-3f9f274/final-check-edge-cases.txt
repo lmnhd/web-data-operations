@@ -1,0 +1,27 @@
+WS-003 final independent validation - edge cases and API validation
+Validator: /root/ws003_final_validator
+Candidate: 3f9f2749c5605c1d8dc06fe8e92a92c130f50607
+Date: 2026-09-12 UTC
+
+Commands:
+python projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/final-3f9f274/final_adversarial_probe.py
+python projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/final-3f9f274/final_production_probe.py
+
+Named frozen cases passed locally and in production:
+- rules=[], rules="", rules=false, rules=0, rules=null -> HTTP 400 Rules must be an object.
+- Truthy arrays, strings, numbers, and booleans -> HTTP 400.
+- Fractional, boolean, zero, negative, above-30, string, null, and unknown-category rule values -> HTTP 400.
+- Malformed JSON, empty JSON, top-level arrays/strings/false, and non-JSON content types -> HTTP 400.
+- Request body over 8 KB -> HTTP 413.
+- Cross-origin and Sec-Fetch-Site: cross-site -> HTTP 403.
+- Same-origin and origin-absent requests -> HTTP 200.
+- Invalid creation, target, and closure timestamps; target/closure before creation; missing closure on CLOSED; future-created open record; and unknown category all routed to INCOMPLETE_DATA_REVIEW with specific reason codes.
+
+Independent expansion failed:
+- status=NONSENSE with no closure was accepted and classified SLA_BREACHED / OPEN_OVERDUE instead of review.
+- status=OPEN with a valid closed_date was accepted and classified COMPLIANT / CLOSED_ON_TIME.
+- status=IN_PROGRESS with a valid closed_date was accepted and classified COMPLIANT / CLOSED_ON_TIME.
+- status=CLOSED with closed_date after the fixed reference time was accepted and classified SLA_BREACHED / CLOSED_OVERDUE.
+- On the HTTPS production host, Origin: http://municipal-311-sla-operations-desk.vercel.app was accepted with HTTP 200 because the guard compares only netloc, not the complete origin tuple.
+
+Full observed payloads: final-adversarial-results.json and final-production-results.json

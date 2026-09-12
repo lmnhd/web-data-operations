@@ -1,0 +1,21 @@
+WS-003 final independent validation - ward and source claims
+Validator: /root/ws003_final_validator
+Candidate: 3f9f2749c5605c1d8dc06fe8e92a92c130f50607
+Date: 2026-09-12 UTC
+
+Observed fixture calculation:
+- Ward 01 - Etobicoke North has 5 total/evaluable records, 2 compliant and 3 breached.
+- 2 / 5 * 100 = 40.0%.
+- Local UI, production UI/API, PDF, README, Manifest, source contract, fixture provenance, and exports label this as a synthetic scenario rather than an official Toronto rate.
+
+Independent official-source command:
+python projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/final-3f9f274/final_source_probe.py
+
+Fresh official result:
+- Package: 311 Service Requests - Customer Initiated.
+- 2026 resource: 99b7f283-7345-4f5a-a126-d078ed4f3419, last modified 2026-09-08T20:00:17, DataStore inactive.
+- Download: SR2026.csv inside the official ZIP, 5,501,248 bytes, SHA-256 c7c85d83a2df4ce9dee0ed4e070cec39cf50ec8687500ea08c554146a84490d7.
+- Header: Creation Date; Status; First 3 Chars of Postal Code; Intersection Street 1; Intersection Street 2; Ward; Service Request Type; Division; Section.
+- No target timestamp, closure/completion timestamp, or stable service-request identifier field exists in the public header.
+
+Machine-readable details: final-source-results.json and final-production-results.json

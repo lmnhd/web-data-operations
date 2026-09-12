@@ -1,0 +1,26 @@
+WS-003 final independent validation - PDF rendering, pages, and links
+Validator: /root/ws003_final_validator
+Candidate: 3f9f2749c5605c1d8dc06fe8e92a92c130f50607
+Date: 2026-09-12 UTC
+
+Commands:
+pdfinfo output/pdf/Municipal-311-SLA-Operations-Desk.pdf
+pdftoppm -png -r 150 output/pdf/Municipal-311-SLA-Operations-Desk.pdf projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/final-3f9f274/pdf-render/page
+
+Document facts:
+- 3 letter-size pages, PDF 1.4, no encryption, no forms, no JavaScript.
+- All three pages were rendered freshly at 150 DPI and inspected individually.
+- Pages 1 and 3 are legible, uncropped, and free of title/subtitle overlap.
+- Page 2 has no title/subtitle overlap, but it is not uncropped: the actual code excerpt's datetime.fromtimestamp line is visibly cut off after `(sla_target_days * 8`, and the footer is visibly cut off to `2 of` instead of the complete page label.
+- Text extraction confirms the code excerpt ends after `sla_target_days * 8`, rather than showing the source expression `sla_target_days * 86400` and the rest of the line.
+
+Embedded links:
+- Page 3: https://municipal-311-sla-operations-desk.vercel.app - resolved and was operated signed out; default and strict scenarios passed.
+- Page 3: https://github.com/lmnhd/web-data-operations - resolved signed out as a public repository. Its current main branch does not yet contain the WS-003 candidate, consistent with the pending source-integration gate.
+
+Rendered pages:
+- pdf-render/page-1.png
+- pdf-render/page-2.png
+- pdf-render/page-3.png
+
+Result: FAIL because the expected clean, uncropped visual study is not satisfied on page 2.

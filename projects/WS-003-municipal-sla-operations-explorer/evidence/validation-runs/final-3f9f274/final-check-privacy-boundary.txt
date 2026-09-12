@@ -1,0 +1,18 @@
+WS-003 final independent validation - privacy and boundary review
+Validator: /root/ws003_final_validator
+Candidate: 3f9f2749c5605c1d8dc06fe8e92a92c130f50607
+Date: 2026-09-12 UTC
+
+Observed:
+- Fresh JSON and CSV exports contain zero resident names, private addresses, postal codes, intersections, emails, phone numbers, or contact fields/values.
+- Every evaluated row in local and production output carries fixture_kind=synthetic_sla_scenario.
+- UI, API config, PDF, README, Source Contract, Fixture Provenance, and Manifest explicitly state that the official public export lacks target and closure timestamps.
+- The demo performs no live municipal collection and needs no credentials.
+- The official 2026 ZIP header independently confirms the timing-field limitation.
+- The PDF and reviewer copy avoid official performance, legal SLA certification, staffing, dispatch, production accuracy, scale, completeness, and real-time claims.
+
+Boundary defects outside the privacy/source-label check:
+- The adapter-ready engine does not fail closed on unknown status values, status/closed_date contradictions, or closure dates after the reference time.
+- The Project Manifest still attributes final verification to /root/ws003_release_validator, while the controlling dispatch and actual final validator are /root/ws003_final_validator.
+
+Machine-readable evidence: final-adversarial-results.json, final-production-results.json, final-source-results.json, final-export.json, final-export.csv.

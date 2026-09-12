@@ -8,7 +8,7 @@
 
 **WS-002 publication candidate:** [Product Recall Match Desk - live demo](https://product-recall-match-desk.vercel.app) | [Project Manifest](projects/WS-002-recall-to-catalog-impact-review/PROJECT_MANIFEST.md). It demonstrates explainable product matching and an explicit ambiguity-review boundary using synthetic catalog rows and a recorded openFDA fixture.
 
-**WS-003 verification blocked:** [Municipal 311 SLA Operations Desk - corrected live demo](https://municipal-311-sla-operations-desk.vercel.app) | [Independent report](projects/WS-003-municipal-sla-operations-explorer/evidence/INDEPENDENT_VALIDATION.json). The demo now discloses its synthetic SLA scenario and public-source limits, but independent validation found one falsey non-object rule-payload bypass. It is not release-ready and has no GitHub release.
+**WS-003 verification blocked:** [Municipal 311 SLA Operations Desk - current live demo](https://municipal-311-sla-operations-desk.vercel.app) | [Independent report](projects/WS-003-municipal-sla-operations-explorer/evidence/INDEPENDENT_VALIDATION.json). The falsey-rule bypass is fixed, but fresh validation found lifecycle-consistency, PDF-clipping, Manifest-attribution, and strict-origin issues. It is not release-ready and has no GitHub release.
 
 **Try the current project:** [Government Contract Change Monitor - live Proof Lab](https://contract-monitor-proof-lab.vercel.app). Run the real Python pipeline, edit a rule, inspect the difference and export the result. [Source and local launch instructions](projects/WS-001-qualified-tender-change-intelligence/demo/README.md).
 

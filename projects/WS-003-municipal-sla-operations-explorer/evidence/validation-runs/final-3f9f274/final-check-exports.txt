@@ -1,0 +1,20 @@
+WS-003 final independent validation - JSON/CSV exports and fingerprints
+Validator: /root/ws003_final_validator
+Candidate: 3f9f2749c5605c1d8dc06fe8e92a92c130f50607
+Date: 2026-09-12 UTC
+
+Fresh outputs:
+- final-export.json: 15 evaluated records, baseline 8/1/5/1.
+- final-export.csv: header plus 15 data rows.
+- Every row in both formats contains fixture_kind=synthetic_sla_scenario, a non-empty reason_code, and a 16-character lowercase hexadecimal fingerprint.
+- JSON and CSV fingerprint sets are identical and contain 15 unique values.
+- Two fixed-input engine evaluations were structurally identical.
+- Changing the first record's ward changed that record's fingerprint.
+- Changing only SLA rules left input fingerprints stable while changing SR-311-001 from COMPLIANT to SLA_BREACHED.
+- Test/evidence fixture copies are identical; test/evidence oracle copies are identical.
+
+Privacy inspection:
+- No resident_name, private_address, postal, intersection, email, phone, or contact fields are exported.
+- No email-like values occur in fresh JSON/CSV outputs.
+
+Machine-readable details: final-adversarial-results.json
