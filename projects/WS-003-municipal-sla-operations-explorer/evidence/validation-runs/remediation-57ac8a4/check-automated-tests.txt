@@ -1,0 +1,17 @@
+WS-003 independent remediation validation - automated tests
+Validator: /root/ws003_remediation_validator
+Frozen product candidate: 57ac8a4cf8b5d8ff344e3b12cb5b1a29c1465a2e
+
+Exact command executed from repository root with normal Windows temporary-directory access:
+python -m unittest discover projects/WS-003-municipal-sla-operations-explorer/tests
+
+Final authoritative output:
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.064s
+
+OK
+
+An earlier sandboxed attempt also discovered all 17 tests but hit PermissionError when an export test used the restricted Windows temporary directory. The identical command was therefore rerun with normal Windows temp access as the frozen plan permits; the successful run above is authoritative.
+
+Result: PASS - 17 tests ran with zero failures or errors.

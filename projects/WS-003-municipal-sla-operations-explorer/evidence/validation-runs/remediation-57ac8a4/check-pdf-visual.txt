@@ -1,0 +1,22 @@
+WS-003 independent remediation validation - PDF visual and links
+Validator: /root/ws003_remediation_validator
+Artifact: output/pdf/Municipal-311-SLA-Operations-Desk.pdf
+
+Fresh technical inspection:
+- PDF metadata reports 3 Letter pages (612 x 792 points), unencrypted, with no form or JavaScript.
+- Every page was freshly rendered with Poppler at exactly 150 DPI to pdf-render/page-1.png through page-3.png.
+- Exact raster dimensions are 1275 x 1650 pixels per page.
+
+Fresh visual review of the exact 150-DPI renders and scaled whole-page overviews:
+- Pages 1, 2, and 3 are readable, clean, and uncropped.
+- No title/subtitle overlap, body overlap, or edge clipping was found.
+- Page 2 shows the complete lifecycle-code list, including INVALID_CLOSED_TIMESTAMP, UNKNOWN_STATUS, MISSING_CLOSED_TIMESTAMP, STATUS_CLOSED_DATE_CONFLICT, CLOSED_BEFORE_CREATED, CLOSED_AFTER_REFERENCE_NOW, and CREATED_AFTER_REFERENCE_NOW.
+- The page-2 footer is fully visible as "WS-003 / 2 of 3"; pages 1 and 3 likewise show their full footers.
+- Text extraction confirms all expected page text.
+
+Link inspection and signed-out operation:
+- Page 3 contains https://municipal-311-sla-operations-desk.vercel.app and https://github.com/lmnhd/web-data-operations as PDF URI annotations.
+- Anonymous HTTP operation followed redirects and returned 200 for both exact links.
+- The demo link was additionally loaded and operated in a fresh signed-out Chrome session.
+
+Result: PASS - all three pages and both PDF links satisfy the frozen visual/link expectation.

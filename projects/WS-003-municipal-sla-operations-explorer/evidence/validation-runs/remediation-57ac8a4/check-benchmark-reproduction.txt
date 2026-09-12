@@ -1,0 +1,28 @@
+WS-003 independent remediation validation - benchmark and live demo
+Validator: /root/ws003_remediation_validator
+Frozen product candidate: 57ac8a4cf8b5d8ff344e3b12cb5b1a29c1465a2e
+Production deployment: dpl_JBt2EBRSHRN8PKDLTsnBWpYHtjCb
+Production URL: https://municipal-311-sla-operations-desk.vercel.app
+
+Independent engine/API reproduction:
+- Local default rules: 15 total; 8 COMPLIANT, 1 AT_RISK, 5 SLA_BREACHED, 1 INCOMPLETE_DATA_REVIEW.
+- Production default rules: 15 total; 8 COMPLIANT, 1 AT_RISK, 5 SLA_BREACHED, 1 INCOMPLETE_DATA_REVIEW.
+- Local strict rules (3/2/5/1): 0 COMPLIANT, 1 AT_RISK, 13 SLA_BREACHED, 1 INCOMPLETE_DATA_REVIEW.
+- Production strict rules (3/2/5/1): 0 COMPLIANT, 1 AT_RISK, 13 SLA_BREACHED, 1 INCOMPLETE_DATA_REVIEW.
+- Under strict rules SR-311-001 changed from COMPLIANT/CLOSED_BEFORE_SLA_TARGET to SLA_BREACHED/CLOSED_AFTER_SLA_TARGET.
+
+Production-candidate equivalence:
+- Deployed engine_sha256 equals local src/sla_engine.py: 1da45a860095719e8b13ed3ea7b2f355ce8a0db2c6e060f4ebaf982d3c784255.
+- Production demo/index.html normalized SHA-256 equals local: 4650c9ec4ea2b8d29d9db5477e50a8791c74c677efc704848ea6133d5e0d90a0.
+- Production demo/app.js normalized SHA-256 equals local: a79396e3b55085f80498976ece97c4d2163d142a1b60f0ff9c21829f6c396419.
+- Production demo/style.css normalized SHA-256 equals local: 0838661f7b11b7cbe764ad5dd3be3c237c59c69c943f5ae0dafeb480ee5bb053.
+
+Fresh signed-out reviewer operation in Chrome:
+- The public page loaded without authentication and rendered 15 records with the default 8/1/5/1 cards.
+- The page explicitly displayed the synthetic-data boundary and Ward 01 scenario result.
+- Activating "Apply Strict Rules (3/2/5/1)" updated the cards to 0/1/13/1 and reclassified SR-311-001 as expected.
+- The JSON and CSV export controls were each activated while signed out; independent API/CLI export validation is captured in check-exports.txt.
+
+Machine-readable raw evidence: remediation-probe-results.json.
+
+Result: PASS - default and strict scenarios reproduce locally and on the signed-out production deployment.

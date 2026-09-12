@@ -1,0 +1,17 @@
+WS-003 independent remediation validation - adversarial finding register
+Validator: /root/ws003_remediation_validator
+
+Adversarial probes added beyond the minimum frozen procedures:
+- strict-rule reclassification parity across local and production
+- boolean, zero, negative, over-30, numeric-string, falsey rules, and non-object root payloads
+- malformed JSON, wrong Content-Type, and oversized production request
+- lifecycle contradictions, closure after reference_now, and future-created records
+- cross-origin, cross-scheme same-host, cross-site fetch metadata, and opaque Origin
+- fingerprint uniqueness, rule-change stability, and source-record sensitivity
+- normalized deployed static-asset equality and deployed engine hash equality
+- signed-out production UI operation and anonymous operation of both PDF links
+- fresh official-source schema check
+- exact 150-DPI three-page PDF rendering plus page-2 lifecycle/footer inspection
+
+Unresolved findings: none.
+Verdict recommendation: PASS.

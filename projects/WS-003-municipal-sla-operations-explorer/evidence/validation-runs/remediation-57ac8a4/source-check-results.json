@@ -1,0 +1,26 @@
+{
+  "archive_csv": "SR2026.csv",
+  "checked_at": "2026-09-12T23:28:05.555511+00:00",
+  "header": [
+    "Creation Date",
+    "Status",
+    "First 3 Chars of Postal Code",
+    "Intersection Street 1",
+    "Intersection Street 2",
+    "Ward",
+    "Service Request Type",
+    "Division",
+    "Section"
+  ],
+  "missing_required_for_sla_proof": {
+    "closure_timestamp": true,
+    "stable_request_id": true,
+    "target_timestamp": true
+  },
+  "package_api": "https://ckan0.cf.opendata.inter.prod-toronto.ca/api/3/action/package_show?id=311-service-requests-customer-initiated",
+  "resource_bytes": 5501248,
+  "resource_id": "99b7f283-7345-4f5a-a126-d078ed4f3419",
+  "resource_last_modified": "2026-09-08T20:00:17",
+  "resource_name": "311 Service Requests 2026",
+  "resource_url": "https://ckan0.cf.opendata.inter.prod-toronto.ca/dataset/2e54bc0e-4399-4076-b717-351df5918ae7/resource/99b7f283-7345-4f5a-a126-d078ed4f3419/download/sr2026.zip"
+}

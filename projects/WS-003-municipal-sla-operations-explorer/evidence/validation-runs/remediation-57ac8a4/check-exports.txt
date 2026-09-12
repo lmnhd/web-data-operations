@@ -1,0 +1,17 @@
+WS-003 independent remediation validation - CSV/JSON exports and fingerprints
+Validator: /root/ws003_remediation_validator
+
+The engine CLI was independently run with --output-json and --output-csv, producing:
+- remediation-export.json: 15 records
+- remediation-export.csv: header plus 15 data rows
+
+Both exports include fixture_kind=synthetic_sla_scenario, reason_code, and fingerprint. All 15 rows have nonempty reason codes and fingerprints. Fingerprints are unique across the 15 fixture records, are exactly 16 lowercase hexadecimal characters, remain stable when only SLA rules change, and change when source record content changes.
+
+The CSV columns are:
+fixture_kind, service_request_id, service_name, ward, created_date, target_date, closed_date, status, duration_days, sla_target_days, margin_days, lifecycle_state, sla_status, reason_code, fingerprint
+
+The evidence and test fixture copies of both benchmark_oracle.json and toronto_311_sample.json were byte-identical when checked.
+
+The production API returned parseable JSON plus parseable 15-row CSV content for both default and strict evaluations. The live demo's JSON and CSV controls were each activated signed out.
+
+Result: PASS - required structures, row counts, labels, reason codes, and auditable fingerprints are present.

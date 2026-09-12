@@ -1,0 +1,14 @@
+WS-003 independent remediation validation - Ward 01 claim
+Validator: /root/ws003_remediation_validator
+
+Independent default-rule calculation for Ward 01 - Etobicoke North:
+- total requests: 5
+- compliant: 2
+- SLA breached: 3
+- at risk: 0
+- data error: 0
+- compliance rate: 40.0% (2 / 5)
+
+The 40.0% figure appears in the live signed-out demo as a synthetic scenario result. Candidate-facing README, Manifest, source contract, fixture provenance, proof report, PDF, UI, and release copy consistently distinguish synthetic scenario output from City of Toronto official performance. No official municipal SLA performance claim is made.
+
+Result: PASS - calculation is correct and the claim boundary is explicit.
