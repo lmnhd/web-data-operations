@@ -1,0 +1,14 @@
+Independent validator: /root/ws003_release_validator
+Candidate: 968506742e7219515dc81d6e1459922efef47124
+Date: 2026-09-12
+
+Fresh export inspection:
+- Keys: closed_date, created_date, duration_days, fingerprint, fixture_kind, lifecycle_state, margin_days, reason_code, service_name, service_request_id, sla_status, sla_target_days, status, target_date, ward.
+- No resident-name, email, phone, address, postal-code, or intersection fields were present.
+- No email-like values were found.
+- All 15 JSON and all 15 CSV rows have fixture_kind=synthetic_sla_scenario.
+- Source/fixture contracts explicitly state that target and closure timestamps are absent from the official public source and are synthetic in the proof.
+- Reviewer screenshots contain only synthetic IDs, category names, wards, timestamps, rules, and results; no personal data was visible.
+
+FAIL reason:
+The zero-personal-data portion passes, but the required reviewer-facing synthetic/source boundary does not. The linked public demo omits fixture_kind from /api/run, describes the fixture as recorded Toronto open data, and does not disclose that public target/closure timestamps are absent.

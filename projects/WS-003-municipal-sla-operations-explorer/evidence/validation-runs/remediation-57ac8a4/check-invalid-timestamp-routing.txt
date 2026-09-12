@@ -1,0 +1,33 @@
+WS-003 independent remediation validation - invalid and contradictory inputs
+Validator: /root/ws003_remediation_validator
+
+Independent record-level probes all routed to INCOMPLETE_DATA_REVIEW / DATA_ERROR with a specific reason code:
+- invalid or missing created timestamp -> INVALID_CREATED_TIMESTAMP
+- invalid target timestamp -> INVALID_TARGET_TIMESTAMP
+- target before created -> TARGET_BEFORE_CREATED
+- invalid closed timestamp -> INVALID_CLOSED_TIMESTAMP
+- closure before created -> CLOSED_BEFORE_CREATED
+- future-created record -> CREATED_AFTER_REFERENCE_NOW
+- unmapped category -> UNKNOWN_SLA_CATEGORY
+- unknown status -> UNKNOWN_STATUS
+- OPEN with a closure timestamp -> STATUS_CLOSED_DATE_CONFLICT
+- IN_PROGRESS with a closure timestamp -> STATUS_CLOSED_DATE_CONFLICT
+- CLOSED without a closure timestamp -> MISSING_CLOSED_TIMESTAMP
+- CLOSED after reference_now -> CLOSED_AFTER_REFERENCE_NOW
+
+Direct engine rule probes rejected boolean, fractional, zero, negative, over-30, and string values with INVALID_SLA_RULE.
+
+Local and production /api/evaluate probes returned HTTP 400 for all of these payload classes:
+- fractional, boolean, zero, negative, over-30, and numeric-string targets
+- unknown category
+- empty array, empty string, false, zero, and null rules
+- root array, root string, and root null bodies
+
+Additional production probes:
+- malformed JSON -> 400
+- wrong Content-Type -> 400
+- oversized request -> 413
+
+Machine-readable raw evidence: remediation-probe-results.json.
+
+Result: PASS - no invalid or contradictory case produced plausible successful output.

@@ -1,0 +1,31 @@
+WS-003 final independent validation - benchmark and operated demos
+Validator: /root/ws003_final_validator
+Candidate: 3f9f2749c5605c1d8dc06fe8e92a92c130f50607
+Date: 2026-09-12 UTC
+
+CLI command:
+python projects/WS-003-municipal-sla-operations-explorer/src/sla_engine.py --output-json projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/final-3f9f274/final-export.json --output-csv projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/final-3f9f274/final-export.csv
+
+Observed CLI result:
+- Reference now: 2026-08-08T12:00:00+00:00
+- Total records: 15
+- COMPLIANT: 8
+- AT_RISK: 1
+- SLA_BREACHED: 5
+- INCOMPLETE_DATA_REVIEW: 1
+- Ward 01 - Etobicoke North: 5 total, 2 compliant, 3 breached, 40.0% scenario compliance
+
+Local browser operation at http://127.0.0.1:5000:
+- Page visibly disclosed REAL ENGINE / SYNTHETIC SCENARIO and the absence of public target/closure timestamps.
+- Automatic default run visibly showed 8/1/5/1.
+- Clicking Apply Strict Rules (3/2/5/1) visibly showed 0/1/13/1.
+- SR-311-001 changed from COMPLIANT / CLOSED_BEFORE_SLA_TARGET to SLA_BREACHED / CLOSED_AFTER_SLA_TARGET.
+
+Signed-out production operation at https://municipal-311-sla-operations-desk.vercel.app:
+- Anonymous default UI run visibly showed 8/1/5/1 and Ward 01 at 40%.
+- Clicking Apply Strict Rules (3/2/5/1) visibly showed 0/1/13/1.
+- Production SR-311-001 became SLA_BREACHED / CLOSED_AFTER_SLA_TARGET.
+- Production engine_sha256 58f4df9f05cde2c92cc3dcb8ffba6ac536651264ceba1eadc5aac1a6327c58a2 matched the frozen local engine.
+- Production HTML, app.js, and style.css matched local candidate assets under canonical-LF hashing.
+
+Machine-readable production details: final-production-results.json

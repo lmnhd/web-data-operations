@@ -1,0 +1,24 @@
+WS-003 independent repair recheck - PDF visual study
+Date: 2026-09-12
+Candidate: 2addbb6f7b4e3f20e3ccc54010005d05ccf7b8a5
+PDF: output/pdf/Municipal-311-SLA-Operations-Desk.pdf
+
+Render command:
+pdftoppm -png -r 150 output/pdf/Municipal-311-SLA-Operations-Desk.pdf projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/recheck-pdf-render/page
+
+Rendered files inspected individually:
+- recheck-pdf-render/page-1.png (242847 bytes)
+- recheck-pdf-render/page-2.png (187914 bytes)
+- recheck-pdf-render/page-3.png (179555 bytes)
+
+Visual result: all three portrait pages are legible and clean. Titles/subtitles do
+not overlap, content is not cropped, screenshot and metric cards are readable, and
+the document explicitly identifies the scenario as synthetic and disclaims official
+Toronto performance. Page 2 says 14/14 tests; page 3 shows 8/1/5/1 and the 40.0%
+synthetic Ward 01 scenario. PDF extraction confirmed 3 pages and title metadata.
+
+Embedded link annotations extracted with pypdf:
+- https://municipal-311-sla-operations-desk.vercel.app -> HTTP 200
+- https://github.com/lmnhd/web-data-operations -> HTTP 200
+
+Result: PASS.

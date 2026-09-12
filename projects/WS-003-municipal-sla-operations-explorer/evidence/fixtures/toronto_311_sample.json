@@ -1,0 +1,137 @@
+[
+  {
+    "service_request_id": "SR-311-001",
+    "service_name": "Pothole Repair",
+    "ward": "Ward 10 - Spadina-Fort York",
+    "created_date": "2026-08-01T09:00:00Z",
+    "target_date": "2026-08-06T09:00:00Z",
+    "closed_date": "2026-08-04T14:30:00Z",
+    "status": "CLOSED"
+  },
+  {
+    "service_request_id": "SR-311-002",
+    "service_name": "Pothole Repair",
+    "ward": "Ward 10 - Spadina-Fort York",
+    "created_date": "2026-08-01T10:00:00Z",
+    "target_date": "2026-08-06T10:00:00Z",
+    "closed_date": "2026-08-08T11:00:00Z",
+    "status": "CLOSED"
+  },
+  {
+    "service_request_id": "SR-311-003",
+    "service_name": "Streetlight Maintenance",
+    "ward": "Ward 01 - Etobicoke North",
+    "created_date": "2026-08-01T08:00:00Z",
+    "target_date": "2026-08-04T08:00:00Z",
+    "closed_date": null,
+    "status": "OPEN"
+  },
+  {
+    "service_request_id": "SR-311-004",
+    "service_name": "Streetlight Maintenance",
+    "ward": "Ward 01 - Etobicoke North",
+    "created_date": "2026-08-05T08:00:00Z",
+    "target_date": "2026-08-08T08:00:00Z",
+    "closed_date": "2026-08-07T12:00:00Z",
+    "status": "CLOSED"
+  },
+  {
+    "service_request_id": "SR-311-005",
+    "service_name": "Tree Trimming",
+    "ward": "Ward 14 - Toronto-Danforth",
+    "created_date": "2026-07-20T10:00:00Z",
+    "target_date": "2026-07-30T10:00:00Z",
+    "closed_date": "2026-08-02T16:00:00Z",
+    "status": "CLOSED"
+  },
+  {
+    "service_request_id": "SR-311-006",
+    "service_name": "Tree Trimming",
+    "ward": "Ward 14 - Toronto-Danforth",
+    "created_date": "2026-08-01T09:00:00Z",
+    "target_date": "2026-08-11T09:00:00Z",
+    "closed_date": null,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "service_request_id": "SR-311-007",
+    "service_name": "Garbage Collection",
+    "ward": "Ward 10 - Spadina-Fort York",
+    "created_date": "2026-08-07T07:00:00Z",
+    "target_date": "2026-08-09T07:00:00Z",
+    "closed_date": "2026-08-08T11:00:00Z",
+    "status": "CLOSED"
+  },
+  {
+    "service_request_id": "SR-311-008",
+    "service_name": "Garbage Collection",
+    "ward": "Ward 01 - Etobicoke North",
+    "created_date": "2026-08-04T07:00:00Z",
+    "target_date": "2026-08-06T07:00:00Z",
+    "closed_date": null,
+    "status": "OPEN"
+  },
+  {
+    "service_request_id": "SR-311-009",
+    "service_name": "Pothole Repair",
+    "ward": "Ward 14 - Toronto-Danforth",
+    "created_date": "2026-08-05T12:00:00Z",
+    "target_date": null,
+    "closed_date": null,
+    "status": "OPEN"
+  },
+  {
+    "service_request_id": "SR-311-010",
+    "service_name": "Streetlight Maintenance",
+    "ward": "Ward 10 - Spadina-Fort York",
+    "created_date": "INVALID_DATE_FORMAT",
+    "target_date": "2026-08-05T08:00:00Z",
+    "closed_date": null,
+    "status": "OPEN"
+  },
+  {
+    "service_request_id": "SR-311-011",
+    "service_name": "Pothole Repair",
+    "ward": "Ward 01 - Etobicoke North",
+    "created_date": "2026-08-03T11:00:00Z",
+    "target_date": "2026-08-08T11:00:00Z",
+    "closed_date": "2026-08-07T10:00:00Z",
+    "status": "CLOSED"
+  },
+  {
+    "service_request_id": "SR-311-012",
+    "service_name": "Tree Trimming",
+    "ward": "Ward 01 - Etobicoke North",
+    "created_date": "2026-07-15T09:00:00Z",
+    "target_date": "2026-07-25T09:00:00Z",
+    "closed_date": null,
+    "status": "OPEN"
+  },
+  {
+    "service_request_id": "SR-311-013",
+    "service_name": "Garbage Collection",
+    "ward": "Ward 14 - Toronto-Danforth",
+    "created_date": "2026-08-06T08:00:00Z",
+    "target_date": "2026-08-08T08:00:00Z",
+    "closed_date": "2026-08-08T07:30:00Z",
+    "status": "CLOSED"
+  },
+  {
+    "service_request_id": "SR-311-014",
+    "service_name": "Pothole Repair",
+    "ward": "Ward 10 - Spadina-Fort York",
+    "created_date": "2026-08-02T14:00:00Z",
+    "target_date": "2026-08-07T14:00:00Z",
+    "closed_date": "2026-08-07T13:00:00Z",
+    "status": "CLOSED"
+  },
+  {
+    "service_request_id": "SR-311-015",
+    "service_name": "Streetlight Maintenance",
+    "ward": "Ward 14 - Toronto-Danforth",
+    "created_date": "2026-08-06T10:00:00Z",
+    "target_date": "2026-08-09T10:00:00Z",
+    "closed_date": null,
+    "status": "IN_PROGRESS"
+  }
+]

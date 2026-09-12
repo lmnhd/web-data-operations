@@ -1,0 +1,38 @@
+WS-003 independent repair recheck - adversarial findings
+Date: 2026-09-12
+Candidate: 2addbb6f7b4e3f20e3ccc54010005d05ccf7b8a5
+
+Signed-out production command:
+python projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/recheck-production-probes.py
+
+Production results before intentional failure:
+- page HTTP 200; synthetic boundary present; target/closure absence disclosed;
+  old `recorded Toronto 311 records` claim absent
+- /api/config HTTP 200 with synthetic boundary and default 5/3/10/2 rules
+- default /api/run HTTP 200: 8/1/5/1, top-level and all rows labeled
+  fixture_kind=synthetic_sla_scenario
+- strict 3/2/5/1 /api/run HTTP 200: 0/1/13/1, all rows fixture-labeled
+- fractional rule -> HTTP 400
+- unknown category rule -> HTTP 400
+
+Unresolved production and local defect:
+- {"rules":[]} -> HTTP 200/default run, expected HTTP 400
+- {"rules":""} -> HTTP 200/default run, expected HTTP 400
+- {"rules":false} -> HTTP 200/default run, expected HTTP 400
+- {"rules":0} -> HTTP 200/default run, expected HTTP 400
+- {"rules":[1]} correctly returns HTTP 400 `Rules must be an object.`
+
+Cause confirmed by source inspection: the adapter calls
+`run_demo(rules_override=rules_override or {})`, so falsey non-object values are
+coerced to an empty object before `validate_rules_override` can reject the type.
+
+Impact: invalid client payload types can be silently accepted as default rules,
+producing plausible output instead of a clear validation failure. This is a
+functional API contract defect and a fake-success risk. Action: preserve the raw
+value through validation (default only when omitted/null as explicitly intended),
+add regressions for each falsey non-object type, then require a new independent
+validation cycle. No implementation fix was made by the validator.
+
+Prior failed evidence preserved unchanged:
+evidence/validation-runs/failed-report-9685067.json
+SHA-256: a902afbdd5be0e5dd04357904ab2036f9dbe5b09912074d7c5e5c5192ad75fe1

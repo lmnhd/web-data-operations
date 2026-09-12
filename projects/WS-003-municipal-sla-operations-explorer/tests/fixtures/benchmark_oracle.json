@@ -1,0 +1,87 @@
+{
+  "reference_now": "2026-08-08T12:00:00Z",
+  "expected_total_records": 15,
+  "expected_classifications": {
+    "SR-311-001": {
+      "sla_status": "COMPLIANT",
+      "lifecycle_state": "CLOSED_ON_TIME",
+      "reason_code": "CLOSED_BEFORE_SLA_TARGET"
+    },
+    "SR-311-002": {
+      "sla_status": "SLA_BREACHED",
+      "lifecycle_state": "CLOSED_OVERDUE",
+      "reason_code": "CLOSED_AFTER_SLA_TARGET"
+    },
+    "SR-311-003": {
+      "sla_status": "SLA_BREACHED",
+      "lifecycle_state": "OPEN_OVERDUE",
+      "reason_code": "OPEN_PAST_SLA_TARGET"
+    },
+    "SR-311-004": {
+      "sla_status": "COMPLIANT",
+      "lifecycle_state": "CLOSED_ON_TIME",
+      "reason_code": "CLOSED_BEFORE_SLA_TARGET"
+    },
+    "SR-311-005": {
+      "sla_status": "SLA_BREACHED",
+      "lifecycle_state": "CLOSED_OVERDUE",
+      "reason_code": "CLOSED_AFTER_SLA_TARGET"
+    },
+    "SR-311-006": {
+      "sla_status": "COMPLIANT",
+      "lifecycle_state": "IN_PROGRESS",
+      "reason_code": "IN_PROGRESS_WITHIN_SLA"
+    },
+    "SR-311-007": {
+      "sla_status": "COMPLIANT",
+      "lifecycle_state": "CLOSED_ON_TIME",
+      "reason_code": "CLOSED_BEFORE_SLA_TARGET"
+    },
+    "SR-311-008": {
+      "sla_status": "SLA_BREACHED",
+      "lifecycle_state": "OPEN_OVERDUE",
+      "reason_code": "OPEN_PAST_SLA_TARGET"
+    },
+    "SR-311-009": {
+      "sla_status": "COMPLIANT",
+      "lifecycle_state": "OPEN",
+      "reason_code": "OPEN_TARGET_DERIVED_WITHIN_SLA"
+    },
+    "SR-311-010": {
+      "sla_status": "INCOMPLETE_DATA_REVIEW",
+      "lifecycle_state": "DATA_ERROR",
+      "reason_code": "INVALID_CREATED_TIMESTAMP"
+    },
+    "SR-311-011": {
+      "sla_status": "COMPLIANT",
+      "lifecycle_state": "CLOSED_ON_TIME",
+      "reason_code": "CLOSED_BEFORE_SLA_TARGET"
+    },
+    "SR-311-012": {
+      "sla_status": "SLA_BREACHED",
+      "lifecycle_state": "OPEN_OVERDUE",
+      "reason_code": "OPEN_PAST_SLA_TARGET"
+    },
+    "SR-311-013": {
+      "sla_status": "COMPLIANT",
+      "lifecycle_state": "CLOSED_ON_TIME",
+      "reason_code": "CLOSED_BEFORE_SLA_TARGET"
+    },
+    "SR-311-014": {
+      "sla_status": "COMPLIANT",
+      "lifecycle_state": "CLOSED_ON_TIME",
+      "reason_code": "CLOSED_BEFORE_SLA_TARGET"
+    },
+    "SR-311-015": {
+      "sla_status": "AT_RISK",
+      "lifecycle_state": "IN_PROGRESS",
+      "reason_code": "IN_PROGRESS_SLA_MARGIN_EXPIRING"
+    }
+  },
+  "expected_summary_counts": {
+    "COMPLIANT": 8,
+    "SLA_BREACHED": 5,
+    "AT_RISK": 1,
+    "INCOMPLETE_DATA_REVIEW": 1
+  }
+}

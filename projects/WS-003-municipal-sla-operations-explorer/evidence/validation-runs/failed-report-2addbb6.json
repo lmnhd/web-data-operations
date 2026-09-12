@@ -1,0 +1,102 @@
+{
+  "iterationId": "WS-003",
+  "validatorAgentId": "/root/ws003_release_validator",
+  "validatedCommit": "2addbb6f7b4e3f20e3ccc54010005d05ccf7b8a5",
+  "verdict": "FAIL",
+  "unresolvedFindings": [
+    {
+      "id": "falsey-non-object-rules-bypass",
+      "severity": "release-blocking",
+      "summary": "The local and deployed /api/run adapters silently accept falsey non-object rules values as the default rule object.",
+      "evidence": "POST bodies with rules=[], rules=\"\", rules=false, or rules=0 return HTTP 200 with a plausible default evaluation, while the same API correctly returns HTTP 400 `Rules must be an object.` for the truthy non-object rules=[1]. Source inspection shows `rules_override or {}` coerces the falsey invalid values before type validation.",
+      "risk": "An invalid client payload can appear to succeed and produce decision output under rules the client did not validly supply, creating a fake-success and auditability risk.",
+      "action": "Preserve the raw rules value through validation, default only for an explicitly supported omitted/null case, add regression tests for falsey non-object values, and run a new independent validation cycle."
+    }
+  ],
+  "priorFailedReport": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/failed-report-9685067.json",
+  "planSha256": "acacf97f9cb1c9b829e4a2efbe5e8264ae2e8db7a00d5c8cdb300e6a8ac316bf",
+  "artifactSha256": {
+    "output/pdf/Municipal-311-SLA-Operations-Desk.pdf": "b3b78b6db7cea9f77f54ded7a4d95400cbe84836a587900f829f6288003349cf",
+    "projects/WS-003-municipal-sla-operations-explorer/.gitignore": "a4d3111877fb9f9215871a06274f37a3bd696c93db34a313690915180e66b176",
+    "projects/WS-003-municipal-sla-operations-explorer/.vercelignore": "81ed1016e6085036e0dc3b0fe1f7f3705796acdfe28c03e33af6e87a34086dde",
+    "projects/WS-003-municipal-sla-operations-explorer/app.py": "ea2598be36fe2bca75e4360114752cfb000e64f808c730421d9fc3a9dadca6e3",
+    "projects/WS-003-municipal-sla-operations-explorer/demo/app.js": "a79396e3b55085f80498976ece97c4d2163d142a1b60f0ff9c21829f6c396419",
+    "projects/WS-003-municipal-sla-operations-explorer/demo/index.html": "4650c9ec4ea2b8d29d9db5477e50a8791c74c677efc704848ea6133d5e0d90a0",
+    "projects/WS-003-municipal-sla-operations-explorer/demo/style.css": "0838661f7b11b7cbe764ad5dd3be3c237c59c69c943f5ae0dafeb480ee5bb053",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/evaluated_run.csv": "cd5a49a2fa68bb8f0d673a8341d52f2f9ea8a3fc6e78e416cd71a2d4eaec3391",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/evaluated_run.json": "29655afbf6f1d3aeba64201e56bbd388c3c617495e2f8d42549b0ade23af7903",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/FIXTURE_PROVENANCE.md": "53ac1c2ec970a709c9423089e61ef864df72872e6462a22c4eeb020a6609e756",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/fixtures/benchmark_oracle.json": "087528439acd409be6fe2fcddbe9b3868f858dfc31a1e44bf37876aefe8b0a7b",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/fixtures/toronto_311_sample.json": "b631f76883fc8010d50b0e48bc67b278cb4c91dc9150513be0d8fc2a4685cf3b",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/PROOF_REPORT.md": "0dc134ef6976030aa6947f1dc62eef7ac3a7b0496b69d0cbb4551dbef335106c",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/reviewer/working-demo-pdf.png": "771855ed0204bc7afe754258f6bb381366a33f144de1b7a29fbbfe3798bdc70d",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/reviewer/working-demo.png": "c404722036f9d830aae2d579b055008e11ce5088f7dcdc2fab98a87b248c742a",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/UPWORK_PUBLICATION.md": "662648168dc9fcf1882b00ec7ba9d9ba9a54550deb8de7af4cba1884f9483399",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/VALIDATION_PLAN.json": "acacf97f9cb1c9b829e4a2efbe5e8264ae2e8db7a00d5c8cdb300e6a8ac316bf",
+    "projects/WS-003-municipal-sla-operations-explorer/PROJECT_MANIFEST.md": "9f3689460d3a55b1325ccde84678eddff97b59c15b68728f3a2d118adc1bcd47",
+    "projects/WS-003-municipal-sla-operations-explorer/README.md": "03e4b80e0e329289198adcc528a92a52147339d3fd4f82df760896a6d92835bb",
+    "projects/WS-003-municipal-sla-operations-explorer/requirements.txt": "6979faed9b4726634bb0ff2b36f3e5a080e4d89a162dc1f264fce99bae332a8a",
+    "projects/WS-003-municipal-sla-operations-explorer/SOURCE_CONTRACT.md": "867ee734b6e896700a4f299632063324347f1b0d9a27d519da1cc7b9e7ad93ad",
+    "projects/WS-003-municipal-sla-operations-explorer/src/demo_server.py": "bdaea05f6c6a8d5cd1e7595e8b3efae2201838bb8a8c8d86384f6e3a6a2c6dec",
+    "projects/WS-003-municipal-sla-operations-explorer/src/sla_engine.py": "6fa9a472303b7930d658cd713b0ec8cff45ec8e63fff6d1a51adbcb721dbf0ef",
+    "projects/WS-003-municipal-sla-operations-explorer/tests/fixtures/benchmark_oracle.json": "087528439acd409be6fe2fcddbe9b3868f858dfc31a1e44bf37876aefe8b0a7b",
+    "projects/WS-003-municipal-sla-operations-explorer/tests/fixtures/toronto_311_sample.json": "b631f76883fc8010d50b0e48bc67b278cb4c91dc9150513be0d8fc2a4685cf3b",
+    "projects/WS-003-municipal-sla-operations-explorer/tests/test_app.py": "c9d66a1c3fc5526a99efb583905784d2b4351089e201fb3d700ef0973a77e474",
+    "projects/WS-003-municipal-sla-operations-explorer/tests/test_sla_engine.py": "fd7e80fe185d6c4a73d4e01050d20c24f4cc0aab68d005e1e6fde2ca4c2475b6",
+    "projects/WS-003-municipal-sla-operations-explorer/vercel.json": "fe334fb8fe1bde438a6b4091799038bc45aa920549adc488db6ce258eff944d4",
+    "scripts/build_ws003_work_sample.py": "18cc699c9829b21bf3034b61aa3ef2d4c5143e948ea78d603bcd377544054b13"
+  },
+  "checks": [
+    {
+      "id": "check_automated_tests",
+      "status": "PASS",
+      "observed": "The exact frozen command completed 14 tests in 0.030 seconds with zero failures and zero errors outside the managed filesystem sandbox. Coverage meaningfully includes the expanded timestamp, chronology, category, fractional-rule and unknown-key regressions, though it omits the falsey non-object payloads identified adversarially.",
+      "evidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/recheck-automated-tests.txt",
+      "evidenceSha256": "46b8058a937a513599d088438ce5978e1979759b2f98c840514af7fc0a86a928"
+    },
+    {
+      "id": "check_benchmark_reproduction",
+      "status": "PASS",
+      "observed": "The CLI evaluated 15 explicitly synthetic records and reproduced exactly 8 COMPLIANT, 1 AT_RISK, 5 SLA_BREACHED and 1 INCOMPLETE_DATA_REVIEW at the fixed reference time.",
+      "evidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/recheck-benchmark.txt",
+      "evidenceSha256": "8f6729dfc8ba8d0e3401a8fb7379c930cb2e75b41a577dea4566a74b17f4d7b2"
+    },
+    {
+      "id": "check_invalid_timestamp_routing",
+      "status": "PASS",
+      "observed": "Every named invalid record routed to INCOMPLETE_DATA_REVIEW with its specific reason code; fractional, boolean, zero and unknown-category rule overrides returned HTTP 400, while 1-day and 30-day bounds were accepted. The independent expansion additionally found the unresolved falsey non-object type bypass recorded separately.",
+      "evidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/recheck-edge-cases.txt",
+      "evidenceSha256": "c97cfdc186808eb7dfa67c05eeaa0537d55dde154fbba95b57af98e263f3f11f"
+    },
+    {
+      "id": "check_csv_json_export_structure",
+      "status": "PASS",
+      "observed": "Fresh CLI exports contain 15 JSON records and 15 CSV rows plus header. Both formats carry fixture_kind=synthetic_sla_scenario, reason_code and non-empty unique fingerprint fields, and their fingerprint sets and benchmark counts match.",
+      "evidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/recheck-exports.txt",
+      "evidenceSha256": "76435af7ae1c7ea4977adccaa00badefdf826d72c499802c5f1f5475a8520052"
+    },
+    {
+      "id": "check_pdf_visual_study",
+      "status": "PASS",
+      "observed": "All three PDF pages were freshly rendered at 150 DPI and inspected individually: layout is legible, uncropped and free of title/subtitle overlap; screenshot, synthetic boundary, 14/14 tests and metrics are consistent. Both embedded link annotations resolve HTTP 200.",
+      "evidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/recheck-pdf-visual.txt",
+      "evidenceSha256": "0ec1423301f615b0d65dda48b42f31ac520ad905c2a0c37ca9a76cce79ba3d7f"
+    },
+    {
+      "id": "check_ward_bottleneck_claim",
+      "status": "PASS",
+      "observed": "Ward 01 reproduced as 2 compliant of 5 total, or 40.0%, and is consistently labeled a synthetic fixture result. A fresh download of the official Toronto 2026 resource confirmed that its public schema lacks target and closure timestamps, so this report certifies no official municipal performance claim.",
+      "evidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/recheck-ward-claims.txt",
+      "evidenceSha256": "7d7a691829c48a4058699f59e5af699ad471617ae64d3d0d1789e7922260af71"
+    },
+    {
+      "id": "check_privacy_boundary",
+      "status": "PASS",
+      "observed": "Fresh exports contain no resident names, private addresses, postal codes, intersections, emails, phone numbers or contact fields. Every row, the signed-out page/config, the PDF and reviewer copy explicitly maintain the synthetic fixture and missing-official-timing-fields boundary.",
+      "evidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/recheck-privacy-boundary.txt",
+      "evidenceSha256": "69101374d9f2ae3e9095b3912f70368c74dd11f612ab5f0caba40452b8ddcf21"
+    }
+  ],
+  "adversarialEvidencePath": "projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/recheck-adversarial-findings.txt",
+  "adversarialEvidenceSha256": "e88ec7efa23424b478f28eb53f2dcd80543a2f0fb2a76ef784ec322a7a36ff15"
+}

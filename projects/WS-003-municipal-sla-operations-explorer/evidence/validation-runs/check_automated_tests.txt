@@ -1,0 +1,22 @@
+Independent validator: /root/ws003_release_validator
+Candidate: 968506742e7219515dc81d6e1459922efef47124
+Date: 2026-09-12
+
+Frozen command:
+python -m unittest discover projects/WS-003-municipal-sla-operations-explorer/tests
+
+First execution inside the managed filesystem sandbox:
+- 7 tests discovered.
+- 6 passed and test_csv_and_json_export errored because tempfile.TemporaryDirectory could not write C:\Users\cclem\AppData\Local\Temp (PermissionError / WinError 5).
+- This was an execution-environment restriction, not an assertion or product failure.
+
+Required rerun outside the filesystem sandbox, with the identical command:
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.026s
+
+OK
+
+Test assessment:
+- Meaningful coverage: benchmark/oracle agreement, Pothole 5-to-3-day rule change, malformed created timestamp routing, CSV/JSON creation, and Flask index/config/run endpoints.
+- Coverage gaps found adversarially: malformed closed timestamps, impossible timestamp ordering, unmapped service categories, and fractional rule inputs. See adversarial_findings.txt.

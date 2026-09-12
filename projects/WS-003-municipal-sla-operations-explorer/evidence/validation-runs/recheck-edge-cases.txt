@@ -1,0 +1,33 @@
+WS-003 independent repair recheck - edge cases and rule validation
+Date: 2026-09-12
+Candidate: 2addbb6f7b4e3f20e3ccc54010005d05ccf7b8a5
+
+Command:
+python projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/recheck-edge-probes.py
+
+Expected plan cases passed:
+- malformed creation -> INCOMPLETE_DATA_REVIEW / INVALID_CREATED_TIMESTAMP
+- malformed closure -> INCOMPLETE_DATA_REVIEW / INVALID_CLOSED_TIMESTAMP
+- missing closure on CLOSED -> INCOMPLETE_DATA_REVIEW / MISSING_CLOSED_TIMESTAMP
+- closure before creation -> INCOMPLETE_DATA_REVIEW / CLOSED_BEFORE_CREATED
+- malformed target -> INCOMPLETE_DATA_REVIEW / INVALID_TARGET_TIMESTAMP
+- target before creation -> INCOMPLETE_DATA_REVIEW / TARGET_BEFORE_CREATED
+- future creation -> INCOMPLETE_DATA_REVIEW / CREATED_AFTER_REFERENCE_TIME
+- unmapped service -> INCOMPLETE_DATA_REVIEW / UNKNOWN_SERVICE_CATEGORY
+- invalid direct fractional rule -> INCOMPLETE_DATA_REVIEW / INVALID_SLA_RULE
+- fractional API rule -> HTTP 400
+- boolean API rule -> HTTP 400
+- unknown API rule key -> HTTP 400
+- zero-day API rule -> HTTP 400
+- 1-day and 30-day boundary rules -> HTTP 200
+- truthy non-object rules array [1] -> HTTP 400, `Rules must be an object.`
+
+Adversarial mismatch (script exit 1 by design):
+- rules=[] -> expected HTTP 400, observed HTTP 200/default evaluation
+- rules="" -> expected HTTP 400, observed HTTP 200/default evaluation
+- rules=false -> expected HTTP 400, observed HTTP 200/default evaluation
+- rules=0 -> expected HTTP 400, observed HTTP 200/default evaluation
+
+The named frozen-plan conditions pass. The falsey non-object bypass is outside the
+named examples but contradicts the API's type contract and remains an unresolved
+release finding.

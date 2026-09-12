@@ -1,0 +1,27 @@
+WS-003 independent remediation validation - privacy, source, attribution, and origin boundary
+Validator: /root/ws003_remediation_validator
+
+Privacy/export boundary:
+- Inspected CSV/JSON fields contain no resident names, private addresses, postal identifiers, intersections, emails, phone numbers, or personal contact details.
+- service_name is an operational service category, not a resident name.
+- All 15 inputs and outputs are explicitly labeled fixture_kind=synthetic_sla_scenario.
+
+Fresh official-source check:
+- The City of Toronto package API returned resource 99b7f283-7345-4f5a-a126-d078ed4f3419, "311 Service Requests 2026", last modified 2026-09-08T20:00:17.
+- Fresh ZIP/CSV header: Creation Date, Status, First 3 Chars of Postal Code, Intersection Street 1, Intersection Street 2, Ward, Service Request Type, Division, Section.
+- The public schema does not contain a stable request ID, target timestamp, or closure timestamp. SOURCE_CONTRACT.md and FIXTURE_PROVENANCE.md state this gap and describe the synthetic fixture accurately.
+- The project cites Toronto Open Data as licensed schema context and does not imply endorsement or official SLA performance.
+
+Attribution boundary:
+- PROJECT_MANIFEST.md names /root/ws003_remediation_validator as independent validator in both the validation-plan table and validator section; no prior validator is named there.
+
+Origin boundary, local and production:
+- exact same-origin HTTPS request -> 200
+- cross-origin host -> 403
+- same host with HTTP Origin against HTTPS endpoint -> 403
+- Sec-Fetch-Site: cross-site -> 403
+- opaque/null Origin -> 403
+
+Machine-readable evidence: source-check-results.json and remediation-probe-results.json.
+
+Result: PASS - privacy, source/claim, validator-attribution, and scheme-plus-host Origin boundaries hold.

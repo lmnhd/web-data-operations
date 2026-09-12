@@ -1,0 +1,12 @@
+Independent validator: /root/ws003_release_validator
+Candidate: 968506742e7219515dc81d6e1459922efef47124
+Date: 2026-09-12
+
+Procedure: call evaluate_record with created_date=INVALID_STAMP, target_date=null, closed_date=null, status=OPEN.
+
+Observed output:
+INCOMPLETE_DATA_REVIEW DATA_ERROR INVALID_CREATED_TIMESTAMP
+
+The local browser default run also displayed SR-311-010 with INVALID_DATE_FORMAT, INCOMPLETE_DATA_REVIEW, lifecycle DATA_ERROR, and reason INVALID_CREATED_TIMESTAMP.
+
+The predefined malformed-created-timestamp case passes. Broader malformed lifecycle handling does not; see adversarial_findings.txt.

@@ -1,0 +1,20 @@
+WS-003 FINAL INDEPENDENT VALIDATION FINDINGS
+Validator: /root/ws003_final_validator
+Candidate: 3f9f2749c5605c1d8dc06fe8e92a92c130f50607
+Production: https://municipal-311-sla-operations-desk.vercel.app
+Vercel deployment supplied in handoff: dpl_8fHVBNaNYgwfZCq6h4bMbYkMghYj
+Date: 2026-09-12 UTC
+
+F-001 - HIGH - Adapter accepts contradictory or unknown lifecycle inputs as decision output
+The engine validates timestamp syntax and some chronology, but never validates allowed status values or consistency between status, closed_date, and reference_now. An unknown status is treated as open; OPEN and IN_PROGRESS records with closed timestamps are classified as closed; an OPEN+closed record produced COMPLIANT/CLOSED_ON_TIME; and a closure after the fixed reference time was accepted. This contradicts the safe-review posture and can create plausible but misleading decision output when a future authorized adapter supplies malformed lifecycle state. Route these cases to INCOMPLETE_DATA_REVIEW with explicit reason codes and add tests.
+
+F-002 - MEDIUM - PDF page 2 is visibly clipped
+Fresh 150-DPI rendering shows the code excerpt line cut off after `(sla_target_days * 8` and the footer cut off to `2 of`. The document therefore fails the frozen clean/uncropped visual expectation and displays an invalid-looking code excerpt. Correct layout, rebuild the PDF, render all pages again, and revalidate.
+
+F-003 - MEDIUM - Project Manifest names the wrong final validator
+PROJECT_MANIFEST.md identifies /root/ws003_release_validator as the fresh final validator and evidence verifier. The controlling tracking entry and actual final validation identify /root/ws003_final_validator. This violates the Manifest requirement that agent roles match the recorded handoff. Correct the role/verification claim before release and revalidate covered hashes.
+
+F-004 - LOW - Origin guard compares host only, not full origin
+The HTTPS production endpoint accepted Origin: http://municipal-311-sla-operations-desk.vercel.app with HTTP 200 because same_origin_guard compares only urlsplit(origin).netloc to request.host. Cross-site and unrelated-host probes correctly return 403, and current browser/CORS/deployment behavior limits practical exposure, but the function is not a strict same-origin comparison. Compare scheme plus host, or document that this is a same-host guard.
+
+VERDICT: FAIL. No fix was implemented by the validator. Prior failed evidence remains unchanged.

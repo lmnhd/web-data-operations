@@ -1,0 +1,61 @@
+{
+  "iterationId": "WS-003",
+  "builderAgentIds": ["root"],
+  "artifactPaths": [
+    "output/pdf/Municipal-311-SLA-Operations-Desk.pdf",
+    "scripts/build_ws003_work_sample.py",
+    "projects/WS-003-municipal-sla-operations-explorer/src/sla_engine.py",
+    "projects/WS-003-municipal-sla-operations-explorer/src/demo_server.py",
+    "projects/WS-003-municipal-sla-operations-explorer/app.py",
+    "projects/WS-003-municipal-sla-operations-explorer/tests/test_sla_engine.py",
+    "projects/WS-003-municipal-sla-operations-explorer/tests/test_app.py",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/fixtures/toronto_311_sample.json",
+    "projects/WS-003-municipal-sla-operations-explorer/evidence/fixtures/benchmark_oracle.json",
+    "projects/WS-003-municipal-sla-operations-explorer/SOURCE_CONTRACT.md",
+    "projects/WS-003-municipal-sla-operations-explorer/README.md"
+  ],
+  "checks": [
+    {
+      "id": "check_automated_tests",
+      "category": "tests",
+      "procedure": "Execute `python -m unittest discover projects/WS-003-municipal-sla-operations-explorer/tests` in repository root.",
+      "expected": "17 passed tests with 0 failures, including malformed closure, reversed chronology, unknown category, future-created, invalid target, lifecycle status/date consistency, post-reference closure, falsey/non-object rules, and scheme-aware origin regressions."
+    },
+    {
+      "id": "check_benchmark_reproduction",
+      "category": "demo",
+      "procedure": "Run `python projects/WS-003-municipal-sla-operations-explorer/src/sla_engine.py` over sample fixture.",
+      "expected": "15 explicitly synthetic scenario records evaluated: 8 COMPLIANT, 1 AT_RISK, 5 SLA_BREACHED, 1 INCOMPLETE_DATA_REVIEW."
+    },
+    {
+      "id": "check_invalid_timestamp_routing",
+      "category": "edge_case",
+      "procedure": "Evaluate malformed creation/closure/target timestamps, closure-before-creation, future-created open records, unmapped categories, unknown statuses, OPEN/IN_PROGRESS records with closure timestamps, and closures after the reference time; submit fractional, unknown, and falsey non-object API rule overrides.",
+      "expected": "Every invalid or contradictory record routes to INCOMPLETE_DATA_REVIEW with a specific reason code; invalid rule overrides return HTTP 400 instead of producing plausible default output."
+    },
+    {
+      "id": "check_csv_json_export_structure",
+      "category": "exports",
+      "procedure": "Execute engine CLI with --output-json and --output-csv arguments and verify output files.",
+      "expected": "Valid CSV and JSON files created with 15 rows plus fixture_kind=synthetic_sla_scenario, reason_code, and fingerprint fields."
+    },
+    {
+      "id": "check_pdf_visual_study",
+      "category": "pdf_visual",
+      "procedure": "Inspect rendered pages of `output/pdf/Municipal-311-SLA-Operations-Desk.pdf`.",
+      "expected": "3-page visual study rendered cleanly, uncropped, and legible, with no title/subtitle overlap and with correct links and metrics."
+    },
+    {
+      "id": "check_ward_bottleneck_claim",
+      "category": "claims",
+      "procedure": "Verify the synthetic scenario ward-level compliance calculation for Ward 01 - Etobicoke North and confirm it is not presented as an official Toronto performance rate.",
+      "expected": "Synthetic scenario rate calculated as 40.0% (2 compliant of 5 total) and labeled as a fixture result, not an official municipal metric."
+    },
+    {
+      "id": "check_privacy_boundary",
+      "category": "boundaries",
+      "procedure": "Inspect exported fields in CSV and JSON output, reviewer-facing source/fixture labels, Manifest validation attribution, and POST origin handling for scheme-plus-host equality.",
+      "expected": "Zero resident names, private addresses, or personal contact details present; synthetic input status and absent official target/closure timestamps are explicit; the Manifest names /root/ws003_remediation_validator; HTTPS rejects an equivalent HTTP Origin."
+    }
+  ]
+}

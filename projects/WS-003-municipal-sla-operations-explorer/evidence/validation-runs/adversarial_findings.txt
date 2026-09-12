@@ -1,0 +1,25 @@
+Independent validator: /root/ws003_release_validator
+Candidate: 968506742e7219515dc81d6e1459922efef47124
+Date: 2026-09-12
+
+F-001 HIGH - Linked public demo is stale and makes unsupported municipal-source claims.
+Evidence: signed-out HTML says "recorded Toronto 311 records" and "100% of benchmark oracle labels reproduced"; /api/config says "Recorded City of Toronto 311 Open Data fixture"; /api/run lacks fixture_kind. The official 2026 CSV has no target or closure timestamps. Action: deploy the reviewed synthetic-boundary candidate, verify signed-out HTML/config/default/strict/export behavior, and rerun independent validation.
+
+F-002 HIGH - Invalid or impossible closure timestamps can be silently certified as compliant.
+Probe A: status=CLOSED, closed_date=NOT_A_DATE, created=2026-08-01, target=2026-08-10 produced lifecycle OPEN, sla_status COMPLIANT, reason IN_PROGRESS_WITHIN_SLA.
+Probe B: status=CLOSED, created=2026-08-05, closed=2026-08-04 produced duration_days=-1.0, lifecycle CLOSED_ON_TIME, sla_status COMPLIANT.
+Action: validate status/timestamp consistency and temporal ordering; route malformed or impossible records to INCOMPLETE_DATA_REVIEW with explicit reason codes; add unit/API tests.
+
+F-003 MEDIUM - Unmapped categories receive a silent five-day default and can be certified compliant.
+Probe: service_name=Unmapped Service with no target_date was assigned sla_target_days=5 and returned COMPLIANT / CLOSED_BEFORE_SLA_TARGET.
+Action: require an explicit approved category rule or route the record to review with an unmapped-category reason; test the adapter boundary.
+
+F-004 MEDIUM - Fractional API rule inputs are silently truncated despite an integer contract.
+Probe: POST rules {"Pothole Repair": 1.5} returned HTTP 200 with rules_applied Pothole Repair=1. Zero correctly returned HTTP 400.
+Action: reject non-integral numeric values (including booleans) with HTTP 400 or document and surface an explicit rounding policy; add tests.
+
+Additional checks that passed:
+- Cross-site POST returned HTTP 403.
+- Candidate local HTML, exports, PDF, and screenshots use an explicit synthetic boundary.
+- Vercel and GitHub links both resolve with HTTP 200.
+- No personal/contact/address fields or email-like values were found in fresh exports.
