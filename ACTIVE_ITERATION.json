@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "iterationId": "WS-003",
-  "stage": "VERIFYING",
+  "stage": "REPAIRING",
   "concept": {
     "slug": "municipal-sla-operations-explorer",
     "name": "Municipal SLA & Service Bottleneck Operations Explorer",
@@ -11,17 +11,14 @@
     "centralClaim": "Given an explicitly synthetic, adapter-ready service-request fixture with created, target, and closure timestamps, the engine can reproducibly calculate scenario margins, route malformed inputs to review, aggregate ward scenarios, and export auditable results without claiming official municipal performance."
   },
   "authorizedScope": "Human approved the web UI, visual 3-page PDF, Project Manifest, independent validation, Vercel hosting, GitHub release, and Upwork portfolio publication on 2026-09-08. Paid services, live municipal dispatch integration, and legal SLA certifications remain unauthorized.",
-  "nextAction": "Stop at the approval boundary. Independent recheck failed candidate 2addbb6 because falsey non-object rules payloads bypass validation. The single permitted repair pass is exhausted; a narrowly scoped second repair and fresh validator turn require explicit human approval.",
+  "nextAction": "Apply the explicitly approved narrow adapter repair for falsey non-object rules payloads, add one parameterized regression test, redeploy, freeze a candidate, then dispatch a fresh-context non-builder validator. No further repair loop.",
   "humanApproval": {
     "status": "approved",
-    "date": "2026-09-08",
-    "basis": "The user approved the publication request on 2026-09-08 ('Approve.'). This authorizes independent validation, source integration, public hosting, release tagging, GitHub publication, and Upwork portfolio publication for WS-003."
+    "date": "2026-09-12",
+    "basis": "The user approved publication on 2026-09-08 and explicitly approved one narrow additional repair plus one fresh independent-validator turn on 2026-09-12 ('Approved')."
   },
   "fatalBlockers": [],
-  "repairableConditions": [
-    "Independent validation verdict is FAIL: falsey non-object rules payloads are coerced to defaults and return plausible HTTP 200 results. Release readiness and source integration are prohibited.",
-    "A small adapter fix can preserve raw rules values, reject falsey non-object inputs, add focused regressions, redeploy, and undergo a new independent validation turn, but this would exceed the approved one-repair-pass limit."
-  ],
+  "repairableConditions": [],
   "limitations": [
     "No client posting was supplied; demand evidence is based on general operational dashboard and monitoring signals.",
     "The proof uses 15 synthetic 311-style records; it is not a recorded Toronto extract and does not estimate production accuracy.",
@@ -49,7 +46,7 @@
   ],
   "agentBudget": {
     "stageLimit": 4,
-    "used": 2,
+    "used": 0,
     "unit": "delegated agent turns",
     "additionalUseRequiresHumanApproval": true
   }
