@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "iterationId": "WS-003",
-  "stage": "VERIFYING",
+  "stage": "REPAIRING",
   "concept": {
     "slug": "municipal-sla-operations-explorer",
     "name": "Municipal SLA & Service Bottleneck Operations Explorer",
@@ -11,19 +11,14 @@
     "centralClaim": "Given an explicitly synthetic, adapter-ready service-request fixture with created, target, and closure timestamps, the engine can reproducibly calculate scenario margins, route malformed inputs to review, aggregate ward scenarios, and export auditable results without claiming official municipal performance."
   },
   "authorizedScope": "Human approved the web UI, visual 3-page PDF, Project Manifest, independent validation, Vercel hosting, GitHub release, and Upwork portfolio publication on 2026-09-08. Paid services, live municipal dispatch integration, and legal SLA certifications remain unauthorized.",
-  "nextAction": "Stop at the approval boundary. Fresh independent validation failed candidate 3f9f274 with four unresolved findings spanning lifecycle consistency, PDF clipping, Manifest attribution, and strict origin comparison. No further repair was authorized; release and WS-004 remain blocked pending human direction.",
+  "nextAction": "Apply the explicitly approved four-finding remediation: lifecycle consistency, PDF page-2 clipping, final-validator Manifest attribution, and scheme-plus-host origin enforcement; run 17 tests, redeploy, freeze, and dispatch /root/ws003_remediation_validator. No work outside these findings.",
   "humanApproval": {
     "status": "approved",
     "date": "2026-09-12",
-    "basis": "The user approved publication on 2026-09-08 and explicitly approved one narrow additional repair plus one fresh independent-validator turn on 2026-09-12 ('Approved')."
+    "basis": "The user approved publication on 2026-09-08, the falsey-rule repair on 2026-09-12, and then explicitly approved the four-finding expanded remediation plus a fresh independent-validator turn on 2026-09-12 ('Approved')."
   },
   "fatalBlockers": [],
-  "repairableConditions": [
-    "Independent validation F-001: unknown or contradictory lifecycle status/date combinations and post-reference closures must route to explicit review instead of ordinary SLA decisions.",
-    "Independent validation F-002: PDF page 2 clips the code excerpt and footer and must be regenerated and visually rechecked.",
-    "Independent validation F-003: PROJECT_MANIFEST.md names the prior validator instead of /root/ws003_final_validator.",
-    "Independent validation F-004: the HTTPS production endpoint accepts an equivalent HTTP Origin because the guard compares only host rather than scheme plus host."
-  ],
+  "repairableConditions": [],
   "limitations": [
     "No client posting was supplied; demand evidence is based on general operational dashboard and monitoring signals.",
     "The proof uses 15 synthetic 311-style records; it is not a recorded Toronto extract and does not estimate production accuracy.",
@@ -51,7 +46,7 @@
   ],
   "agentBudget": {
     "stageLimit": 4,
-    "used": 1,
+    "used": 0,
     "unit": "delegated agent turns",
     "additionalUseRequiresHumanApproval": true
   }

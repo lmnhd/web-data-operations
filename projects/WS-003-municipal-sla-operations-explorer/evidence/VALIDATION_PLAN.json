@@ -19,7 +19,7 @@
       "id": "check_automated_tests",
       "category": "tests",
       "procedure": "Execute `python -m unittest discover projects/WS-003-municipal-sla-operations-explorer/tests` in repository root.",
-      "expected": "15 passed tests with 0 failures, including malformed closure, reversed chronology, unknown category, future-created, invalid target, fractional-rule, unknown-rule-key, and falsey-non-object-rule regressions."
+      "expected": "17 passed tests with 0 failures, including malformed closure, reversed chronology, unknown category, future-created, invalid target, lifecycle status/date consistency, post-reference closure, falsey/non-object rules, and scheme-aware origin regressions."
     },
     {
       "id": "check_benchmark_reproduction",
@@ -30,8 +30,8 @@
     {
       "id": "check_invalid_timestamp_routing",
       "category": "edge_case",
-      "procedure": "Evaluate malformed creation/closure/target timestamps, closure-before-creation, future-created open records, and unmapped service categories; submit fractional, unknown, and falsey non-object API rule overrides (`[]`, empty string, `false`, and `0`).",
-      "expected": "Every invalid record routes to INCOMPLETE_DATA_REVIEW with a specific reason code; fractional, unknown, and falsey non-object rule overrides return HTTP 400 instead of being truncated, ignored, or replaced with defaults."
+      "procedure": "Evaluate malformed creation/closure/target timestamps, closure-before-creation, future-created open records, unmapped categories, unknown statuses, OPEN/IN_PROGRESS records with closure timestamps, and closures after the reference time; submit fractional, unknown, and falsey non-object API rule overrides.",
+      "expected": "Every invalid or contradictory record routes to INCOMPLETE_DATA_REVIEW with a specific reason code; invalid rule overrides return HTTP 400 instead of producing plausible default output."
     },
     {
       "id": "check_csv_json_export_structure",
@@ -54,8 +54,8 @@
     {
       "id": "check_privacy_boundary",
       "category": "boundaries",
-      "procedure": "Inspect exported fields in CSV and JSON output and reviewer-facing source/fixture labels.",
-      "expected": "Zero resident names, private addresses, or personal contact details present; synthetic input status and the absence of official target/closure timestamps are explicit."
+      "procedure": "Inspect exported fields in CSV and JSON output, reviewer-facing source/fixture labels, Manifest validation attribution, and POST origin handling for scheme-plus-host equality.",
+      "expected": "Zero resident names, private addresses, or personal contact details present; synthetic input status and absent official target/closure timestamps are explicit; the Manifest names /root/ws003_remediation_validator; HTTPS rejects an equivalent HTTP Origin."
     }
   ]
 }
