@@ -13,8 +13,8 @@ Closeout resumed 2026-09-12 UTC. Statuses remain fail-closed until evidence is r
 | Official source contract | PASS | 2026 ZIP columns verified; missing target/closure timestamps disclosed |
 | Visual three-page PDF | PASS | Rebuilt after title-overlap repair; synthetic boundaries visible |
 | Actual working-output screenshot | PASS | `evidence/reviewer/working-demo.png` and `evidence/reviewer/working-demo-pdf.png`, captured from the corrected local demo on 2026-09-12 |
-| Independent verification | BLOCKED | `/root/ws003_release_validator` failed candidate `9685067`; one bounded repair recheck is required |
-| Executable hash gate | BLOCKED | Run after fresh independent report |
+| Independent verification | FAIL | `/root/ws003_release_validator` failed repair candidate `2addbb6`; falsey non-object `rules` payloads bypass validation |
+| Executable hash gate | FAIL | Hash-bound report is complete but verdict is FAIL; the release-stage gate rejects it |
 | Signed-out public demo | PASS | Production alias redeployed 2026-09-12; anonymous page/config/default/strict/fractional-rule checks passed and expose `synthetic_sla_scenario` |
 | Upwork publication | PASS | User confirms item number 3 is published; corrected copy/PDF refresh remains |
 | Reviewed source integration | BLOCKED | Pull request/default-branch integration required |

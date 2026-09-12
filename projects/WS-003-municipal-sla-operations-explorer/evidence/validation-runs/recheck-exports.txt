@@ -1,0 +1,23 @@
+WS-003 independent repair recheck - CSV and JSON exports
+Date: 2026-09-12
+Candidate: 2addbb6f7b4e3f20e3ccc54010005d05ccf7b8a5
+
+Command:
+python projects/WS-003-municipal-sla-operations-explorer/src/sla_engine.py --output-json projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/recheck-export.json --output-csv projects/WS-003-municipal-sla-operations-explorer/evidence/validation-runs/recheck-export.csv
+
+Observed:
+- JSON evaluated_records: 15
+- CSV rows: 15 plus header
+- top-level fixture_kind: synthetic_sla_scenario
+- every JSON and CSV row fixture_kind: synthetic_sla_scenario
+- fixture_kind, reason_code, and fingerprint fields present in both formats
+- all 15 fingerprints non-empty and unique
+- JSON/CSV fingerprint sets identical
+- status counts: 8 compliant / 1 at risk / 5 breached / 1 review
+- Ward 01: 2 compliant of 5, 40.0%
+
+Files:
+- evidence/validation-runs/recheck-export.json
+- evidence/validation-runs/recheck-export.csv
+
+Result: PASS.

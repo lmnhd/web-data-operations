@@ -1,0 +1,22 @@
+WS-003 independent repair recheck - automated tests
+Date: 2026-09-12
+Candidate: 2addbb6f7b4e3f20e3ccc54010005d05ccf7b8a5
+Validator: /root/ws003_release_validator
+
+Command:
+python -m unittest discover projects/WS-003-municipal-sla-operations-explorer/tests
+
+Result (run outside the managed filesystem sandbox because tempfile creation under
+the Windows user temp directory is not permitted inside it):
+..............
+----------------------------------------------------------------------
+Ran 14 tests in 0.030s
+
+OK
+
+Assessment: the 14 tests exercise benchmark counts, exports, Flask routes, changed
+rules, malformed creation/closure/target timestamps, reversed chronology,
+future-created records, unknown categories, fractional rules, and unknown rule
+keys. They are meaningful for the frozen plan, but omit falsey non-object `rules`
+payloads; that omission is covered by the independent adversarial probes and is an
+unresolved release finding.

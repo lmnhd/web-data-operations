@@ -1,0 +1,20 @@
+WS-003 independent repair recheck - benchmark reproduction
+Date: 2026-09-12
+Candidate: 2addbb6f7b4e3f20e3ccc54010005d05ccf7b8a5
+
+Command:
+python projects/WS-003-municipal-sla-operations-explorer/src/sla_engine.py
+
+Observed:
+- Reference Now: 2026-08-08T12:00:00+00:00
+- Total Records: 15
+- COMPLIANT: 8
+- AT_RISK: 1
+- SLA_BREACHED: 5
+- INCOMPLETE_DATA_REVIEW: 1
+- Ward 10 - Spadina-Fort York: 75.0% (3 compliant, 1 breached, 1 review)
+- Ward 01 - Etobicoke North: 40.0% (2 compliant, 3 breached)
+- Ward 14 - Toronto-Danforth: 60.0% (3 compliant, 1 at risk, 1 breached)
+
+The fixture and output rows are explicitly labeled `synthetic_sla_scenario`.
+Result: PASS.

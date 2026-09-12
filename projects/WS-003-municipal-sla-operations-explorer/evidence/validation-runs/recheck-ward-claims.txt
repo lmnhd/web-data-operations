@@ -1,0 +1,22 @@
+WS-003 independent repair recheck - ward calculation and claim boundary
+Date: 2026-09-12
+Candidate: 2addbb6f7b4e3f20e3ccc54010005d05ccf7b8a5
+
+Local CLI and fresh exports independently reproduced Ward 01 - Etobicoke North as:
+- total_requests: 5
+- compliant: 2
+- breached: 3
+- compliance_rate_pct: 40.0
+
+Signed-out production page/config/default/strict probes show an explicit synthetic
+scenario boundary and no old `recorded Toronto 311 records` claim. Local README,
+SOURCE_CONTRACT, Manifest, PDF, fixture, and exports consistently identify the
+40.0% value as a synthetic scenario result, not official municipal performance.
+
+The independent live source probe downloaded Toronto CKAN resource
+99b7f283-7345-4f5a-a126-d078ed4f3419 (SR2026.csv, 5,501,248-byte ZIP). Its columns
+are Creation Date, Status, First 3 Chars of Postal Code, Intersection Street 1,
+Intersection Street 2, Ward, Service Request Type, Division, and Section. Target
+and closure timestamps are absent; no official Toronto SLA rate is certified.
+
+Result: PASS.
