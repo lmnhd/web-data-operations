@@ -1,5 +1,13 @@
 # Portfolio Tracking Log
 
+## 2026-09-13 - WS-004 stable candidate and independent validator dispatch
+
+- **Candidate:** Builder commit `d95db72` contains the approved reviewer UI, 23 tests, actual default/changed-input screenshots, three-page PDF, completed Manifest, release checklist, reproducible evidence, and deployment-ready configuration. No deployment or publication occurred.
+- **Builder verification:** The frozen test command passed 23/23; all 16 declared artifact paths exist; the PDF has exactly three Letter pages, required text, and working local/repository link annotations; all pages render cleanly at 150 DPI in builder inspection.
+- **Independent dispatch:** Fresh non-builder `/root/ws004_independent_validator` was dispatched with no inherited conversation against exact candidate `d95db72`, the approved brief, frozen plan, Reviewer Evidence Standard, Independent Validation Protocol, and source contract. The validator may write review evidence only and cannot repair builder artifacts.
+- **Budget:** 1 of 4 delegated turns used. One validator repair recheck remains reserved. No research/build agent was used.
+- **Boundary:** WS-004 is VERIFYING. Hosting and publication remain unauthorized; same-agent checks cannot substitute for the independent report or executable hash gate.
+
 ## 2026-09-13 - WS-004 expansion approved
 
 - **Approval:** At `AWAITING_BUILD_APPROVAL`, the user replied `Approved. Please continue.` This authorizes the reviewer web UI, expanded local tests/evidence, project-specific three-page PDF, completed Manifest/release checklist, stable candidate, and dispatch of the reserved fresh non-builder validator.

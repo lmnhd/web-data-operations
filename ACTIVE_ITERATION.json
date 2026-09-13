@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "iterationId": "WS-004",
-  "stage": "BUILDING",
+  "stage": "VERIFYING",
   "concept": {
     "slug": "corporate-carbon-disclosure-reconciler",
     "name": "Corporate Carbon Disclosure Reconciliation Desk",
@@ -11,7 +11,7 @@
     "centralClaim": "A bounded reviewer-operated proof can extract declared company-level energy and emissions figures from a small, licensed set of public filings, preserve page-level provenance, normalize units, and reproduce only calculations supported by explicit activity and factor evidence while routing insufficient or contradictory disclosures to review."
   },
   "authorizedScope": "Human-approved WS-004 expansion: build the reviewer web UI over the frozen six-case engine, add project-specific tests and reproducible evidence, create the required three-page visual PDF and completed Manifest/release checklist, freeze a stable candidate, and dispatch the reserved fresh non-builder validator. No new source documents, paid services, public hosting, publication, regulatory-compliance claim, audit-assurance claim, or delegated research/build work is authorized. Earlier publication approvals do not transfer to WS-004.",
-  "nextAction": "Finish deterministic builder verification of the approved local reviewer UI, project-specific three-page PDF, tests, reproducible evidence, Manifest, and release checklist; commit a stable candidate; then dispatch the reserved fresh non-builder validator. The iteration's single consolidated builder review already passed at the proof gate. Do not host or publish.",
+  "nextAction": "Fresh non-builder /root/ws004_independent_validator must validate candidate d95db72 against the frozen seven-category plan, operate the local demo, inspect both input states and exports, render every PDF page, add adversarial checks, and write hash-complete evidence. Do not host or publish.",
   "humanApproval": {
     "status": "approved",
     "date": "2026-09-12",
@@ -78,13 +78,13 @@
   ],
   "agentBudget": {
     "stageLimit": 4,
-    "used": 0,
+    "used": 1,
     "unit": "delegated agent turns",
     "reserved": {
       "freshContextNonBuilderValidator": 1,
       "singleRepairRecheck": 1
     },
-    "allocationPlan": "The validator and one repair recheck are reserved before any research/build agent. No research or build delegation is planned; root will perform a bounded proof if approved. Any use beyond four turns or any second repair pass requires new human approval.",
+    "allocationPlan": "Fresh non-builder /root/ws004_independent_validator was dispatched against stable candidate d95db72 as delegated turn 1. One repair recheck remains reserved. No research/build agent was used. Any use beyond four turns or any second repair pass requires new human approval.",
     "additionalUseRequiresHumanApproval": true
   }
 }
