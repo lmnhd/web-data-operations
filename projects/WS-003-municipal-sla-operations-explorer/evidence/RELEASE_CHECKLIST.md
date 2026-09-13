@@ -16,9 +16,9 @@ Closeout resumed 2026-09-12 UTC. Statuses remain fail-closed until evidence is r
 | Independent verification | PASS | `/root/ws003_remediation_validator` reports 7/7 PASS, zero unresolved findings, for candidate `57ac8a4` and deployment `dpl_JBt2EBRSHRN8PKDLTsnBWpYHtjCb` |
 | Executable hash gate | PASS | The canonical report covers all 29 required artifacts; the real `VERIFYING -> RELEASE_READY` transition and `scripts/validation_gate.py` accept it |
 | Signed-out public demo | PASS | Anonymous default `8/1/5/1`, strict `0/1/13/1`, falsey-rule HTTP 400, cross-scheme Origin 403, and both PDF links verified |
-| Upwork publication | PASS | User confirms item number 3 is published; corrected copy/PDF refresh remains |
-| Reviewed source integration | BLOCKED | Independent PASS is absent; pull request/default-branch integration is prohibited |
-| Immutable release | BLOCKED | `ws-003-v1.0.0` tag and GitHub release required |
+| Upwork publication | PASS | User confirms item number 3 is published; current listing copy and attachment were not reverified because browser control was unavailable |
+| Reviewed source integration | PASS | GitHub PR #6 passed archive integrity and merged as `6da79dca1dbfea6d3dbca355caa8ad67173b80f0` |
+| Immutable release | PASS | `ws-003-v1.0.0` and the GitHub Release point to the reviewed merge; release page and PDF asset return HTTP 200 signed out |
 | Release authorization | PASS | User authorized closeout before WS-004 on 2026-09-12 |
 
 ## Artifact integrity
