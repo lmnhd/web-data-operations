@@ -42,7 +42,7 @@ The tool will not grade environmental performance. It will answer a narrower que
 
 ### Central testable claim
 
-For a declared six-case benchmark built from a small permitted set of public filing excerpts and the official 2026 conversion-factor flat file, the proof can preserve page/cell provenance, normalize supported units, produce **2 RECONCILED, 1 MISMATCH, and 3 REVIEW_REQUIRED** outcomes, and fail closed when units, activity breakdown, factor year, or supported document text are missing.
+For a declared six-case benchmark built from a small permitted set of public filing facts and the official factor vintage cited by those filings, the proof can preserve source/table provenance, normalize supported units, produce **2 RECONCILED, 1 MISMATCH, and 3 REVIEW_REQUIRED** outcomes, and fail closed when units, activity breakdown, factor year, or supported document text are missing. Source verification selected the 2025 Version 1 / Final flat file rather than the newer 2026 file so the calculation basis matches the disclosures.
 
 Those are planned oracle outcomes, not observed performance. They become publishable only if the built proof and independent validator reproduce them.
 
@@ -59,7 +59,7 @@ Primary references:
 - [Companies House Public Data API](https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference)
 - [Companies House Document API](https://developer-specs.company-information.service.gov.uk/document-api/reference)
 - [Companies House rate limits](https://developer-specs.company-information.service.gov.uk/guides/rateLimiting)
-- [UK government 2026 conversion factors](https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2026)
+- [UK government 2025 conversion factors](https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2025)
 
 ### Smallest vertical proof after approval
 

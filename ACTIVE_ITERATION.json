@@ -11,7 +11,7 @@
     "centralClaim": "A bounded reviewer-operated proof can extract declared company-level energy and emissions figures from a small, licensed set of public filings, preserve page-level provenance, normalize units, and reproduce only calculations supported by explicit activity and factor evidence while routing insufficient or contradictory disclosures to review."
   },
   "authorizedScope": "Human-approved bounded vertical proof for Candidate A: complete the source contract, select no more than three permitted public SECR filing documents, freeze the project-local validation plan before implementation, and build/test a six-case reviewer proof with local JSON/CSV evidence. No expansion, hosting, paid services, publication, regulatory-compliance claim, or delegated research/build work is authorized. Earlier publication approvals do not transfer to WS-004.",
-  "nextAction": "Complete the Companies House and 2026 factor source contract, confirm three usable SECR documents, freeze the project-local validation plan, then begin only the bounded vertical proof.",
+  "nextAction": "Freeze and commit the verified Companies House source selection, matched 2025 factor subset, six-case oracle, and project-local validation plan; then transition to PROVING and build only the bounded local proof.",
   "humanApproval": {
     "status": "approved",
     "date": "2026-09-12",
@@ -19,8 +19,8 @@
   },
   "fatalBlockers": [],
   "repairableConditions": [
-    "Before any source acquisition or implementation, verify the exact reuse/licensing terms applicable to the selected Companies House filing documents and record the permitted public-evidence treatment.",
-    "Before implementation, confirm that at least three bounded company filings expose sufficient SECR content in supported PDF or XHTML form to exercise the declared oracle without collecting personal fields.",
+    "Before implementation, commit the verified reuse/licensing treatment and minimized source-selection record for the one acquired Companies House archive.",
+    "Before implementation, commit the three selected text-bearing iXBRL documents as hashes and minimized company-level SECR facts; one document is intentionally an insufficient-calculation-evidence case.",
     "Before implementation, finalize and freeze the project-local evidence/VALIDATION_PLAN.json with exact artifact paths and the final builder identity.",
     "If a filing lacks explicit activity detail or usable units, route it to REVIEW_REQUIRED rather than inferring a conversion basis.",
     "If filing reuse does not permit retained source documents or screenshots, use hashes, source metadata, reviewer-supplied files, and permitted narrow excerpts only; request approval if that makes the public evidence inadequate."

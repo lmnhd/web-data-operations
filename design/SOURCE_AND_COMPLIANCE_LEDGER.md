@@ -358,3 +358,23 @@ This is a **pre-approval feasibility record, not source clearance**. No Companie
 - **Use boundary:** The factors support calculations from explicit activity data. They do not justify reverse-engineering an undisclosed activity mix or certifying a company's filing.
 - **Licence observation:** The GOV.UK publication page states that page content is available under OGL v3.0 except where otherwise stated. The factor workbook's own notices must still be inspected before freezing a source contract.
 - **Official page checked:** https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2026
+
+## 2026-09-13 WS-004 approved bounded-source record
+
+This addendum supersedes the preliminary source choice for the approved proof. It records actual bounded acquisition, not a general clearance for unrelated use.
+
+### Companies House Free Accounts Data Product
+
+- **Official pages:** https://www.gov.uk/guidance/companies-house-data-products and https://download.companieshouse.gov.uk/en_accountsdata.html
+- **Acquisition:** One daily archive only, `Accounts_Bulk_Data-2026-08-07.zip`, 54,357,249 bytes, 7,393 entries, SHA-256 `CD8733AD05CBB3EEACA514F6B2044D16C6B6098D72535A90354D1863BD5077E5`.
+- **Selection result:** Twelve visible SECR candidates were identified and exactly three text-bearing iXBRL documents selected. Their identifiers, hashes, minimized company-level facts, and evidence roles are frozen in `projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/SOURCE_SELECTION.json`.
+- **Permitted treatment:** Companies House describes the product as free public-register information intended for data manipulation while making users responsible for applicable copyright, data-protection, and other law. WS-004 therefore commits only company numbers, reporting periods, selected company-level numerical facts, narrow table locators, official URLs, and hashes. It does not commit or redistribute the archive, full filings, company names, personal names, signatures, addresses, contacts, or unrelated narrative.
+- **Coverage limits:** The product covers electronically filed accounts and excludes some paper/revised material. The sample is a bounded proof selection, not exhaustive filing coverage.
+
+### UK government greenhouse-gas conversion factors 2025
+
+- **Correction:** The selected filings cite the 2025 factor vintage. Applying the 2026 preliminary source would create a false comparison, so the approved proof pins the matching 2025 Version 1 / Final flat file before implementation.
+- **Official page:** https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2025
+- **Workbook:** `ghg-conversion-factors-2025-flat-format.xlsx`, updated 2025-06-10, 505,634 bytes, SHA-256 `8BFDB45B81EC4A88E3BDF4584637330F62E6BD09CE1940E654C5D7B7F736DE94`.
+- **Retained subset:** Only UK grid electricity kWh plus natural-gas gross-CV and net-CV rows are committed with factor IDs and workbook row provenance. The full workbook remains uncommitted.
+- **Calculation boundary:** Electricity may be recomputed only against the exact 2025 factor ID. Natural-gas kWh without an explicit gross/net calorific basis routes to `REVIEW_REQUIRED: AMBIGUOUS_ACTIVITY_BASIS`; matching a disclosed number by selecting the convenient row is prohibited.

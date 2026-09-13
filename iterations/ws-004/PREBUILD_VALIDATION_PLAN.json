@@ -1,7 +1,7 @@
 {
   "iterationId": "WS-004",
-  "planStatus": "draft-preapproval-must-be-frozen-in-project-before-implementation",
-  "planRationale": "The validation contract is defined at concept selection, before implementation. After concept approval and source clearance, this draft must be copied to the project evidence folder, updated with the exact builder identity and artifact paths, reviewed, and committed before code or fixtures are implemented.",
+  "planStatus": "superseded_by_frozen_project_plan",
+  "planRationale": "The validation contract was defined at concept selection before implementation. After approval and source clearance, it was finalized at `projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/VALIDATION_PLAN.json` with the exact builder identity, artifact paths, matched 2025 factor vintage, and source-derived edge cases. The project-local plan is authoritative.",
   "builderAgentIds": [
     "root"
   ],

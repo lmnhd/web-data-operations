@@ -1,0 +1,52 @@
+{
+  "factorSetId": "UK-GHG-2025-V1-FINAL",
+  "owner": "Department for Energy Security and Net Zero",
+  "officialPageUrl": "https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2025",
+  "downloadUrl": "https://assets.publishing.service.gov.uk/media/6846b6ea57f3515d9611f0dd/ghg-conversion-factors-2025-flat-format.xlsx",
+  "fileName": "ghg-conversion-factors-2025-flat-format.xlsx",
+  "retrievedOn": "2026-09-13",
+  "sizeBytes": 505634,
+  "sha256": "8BFDB45B81EC4A88E3BDF4584637330F62E6BD09CE1940E654C5D7B7F736DE94",
+  "workbookStatus": "Final",
+  "workbookVersion": "1",
+  "workbookUpdatedOn": "2025-06-10",
+  "licence": "Open Government Licence v3.0 except where otherwise stated on GOV.UK",
+  "notice": "The workbook identifies the factors for organizational greenhouse-gas reporting and cautions that other uses are at the user's own risk.",
+  "sheet": "Factors by Category",
+  "factors": [
+    {
+      "factorId": "1_100_1004_6_1",
+      "row": 83,
+      "scope": "Scope 1",
+      "level1": "Fuels",
+      "level2": "Gaseous fuels",
+      "level3": "Natural gas",
+      "activityUnit": "kWh (Gross CV)",
+      "emissionsUnit": "kg CO2e",
+      "factor": "0.18296"
+    },
+    {
+      "factorId": "1_100_1004_7_1",
+      "row": 79,
+      "scope": "Scope 1",
+      "level1": "Fuels",
+      "level2": "Gaseous fuels",
+      "level3": "Natural gas",
+      "activityUnit": "kWh (Net CV)",
+      "emissionsUnit": "kg CO2e",
+      "factor": "0.2027"
+    },
+    {
+      "factorId": "7_400_4000_5_1",
+      "row": 3066,
+      "scope": "Scope 2",
+      "level1": "UK electricity",
+      "level2": "Electricity generated",
+      "level3": "Electricity: UK",
+      "activityUnit": "kWh",
+      "emissionsUnit": "kg CO2e",
+      "factor": "0.177"
+    }
+  ],
+  "selectionBoundary": "Only the rows required to reproduce the bounded oracle or demonstrate a gross/net ambiguity are retained. The original workbook remains uncommitted under ignored temporary storage."
+}

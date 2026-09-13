@@ -20,24 +20,24 @@ The proof answers only: **is the disclosed arithmetic reproducible from explicit
 
 Use one official Companies House Free Accounts Data Product daily archive, not the key-authenticated Document API. Select at most three electronically filed iXBRL/XBRL account documents that contain usable company-level SECR material. Retain public evidence only as minimized numerical excerpts, source identifiers, retrieval metadata, and hashes under the [source contract](../../projects/WS-004-corporate-carbon-disclosure-reconciler/SOURCE_CONTRACT.md).
 
-Use the Department for Energy Security and Net Zero 2026 conversion-factor flat file only after its workbook notices, update date, and SHA-256 are recorded. No factor may be inferred from an absent category or blank value.
+Use the Department for Energy Security and Net Zero 2025 conversion-factor flat file because the selected filings explicitly cite the 2025 factor vintage. Its Version 1 / Final status, 2025-06-10 update date, workbook notices, row provenance, and SHA-256 must be recorded. No factor may be inferred from an absent category, blank value, or ambiguous gross/net calorific basis.
 
 ## Declared six-case oracle
 
 | Case | Purpose | Expected decision |
 |---|---|---|
-| 1 | Explicit activity, supported unit, explicit factor category/year, arithmetic within tolerance | RECONCILED |
-| 2 | Second structurally different valid disclosure within tolerance | RECONCILED |
-| 3 | Explicit inputs whose disclosed result conflicts with recomputation | MISMATCH |
-| 4 | Disclosed emissions total without activity breakdown or factor reference | REVIEW_REQUIRED: INSUFFICIENT_CALCULATION_EVIDENCE |
+| 1 | Recorded filing electricity activity with an explicit 2025 factor reference and arithmetic within tolerance | RECONCILED |
+| 2 | Clearly labeled reviewer-supplied electricity scenario with explicit factor ID and arithmetic within tolerance | RECONCILED |
+| 3 | Recorded filing electricity inputs whose disclosed result conflicts with the declared 2025 factor recomputation | MISMATCH |
+| 4 | Recorded natural-gas activity whose filing does not distinguish gross from net calorific basis | REVIEW_REQUIRED: AMBIGUOUS_ACTIVITY_BASIS |
 | 5 | Image-only or otherwise unsupported source representation | REVIEW_REQUIRED: UNSUPPORTED_SOURCE_FORMAT |
-| 6 | Unknown/unsupported factor year or category | REVIEW_REQUIRED: UNKNOWN_FACTOR_REFERENCE |
+| 6 | Recorded aggregate energy/emissions disclosure without a fuel/activity breakdown | REVIEW_REQUIRED: INSUFFICIENT_CALCULATION_EVIDENCE |
 
 Planned benchmark total: 2 RECONCILED, 1 MISMATCH, 3 REVIEW_REQUIRED. This is a declared oracle, not an observed result.
 
 ## Reviewer-operated scenario
 
-Change one activity unit from `MWh` to `kWh` without changing its numeric value. The normalized activity and recomputed emissions must change by exactly 1,000x; the input hash must change; the unchanged engine, factor, and source hashes must remain stable; and the decision must become MISMATCH unless the disclosed output changes consistently.
+For the labeled reviewer-supplied 1,000 MWh electricity scenario, change the activity unit from `MWh` to `kWh` without changing its numeric value. The normalized activity and recomputed emissions must become exactly 1/1,000 of the original values; the input hash must change; the unchanged engine, factor, and source hashes must remain stable; and the decision must become MISMATCH unless the disclosed output changes consistently.
 
 ## Smallest proof implementation
 
