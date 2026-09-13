@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "iterationId": "WS-004",
-  "stage": "VERIFYING",
+  "stage": "REPAIRING",
   "concept": {
     "slug": "corporate-carbon-disclosure-reconciler",
     "name": "Corporate Carbon Disclosure Reconciliation Desk",
@@ -11,7 +11,7 @@
     "centralClaim": "A bounded reviewer-operated proof can extract declared company-level energy and emissions figures from a small, licensed set of public filings, preserve page-level provenance, normalize units, and reproduce only calculations supported by explicit activity and factor evidence while routing insufficient or contradictory disclosures to review."
   },
   "authorizedScope": "Human-approved WS-004 expansion: build the reviewer web UI over the frozen six-case engine, add project-specific tests and reproducible evidence, create the required three-page visual PDF and completed Manifest/release checklist, freeze a stable candidate, and dispatch the reserved fresh non-builder validator. No new source documents, paid services, public hosting, publication, regulatory-compliance claim, audit-assurance claim, or delegated research/build work is authorized. Earlier publication approvals do not transfer to WS-004.",
-  "nextAction": "Fresh non-builder /root/ws004_independent_validator must validate candidate d95db72 against the frozen seven-category plan, operate the local demo, inspect both input states and exports, render every PDF page, add adversarial checks, and write hash-complete evidence. Do not host or publish.",
+  "nextAction": "Execute the single bounded WS-004 repair for validator findings WS004-IV-001 through WS004-IV-004, then freeze one repair candidate and return it to the same independent non-builder validator for the reserved recheck. Do not host or publish.",
   "humanApproval": {
     "status": "approved",
     "date": "2026-09-12",
@@ -23,7 +23,12 @@
     "basis": "The user replied 'Approved. Please continue.' at AWAITING_BUILD_APPROVAL. This authorizes the bounded expansion build and independent validation, but not public hosting or publication."
   },
   "fatalBlockers": [],
-  "repairableConditions": [],
+  "repairableConditions": [
+    "WS004-IV-001 HIGH: enforce exact activityCategory-to-factor-category compatibility and fail closed on conflicts.",
+    "WS004-IV-002 MEDIUM: include runId in machine-readable CSV exports and verify JSON/CSV run identity.",
+    "WS004-IV-003 MEDIUM: reject supplied sourceSha256 values unless they are exactly 64 hexadecimal characters.",
+    "WS004-IV-004 LOW: update the Manifest to identify candidate d95db72 and the completed independent FAIL without claiming release readiness."
+  ],
   "limitations": [
     "No client posting was supplied. Demand evidence is indirect and inherited from the recorded public-preliminary market matrix; it does not prove demand for this exact service.",
     "The Companies House Document API requires an API key and is unavailable in its sandbox. The approved proof instead uses one bounded official free Accounts Data Product archive; no credential is required or requested.",
@@ -84,7 +89,7 @@
       "freshContextNonBuilderValidator": 1,
       "singleRepairRecheck": 1
     },
-    "allocationPlan": "Fresh non-builder /root/ws004_independent_validator was dispatched against stable candidate d95db72 as delegated turn 1. One repair recheck remains reserved. No research/build agent was used. Any use beyond four turns or any second repair pass requires new human approval.",
+    "allocationPlan": "Fresh non-builder /root/ws004_independent_validator returned a hash-complete FAIL against stable candidate d95db72 as delegated turn 1. Root may execute the single bounded repair for WS004-IV-001 through WS004-IV-004. One same-validator recheck remains reserved as delegated turn 2. No research/build agent was used. Any use beyond four turns or any second repair pass requires new human approval.",
     "additionalUseRequiresHumanApproval": true
   }
 }

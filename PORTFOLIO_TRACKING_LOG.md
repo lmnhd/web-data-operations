@@ -1,5 +1,12 @@
 # Portfolio Tracking Log
 
+## 2026-09-13 - WS-004 independent FAIL and single repair scope
+
+- **Independent result:** Fresh non-builder `/root/ws004_independent_validator` returned a hash-complete FAIL against candidate `d95db72`. The local demo, 23 tests, frozen 2/1/3 result, Case 02 unit-change behavior, source/factor hashes, generated exports, and all three PDF pages passed their observed checks.
+- **Exact findings:** `WS004-IV-001` HIGH: factor resolution does not enforce activity-category compatibility; `WS004-IV-002` MEDIUM: CSV omits `runId`; `WS004-IV-003` MEDIUM: malformed supplied source digests are accepted; `WS004-IV-004` LOW: the Manifest still says no candidate or dispatch exists.
+- **Bounded repair:** WS-004 moves `VERIFYING -> REPAIRING`. Before implementation, the authoritative project validation plan is revised to require exact category compatibility, cross-format run identity, strict supplied-digest syntax, and current Manifest status. This is the one permitted repair pass; the six-case oracle, selected sources, buyer claim, PDF scope, and publication boundary may not expand.
+- **Validation and budget:** The failed report and logs remain preserved. One delegated turn has been used; the same independent non-builder validator receives one reserved recheck after a stable repair candidate. No second repair loop, hosting, or publication is authorized.
+
 ## 2026-09-13 - WS-004 stable candidate and independent validator dispatch
 
 - **Candidate:** Builder commit `d95db72` contains the approved reviewer UI, 23 tests, actual default/changed-input screenshots, three-page PDF, completed Manifest, release checklist, reproducible evidence, and deployment-ready configuration. No deployment or publication occurred.
