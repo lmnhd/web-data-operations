@@ -11,16 +11,11 @@
     "centralClaim": "Given an explicitly synthetic, adapter-ready service-request fixture with created, target, and closure timestamps, the engine can reproducibly calculate scenario margins, route malformed inputs to review, aggregate ward scenarios, and export auditable results without claiming official municipal performance."
   },
   "authorizedScope": "Human approved the web UI, visual 3-page PDF, Project Manifest, independent validation, Vercel hosting, GitHub release, and Upwork portfolio publication on 2026-09-08. Paid services, live municipal dispatch integration, and legal SLA certifications remain unauthorized.",
-  "nextAction": "WS-003 is released. Preserve its final state and immutable evidence. Do not initialize WS-004 until a fresh scope and publication approval are recorded; current Upwork visibility is user-confirmed but its listing contents were not reverified because browser control was unavailable.",
+  "nextAction": "WS-003 is released. Preserve this final state and immutable evidence. Begin no WS-004 work until fresh scope and publication approval are recorded.",
   "humanApproval": {
     "status": "approved",
     "date": "2026-09-12",
     "basis": "The user approved publication on 2026-09-08, the four-finding remediation on 2026-09-12, and resumption of the independent validator after its runtime interruption on 2026-09-12."
-  },
-  "humanApproval": {
-    "status": "approved",
-    "date": "2026-09-12",
-    "basis": "The user approved publication on 2026-09-08, the falsey-rule repair on 2026-09-12, and then explicitly approved the four-finding expanded remediation plus a fresh independent-validator turn on 2026-09-12 ('Approved')."
   },
   "fatalBlockers": [],
   "repairableConditions": [],
@@ -66,6 +61,13 @@
     "githubRelease": "https://github.com/lmnhd/web-data-operations/releases/tag/ws-003-v1.0.0",
     "pdfAsset": "Municipal-311-SLA-Operations-Desk.pdf",
     "upworkProfile": "https://www.upwork.com/freelancers/~010d1d69f81d197489",
+    "upworkPortfolioTitle": "Municipal 311 SLA Operations Desk | Response Analytics & Ward Bottlenecks",
     "upworkPublicationEvidence": "User confirmed item number 3 is published on 2026-09-12; current listing copy and attachment were not reverified because browser control was unavailable."
-  }
+  },
+  "lessons": [
+    "Validate source columns before framing timing claims; licensed context does not supply missing target or closure evidence.",
+    "Treat lifecycle consistency and complete origin equality as release-critical adversarial cases, not optional hardening.",
+    "Keep mutable portfolio status out of shared files hash-locked by prior releases; use the tracking catalog unless older evidence is independently recertified.",
+    "A builder-side pass cannot replace the fresh non-builder report or executable hash gate."
+  ]
 }
