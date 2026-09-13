@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "iterationId": "WS-004",
-  "stage": "APPROVED",
+  "stage": "PROVING",
   "concept": {
     "slug": "corporate-carbon-disclosure-reconciler",
     "name": "Corporate Carbon Disclosure Reconciliation Desk",
@@ -11,7 +11,7 @@
     "centralClaim": "A bounded reviewer-operated proof can extract declared company-level energy and emissions figures from a small, licensed set of public filings, preserve page-level provenance, normalize units, and reproduce only calculations supported by explicit activity and factor evidence while routing insufficient or contradictory disclosures to review."
   },
   "authorizedScope": "Human-approved bounded vertical proof for Candidate A: complete the source contract, select no more than three permitted public SECR filing documents, freeze the project-local validation plan before implementation, and build/test a six-case reviewer proof with local JSON/CSV evidence. No expansion, hosting, paid services, publication, regulatory-compliance claim, or delegated research/build work is authorized. Earlier publication approvals do not transfer to WS-004.",
-  "nextAction": "Freeze and commit the verified Companies House source selection, matched 2025 factor subset, six-case oracle, and project-local validation plan; then transition to PROVING and build only the bounded local proof.",
+  "nextAction": "Implement and test only the approved six-case local reconciliation proof, record actual outcomes, run one consolidated same-agent review, then stop at AWAITING_BUILD_APPROVAL for human expansion approval.",
   "humanApproval": {
     "status": "approved",
     "date": "2026-09-12",
