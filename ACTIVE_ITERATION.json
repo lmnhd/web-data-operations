@@ -80,13 +80,13 @@
   ],
   "agentBudget": {
     "stageLimit": 4,
-    "used": 2,
+    "used": 3,
     "unit": "delegated agent turns",
     "reserved": {
       "freshContextNonBuilderValidator": 1,
       "singleRepairRecheck": 1
     },
-    "allocationPlan": "Fresh non-builder /root/ws004_independent_validator returned a hash-complete FAIL against candidate d95db72 as delegated turn 1 and was dispatched for the one reserved recheck of repaired candidate c624ea5da67e8838ed96064560e83298767cb943 as delegated turn 2. No research/build agent was used. No second repair pass is authorized; any additional delegated use requires new human approval.",
+    "allocationPlan": "Fresh non-builder /root/ws004_independent_validator returned a hash-complete FAIL against candidate d95db72 as turn 1. The repair recheck of unchanged candidate c624ea5da67e8838ed96064560e83298767cb943 was interrupted by the account usage limit as turn 2 without a report, then resumed with the same validator as turn 3 after fresh account limits allowed work. No research/build agent was used. No second repair pass is authorized; one approved delegated turn remains and any use beyond four requires new human approval.",
     "additionalUseRequiresHumanApproval": true
   }
 }

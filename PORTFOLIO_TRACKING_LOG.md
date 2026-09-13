@@ -1,5 +1,11 @@
 # Portfolio Tracking Log
 
+## 2026-09-13 - WS-004 validator runtime interruption and approved-budget resume
+
+- **Interruption:** The first repair-recheck turn for `/root/ws004_independent_validator` stopped at the account usage limit before producing a report. Candidate `c624ea5da67e8838ed96064560e83298767cb943` and all builder artifacts remained unchanged; no gate was bypassed.
+- **Resume:** A fresh usage check showed Codex work allowed again, so the same independent non-builder resumed the same recheck against the unchanged candidate. This is continuation of the reserved validation, not a new repair or scope expansion.
+- **Budget:** Three of four approved delegated turns are now charged: initial FAIL, interrupted recheck, and resumed recheck. No research/build agent, second repair, hosting, or publication is authorized.
+
 ## 2026-09-13 - WS-004 repair freeze and independent recheck dispatch
 
 - **Repair candidate:** `c624ea5da67e8838ed96064560e83298767cb943` implements only findings `WS004-IV-001` through `WS004-IV-004`: canonical activity categories with exact factor compatibility, strict supplied 64-hex source digests, `runId` on every CSV row, and current Manifest status.
