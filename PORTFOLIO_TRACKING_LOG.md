@@ -1,5 +1,11 @@
 # Portfolio Tracking Log
 
+## 2026-09-13 - WS-004 expansion approved
+
+- **Approval:** At `AWAITING_BUILD_APPROVAL`, the user replied `Approved. Please continue.` This authorizes the reviewer web UI, expanded local tests/evidence, project-specific three-page PDF, completed Manifest/release checklist, stable candidate, and dispatch of the reserved fresh non-builder validator.
+- **Publication boundary:** No new source documents, paid services, public hosting, or publication are authorized. Earlier WS-003 publication approvals do not transfer. After independent PASS and the executable hash gate, WS-004 must still stop for explicit publication approval.
+- **Delegation:** 0 of 4 turns used. Root remains the only builder. One fresh non-builder validator turn and one repair recheck remain reserved; no research/build agent is allocated.
+
 ## 2026-09-13 - WS-004 bounded proof executed
 
 - **Implementation:** Root built only the authorized local engine, six-case minimized fixture, deterministic JSON/CSV exports, and focused tests. No UI, PDF, hosting, public deployment, or publication work began.

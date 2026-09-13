@@ -4,7 +4,7 @@
 
 - **Iteration:** WS-004
 - **Project:** Corporate Carbon Disclosure Reconciliation Desk
-- **Status:** AWAITING_BUILD_APPROVAL - bounded local proof and consolidated builder review passed
+- **Status:** EXPANSION APPROVED - build not yet started
 - **Release:** None
 - **Reviewed commit / PR / tag:** Not applicable; no candidate exists
 - **Primary reviewer:** ESG assurance, sustainability reporting, or accounting reviewer
@@ -26,6 +26,7 @@ The source strategy used one official Companies House Free Accounts Data Product
 | Role | Responsibility | Current result |
 |---|---|---|
 | Human approver | Candidate and four-turn ceiling | Approved bounded proof on 2026-09-12 |
+| Human approver | Expansion UI, evidence package, PDF, and independent validation | Approved on 2026-09-13; hosting/publication excluded |
 | Root builder/orchestrator | Source contract, plan freeze, proof implementation and same-agent checks | Proof implemented; 13 tests and consolidated review pass after one formatting-only repair |
 | Fresh non-builder validator | Execute frozen plan after a stable expanded candidate, if expansion is approved | Reserved, not dispatched |
 | Repair recheck | One recheck after at most one repair pass | Reserved, not used |
@@ -44,4 +45,4 @@ The source strategy used one official Companies House Free Accounts Data Product
 
 ## Next gate
 
-Human expansion approval is required before building a reviewer web UI, project-specific three-page visual PDF, public hosting, or release evidence. Independent validation remains mandatory later and same-agent review cannot satisfy release readiness.
+Build the approved reviewer UI, project-specific three-page visual PDF, tests, evidence, Manifest, and release checklist without hosting. Then freeze a stable candidate and dispatch the reserved non-builder validator. Publication approval remains a later human gate.

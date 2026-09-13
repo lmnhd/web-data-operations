@@ -62,3 +62,16 @@ If three usable source documents cannot be found in one bounded archive, stop an
 ## Future expansion obligations
 
 Expansion approval would be required for a reviewer web UI, project-specific three-page visual PDF, additional documents, public hosting, Manifest, independent validator dispatch, or publication. Any final project must have its own runnable demo, plain-English visual PDF, problem-solving evidence, Manifest, release checklist, independent PASS, and executable hash gate.
+
+## Expansion approval - 2026-09-13
+
+The user replied `Approved. Please continue.` after the passing bounded proof was presented at `AWAITING_BUILD_APPROVAL`.
+
+Authorized expansion is limited to:
+
+- a reviewer web UI over the frozen six-case engine, including the MWh-to-kWh input change and fail-closed cases;
+- project-specific local tests, screenshots, reproducible JSON/CSV evidence, Manifest, and release checklist;
+- one new three-page client-facing PDF meeting the Reviewer Evidence Standard;
+- one stable candidate and dispatch of the already-reserved fresh non-builder validator, with one validator recheck reserved if the single repair pass is needed.
+
+Not authorized: new source documents, paid services, public hosting, publication, regulatory or audit claims, production-scale claims, or research/build delegation. Hosting and publication require a later explicit publication approval; prior WS-003 approvals do not transfer.
