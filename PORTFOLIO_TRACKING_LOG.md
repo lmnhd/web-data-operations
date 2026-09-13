@@ -1,5 +1,13 @@
 # Portfolio Tracking Log
 
+## 2026-09-13 - WS-004 independent repair PASS and executable gate
+
+- **Independent PASS:** `/root/ws004_independent_validator` completed the reserved recheck of repaired candidate `c624ea5da67e8838ed96064560e83298767cb943`. All seven revised checks passed with zero unresolved findings; the canonical report covers 31 artifacts and has SHA-256 `4314b19c1cedf8f2426f2d3bcfc6c3b2553d21e187785889de2328c4ab17960b`.
+- **Observed results:** 27/27 tests passed independently; the live UI and CLI reproduced 2/1/3 and the Case 02 177 -> 0.177 tCO2e change; all four original findings are resolved; JSON/CLI CSV/web CSV run identity agrees; all three PDF pages and both link targets passed; source, workbook, selected-entry, factor-row, privacy, and claim boundaries passed.
+- **Executable gate:** The repository's real `VERIFYING -> RELEASE_READY` transition accepted the report and complete hash map. `python scripts/validation_gate.py` passed at `RELEASE_READY`.
+- **Current boundary:** WS-004 is release-ready but not released. No hosting, GitHub integration/release, Upwork publication, or other public action is authorized. Prior WS-003 approvals do not transfer; explicit publication approval is required next.
+- **Budget:** Three of four approved delegated turns were used. No research/build agent was used and the fourth turn remains unused.
+
 ## 2026-09-13 - WS-004 validator runtime interruption and approved-budget resume
 
 - **Interruption:** The first repair-recheck turn for `/root/ws004_independent_validator` stopped at the account usage limit before producing a report. Candidate `c624ea5da67e8838ed96064560e83298767cb943` and all builder artifacts remained unchanged; no gate was bypassed.
