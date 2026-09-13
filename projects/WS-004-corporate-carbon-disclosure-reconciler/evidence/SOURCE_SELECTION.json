@@ -1,0 +1,110 @@
+{
+  "iterationId": "WS-004",
+  "status": "frozen_for_bounded_proof",
+  "retrievedOn": "2026-09-13",
+  "sourceOwner": "Companies House, UK Department for Business and Trade",
+  "officialGuidanceUrl": "https://www.gov.uk/guidance/companies-house-data-products",
+  "officialArchiveIndexUrl": "https://download.companieshouse.gov.uk/en_accountsdata.html",
+  "archive": {
+    "fileName": "Accounts_Bulk_Data-2026-08-07.zip",
+    "downloadUrl": "https://download.companieshouse.gov.uk/Accounts_Bulk_Data-2026-08-07.zip",
+    "sizeBytes": 54357249,
+    "sha256": "CD8733AD05CBB3EEACA514F6B2044D16C6B6098D72535A90354D1863BD5077E5",
+    "entryCount": 7393,
+    "visibleSecrCandidateCount": 12,
+    "secondArchiveAcquired": false
+  },
+  "reuseTreatment": {
+    "basis": "Companies House describes the free accounts product as public-register information for reuse and manipulation, while making users responsible for applicable copyright, data-protection, and other legal requirements.",
+    "committedEvidence": "Only company number, reporting period, selected company-level numerical facts, narrow table provenance, official URLs, and hashes.",
+    "excluded": [
+      "company names",
+      "personal names",
+      "signatures",
+      "addresses",
+      "contact details",
+      "unrelated narrative",
+      "full filing bodies"
+    ],
+    "fullSourcesCommitted": false
+  },
+  "selectedDocuments": [
+    {
+      "sourceId": "CH-09904577-2025",
+      "companyNumber": "09904577",
+      "reportingPeriodEnd": "2025-12-31",
+      "archiveEntry": "Prod223_4280_09904577_20251231.html",
+      "sizeBytes": 697457,
+      "sha256": "AF67A7E7290D925386229997479A7835289FB79398CB5B588E4377B37EE0ECFD",
+      "format": "iXBRL HTML",
+      "factorVintageStatement": "The filing states that UK Government factors applicable to the reporting period were used.",
+      "evidenceRole": [
+        "reconciled electricity case",
+        "ambiguous natural-gas calorific-basis case"
+      ],
+      "minimizedFacts": [
+        {
+          "locator": "SECR table / Purchased Electricity (Location based) / 2025",
+          "activityValue": "3939780",
+          "activityUnit": "kWh",
+          "disclosedEmissionsValue": "697.34",
+          "disclosedEmissionsUnit": "tCO2e"
+        },
+        {
+          "locator": "SECR table / Natural Gas / 2025",
+          "activityValue": "195757",
+          "activityUnit": "kWh",
+          "disclosedEmissionsValue": "35.82",
+          "disclosedEmissionsUnit": "tCO2e",
+          "knownGap": "The filing does not state whether the kWh figure uses gross or net calorific value."
+        }
+      ]
+    },
+    {
+      "sourceId": "CH-12976528-2025",
+      "companyNumber": "12976528",
+      "reportingPeriodEnd": "2025-11-30",
+      "archiveEntry": "Prod223_4280_12976528_20251130.html",
+      "sizeBytes": 384195,
+      "sha256": "532CFD04ED088021A847577EF6F56E74EB5DCBC4F82F300509860F7041D65D33",
+      "format": "iXBRL HTML",
+      "factorVintageStatement": "The filing states that the latest 2025 UK Government factors and location-based electricity reporting were used.",
+      "evidenceRole": [
+        "declared-factor mismatch case"
+      ],
+      "minimizedFacts": [
+        {
+          "locator": "SECR energy table / Electricity / reporting period",
+          "activityValue": "416416",
+          "activityUnit": "kWh",
+          "disclosedEmissionsValue": "72.54",
+          "disclosedEmissionsUnit": "tCO2e"
+        }
+      ]
+    },
+    {
+      "sourceId": "CH-00376891-2025",
+      "companyNumber": "00376891",
+      "reportingPeriodEnd": "2025-12-31",
+      "archiveEntry": "Prod223_4280_00376891_20251231.html",
+      "sizeBytes": 572888,
+      "sha256": "D1769B95779AEBEEAB88245B5ED24B2E3B83229C4305D00A112EBA8CEBAB4B1D",
+      "format": "iXBRL HTML",
+      "factorVintageStatement": "The filing states that 2025 UK Government factors were used.",
+      "evidenceRole": [
+        "insufficient activity breakdown case"
+      ],
+      "minimizedFacts": [
+        {
+          "locator": "SECR aggregate energy and emissions table / reporting period",
+          "aggregateEnergyValue": "15174993",
+          "aggregateEnergyUnit": "kWh",
+          "disclosedTotalEmissionsValue": "3859.27",
+          "disclosedEmissionsUnit": "tCO2e",
+          "knownGap": "The aggregate energy value is not split into compatible activity categories for independent factor recomputation."
+        }
+      ]
+    }
+  ],
+  "selectionConclusion": "One bounded archive supplied three text-bearing SECR documents that exercise a reconciled calculation, a declared-factor mismatch, an ambiguous factor basis, and an insufficient-breakdown route without retaining personal fields or full filings."
+}

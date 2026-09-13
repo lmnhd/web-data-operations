@@ -1,0 +1,77 @@
+{
+  "iterationId": "WS-004",
+  "planStatus": "revised_before_single_repair",
+  "frozenOn": "2026-09-13",
+  "builderAgentIds": [
+    "root"
+  ],
+  "sourceCorrectionRationale": "The approved concept draft named the 2026 factor file. Source inspection found that all three selected filings cite 2025 factors, so the frozen plan uses the official 2025 Version 1 / Final workbook. This correction was recorded before code or disclosure fixtures were implemented.",
+  "repairRevision": {
+    "date": "2026-09-13",
+    "candidate": "d95db72",
+    "validator": "/root/ws004_independent_validator",
+    "rationale": "The first independent run found four bounded gaps not explicit enough in the prebuild procedures: activity-category/factor-category compatibility, cross-format run identity, supplied source-digest syntax, and current Manifest status. The single repair must add these checks without changing the six-case oracle, sources, buyer claim, PDF scope, or publication boundary."
+  },
+  "artifactPaths": [
+    "output/pdf/Carbon-Disclosure-Reconciliation-Desk.pdf",
+    "scripts/build_ws004_work_sample.py",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/app.py",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/demo/index.html",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/demo/app.js",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/demo/style.css",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/src/reconcile.py",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/src/demo_server.py",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/tests/test_reconcile.py",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/tests/test_app.py",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/fixtures/disclosure_cases.json",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/fixtures/benchmark_oracle.json",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/factors/ghg_factors_2025.json",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/SOURCE_CONTRACT.md",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/README.md",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/PROJECT_MANIFEST.md"
+  ],
+  "checks": [
+    {
+      "id": "check_automated_tests",
+      "category": "tests",
+      "procedure": "From repository root run `python -B -m unittest discover -s projects/WS-004-corporate-carbon-disclosure-reconciler/tests -v`.",
+      "expected": "Exit code 0 with zero failures or errors. Named tests cover the exact six-case oracle, decimal unit normalization, tolerance boundaries, ambiguous gross/net gas basis, aggregate activity without a compatible breakdown, unsupported source format, unknown factor reference, exact activity-category/factor-category compatibility, invalid numeric input, malformed supplied source-digest rejection, deterministic hashes, cross-format run identity, and personal-field exclusions. The benchmark result is exactly 2 RECONCILED, 1 MISMATCH, and 3 REVIEW_REQUIRED."
+    },
+    {
+      "id": "check_reviewer_demo",
+      "category": "demo",
+      "procedure": "Run the documented local reviewer demo with the default six-case fixture. Then rerun CASE-02-CONTROLLED-MWH-RECONCILED after changing only its activity unit from MWh to kWh while retaining the numeric value 1000 and the disclosed result 177 tCO2e.",
+      "expected": "The default run produces exactly 2 RECONCILED, 1 MISMATCH, and 3 REVIEW_REQUIRED. In the changed-input run, normalized activity and recomputed emissions become exactly 1/1,000 of their original values (1,000,000 to 1,000 kWh and 177 to 0.177 tCO2e), the input SHA-256 changes, the engine/factor/source hashes remain unchanged, and the decision changes from RECONCILED to MISMATCH."
+    },
+    {
+      "id": "check_insufficient_evidence_edge",
+      "category": "edge_case",
+      "procedure": "Run the recorded aggregate-energy case, the controlled image-only case, a controlled case with an unknown factor year or ID, the recorded natural-gas case whose filing omits gross/net calorific basis, a diesel-labeled activity paired with the UK-electricity factor, and a supported case with a malformed supplied sourceSha256.",
+      "expected": "The original cases return REVIEW_REQUIRED with INSUFFICIENT_CALCULATION_EVIDENCE, UNSUPPORTED_SOURCE_FORMAT, UNKNOWN_FACTOR_REFERENCE, and AMBIGUOUS_ACTIVITY_BASIS respectively. The incompatible category returns REVIEW_REQUIRED with FACTOR_ACTIVITY_CATEGORY_CONFLICT and no arithmetic result. A malformed supplied digest is rejected before a run can be produced. None emits an inferred fuel mix, factor, computed assurance result, or compliance conclusion."
+    },
+    {
+      "id": "check_exports",
+      "category": "exports",
+      "procedure": "Execute the six-case benchmark using the documented CLI export command and inspect `evidence/evaluated_run.json` and `evidence/evaluated_run.csv`. Compare run ID, decisions, reason codes, normalized and computed values, tolerance, source locator, factor version, and input/source/factor/engine hashes across both files.",
+      "expected": "Both exports are generated for the same executed run, contain six cases, carry the exact same runId on every CSV row and in the JSON envelope, agree exactly on 2 RECONCILED, 1 MISMATCH, and 3 REVIEW_REQUIRED and all traceability fields, and contain no company names, personal names, signatures, addresses, contact details, credentials, or full filing bodies."
+    },
+    {
+      "id": "check_pdf_visual",
+      "category": "pdf_visual",
+      "procedure": "Render `output/pdf/Carbon-Disclosure-Reconciliation-Desk.pdf` at 150 DPI and visually inspect every page for legibility, clipping, overlap, screenshot authenticity, link targets, and agreement with the frozen demo.",
+      "expected": "Exactly three readable client-facing pages render without clipping or overlap. Page 1 shows an actual working result, page 2 explains the observed 2026-to-2025 factor-vintage correction and fail-closed evidence design using implemented material, and page 3 shows reproducible 2/1/3 evidence, tests, limitations, and working try-it links."
+    },
+    {
+      "id": "check_claims",
+      "category": "claims",
+      "procedure": "Compare the PDF, README, Manifest, proof report, oracle, executed outputs, test log, source contract, selected-source record, and factor/source hashes.",
+      "expected": "Every quantitative statement traces to the same frozen artifacts. The 2/1/3 result is labeled as a six-case benchmark, the controlled scenarios are distinguished from recorded public filing facts, and no copy claims regulatory compliance, audit assurance, emissions truth, environmental performance, savings, exhaustive filing coverage, or production accuracy."
+    },
+    {
+      "id": "check_boundaries",
+      "category": "boundaries",
+      "procedure": "Inspect fixtures, extraction output, hosted/local routes, logs, repository history, and public evidence against the frozen source contract and privacy exclusions. Verify the validator identity differs from every builder identity and run `python scripts/validation_gate.py` at the release-stage transition.",
+      "expected": "Only explicitly permitted company-level metrics and narrow provenance are retained; the bulk archive, factor workbook, and full filings remain uncommitted; no secrets, company names, personal fields, signatures, addresses, unrelated filing text, arbitrary URL/file access, or live write operations are exposed. A fresh non-builder report says PASS with zero unresolved findings, all artifacts are SHA-256 covered, and the executable gate passes."
+    }
+  ]
+}

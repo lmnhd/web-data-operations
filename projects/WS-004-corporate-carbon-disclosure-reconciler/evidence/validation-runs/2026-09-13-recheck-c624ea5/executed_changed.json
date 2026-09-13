@@ -1,0 +1,45 @@
+{
+  "iterationId": "WS-004",
+  "runId": "ws004-944aa2c7c09f7480",
+  "fixtureStatus": "bounded_recorded_and_controlled_evidence",
+  "factorSetId": "UK-GHG-2025-V1-FINAL",
+  "factorFileSha256": "61ad0e9b125f6a072a39414ba5cfc2ebe29d57b0b6d555bb3713c3ea86f75903",
+  "factorWorkbookSha256": "8bfdb45b81ec4a88e3bdf4584637330f62e6bd09ce1940e654c5d7b7f736de94",
+  "engineSha256": "220b84d987648689d7b92ffaa068ddcf2fe5a6516abdb007abe35fbcc0e7f3a4",
+  "summary": {
+    "totalCases": 1,
+    "RECONCILED": 0,
+    "MISMATCH": 1,
+    "REVIEW_REQUIRED": 0
+  },
+  "results": [
+    {
+      "caseId": "CASE-02-CONTROLLED-MWH-RECONCILED",
+      "fixtureKind": "reviewer_supplied_controlled_scenario",
+      "sourceId": "CONTROLLED-ELECTRICITY-CASE-02-V1",
+      "sourceFormat": "controlled_structured",
+      "sourceLocator": "Reviewer-supplied scenario / explicit factor exercise",
+      "sourceSha256": "d49bc0a18f43bd14adb2048f7446488fd0441e5f3b614fccbd38470f4b47290d",
+      "reportingPeriodEnd": null,
+      "inputSha256": "2703686f42f0659b8d4eb91df9eb5470c2cddf87af0632c8af002bc208b2052c",
+      "factorSetId": "UK-GHG-2025-V1-FINAL",
+      "factorFileSha256": "61ad0e9b125f6a072a39414ba5cfc2ebe29d57b0b6d555bb3713c3ea86f75903",
+      "factorWorkbookSha256": "8bfdb45b81ec4a88e3bdf4584637330f62e6bd09ce1940e654c5d7b7f736de94",
+      "engineSha256": "220b84d987648689d7b92ffaa068ddcf2fe5a6516abdb007abe35fbcc0e7f3a4",
+      "factorId": "7_400_4000_5_1",
+      "factorYear": 2025,
+      "activityValue": "1000",
+      "activityUnit": "kWh",
+      "disclosedEmissionsValue": "177",
+      "disclosedEmissionsUnit": "tCO2e",
+      "normalizedActivityKwh": "1000.000000",
+      "disclosedEmissionsTco2e": "177.000000",
+      "computedEmissionsTco2e": "0.177000",
+      "varianceTco2e": "176.823000",
+      "toleranceTco2e": "0.010000",
+      "decision": "MISMATCH",
+      "reasonCode": "DISCLOSED_RESULT_OUTSIDE_TOLERANCE"
+    }
+  ],
+  "claimBoundary": "Arithmetic reproducibility from explicit evidence only; not audit assurance, compliance, emissions truth, or production accuracy."
+}

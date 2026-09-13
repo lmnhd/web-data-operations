@@ -1,71 +1,100 @@
 {
   "schemaVersion": 1,
-  "iterationId": "WS-003",
-  "stage": "RELEASED",
+  "iterationId": "WS-004",
+  "stage": "RELEASE_READY",
   "concept": {
-    "slug": "municipal-sla-operations-explorer",
-    "name": "Municipal SLA & Service Bottleneck Operations Explorer",
-    "publicName": "Municipal 311 SLA Operations Desk",
-    "targetBuyer": "Municipal operations managers, public works team leads, or service contractors",
-    "buyerProblem": "Public 311 exports can omit the target and closure timestamps needed for SLA review, so operations teams need an explicit adapter boundary and a safe way to evaluate authorized enriched records without treating missing fields as evidence.",
-    "centralClaim": "Given an explicitly synthetic, adapter-ready service-request fixture with created, target, and closure timestamps, the engine can reproducibly calculate scenario margins, route malformed inputs to review, aggregate ward scenarios, and export auditable results without claiming official municipal performance."
+    "slug": "corporate-carbon-disclosure-reconciler",
+    "name": "Corporate Carbon Disclosure Reconciliation Desk",
+    "publicName": "Carbon Disclosure Reconciliation Desk",
+    "targetBuyer": "ESG assurance analysts, sustainability reporting teams, and accounting reviewers",
+    "buyerProblem": "Public corporate energy and emissions disclosures are often embedded in filings with inconsistent layouts, units, factor years, and levels of detail, making it costly to determine which figures can be reproduced and which require human follow-up.",
+    "centralClaim": "A bounded reviewer-operated proof can extract declared company-level energy and emissions figures from a small, licensed set of public filings, preserve page-level provenance, normalize units, and reproduce only calculations supported by explicit activity and factor evidence while routing insufficient or contradictory disclosures to review."
   },
-  "authorizedScope": "Human approved the web UI, visual 3-page PDF, Project Manifest, independent validation, Vercel hosting, GitHub release, and Upwork portfolio publication on 2026-09-08. Paid services, live municipal dispatch integration, and legal SLA certifications remain unauthorized.",
-  "nextAction": "WS-003 is released. Preserve its final state and immutable evidence. Do not initialize WS-004 until a fresh scope and publication approval are recorded; current Upwork visibility is user-confirmed but its listing contents were not reverified because browser control was unavailable.",
+  "authorizedScope": "Human-approved WS-004 expansion: build the reviewer web UI over the frozen six-case engine, add project-specific tests and reproducible evidence, create the required three-page visual PDF and completed Manifest/release checklist, freeze a stable candidate, and dispatch the reserved fresh non-builder validator. No new source documents, paid services, public hosting, publication, regulatory-compliance claim, audit-assurance claim, or delegated research/build work is authorized. Earlier publication approvals do not transfer to WS-004.",
+  "nextAction": "Execute the approved WS-004 publication sequence for GitHub, Vercel, and Upwork using only the independently certified artifacts; verify public links signed out, record actual outcomes, and preserve immutable final state and release evidence before transitioning to RELEASED.",
   "humanApproval": {
     "status": "approved",
     "date": "2026-09-12",
-    "basis": "The user approved publication on 2026-09-08, the four-finding remediation on 2026-09-12, and resumption of the independent validator after its runtime interruption on 2026-09-12."
+    "basis": "The user replied 'Approved!' to the WS-004 Candidate A recommendation and four-turn delegated-agent ceiling. This authorizes the bounded source-contract check and vertical proof only; expansion, hosting, and publication remain unapproved."
   },
-  "humanApproval": {
+  "expansionApproval": {
     "status": "approved",
-    "date": "2026-09-12",
-    "basis": "The user approved publication on 2026-09-08, the falsey-rule repair on 2026-09-12, and then explicitly approved the four-finding expanded remediation plus a fresh independent-validator turn on 2026-09-12 ('Approved')."
+    "date": "2026-09-13",
+    "basis": "The user replied 'Approved. Please continue.' at AWAITING_BUILD_APPROVAL. This authorizes the bounded expansion build and independent validation, but not public hosting or publication."
+  },
+  "publicationApproval": {
+    "status": "approved",
+    "date": "2026-09-13",
+    "destinations": [
+      "GitHub",
+      "Vercel",
+      "Upwork"
+    ],
+    "basis": "At the RELEASE_READY publication boundary, the user replied 'Approved' to the explicit request to publish WS-004 to GitHub, Vercel, and Upwork."
   },
   "fatalBlockers": [],
   "repairableConditions": [],
   "limitations": [
-    "No client posting was supplied; demand evidence is based on general operational dashboard and monitoring signals.",
-    "The proof uses 15 synthetic 311-style records; it is not a recorded Toronto extract and does not estimate production accuracy.",
-    "Toronto's current public 311 export does not expose target or closure timestamps, so production calculations require an authorized internal adapter.",
-    "The scenario calculations do not constitute official municipal performance metrics, staffing instructions, dispatch commands, or legal certifications."
+    "No client posting was supplied. Demand evidence is indirect and inherited from the recorded public-preliminary market matrix; it does not prove demand for this exact service.",
+    "The Companies House Document API requires an API key and is unavailable in its sandbox. The approved proof instead uses one bounded official free Accounts Data Product archive; no credential is required or requested.",
+    "The candidate assesses reproducibility and evidence sufficiency, not emissions truth, legal compliance, audit assurance, or company truthfulness.",
+    "Only company-level metrics may be retained or displayed; personal names, signatures, contact details, and unrelated filing content are out of scope."
   ],
   "requiredFiles": [
     "README.md",
     "START_NEXT_ITERATION.md",
     "SOURCE_CONTROL_AND_PUBLIC_ARCHIVE.md",
-    "iterations/ws-003/CONCEPT_RECOMMENDATION.md",
-    "iterations/ws-003/CODEX_VERTICAL_PROOF_BRIEF.md",
-    "projects/WS-003-municipal-sla-operations-explorer/README.md",
-    "projects/WS-003-municipal-sla-operations-explorer/SOURCE_CONTRACT.md",
-    "projects/WS-003-municipal-sla-operations-explorer/PROJECT_MANIFEST.md",
-    "projects/WS-003-municipal-sla-operations-explorer/evidence/PROOF_REPORT.md",
-    "projects/WS-003-municipal-sla-operations-explorer/evidence/FIXTURE_PROVENANCE.md",
-    "projects/WS-003-municipal-sla-operations-explorer/evidence/VALIDATION_PLAN.json",
-    "projects/WS-003-municipal-sla-operations-explorer/evidence/INDEPENDENT_VALIDATION.json",
-    "projects/WS-003-municipal-sla-operations-explorer/evidence/RELEASE_CHECKLIST.md",
-    "output/pdf/Municipal-311-SLA-Operations-Desk.pdf",
+    "PORTFOLIO_TRACKING_LOG.md",
+    "iterations/ws-004/CONCEPT_RECOMMENDATION.md",
+    "iterations/ws-004/CODEX_VERTICAL_PROOF_BRIEF.md",
+    "iterations/ws-004/PREBUILD_VALIDATION_PLAN.json",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/README.md",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/SOURCE_CONTRACT.md",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/PROJECT_MANIFEST.md",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/app.py",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/requirements.txt",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/vercel.json",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/.vercelignore",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/src/reconcile.py",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/src/demo_server.py",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/tests/test_reconcile.py",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/tests/test_app.py",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/demo/index.html",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/demo/app.js",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/demo/style.css",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/VALIDATION_PLAN.json",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/SOURCE_SELECTION.json",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/factors/ghg_factors_2025.json",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/fixtures/disclosure_cases.json",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/fixtures/benchmark_oracle.json",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/evaluated_run.json",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/evaluated_run.csv",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/changed_input_run.json",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/changed_input_run.csv",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/PROOF_REPORT.md",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/BUILDER_TEST_LOG.md",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/RELEASE_CHECKLIST.md",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/reviewer/SCREENSHOT_PROVENANCE.md",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/reviewer/PDF_QA.md",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/reviewer/working-demo.png",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/reviewer/changed-input-demo.png",
+    "scripts/build_ws004_work_sample.py",
+    "output/pdf/Carbon-Disclosure-Reconciliation-Desk.pdf",
+    "research/UPWORK_DEMAND_MATRIX.md",
+    "research/CANDIDATE_SCORECARD.md",
     "design/SOURCE_AND_COMPLIANCE_LEDGER.md",
     "docs/shipping-pipeline/REVIEWER_EVIDENCE_STANDARD.md",
     "docs/shipping-pipeline/INDEPENDENT_VALIDATION.md"
   ],
   "agentBudget": {
     "stageLimit": 4,
-    "used": 2,
+    "used": 3,
     "unit": "delegated agent turns",
+    "reserved": {
+      "freshContextNonBuilderValidator": 1,
+      "singleRepairRecheck": 1
+    },
+    "allocationPlan": "Fresh non-builder /root/ws004_independent_validator returned a hash-complete FAIL against candidate d95db72 as turn 1. The repair recheck of unchanged candidate c624ea5da67e8838ed96064560e83298767cb943 was interrupted by the account usage limit as turn 2 without a report, then resumed and returned PASS with zero findings as turn 3. No research/build agent was used. One approved delegated turn remains unused; publication still requires explicit human approval.",
     "additionalUseRequiresHumanApproval": true
-  },
-  "release": {
-    "publicDemo": "https://municipal-311-sla-operations-desk.vercel.app",
-    "productionDeploymentId": "dpl_JBt2EBRSHRN8PKDLTsnBWpYHtjCb",
-    "pullRequest": "https://github.com/lmnhd/web-data-operations/pull/6",
-    "mergeCommit": "6da79dca1dbfea6d3dbca355caa8ad67173b80f0",
-    "validatedCandidate": "57ac8a4cf8b5d8ff344e3b12cb5b1a29c1465a2e",
-    "validatorAgentId": "/root/ws003_remediation_validator",
-    "tag": "ws-003-v1.0.0",
-    "githubRelease": "https://github.com/lmnhd/web-data-operations/releases/tag/ws-003-v1.0.0",
-    "pdfAsset": "Municipal-311-SLA-Operations-Desk.pdf",
-    "upworkProfile": "https://www.upwork.com/freelancers/~010d1d69f81d197489",
-    "upworkPublicationEvidence": "User confirmed item number 3 is published on 2026-09-12; current listing copy and attachment were not reverified because browser control was unavailable."
   }
 }

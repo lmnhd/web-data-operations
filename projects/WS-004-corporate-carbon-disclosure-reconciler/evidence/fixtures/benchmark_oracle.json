@@ -1,0 +1,61 @@
+{
+  "iterationId": "WS-004",
+  "oracleStatus": "declared_before_implementation",
+  "toleranceTco2e": "0.01",
+  "expectedCounts": {
+    "RECONCILED": 2,
+    "MISMATCH": 1,
+    "REVIEW_REQUIRED": 3
+  },
+  "cases": [
+    {
+      "caseId": "CASE-01-FILING-ELECTRICITY-RECONCILED",
+      "fixtureKind": "recorded_public_filing_fact",
+      "expectedDecision": "RECONCILED",
+      "expectedReasonCode": "WITHIN_TOLERANCE",
+      "expectedComputedTco2e": "697.341060",
+      "expectedVarianceTco2e": "0.001060"
+    },
+    {
+      "caseId": "CASE-02-CONTROLLED-MWH-RECONCILED",
+      "fixtureKind": "reviewer_supplied_controlled_scenario",
+      "expectedDecision": "RECONCILED",
+      "expectedReasonCode": "WITHIN_TOLERANCE",
+      "expectedComputedTco2e": "177.000000",
+      "expectedVarianceTco2e": "0.000000"
+    },
+    {
+      "caseId": "CASE-03-FILING-ELECTRICITY-MISMATCH",
+      "fixtureKind": "recorded_public_filing_fact",
+      "expectedDecision": "MISMATCH",
+      "expectedReasonCode": "DISCLOSED_RESULT_OUTSIDE_TOLERANCE",
+      "expectedComputedTco2e": "73.705632",
+      "expectedVarianceTco2e": "1.165632"
+    },
+    {
+      "caseId": "CASE-04-FILING-GAS-AMBIGUOUS",
+      "fixtureKind": "recorded_public_filing_fact",
+      "expectedDecision": "REVIEW_REQUIRED",
+      "expectedReasonCode": "AMBIGUOUS_ACTIVITY_BASIS",
+      "expectedComputedTco2e": null,
+      "expectedVarianceTco2e": null
+    },
+    {
+      "caseId": "CASE-05-CONTROLLED-IMAGE-ONLY",
+      "fixtureKind": "reviewer_supplied_controlled_scenario",
+      "expectedDecision": "REVIEW_REQUIRED",
+      "expectedReasonCode": "UNSUPPORTED_SOURCE_FORMAT",
+      "expectedComputedTco2e": null,
+      "expectedVarianceTco2e": null
+    },
+    {
+      "caseId": "CASE-06-FILING-AGGREGATE-INSUFFICIENT",
+      "fixtureKind": "recorded_public_filing_fact",
+      "expectedDecision": "REVIEW_REQUIRED",
+      "expectedReasonCode": "INSUFFICIENT_CALCULATION_EVIDENCE",
+      "expectedComputedTco2e": null,
+      "expectedVarianceTco2e": null
+    }
+  ],
+  "claimBoundary": "The 2/1/3 distribution is a six-case declared oracle, not production accuracy, audit assurance, regulatory compliance, or evidence that a company's emissions are true."
+}
