@@ -1,7 +1,8 @@
 # Corporate Carbon Disclosure Reconciliation Desk
 
-**Iteration:** WS-004  
-**Status:** PROVING - bounded local proof implemented; expansion not approved
+**Iteration:** WS-004
+
+**Status:** BUILDING - expanded local candidate; independent validation pending
 
 This project is a bounded reviewer tool for deciding whether a company-level energy/emissions calculation can be reproduced from explicit activity, unit, factor-category, and factor-year evidence. Unsupported or incomplete disclosures must route to review rather than producing an inferred assurance result.
 
@@ -17,9 +18,19 @@ The deterministic six-case run produces:
 
 The fixture distinguishes minimized recorded public filing facts from clearly labeled reviewer-supplied controlled scenarios. The proof uses the official UK 2025 Version 1 / Final factor vintage cited by the selected filings. It never treats a numerical match or mismatch as compliance, audit assurance, or proof that reported emissions are true.
 
-## Run locally
+## Run the reviewer workbench locally
 
-Requirements: Python 3.11+; no third-party packages.
+Requirements: Python 3.11+ and Flask 3.1.2.
+
+```powershell
+cd projects/WS-004-corporate-carbon-disclosure-reconciler
+python -m pip install -r requirements.txt
+python app.py
+```
+
+Open `http://127.0.0.1:5000`. The six-case engine executes automatically. Click `Try the 1/1,000 unit change` to change the controlled scenario from 1,000 MWh to 1,000 kWh, then inspect the calculation, reason code, locator, and source hash or download the executed JSON/CSV.
+
+## Run the CLI
 
 From the repository root:
 
@@ -45,6 +56,8 @@ Run tests:
 python -B -m unittest discover -s projects/WS-004-corporate-carbon-disclosure-reconciler/tests -v
 ```
 
+Builder result on 2026-09-13: **23 passed, 0 failed, 0 errors**. Independent execution is still pending.
+
 ## Evidence
 
 - [Proof report](evidence/PROOF_REPORT.md)
@@ -54,10 +67,14 @@ python -B -m unittest discover -s projects/WS-004-corporate-carbon-disclosure-re
 - [Selected-source record](evidence/SOURCE_SELECTION.json)
 - [Pinned factor subset](evidence/factors/ghg_factors_2025.json)
 - [Frozen validation plan](evidence/VALIDATION_PLAN.json)
+- [Builder test log](evidence/BUILDER_TEST_LOG.md)
+- [Release checklist](evidence/RELEASE_CHECKLIST.md)
+- [Screenshot provenance](evidence/reviewer/SCREENSHOT_PROVENANCE.md)
+- [Three-page client-facing PDF](../../output/pdf/Carbon-Disclosure-Reconciliation-Desk.pdf)
 
 ## Current boundary
 
-Human approval covers this local bounded proof only. A reviewer web UI, visual PDF, broader sample, public hosting, independent release validation, and publication are not yet authorized. No production accuracy, compliance conclusion, audit assurance, environmental-performance claim, or savings claim is made.
+Human approval covers the expanded local UI, visual PDF, evidence package, stable candidate, and independent validation. Public hosting and publication are not authorized. The included `vercel.json` makes the candidate deployment-ready but no deployment has been created. No production accuracy, compliance conclusion, audit assurance, environmental-performance claim, or savings claim is made.
 
 Read before work:
 

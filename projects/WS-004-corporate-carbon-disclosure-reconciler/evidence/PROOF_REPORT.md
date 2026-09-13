@@ -2,9 +2,9 @@
 
 **Executed:** 2026-09-13
 
-**Stage:** AWAITING_BUILD_APPROVAL
+**Stage:** BUILDING
 
-**Review status:** Consolidated builder review PASS after one formatting-only repair; independent validation has not been dispatched
+**Review status:** Expanded candidate builder verification in progress; independent validation has not been dispatched
 
 ## Outcome
 
@@ -41,7 +41,7 @@ The source, factor-subset, factor-workbook, and engine hashes remain unchanged. 
 python -B -m unittest discover -s projects/WS-004-corporate-carbon-disclosure-reconciler/tests -v
 ```
 
-Result: 13 passed, 0 failed, 0 errors.
+Bounded-proof result: 13 passed, 0 failed, 0 errors. After the approved UI expansion, the same frozen discovery command runs **23 tests** with 0 failures and 0 errors; see `BUILDER_TEST_LOG.md`.
 
 ```powershell
 python -B projects/WS-004-corporate-carbon-disclosure-reconciler/src/reconcile.py `
@@ -64,9 +64,17 @@ Preliminary feasibility named the 2026 factor file. Source inspection showed tha
 
 The first sandboxed export-test run also found that the host's default temporary directory was outside the workspace write boundary. The test was changed to create its disposable directory under the project and the exact frozen command then passed with normal workspace permissions. Product calculations and oracle values did not change.
 
+## Approved expansion evidence
+
+- `app.py`, `src/demo_server.py`, and `demo/` provide a responsive reviewer workbench over the same Python engine.
+- The live local browser reproduced the 2/1/3 default state and the controlled 0.177 tCO2e MISMATCH state.
+- `evidence/reviewer/working-demo.png` and `changed-input-demo.png` are actual 1440 x 900 browser captures with assertions recorded in `SCREENSHOT_PROVENANCE.md`.
+- `output/pdf/Carbon-Disclosure-Reconciliation-Desk.pdf` is a three-page Letter case study using the actual default screenshot, factor-vintage correction, code excerpt, before/after evidence, tests, and limitations.
+- `vercel.json` is deployment-ready configuration only. No public deployment or publication has occurred.
+
 ## Limits and next gate
 
-This is a bounded local proof using three minimized filing sources and two clearly labeled controlled scenarios. It does not establish production accuracy, exhaustive source coverage, regulatory compliance, audit assurance, emissions truth, environmental performance, or savings. There is no visual PDF, web UI, public host, release checklist, independent PASS, or executable release-gate result yet. Expansion requires new human approval.
+This is a bounded local candidate using three minimized filing sources and two clearly labeled controlled scenarios. It does not establish production accuracy, exhaustive source coverage, regulatory compliance, audit assurance, emissions truth, environmental performance, or savings. The UI, PDF, Manifest, and release checklist now exist, but there is no public host, independent PASS, executable release-gate result, or publication approval yet.
 
 ## Consolidated builder review
 

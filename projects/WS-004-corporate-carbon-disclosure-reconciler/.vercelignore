@@ -1,0 +1,10 @@
+tests/
+evidence/reviewer/
+evidence/validation-runs/
+evidence/INDEPENDENT_VALIDATION.json
+evidence/RELEASE_CHECKLIST.md
+evidence/PROOF_REPORT.md
+evidence/SOURCE_SELECTION.json
+evidence/VALIDATION_PLAN.json
+evidence/*.csv
+evidence/*.json

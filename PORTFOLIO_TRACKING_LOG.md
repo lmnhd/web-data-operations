@@ -5,6 +5,9 @@
 - **Approval:** At `AWAITING_BUILD_APPROVAL`, the user replied `Approved. Please continue.` This authorizes the reviewer web UI, expanded local tests/evidence, project-specific three-page PDF, completed Manifest/release checklist, stable candidate, and dispatch of the reserved fresh non-builder validator.
 - **Publication boundary:** No new source documents, paid services, public hosting, or publication are authorized. Earlier WS-003 publication approvals do not transfer. After independent PASS and the executable hash gate, WS-004 must still stop for explicit publication approval.
 - **Delegation:** 0 of 4 turns used. Root remains the only builder. One fresh non-builder validator turn and one repair recheck remain reserved; no research/build agent is allocated.
+- **Expanded build evidence:** A Flask reviewer UI now runs the frozen Python engine, exposes the default and controlled unit-change scenarios, reason codes, locators, hashes, and JSON/CSV downloads. Actual 1440 x 900 default and changed-input browser states were captured. The new three-page Letter PDF uses the real screenshot and project-specific 2025 factor-vintage correction; all pages render cleanly at 150 DPI in builder inspection.
+- **Expanded tests:** The frozen discovery command now passes 23 unit/integration/security tests. Deployment-ready configuration is included to avoid post-validation code changes, but no Vercel deployment or public publication has been performed.
+- **Review economy:** The iteration's single consolidated builder review was already used at the proof gate. Expansion receives deterministic builder verification followed by the mandatory separate non-builder validation; no second consolidated review or build delegation is added.
 
 ## 2026-09-13 - WS-004 bounded proof executed
 

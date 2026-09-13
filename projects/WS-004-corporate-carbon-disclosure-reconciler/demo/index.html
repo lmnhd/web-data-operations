@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Carbon Disclosure Reconciliation Desk</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="mark">CO2</span>
+      <div>CARBON DISCLOSURE RECONCILIATION DESK<small>Runnable evidence / WS-004</small></div>
+    </div>
+    <span class="engine-badge"><i></i> REAL PYTHON ENGINE / BOUNDED FIXTURE</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">DISCLOSURE EVIDENCE REVIEW</p>
+        <h1>Reproduce the math.<br><span>Escalate the gaps.</span></h1>
+      </div>
+      <p class="hero-copy">Compare declared energy and emissions arithmetic against an exact 2025 factor reference. The workbench computes only when the evidence supports it and routes ambiguity to human review.</p>
+    </section>
+
+    <div class="workspace">
+      <aside class="control-panel">
+        <div>
+          <p class="step">01 / REVIEW INPUT</p>
+          <h2>Run a reconciliation</h2>
+          <p class="help">Start with all six cases or operate the controlled unit-change scenario.</p>
+        </div>
+
+        <form id="review-form">
+          <label for="case-select">Evidence case</label>
+          <select id="case-select">
+            <option value="">All six benchmark cases</option>
+            <option value="CASE-02-CONTROLLED-MWH-RECONCILED">Case 02 - controlled unit scenario</option>
+          </select>
+
+          <label for="unit-select">Activity unit</label>
+          <select id="unit-select" disabled>
+            <option value="MWh">MWh - baseline</option>
+            <option value="kWh">kWh - reviewer change</option>
+          </select>
+
+          <button class="primary" id="run" type="submit">Run evidence check <span>-&gt;</span></button>
+        </form>
+
+        <div class="presets">
+          <button id="preset-default" type="button">Restore six-case benchmark</button>
+          <button id="preset-unit-change" type="button">Try the 1/1,000 unit change</button>
+        </div>
+
+        <div class="factor-card">
+          <span>PINNED FACTOR SET</span>
+          <strong>UK GHG 2025 / V1 FINAL</strong>
+          <small>Workbook updated 2025-06-10</small>
+        </div>
+
+        <p class="boundary">Three minimized recorded filing sources plus two controlled scenarios. No company names or personal fields. Arithmetic reproducibility only - not audit assurance, compliance, or emissions truth.</p>
+      </aside>
+
+      <section class="workbench">
+        <div class="section-top">
+          <div>
+            <p class="step">02 / DECISION SUMMARY</p>
+            <h2 id="decision-title">Preparing the evidence run</h2>
+          </div>
+          <span id="decision-pill" class="pill neutral">Not executed</span>
+        </div>
+        <p id="runline" class="runline">The Python engine will execute automatically.</p>
+        <p id="error" role="alert" hidden></p>
+
+        <div id="result" hidden>
+          <div id="summary-cards" class="counts"></div>
+
+          <div class="section-top result-heading">
+            <div>
+              <p class="step">03 / TRACEABLE OUTCOMES</p>
+              <h2>Calculation and review queue</h2>
+            </div>
+            <span class="microcopy">DECISION + REASON + SOURCE HASH</span>
+          </div>
+          <div id="results-list" class="results-list"></div>
+
+          <div class="downloads">
+            <button id="download-json" type="button">Download run JSON</button>
+            <button id="download-csv" type="button">Download results CSV</button>
+          </div>
+        </div>
+
+        <details>
+          <summary>Inspect the fail-closed Python decision path</summary>
+          <pre id="code"></pre>
+        </details>
+      </section>
+    </div>
+
+    <footer>
+      <strong>Measured proof:</strong> the declared six-case benchmark reproduces 2 RECONCILED, 1 MISMATCH, and 3 REVIEW_REQUIRED outcomes. Recorded filing facts and controlled scenarios are labeled separately.
+    </footer>
+  </main>
+</body>
+</html>
