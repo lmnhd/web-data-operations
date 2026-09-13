@@ -21,6 +21,7 @@
       "level1": "Fuels",
       "level2": "Gaseous fuels",
       "level3": "Natural gas",
+      "activityCategory": "natural_gas",
       "activityUnit": "kWh (Gross CV)",
       "emissionsUnit": "kg CO2e",
       "factor": "0.18296"
@@ -32,6 +33,7 @@
       "level1": "Fuels",
       "level2": "Gaseous fuels",
       "level3": "Natural gas",
+      "activityCategory": "natural_gas",
       "activityUnit": "kWh (Net CV)",
       "emissionsUnit": "kg CO2e",
       "factor": "0.2027"
@@ -43,6 +45,7 @@
       "level1": "UK electricity",
       "level2": "Electricity generated",
       "level3": "Electricity: UK",
+      "activityCategory": "uk_grid_electricity",
       "activityUnit": "kWh",
       "emissionsUnit": "kg CO2e",
       "factor": "0.177"

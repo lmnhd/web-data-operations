@@ -2,9 +2,9 @@
 
 **Executed:** 2026-09-13
 
-**Stage:** BUILDING
+**Stage:** VERIFYING candidate
 
-**Review status:** Expanded candidate builder verification in progress; independent validation has not been dispatched
+**Review status:** Initial independent FAIL preserved; single bounded repair implemented; independent recheck pending
 
 ## Outcome
 
@@ -16,7 +16,7 @@ The approved six-case local proof reproduced its pre-implementation oracle exact
 | MISMATCH | 1 | 1 |
 | REVIEW_REQUIRED | 3 | 3 |
 
-Default run ID: `ws004-1984fbedb2ae05ca`.
+Default repair run ID: `ws004-6fd5836905285efd`.
 
 The recorded electricity calculation for source `CH-09904577-2025` recomputed to `697.341060 tCO2e` versus `697.340000 tCO2e` disclosed, a `0.001060 tCO2e` variance within the frozen `0.010000 tCO2e` tolerance. The recorded electricity calculation for `CH-12976528-2025` recomputed to `73.705632 tCO2e` versus `72.540000 tCO2e` disclosed, a `1.165632 tCO2e` variance and therefore MISMATCH. This is an arithmetic comparison against the filing's declared 2025 factor basis, not a compliance or truthfulness finding.
 
@@ -33,7 +33,7 @@ Case `CASE-02-CONTROLLED-MWH-RECONCILED` is an explicitly labeled reviewer-suppl
 | Decision | RECONCILED | MISMATCH |
 | Input SHA-256 | `eb25a296...7adffe8` | `2703686f...8b2052c` |
 
-The source, factor-subset, factor-workbook, and engine hashes remain unchanged. Changed-input run ID: `ws004-52cd149712424e77`.
+The source, factor-subset, factor-workbook, and engine hashes remain unchanged between the two repaired executions. Changed-input run ID: `ws004-944aa2c7c09f7480`.
 
 ## Commands and actual results
 
@@ -49,13 +49,13 @@ python -B projects/WS-004-corporate-carbon-disclosure-reconciler/src/reconcile.p
   --output-csv projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/evaluated_run.csv
 ```
 
-Result: six records exported in both formats with the same run ID, decisions, reason codes, values, locators, and hashes.
+Result: six records exported in both formats with the same run ID on the JSON envelope and every CSV row, plus matching decisions, reason codes, values, locators, and hashes.
 
 ## Evidence trace
 
 - Full 2025 workbook SHA-256: `8BFDB45B81EC4A88E3BDF4584637330F62E6BD09CE1940E654C5D7B7F736DE94`.
-- Committed minimized factor subset SHA-256 in the executed run: `8e55b4c1f1c35c3f1cf26d517b48dc5d1725642604d30946d13ab65aa59372a0`.
-- Engine SHA-256 in both executed runs: `2c7b6930672a817775e0fef76cedb5523e7bf9ce76a3a981f741328bb7c125da`.
+- Committed minimized factor subset SHA-256 in the repaired run: `61ad0e9b125f6a072a39414ba5cfc2ebe29d57b0b6d555bb3713c3ea86f75903`.
+- Engine SHA-256 in both repaired runs: `220b84d987648689d7b92ffaa068ddcf2fe5a6516abdb007abe35fbcc0e7f3a4`.
 - Three selected filing hashes and the bounded archive hash are recorded in `SOURCE_SELECTION.json`; the full documents and archive are not committed.
 
 ## Actual obstacle and correction
@@ -86,6 +86,8 @@ One consolidated builder review completed on 2026-09-13 with all functional and 
 - JSON/CSV exports agreed and the minimized input rejected prohibited personal/display fields;
 - `git diff --check` and the active-state validator passed.
 
-The subsequent staged-diff preflight exposed two trailing-space lines in this Markdown report. The one bounded repair pass removed only that whitespace and updated the record; no code, fixture, calculation, output, or hash-bearing execution evidence changed. The independent-validator repair recheck remains reserved and unused.
+The subsequent staged-diff preflight exposed two trailing-space lines in this Markdown report. That formatting correction changed no code, fixture, calculation, output, or hash-bearing execution evidence and did not consume the reserved validator repair/recheck.
+
+The first independent run later failed candidate `d95db72` on four bounded gaps: incompatible activity/factor categories could compute; CSV lacked run identity; malformed supplied source hashes were accepted; and the Manifest was stale. The single validator repair now adds exact category matching, strict 64-hex source-digest validation, `runId` on every CSV row, current Manifest status, and four engine/API regressions. The six-case oracle, source set, buyer claim, and publication boundary remain unchanged. The builder command passes 27/27; the independent recheck remains mandatory.
 
 This is explicitly same-agent review. It cannot substitute for the fresh non-builder PASS and executable hash-based release gate required after an approved expanded candidate exists.

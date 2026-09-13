@@ -1,9 +1,11 @@
 from __future__ import annotations
 
+import copy
 import json
 import sys
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -11,6 +13,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
 from app import app
+import demo_server
 
 
 class WebAdapterTests(unittest.TestCase):
@@ -64,6 +67,9 @@ class WebAdapterTests(unittest.TestCase):
             },
         )
         self.assertEqual(data["csv"].count("\n"), 7)
+        self.assertTrue(data["csv"].startswith("runId,"))
+        for row in data["csv"].splitlines()[1:]:
+            self.assertTrue(row.startswith(f"{data['runId']},"))
         self.assertEqual(len(data["results"]), 6)
 
     def test_reviewer_unit_change_reclassifies_controlled_case(self):
@@ -92,6 +98,29 @@ class WebAdapterTests(unittest.TestCase):
             with self.subTest(case_id=case_id):
                 self.assertEqual(results[case_id]["decision"], "REVIEW_REQUIRED")
                 self.assertEqual(results[case_id]["reasonCode"], reason)
+
+    def test_api_fails_closed_on_factor_activity_category_conflict(self):
+        document = copy.deepcopy(demo_server.load_cases())
+        case = document["cases"][0]
+        case["calculation"]["activityCategory"] = "diesel"
+        document["cases"] = [case]
+        with patch("demo_server.load_cases", return_value=document):
+            response = self.post({"caseId": case["caseId"], "activityUnit": None})
+        self.assertEqual(response.status_code, 200)
+        result = response.get_json()["results"][0]
+        self.assertEqual(result["decision"], "REVIEW_REQUIRED")
+        self.assertEqual(result["reasonCode"], "FACTOR_ACTIVITY_CATEGORY_CONFLICT")
+        self.assertIsNone(result["computedEmissionsTco2e"])
+
+    def test_api_rejects_malformed_supplied_source_sha256(self):
+        document = copy.deepcopy(demo_server.load_cases())
+        case = document["cases"][0]
+        case["source"]["sourceSha256"] = "not-a-sha256"
+        document["cases"] = [case]
+        with patch("demo_server.load_cases", return_value=document):
+            response = self.post({"caseId": case["caseId"], "activityUnit": None})
+        self.assertEqual(response.status_code, 400)
+        self.assertIn("64 hexadecimal", response.get_json()["error"])
 
     def test_unknown_fields_and_invalid_types_are_rejected(self):
         for payload in (

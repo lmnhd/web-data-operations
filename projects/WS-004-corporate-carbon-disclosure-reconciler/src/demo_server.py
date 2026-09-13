@@ -61,13 +61,15 @@ def _selected_document(
     return document
 
 
-def _csv_for_results(results: list[dict[str, Any]]) -> str:
+def _csv_for_run(run: dict[str, Any]) -> str:
     output = io.StringIO(newline="")
     writer = csv.DictWriter(
         output, fieldnames=reconcile.CSV_FIELDS, extrasaction="ignore"
     )
     writer.writeheader()
-    writer.writerows(results)
+    writer.writerows(
+        {"runId": run["runId"], **result} for result in run["results"]
+    )
     return output.getvalue()
 
 
@@ -82,7 +84,7 @@ def run_demo(
         factor_file_bytes=FACTORS_PATH.read_bytes(),
         engine_file_bytes=Path(reconcile.__file__).read_bytes(),
     )
-    run["csv"] = _csv_for_results(run["results"])
+    run["csv"] = _csv_for_run(run)
     run["selection"] = {
         "caseId": case_id,
         "activityUnitOverride": activity_unit,

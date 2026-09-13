@@ -103,9 +103,15 @@ def normalize_emissions(value: Decimal, unit: str) -> Decimal:
 
 
 def source_sha256(source: dict[str, Any]) -> str:
-    supplied = source.get("sourceSha256")
-    if supplied:
-        return str(supplied).lower()
+    if "sourceSha256" in source:
+        supplied = source["sourceSha256"]
+        if not isinstance(supplied, str) or len(supplied) != 64 or any(
+            char not in "0123456789abcdefABCDEF" for char in supplied
+        ):
+            raise EvidenceBoundaryError(
+                "sourceSha256 must be exactly 64 hexadecimal characters"
+            )
+        return supplied.lower()
     basis = {
         "sourceId": source.get("sourceId"),
         "sourceFormat": source.get("sourceFormat"),
@@ -202,6 +208,9 @@ def evaluate_case(
     if factor is None:
         return _review(result, "UNKNOWN_FACTOR_REFERENCE")
 
+    if calculation.get("activityCategory") != factor.get("activityCategory"):
+        return _review(result, "FACTOR_ACTIVITY_CATEGORY_CONFLICT")
+
     try:
         activity = parse_decimal(calculation.get("activityValue"))
         disclosed = parse_decimal(calculation.get("disclosedEmissionsValue"))
@@ -297,6 +306,7 @@ def run_benchmark(
 
 
 CSV_FIELDS = [
+    "runId",
     "caseId",
     "fixtureKind",
     "sourceId",
@@ -336,7 +346,9 @@ def write_outputs(
         with output_csv.open("w", newline="", encoding="utf-8") as handle:
             writer = csv.DictWriter(handle, fieldnames=CSV_FIELDS, extrasaction="ignore")
             writer.writeheader()
-            writer.writerows(run["results"])
+            writer.writerows(
+                {"runId": run["runId"], **result} for result in run["results"]
+            )
 
 
 def _select_and_override(

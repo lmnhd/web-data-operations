@@ -142,6 +142,22 @@ class ReconciliationProofTests(unittest.TestCase):
             self.assertEqual(result["reasonCode"], "UNKNOWN_FACTOR_REFERENCE")
             self.assertIsNone(result["computedEmissionsTco2e"])
 
+    def test_factor_activity_category_conflict_fails_closed(self):
+        incompatible = self.case("CASE-01-FILING-ELECTRICITY-RECONCILED")
+        incompatible["calculation"]["activityCategory"] = "diesel"
+        result = self.one_case_run(incompatible)
+        self.assertEqual(result["decision"], "REVIEW_REQUIRED")
+        self.assertEqual(result["reasonCode"], "FACTOR_ACTIVITY_CATEGORY_CONFLICT")
+        self.assertIsNone(result["computedEmissionsTco2e"])
+
+    def test_malformed_supplied_source_sha256_is_rejected(self):
+        malformed = self.case("CASE-01-FILING-ELECTRICITY-RECONCILED")
+        for supplied in ("not-a-sha256", "a" * 63, "g" * 64, 123):
+            malformed["source"]["sourceSha256"] = supplied
+            with self.subTest(supplied=supplied):
+                with self.assertRaises(reconcile.EvidenceBoundaryError):
+                    self.one_case_run(malformed)
+
     def test_invalid_numeric_and_units_fail_closed(self):
         invalid_number = self.case("CASE-01-FILING-ELECTRICITY-RECONCILED")
         invalid_number["calculation"]["activityValue"] = "not-a-number"
@@ -192,6 +208,10 @@ class ReconciliationProofTests(unittest.TestCase):
             self.assertEqual(
                 [item["decision"] for item in loaded_json["results"]],
                 [item["decision"] for item in loaded_csv],
+            )
+            self.assertEqual(
+                {item["runId"] for item in loaded_csv},
+                {loaded_json["runId"]},
             )
             serialized = json_path.read_text(encoding="utf-8") + csv_path.read_text(encoding="utf-8")
             for prohibited_key in reconcile.PROHIBITED_KEYS:

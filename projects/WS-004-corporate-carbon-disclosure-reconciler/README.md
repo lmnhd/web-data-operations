@@ -2,7 +2,7 @@
 
 **Iteration:** WS-004
 
-**Status:** BUILDING - expanded local candidate; independent validation pending
+**Status:** VERIFYING candidate - one bounded independent-validation repair complete; recheck pending
 
 This project is a bounded reviewer tool for deciding whether a company-level energy/emissions calculation can be reproduced from explicit activity, unit, factor-category, and factor-year evidence. Unsupported or incomplete disclosures must route to review rather than producing an inferred assurance result.
 
@@ -56,7 +56,7 @@ Run tests:
 python -B -m unittest discover -s projects/WS-004-corporate-carbon-disclosure-reconciler/tests -v
 ```
 
-Builder result on 2026-09-13: **23 passed, 0 failed, 0 errors**. Independent execution is still pending.
+Builder result after the bounded repair on 2026-09-13: **27 passed, 0 failed, 0 errors**. The initial independent run is preserved as FAIL; the repaired candidate still requires its reserved independent recheck.
 
 ## Evidence
 
@@ -83,4 +83,4 @@ Read before work:
 - [Reviewer evidence standard](../../docs/shipping-pipeline/REVIEWER_EVIDENCE_STANDARD.md)
 - [Independent validation protocol](../../docs/shipping-pipeline/INDEPENDENT_VALIDATION.md)
 
-The project-local `evidence/VALIDATION_PLAN.json` was frozen in commit `cab1c89` before implementation began.
+The project-local `evidence/VALIDATION_PLAN.json` was frozen in commit `cab1c89` before implementation began, then revised before the single repair to include the four exact independent findings.

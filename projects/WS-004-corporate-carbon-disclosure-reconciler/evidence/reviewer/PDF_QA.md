@@ -9,7 +9,7 @@
 ## Mechanical checks
 
 - PDF metadata reports exactly 3 Letter pages, no encryption, form fields, or embedded JavaScript.
-- Text extraction contains the 2/1/3 decisions, `REVIEW_REQUIRED`, the 2025 Version 1 / Final correction, 23/23 tests, 0.177 tCO2e changed result, and the audit/compliance limitation.
+- Text extraction contains the 2/1/3 decisions, `REVIEW_REQUIRED`, the 2025 Version 1 / Final correction, 27/27 tests, 0.177 tCO2e changed result, and the audit/compliance limitation.
 - Link annotations resolve to the documented local workbench URL and repository URL.
 - Final pages rendered at 150 DPI with Poppler.
 

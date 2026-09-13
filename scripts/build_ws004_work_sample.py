@@ -195,7 +195,7 @@ def build_pdf():
 
     metric(pdf, 38, 190, "2025", "MATCHED FACTOR YEAR", FOREST)
     metric(pdf, 178, 190, "3", "PINNED FACTOR ROWS", BLUE)
-    metric(pdf, 318, 190, "23/23", "AUTOMATED TESTS", FOREST)
+    metric(pdf, 318, 190, "27/27", "AUTOMATED TESTS", FOREST)
     metric(pdf, 458, 190, "FAIL", "CLOSED ON AMBIGUITY", AMBER)
     paragraph(
         pdf,
@@ -216,7 +216,7 @@ def build_pdf():
     metric(pdf, 38, 610, "1,000", "BASELINE MWh", FOREST)
     metric(pdf, 178, 610, "177.000", "BASELINE tCO2e", FOREST)
     metric(pdf, 318, 610, "0.177", "CHANGED tCO2e", RED)
-    metric(pdf, 458, 610, "23/23", "TESTS PASSING", BLUE)
+    metric(pdf, 458, 610, "27/27", "TESTS PASSING", BLUE)
 
     y = paragraph(
         pdf,
