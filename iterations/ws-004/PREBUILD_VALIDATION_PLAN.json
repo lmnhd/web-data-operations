@@ -1,0 +1,69 @@
+{
+  "iterationId": "WS-004",
+  "planStatus": "draft-preapproval-must-be-frozen-in-project-before-implementation",
+  "planRationale": "The validation contract is defined at concept selection, before implementation. After concept approval and source clearance, this draft must be copied to the project evidence folder, updated with the exact builder identity and artifact paths, reviewed, and committed before code or fixtures are implemented.",
+  "builderAgentIds": [
+    "root"
+  ],
+  "plannedArtifactPaths": [
+    "output/pdf/Carbon-Disclosure-Reconciliation-Desk.pdf",
+    "scripts/build_ws004_work_sample.py",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/README.md",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/SOURCE_CONTRACT.md",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/src/reconcile.py",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/tests",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/fixtures",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/benchmark_oracle.json"
+  ],
+  "checks": [
+    {
+      "id": "check_automated_tests",
+      "category": "tests",
+      "procedure": "From repository root run `python -B -m unittest discover -s projects/WS-004-corporate-carbon-disclosure-reconciler/tests -v`. Confirm named tests cover exact reconciliation, tolerance, mismatch, missing unit, insufficient activity breakdown, unsupported image-only content, invalid factor year/category, deterministic hashes, and secret/personal-field exclusions.",
+      "expected": "Exit code 0. The declared six-case oracle is reproduced as exactly 2 RECONCILED, 1 MISMATCH, and 3 REVIEW_REQUIRED, and every named invalid or unsupported case fails closed with its specified reason code."
+    },
+    {
+      "id": "check_reviewer_demo",
+      "category": "demo",
+      "procedure": "Launch the documented local reviewer workbench. Run the default case, change one explicit activity unit from MWh to kWh without changing its numeric value, then rerun and compare the visible result and input hash.",
+      "expected": "The normalized activity and recomputed emissions change by exactly 1,000x, the input SHA-256 changes, the engine/source-factor hashes remain unchanged, and the case moves to MISMATCH unless the disclosed result is changed consistently."
+    },
+    {
+      "id": "check_insufficient_evidence_edge",
+      "category": "edge_case",
+      "procedure": "Run a case containing only a total disclosed emissions value with no activity breakdown or factor reference, then run an unsupported image-only document case and an unknown factor-year case.",
+      "expected": "All three return REVIEW_REQUIRED without a computed assurance result: INSUFFICIENT_CALCULATION_EVIDENCE, UNSUPPORTED_SOURCE_FORMAT, and UNKNOWN_FACTOR_REFERENCE respectively. No inferred fuel/activity mix is emitted."
+    },
+    {
+      "id": "check_exports",
+      "category": "exports",
+      "procedure": "Execute the six-case benchmark from the workbench and export JSON and CSV. Compare the displayed run ID, decisions, reason codes, values, page/cell provenance, factor version, and input/source hashes with both downloads.",
+      "expected": "Both exports are generated for the executed run and agree exactly with the UI on 2 RECONCILED, 1 MISMATCH, 3 REVIEW_REQUIRED and all traceability fields; neither export contains a personal name, signature, contact detail, credential, or full filing body."
+    },
+    {
+      "id": "check_pdf_visual",
+      "category": "pdf_visual",
+      "procedure": "Render `output/pdf/Carbon-Disclosure-Reconciliation-Desk.pdf` at 150 DPI and visually inspect every page for legibility, clipping, overlap, screenshot authenticity, link targets, and agreement with the frozen demo.",
+      "expected": "Exactly three readable client-facing pages render without clipping or overlap. Page 1 shows the working result, page 2 explains a real implemented obstacle/correction, and page 3 shows reproducible evidence, limitations, and working try-it links."
+    },
+    {
+      "id": "check_claims",
+      "category": "claims",
+      "procedure": "Compare the PDF, README, Manifest, proof report, oracle, executed outputs, test log, source contract, and factor/source hashes.",
+      "expected": "Every quantitative statement traces to the same frozen artifacts. The 2/1/3 result is labeled as a six-case benchmark, not production accuracy, and no copy claims regulatory compliance, audit assurance, emissions truth, environmental performance, savings, or exhaustive filing coverage."
+    },
+    {
+      "id": "check_boundaries",
+      "category": "boundaries",
+      "procedure": "Inspect acquired fixtures, extraction output, hosted/local routes, logs, repository history, and public evidence against the frozen source contract and privacy exclusions. Verify the validator identity differs from every builder identity and run `python scripts/validation_gate.py` at the release-stage transition.",
+      "expected": "Only explicitly permitted company-level metrics and narrow provenance are retained; no secrets, personal fields, signatures, unrelated filing text, arbitrary URL/file access, or live write operations are exposed. A fresh non-builder report says PASS with zero unresolved findings, all artifacts are SHA-256 covered, and the executable gate passes."
+    }
+  ],
+  "freezeRequirements": [
+    "Verify and record exact Companies House filing-document reuse terms before acquisition.",
+    "Confirm three usable text-bearing SECR filings and record why each may be used.",
+    "Replace plannedArtifactPaths with the exact final artifactPaths array.",
+    "Confirm final builderAgentIds before implementation.",
+    "Commit the project-local evidence/VALIDATION_PLAN.json before code or fixture implementation."
+  ]
+}

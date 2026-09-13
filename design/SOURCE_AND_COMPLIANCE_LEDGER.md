@@ -329,3 +329,32 @@ What this project deliberately will not collect or automate, independent of whic
 - **No treatment of any grant-recipient, contractor, or notice-contact name field as a general-purpose people-search or enrichment dataset**, even on sources (OGL-Canada, OGL-Toronto, OGL-UK) whose licences affirmatively permit reuse of the surrounding institutional data — personal data is structurally excluded from every OGL-family licence reviewed, and named individuals appearing in procurement/grant records (contracting officers, sole-trader suppliers, grant recipients) are recorded here as a bounded, disclosed risk to be scoped around in any data contract, not a feature to build on.
 - **No claim that any of the nine cleared sources above constitutes a cleared *concept*.** Source clearance under this ledger establishes only that the source's reuse terms were fetched and verified before a concept was proposed on it — it does not establish that a resulting concept passes the relevance/uniqueness gate or survives adversarial review. As recorded in the Status flag at the top of this document, the Round 2 leader candidate built on sources 4 and 5 above **failed the gate and was refuted on all three adversarial lenses** (novelty: the matching problem is the already-registered cross-source-identity problem with the industry label changed, and the disjoint-namespace premise is a closing transitional artifact of the Procurement Act 2023 migration, not an intrinsic difficulty; compliance: the operative Terms and Conditions page was never fetched during the original clearance pass and its "avoiding system restrictions" clause collides with the undocumented rate ceiling, and OGL's personal-data exclusion does not cover the contact fields the concept's own matching method depends on; provability: buyer-party identifier schemes are empirically disjoint between the two sources with zero measured overlap, so no independent ground truth exists for cross-source identity and the concept's benchmark grades itself against its own inputs). No future iteration should treat "the source is cleared" as equivalent to "the concept is approved."
 - **No fabrication of rate limits.** Every source above with an undocumented numeric rate ceiling (data.europa.eu, Find a Tender, Contracts Finder, open.canada.ca, open.toronto.ca, data.cityofnewyork.us's exact throttle) is recorded literally as TBD in this ledger rather than estimated or assumed permissive.
+
+## 2026-09-12 WS-004 preliminary source-feasibility addendum
+
+This is a **pre-approval feasibility record, not source clearance**. No Companies House filing document was acquired and no concept was built.
+
+### Companies House filing history and Document API
+
+- **Owner:** Companies House, UK Department for Business and Trade.
+- **Official interfaces:** The Public Data API lists read-only filing-history operations. The Document API provides `GET /document/{document_id}` metadata and `GET /document/{document_id}/content` download redirects.
+- **Authentication:** API key required for both Document API operations. The document API does not run in the Companies House sandbox.
+- **Available representations:** Per-document metadata may advertise `application/pdf`, `application/json`, `application/xml`, `application/xhtml+xml`, `application/zip`, or `text/csv`; not every representation is available for every document.
+- **Published rate limit:** 600 requests per five-minute period per application. Exceeding it returns HTTP 429; Companies House reserves the right to ban applications that repeatedly exceed or try to bypass the limit. WS-004 would use a much smaller fixed recorded sample and no limit probing.
+- **Unresolved blocking precondition:** The exact reuse/licensing terms applicable to company-supplied filing documents, and the permitted treatment of retained documents/screenshots in public portfolio evidence, were not established by this preliminary check. OGL status is not inferred from a government host or page footer. Verify and record the applicable terms before any acquisition.
+- **Privacy boundary:** Even public filings may contain names, signatures, contact details, or other personal data. A cleared proof may extract and display only company-level energy/emissions metrics plus narrow page/document provenance.
+- **Official pages checked:**
+  - https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
+  - https://developer-specs.company-information.service.gov.uk/document-api/reference
+  - https://developer-specs.company-information.service.gov.uk/document-api/resources/documentmetadata?v=latest
+  - https://developer-specs.company-information.service.gov.uk/guides/rateLimiting
+  - https://developer.company-information.service.gov.uk/api-testing
+
+### UK government greenhouse-gas conversion factors 2026
+
+- **Owner:** Department for Energy Security and Net Zero.
+- **Official publication:** 2026 full set, flat file for automatic processing, methodology, and major-changes report.
+- **Update risk:** The flat file was republished on 2026-07-31 to correct values that had been reported as zero instead of blank. Any proof must pin the retrieved file by SHA-256 and record its update date rather than silently using an unversioned workbook.
+- **Use boundary:** The factors support calculations from explicit activity data. They do not justify reverse-engineering an undisclosed activity mix or certifying a company's filing.
+- **Licence observation:** The GOV.UK publication page states that page content is available under OGL v3.0 except where otherwise stated. The factor workbook's own notices must still be inspected before freezing a source contract.
+- **Official page checked:** https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2026

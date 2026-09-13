@@ -1,71 +1,58 @@
 {
   "schemaVersion": 1,
-  "iterationId": "WS-003",
-  "stage": "RELEASED",
+  "iterationId": "WS-004",
+  "stage": "AWAITING_APPROVAL",
   "concept": {
-    "slug": "municipal-sla-operations-explorer",
-    "name": "Municipal SLA & Service Bottleneck Operations Explorer",
-    "publicName": "Municipal 311 SLA Operations Desk",
-    "targetBuyer": "Municipal operations managers, public works team leads, or service contractors",
-    "buyerProblem": "Public 311 exports can omit the target and closure timestamps needed for SLA review, so operations teams need an explicit adapter boundary and a safe way to evaluate authorized enriched records without treating missing fields as evidence.",
-    "centralClaim": "Given an explicitly synthetic, adapter-ready service-request fixture with created, target, and closure timestamps, the engine can reproducibly calculate scenario margins, route malformed inputs to review, aggregate ward scenarios, and export auditable results without claiming official municipal performance."
+    "slug": "corporate-carbon-disclosure-reconciler",
+    "name": "Corporate Carbon Disclosure Reconciliation Desk",
+    "publicName": "Carbon Disclosure Reconciliation Desk",
+    "targetBuyer": "ESG assurance analysts, sustainability reporting teams, and accounting reviewers",
+    "buyerProblem": "Public corporate energy and emissions disclosures are often embedded in filings with inconsistent layouts, units, factor years, and levels of detail, making it costly to determine which figures can be reproduced and which require human follow-up.",
+    "centralClaim": "A bounded reviewer-operated proof can extract declared company-level energy and emissions figures from a small, licensed set of public filings, preserve page-level provenance, normalize units, and reproduce only calculations supported by explicit activity and factor evidence while routing insufficient or contradictory disclosures to review."
   },
-  "authorizedScope": "Human approved the web UI, visual 3-page PDF, Project Manifest, independent validation, Vercel hosting, GitHub release, and Upwork portfolio publication on 2026-09-08. Paid services, live municipal dispatch integration, and legal SLA certifications remain unauthorized.",
-  "nextAction": "WS-003 is released. Preserve its final state and immutable evidence. Do not initialize WS-004 until a fresh scope and publication approval are recorded; current Upwork visibility is user-confirmed but its listing contents were not reverified because browser control was unavailable.",
+  "authorizedScope": "Planning and primary-source feasibility checks only. No filing acquisition, credential creation, proof implementation, delegated research/build work, hosting, paid services, publication, or claim of regulatory compliance is authorized. Earlier publication approvals do not transfer to WS-004.",
+  "nextAction": "Human approval or rejection of Candidate A and the four-turn delegated-agent ceiling. Approval authorizes only a bounded vertical proof after the source contract and final evidence/VALIDATION_PLAN.json are frozen; expansion and publication remain separate approval gates.",
   "humanApproval": {
-    "status": "approved",
-    "date": "2026-09-12",
-    "basis": "The user approved publication on 2026-09-08, the four-finding remediation on 2026-09-12, and resumption of the independent validator after its runtime interruption on 2026-09-12."
-  },
-  "humanApproval": {
-    "status": "approved",
-    "date": "2026-09-12",
-    "basis": "The user approved publication on 2026-09-08, the falsey-rule repair on 2026-09-12, and then explicitly approved the four-finding expanded remediation plus a fresh independent-validator turn on 2026-09-12 ('Approved')."
+    "status": "pending",
+    "date": null,
+    "basis": "WS-004 was initialized after WS-003 release preservation. No WS-004 concept, proof, expansion, hosting, or publication approval has been granted."
   },
   "fatalBlockers": [],
-  "repairableConditions": [],
+  "repairableConditions": [
+    "Before any source acquisition or implementation, verify the exact reuse/licensing terms applicable to the selected Companies House filing documents and record the permitted public-evidence treatment.",
+    "Before implementation, confirm that at least three bounded company filings expose sufficient SECR content in supported PDF or XHTML form to exercise the declared oracle without collecting personal fields.",
+    "Before implementation, finalize and freeze the project-local evidence/VALIDATION_PLAN.json with exact artifact paths and the final builder identity.",
+    "If a filing lacks explicit activity detail or usable units, route it to REVIEW_REQUIRED rather than inferring a conversion basis.",
+    "If filing reuse does not permit retained source documents or screenshots, use hashes, source metadata, reviewer-supplied files, and permitted narrow excerpts only; request approval if that makes the public evidence inadequate."
+  ],
   "limitations": [
-    "No client posting was supplied; demand evidence is based on general operational dashboard and monitoring signals.",
-    "The proof uses 15 synthetic 311-style records; it is not a recorded Toronto extract and does not estimate production accuracy.",
-    "Toronto's current public 311 export does not expose target or closure timestamps, so production calculations require an authorized internal adapter.",
-    "The scenario calculations do not constitute official municipal performance metrics, staffing instructions, dispatch commands, or legal certifications."
+    "No client posting was supplied. Demand evidence is indirect and inherited from the recorded public-preliminary market matrix; it does not prove demand for this exact service.",
+    "The Companies House API requires an API key, and the official Document API is not available in its sandbox. No credential has been created or requested for WS-004.",
+    "The proof would assess reproducibility and evidence sufficiency, not certify emissions, legal compliance, audit assurance, or company truthfulness.",
+    "Only company-level metrics may be retained or displayed; personal names, signatures, contact details, and unrelated filing content are out of scope."
   ],
   "requiredFiles": [
     "README.md",
     "START_NEXT_ITERATION.md",
     "SOURCE_CONTROL_AND_PUBLIC_ARCHIVE.md",
-    "iterations/ws-003/CONCEPT_RECOMMENDATION.md",
-    "iterations/ws-003/CODEX_VERTICAL_PROOF_BRIEF.md",
-    "projects/WS-003-municipal-sla-operations-explorer/README.md",
-    "projects/WS-003-municipal-sla-operations-explorer/SOURCE_CONTRACT.md",
-    "projects/WS-003-municipal-sla-operations-explorer/PROJECT_MANIFEST.md",
-    "projects/WS-003-municipal-sla-operations-explorer/evidence/PROOF_REPORT.md",
-    "projects/WS-003-municipal-sla-operations-explorer/evidence/FIXTURE_PROVENANCE.md",
-    "projects/WS-003-municipal-sla-operations-explorer/evidence/VALIDATION_PLAN.json",
-    "projects/WS-003-municipal-sla-operations-explorer/evidence/INDEPENDENT_VALIDATION.json",
-    "projects/WS-003-municipal-sla-operations-explorer/evidence/RELEASE_CHECKLIST.md",
-    "output/pdf/Municipal-311-SLA-Operations-Desk.pdf",
+    "PORTFOLIO_TRACKING_LOG.md",
+    "iterations/ws-004/CONCEPT_RECOMMENDATION.md",
+    "iterations/ws-004/PREBUILD_VALIDATION_PLAN.json",
+    "research/UPWORK_DEMAND_MATRIX.md",
+    "research/CANDIDATE_SCORECARD.md",
     "design/SOURCE_AND_COMPLIANCE_LEDGER.md",
     "docs/shipping-pipeline/REVIEWER_EVIDENCE_STANDARD.md",
     "docs/shipping-pipeline/INDEPENDENT_VALIDATION.md"
   ],
   "agentBudget": {
     "stageLimit": 4,
-    "used": 2,
+    "used": 0,
     "unit": "delegated agent turns",
+    "reserved": {
+      "freshContextNonBuilderValidator": 1,
+      "singleRepairRecheck": 1
+    },
+    "allocationPlan": "The validator and one repair recheck are reserved before any research/build agent. No research or build delegation is planned; root will perform a bounded proof if approved. Any use beyond four turns or any second repair pass requires new human approval.",
     "additionalUseRequiresHumanApproval": true
-  },
-  "release": {
-    "publicDemo": "https://municipal-311-sla-operations-desk.vercel.app",
-    "productionDeploymentId": "dpl_JBt2EBRSHRN8PKDLTsnBWpYHtjCb",
-    "pullRequest": "https://github.com/lmnhd/web-data-operations/pull/6",
-    "mergeCommit": "6da79dca1dbfea6d3dbca355caa8ad67173b80f0",
-    "validatedCandidate": "57ac8a4cf8b5d8ff344e3b12cb5b1a29c1465a2e",
-    "validatorAgentId": "/root/ws003_remediation_validator",
-    "tag": "ws-003-v1.0.0",
-    "githubRelease": "https://github.com/lmnhd/web-data-operations/releases/tag/ws-003-v1.0.0",
-    "pdfAsset": "Municipal-311-SLA-Operations-Desk.pdf",
-    "upworkProfile": "https://www.upwork.com/freelancers/~010d1d69f81d197489",
-    "upworkPublicationEvidence": "User confirmed item number 3 is published on 2026-09-12; current listing copy and attachment were not reverified because browser control was unavailable."
   }
 }
