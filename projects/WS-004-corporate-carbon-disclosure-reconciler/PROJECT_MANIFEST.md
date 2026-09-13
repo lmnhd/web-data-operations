@@ -26,7 +26,7 @@ The source strategy used one official Companies House Free Accounts Data Product
 | Role | Responsibility | Current result |
 |---|---|---|
 | Human approver | Candidate and four-turn ceiling | Approved bounded proof on 2026-09-12 |
-| Root builder/orchestrator | Source contract, plan freeze, proof implementation and same-agent checks | Proof implemented; 13 tests and consolidated review pass with zero findings |
+| Root builder/orchestrator | Source contract, plan freeze, proof implementation and same-agent checks | Proof implemented; 13 tests and consolidated review pass after one formatting-only repair |
 | Fresh non-builder validator | Execute frozen plan after a stable expanded candidate, if expansion is approved | Reserved, not dispatched |
 | Repair recheck | One recheck after at most one repair pass | Reserved, not used |
 
@@ -36,7 +36,7 @@ The source strategy used one official Companies House Free Accounts Data Product
 - Selected-source and factor records: frozen; archive, workbook, and full filings remain uncommitted
 - Runnable proof: `src/reconcile.py` with default and changed-input JSON/CSV evidence
 - Test results: 13 passed, 0 failed on 2026-09-13; same-agent result only
-- Consolidated builder review: PASS with zero findings; no repair pass used
+- Consolidated builder review: PASS; one formatting-only repair removed two trailing-space lines; no product or execution evidence changed
 - Visual PDF: not authorized or built
 - Independent validation: not dispatched
 - Manifest/release checklist: this Manifest is provisional; release checklist pending expansion

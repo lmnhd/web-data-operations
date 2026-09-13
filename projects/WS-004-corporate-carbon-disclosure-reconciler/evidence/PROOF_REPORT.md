@@ -1,8 +1,10 @@
 # WS-004 bounded proof report
 
-**Executed:** 2026-09-13  
-**Stage:** PROVING  
-**Review status:** Consolidated builder review PASS; independent validation has not been dispatched
+**Executed:** 2026-09-13
+
+**Stage:** AWAITING_BUILD_APPROVAL
+
+**Review status:** Consolidated builder review PASS after one formatting-only repair; independent validation has not been dispatched
 
 ## Outcome
 
@@ -68,12 +70,14 @@ This is a bounded local proof using three minimized filing sources and two clear
 
 ## Consolidated builder review
 
-One consolidated builder review completed on 2026-09-13 with zero findings and no repair pass:
+One consolidated builder review completed on 2026-09-13 with all functional and evidence checks passing:
 
 - the exact frozen unit-test command passed 13/13;
 - the default and changed-input JSON/CSV outputs matched their declared values and hashes;
 - the archive and full-workbook SHA-256 values matched the frozen source records;
 - JSON/CSV exports agreed and the minimized input rejected prohibited personal/display fields;
 - `git diff --check` and the active-state validator passed.
+
+The subsequent staged-diff preflight exposed two trailing-space lines in this Markdown report. The one bounded repair pass removed only that whitespace and updated the record; no code, fixture, calculation, output, or hash-bearing execution evidence changed. The independent-validator repair recheck remains reserved and unused.
 
 This is explicitly same-agent review. It cannot substitute for the fresh non-builder PASS and executable hash-based release gate required after an approved expanded candidate exists.
