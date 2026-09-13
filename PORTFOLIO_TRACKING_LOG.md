@@ -1,5 +1,11 @@
 # Portfolio Tracking Log
 
+## 2026-09-13 - WS-004 publication approved
+
+- **Approval:** At `RELEASE_READY`, the user replied `Approved` to the explicit request to publish WS-004 to GitHub, Vercel, and Upwork.
+- **Authorized sequence:** Preserve the certified candidate; verify GitHub/Vercel sessions; open and merge a gated iteration pull request; deploy and verify the public demo signed out; create immutable tag and GitHub Release with the PDF; publish/update the fourth Upwork portfolio item; then record exact public outcomes and archive the final state.
+- **Boundaries:** Publication may use only the independently certified artifacts and approved destinations. No new source documents, claims, paid services, private data, or WS-005 work is authorized by this approval.
+
 ## 2026-09-13 - WS-004 independent repair PASS and executable gate
 
 - **Independent PASS:** `/root/ws004_independent_validator` completed the reserved recheck of repaired candidate `c624ea5da67e8838ed96064560e83298767cb943`. All seven revised checks passed with zero unresolved findings; the canonical report covers 31 artifacts and has SHA-256 `4314b19c1cedf8f2426f2d3bcfc6c3b2553d21e187785889de2328c4ab17960b`.

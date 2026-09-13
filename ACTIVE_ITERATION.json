@@ -11,7 +11,7 @@
     "centralClaim": "A bounded reviewer-operated proof can extract declared company-level energy and emissions figures from a small, licensed set of public filings, preserve page-level provenance, normalize units, and reproduce only calculations supported by explicit activity and factor evidence while routing insufficient or contradictory disclosures to review."
   },
   "authorizedScope": "Human-approved WS-004 expansion: build the reviewer web UI over the frozen six-case engine, add project-specific tests and reproducible evidence, create the required three-page visual PDF and completed Manifest/release checklist, freeze a stable candidate, and dispatch the reserved fresh non-builder validator. No new source documents, paid services, public hosting, publication, regulatory-compliance claim, audit-assurance claim, or delegated research/build work is authorized. Earlier publication approvals do not transfer to WS-004.",
-  "nextAction": "Stop for explicit publication approval. If approved, integrate the independently certified WS-004 candidate, publish only authorized destinations, verify public links signed out, record actual outcomes, and preserve immutable release evidence. Prior WS-003 publication approval does not transfer.",
+  "nextAction": "Execute the approved WS-004 publication sequence for GitHub, Vercel, and Upwork using only the independently certified artifacts; verify public links signed out, record actual outcomes, and preserve immutable final state and release evidence before transitioning to RELEASED.",
   "humanApproval": {
     "status": "approved",
     "date": "2026-09-12",
@@ -21,6 +21,16 @@
     "status": "approved",
     "date": "2026-09-13",
     "basis": "The user replied 'Approved. Please continue.' at AWAITING_BUILD_APPROVAL. This authorizes the bounded expansion build and independent validation, but not public hosting or publication."
+  },
+  "publicationApproval": {
+    "status": "approved",
+    "date": "2026-09-13",
+    "destinations": [
+      "GitHub",
+      "Vercel",
+      "Upwork"
+    ],
+    "basis": "At the RELEASE_READY publication boundary, the user replied 'Approved' to the explicit request to publish WS-004 to GitHub, Vercel, and Upwork."
   },
   "fatalBlockers": [],
   "repairableConditions": [],
