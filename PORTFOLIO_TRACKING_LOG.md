@@ -1,5 +1,16 @@
 # Portfolio Tracking Log
 
+## 2026-09-13 - WS-004 bounded proof executed
+
+- **Implementation:** Root built only the authorized local engine, six-case minimized fixture, deterministic JSON/CSV exports, and focused tests. No UI, PDF, hosting, public deployment, or publication work began.
+- **Observed oracle:** Default run `ws004-1984fbedb2ae05ca` produced exactly 2 RECONCILED, 1 MISMATCH, and 3 REVIEW_REQUIRED. The two recorded electricity cases recomputed to `697.341060` and `73.705632 tCO2e`; only the first falls within the frozen `0.010000 tCO2e` tolerance.
+- **Reviewer change:** Changing the controlled 1,000 MWh case to 1,000 kWh reduced normalized activity and computed emissions to exactly 1/1,000, changed the input hash, preserved source/factor/engine hashes, and moved RECONCILED to MISMATCH.
+- **Fail-closed evidence:** Ambiguous natural-gas gross/net basis, unsupported image-only evidence, and aggregate energy without a compatible activity breakdown route to REVIEW_REQUIRED. Unknown factor year/ID, invalid numeric data, unsupported units, tolerance boundaries, deterministic hashing, and personal-field rejection are also tested.
+- **Builder test result:** 13 passed, 0 failed on 2026-09-13. This is same-agent evidence and cannot satisfy independent release validation.
+- **Consolidated review:** One builder review checked the frozen plan, exact tests, source/workbook hashes, oracle arithmetic, changed-input behavior, export parity, privacy exclusions, state validity, and worktree hygiene. PASS with zero findings; no repair pass used.
+- **Environment lesson:** The sandboxed Windows process could not write its default temporary directory; the export test now uses a disposable directory under the project and passes with normal workspace permissions. No product calculation or oracle was changed.
+- **Next gate:** Stop at `AWAITING_BUILD_APPROVAL` for explicit expansion approval. No UI, PDF, hosting, validator dispatch, or publication work may begin automatically.
+
 ## 2026-09-13 - WS-004 source selection and validation plan frozen before implementation
 
 - **Bounded acquisition:** One official Companies House daily archive was acquired under ignored `tmp/ws004_source/`: 54,357,249 bytes, 7,393 entries, SHA-256 `CD8733AD05CBB3EEACA514F6B2044D16C6B6098D72535A90354D1863BD5077E5`. Twelve visible SECR candidates were identified and exactly three text-bearing iXBRL documents were selected; no second archive was acquired.

@@ -4,7 +4,7 @@
 
 - **Iteration:** WS-004
 - **Project:** Corporate Carbon Disclosure Reconciliation Desk
-- **Status:** APPROVED - source and validation plan frozen before implementation
+- **Status:** AWAITING_BUILD_APPROVAL - bounded local proof and consolidated builder review passed
 - **Release:** None
 - **Reviewed commit / PR / tag:** Not applicable; no candidate exists
 - **Primary reviewer:** ESG assurance, sustainability reporting, or accounting reviewer
@@ -15,7 +15,7 @@ No client posting was supplied. Public-preliminary market evidence supports dete
 
 ## Buyer decision and proposed proof
 
-The proposed tool decides whether disclosed arithmetic is reproducible from explicit evidence, conflicts with it, or needs review. It will parse a minimized six-case fixture, normalize supported units, resolve only exact versioned factors, and emit reason-coded JSON/CSV. Declared oracle totals are 2 RECONCILED, 1 MISMATCH, and 3 REVIEW_REQUIRED; these remain planned rather than observed until the bounded proof executes.
+The tool decides whether disclosed arithmetic is reproducible from explicit evidence, conflicts with it, or needs review. It parses a minimized six-case fixture, normalizes supported units, resolves only exact versioned factors, and emits reason-coded JSON/CSV. The executed run matches the declared oracle: 2 RECONCILED, 1 MISMATCH, and 3 REVIEW_REQUIRED.
 
 ## Sources and boundaries
 
@@ -26,7 +26,7 @@ The source strategy used one official Companies House Free Accounts Data Product
 | Role | Responsibility | Current result |
 |---|---|---|
 | Human approver | Candidate and four-turn ceiling | Approved bounded proof on 2026-09-12 |
-| Root builder/orchestrator | Source contract, plan freeze, proof implementation and same-agent checks | Source and plan frozen; implementation not started |
+| Root builder/orchestrator | Source contract, plan freeze, proof implementation and same-agent checks | Proof implemented; 13 tests and consolidated review pass with zero findings |
 | Fresh non-builder validator | Execute frozen plan after a stable expanded candidate, if expansion is approved | Reserved, not dispatched |
 | Repair recheck | One recheck after at most one repair pass | Reserved, not used |
 
@@ -34,8 +34,9 @@ The source strategy used one official Companies House Free Accounts Data Product
 
 - Project-local frozen validation plan: recorded at `evidence/VALIDATION_PLAN.json` before implementation
 - Selected-source and factor records: frozen; archive, workbook, and full filings remain uncommitted
-- Runnable proof: not built
-- Test results: none
+- Runnable proof: `src/reconcile.py` with default and changed-input JSON/CSV evidence
+- Test results: 13 passed, 0 failed on 2026-09-13; same-agent result only
+- Consolidated builder review: PASS with zero findings; no repair pass used
 - Visual PDF: not authorized or built
 - Independent validation: not dispatched
 - Manifest/release checklist: this Manifest is provisional; release checklist pending expansion
@@ -43,4 +44,4 @@ The source strategy used one official Companies House Free Accounts Data Product
 
 ## Next gate
 
-Commit the frozen source, factor, oracle, and validation records, then transition to PROVING. After the bounded proof passes one consolidated same-agent review, stop at `AWAITING_BUILD_APPROVAL` for human expansion approval. Independent validation remains mandatory later and same-agent review cannot satisfy release readiness.
+Human expansion approval is required before building a reviewer web UI, project-specific three-page visual PDF, public hosting, or release evidence. Independent validation remains mandatory later and same-agent review cannot satisfy release readiness.

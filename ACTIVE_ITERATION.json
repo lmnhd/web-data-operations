@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "iterationId": "WS-004",
-  "stage": "PROVING",
+  "stage": "AWAITING_BUILD_APPROVAL",
   "concept": {
     "slug": "corporate-carbon-disclosure-reconciler",
     "name": "Corporate Carbon Disclosure Reconciliation Desk",
@@ -11,20 +11,14 @@
     "centralClaim": "A bounded reviewer-operated proof can extract declared company-level energy and emissions figures from a small, licensed set of public filings, preserve page-level provenance, normalize units, and reproduce only calculations supported by explicit activity and factor evidence while routing insufficient or contradictory disclosures to review."
   },
   "authorizedScope": "Human-approved bounded vertical proof for Candidate A: complete the source contract, select no more than three permitted public SECR filing documents, freeze the project-local validation plan before implementation, and build/test a six-case reviewer proof with local JSON/CSV evidence. No expansion, hosting, paid services, publication, regulatory-compliance claim, or delegated research/build work is authorized. Earlier publication approvals do not transfer to WS-004.",
-  "nextAction": "Implement and test only the approved six-case local reconciliation proof, record actual outcomes, run one consolidated same-agent review, then stop at AWAITING_BUILD_APPROVAL for human expansion approval.",
+  "nextAction": "Request explicit human expansion approval before building the reviewer web UI, project-specific three-page visual PDF, public hosting, or release evidence. Independent non-builder validation and the executable hash gate remain mandatory after an approved stable candidate.",
   "humanApproval": {
     "status": "approved",
     "date": "2026-09-12",
     "basis": "The user replied 'Approved!' to the WS-004 Candidate A recommendation and four-turn delegated-agent ceiling. This authorizes the bounded source-contract check and vertical proof only; expansion, hosting, and publication remain unapproved."
   },
   "fatalBlockers": [],
-  "repairableConditions": [
-    "Before implementation, commit the verified reuse/licensing treatment and minimized source-selection record for the one acquired Companies House archive.",
-    "Before implementation, commit the three selected text-bearing iXBRL documents as hashes and minimized company-level SECR facts; one document is intentionally an insufficient-calculation-evidence case.",
-    "Before implementation, finalize and freeze the project-local evidence/VALIDATION_PLAN.json with exact artifact paths and the final builder identity.",
-    "If a filing lacks explicit activity detail or usable units, route it to REVIEW_REQUIRED rather than inferring a conversion basis.",
-    "If filing reuse does not permit retained source documents or screenshots, use hashes, source metadata, reviewer-supplied files, and permitted narrow excerpts only; request approval if that makes the public evidence inadequate."
-  ],
+  "repairableConditions": [],
   "limitations": [
     "No client posting was supplied. Demand evidence is indirect and inherited from the recorded public-preliminary market matrix; it does not prove demand for this exact service.",
     "The Companies House Document API requires an API key and is unavailable in its sandbox. The approved proof instead uses one bounded official free Accounts Data Product archive; no credential is required or requested.",
@@ -42,6 +36,18 @@
     "projects/WS-004-corporate-carbon-disclosure-reconciler/README.md",
     "projects/WS-004-corporate-carbon-disclosure-reconciler/SOURCE_CONTRACT.md",
     "projects/WS-004-corporate-carbon-disclosure-reconciler/PROJECT_MANIFEST.md",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/src/reconcile.py",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/tests/test_reconcile.py",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/VALIDATION_PLAN.json",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/SOURCE_SELECTION.json",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/factors/ghg_factors_2025.json",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/fixtures/disclosure_cases.json",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/fixtures/benchmark_oracle.json",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/evaluated_run.json",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/evaluated_run.csv",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/changed_input_run.json",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/changed_input_run.csv",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/PROOF_REPORT.md",
     "research/UPWORK_DEMAND_MATRIX.md",
     "research/CANDIDATE_SCORECARD.md",
     "design/SOURCE_AND_COMPLIANCE_LEDGER.md",

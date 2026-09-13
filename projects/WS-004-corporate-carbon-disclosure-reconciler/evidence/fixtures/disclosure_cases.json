@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "fixtureStatus": "bounded_recorded_and_controlled_evidence",
+  "factorSetId": "UK-GHG-2025-V1-FINAL",
+  "toleranceTco2e": "0.01",
+  "cases": [
+    {
+      "caseId": "CASE-01-FILING-ELECTRICITY-RECONCILED",
+      "fixtureKind": "recorded_public_filing_fact",
+      "source": {
+        "sourceId": "CH-09904577-2025",
+        "sourceSha256": "AF67A7E7290D925386229997479A7835289FB79398CB5B588E4377B37EE0ECFD",
+        "sourceFormat": "ixbrl_html",
+        "reportingPeriodEnd": "2025-12-31",
+        "locator": "SECR table / Purchased Electricity (Location based) / 2025"
+      },
+      "calculation": {
+        "activityCategory": "uk_grid_electricity",
+        "activityValue": "3939780",
+        "activityUnit": "kWh",
+        "disclosedEmissionsValue": "697.34",
+        "disclosedEmissionsUnit": "tCO2e",
+        "factorYear": 2025,
+        "factorId": "7_400_4000_5_1"
+      }
+    },
+    {
+      "caseId": "CASE-02-CONTROLLED-MWH-RECONCILED",
+      "fixtureKind": "reviewer_supplied_controlled_scenario",
+      "source": {
+        "sourceId": "CONTROLLED-ELECTRICITY-CASE-02-V1",
+        "sourceFormat": "controlled_structured",
+        "locator": "Reviewer-supplied scenario / explicit factor exercise",
+        "sourceFingerprintBasis": "reviewer-supplied-controlled-scenario:case-02:v1"
+      },
+      "calculation": {
+        "activityCategory": "uk_grid_electricity",
+        "activityValue": "1000",
+        "activityUnit": "MWh",
+        "disclosedEmissionsValue": "177",
+        "disclosedEmissionsUnit": "tCO2e",
+        "factorYear": 2025,
+        "factorId": "7_400_4000_5_1"
+      }
+    },
+    {
+      "caseId": "CASE-03-FILING-ELECTRICITY-MISMATCH",
+      "fixtureKind": "recorded_public_filing_fact",
+      "source": {
+        "sourceId": "CH-12976528-2025",
+        "sourceSha256": "532CFD04ED088021A847577EF6F56E74EB5DCBC4F82F300509860F7041D65D33",
+        "sourceFormat": "ixbrl_html",
+        "reportingPeriodEnd": "2025-11-30",
+        "locator": "SECR energy table / Electricity / reporting period"
+      },
+      "calculation": {
+        "activityCategory": "uk_grid_electricity",
+        "activityValue": "416416",
+        "activityUnit": "kWh",
+        "disclosedEmissionsValue": "72.54",
+        "disclosedEmissionsUnit": "tCO2e",
+        "factorYear": 2025,
+        "factorId": "7_400_4000_5_1"
+      }
+    },
+    {
+      "caseId": "CASE-04-FILING-GAS-AMBIGUOUS",
+      "fixtureKind": "recorded_public_filing_fact",
+      "source": {
+        "sourceId": "CH-09904577-2025",
+        "sourceSha256": "AF67A7E7290D925386229997479A7835289FB79398CB5B588E4377B37EE0ECFD",
+        "sourceFormat": "ixbrl_html",
+        "reportingPeriodEnd": "2025-12-31",
+        "locator": "SECR table / Natural Gas / 2025"
+      },
+      "calculation": {
+        "activityCategory": "natural_gas",
+        "activityValue": "195757",
+        "activityUnit": "kWh",
+        "activityBasis": null,
+        "disclosedEmissionsValue": "35.82",
+        "disclosedEmissionsUnit": "tCO2e",
+        "factorYear": 2025,
+        "factorId": null
+      }
+    },
+    {
+      "caseId": "CASE-05-CONTROLLED-IMAGE-ONLY",
+      "fixtureKind": "reviewer_supplied_controlled_scenario",
+      "source": {
+        "sourceId": "CONTROLLED-IMAGE-ONLY-CASE-05-V1",
+        "sourceFormat": "image_only",
+        "locator": "Reviewer-supplied unsupported-format scenario",
+        "sourceFingerprintBasis": "reviewer-supplied-controlled-scenario:case-05:image-only:v1"
+      },
+      "calculation": {
+        "activityCategory": "uk_grid_electricity",
+        "activityValue": null,
+        "activityUnit": null,
+        "disclosedEmissionsValue": "50",
+        "disclosedEmissionsUnit": "tCO2e",
+        "factorYear": 2025,
+        "factorId": "7_400_4000_5_1"
+      }
+    },
+    {
+      "caseId": "CASE-06-FILING-AGGREGATE-INSUFFICIENT",
+      "fixtureKind": "recorded_public_filing_fact",
+      "source": {
+        "sourceId": "CH-00376891-2025",
+        "sourceSha256": "D1769B95779AEBEEAB88245B5ED24B2E3B83229C4305D00A112EBA8CEBAB4B1D",
+        "sourceFormat": "ixbrl_html",
+        "reportingPeriodEnd": "2025-12-31",
+        "locator": "SECR aggregate energy and emissions table / reporting period"
+      },
+      "calculation": {
+        "activityCategory": "mixed_aggregate_energy",
+        "activityValue": "15174993",
+        "activityUnit": "kWh",
+        "activityBreakdownAvailable": false,
+        "disclosedEmissionsValue": "3859.27",
+        "disclosedEmissionsUnit": "tCO2e",
+        "factorYear": 2025,
+        "factorId": null
+      }
+    }
+  ],
+  "limitations": [
+    "Recorded facts are minimized extracts from three public iXBRL filings; full filings are not bundled.",
+    "Controlled scenarios are explicitly labeled and are not company claims.",
+    "A decision addresses arithmetic reproducibility from explicit evidence, not audit assurance, compliance, or emissions truth."
+  ]
+}
