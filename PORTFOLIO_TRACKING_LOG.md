@@ -1,5 +1,12 @@
 # Portfolio Tracking Log
 
+## 2026-09-13 - WS-004 repair freeze and independent recheck dispatch
+
+- **Repair candidate:** `c624ea5da67e8838ed96064560e83298767cb943` implements only findings `WS004-IV-001` through `WS004-IV-004`: canonical activity categories with exact factor compatibility, strict supplied 64-hex source digests, `runId` on every CSV row, and current Manifest status.
+- **Builder verification:** The revised exact command passed 27/27. Default and changed runs remain 2/1/3 and 177 -> 0.177 tCO2e; JSON and CSV carry identical run IDs. Both live browser states were recaptured. The regenerated three-page Letter PDF contains 27/27 and the repaired run IDs and was visually inspected at 150 DPI with no clipping or overlap.
+- **Recheck:** WS-004 moves `REPAIRING -> VERIFYING`. The same independent non-builder `/root/ws004_independent_validator` receives the one reserved recheck against exact candidate `c624ea5`. The initial FAIL report and logs remain immutable.
+- **Budget and boundary:** 2 of 4 delegated turns are charged: initial validation and one repair recheck. No research/build agent, second repair pass, hosting, or publication is authorized.
+
 ## 2026-09-13 - WS-004 independent FAIL and single repair scope
 
 - **Independent result:** Fresh non-builder `/root/ws004_independent_validator` returned a hash-complete FAIL against candidate `d95db72`. The local demo, 23 tests, frozen 2/1/3 result, Case 02 unit-change behavior, source/factor hashes, generated exports, and all three PDF pages passed their observed checks.
