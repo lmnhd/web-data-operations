@@ -1,116 +1,91 @@
 {
   "iterationId": "WS-004",
   "validatorAgentId": "/root/ws004_independent_validator",
-  "verdict": "FAIL",
-  "unresolvedFindings": [
-    {
-      "id": "WS004-IV-001",
-      "severity": "high",
-      "summary": "The engine does not verify that activityCategory is compatible with the resolved factor category. A diesel activity labeled with the UK-electricity factor is classified RECONCILED instead of failing closed.",
-      "requiredRepair": "Give factor records a canonical activity category, require an exact category match before arithmetic, emit a fail-closed reason code for conflicts, and add engine/API regression coverage."
-    },
-    {
-      "id": "WS004-IV-002",
-      "severity": "medium",
-      "summary": "The CSV export omits runId, so the frozen requirement to compare the executed run ID across JSON and CSV cannot be satisfied.",
-      "requiredRepair": "Include runId in each CSV row or in an equally machine-readable CSV run metadata representation, regenerate both committed exports, and test exact cross-format run identity."
-    },
-    {
-      "id": "WS004-IV-003",
-      "severity": "medium",
-      "summary": "A malformed supplied sourceSha256 value is copied into a RECONCILED result without validation, weakening the promised source traceability boundary.",
-      "requiredRepair": "Require supplied source digests to be exactly 64 hexadecimal characters or derive them only in a trusted acquisition step, and fail closed on malformed values with regression coverage."
-    },
-    {
-      "id": "WS004-IV-004",
-      "severity": "low",
-      "summary": "PROJECT_MANIFEST.md is stale: it says no candidate exists and the validator has not been dispatched despite stable candidate d95db72 and the recorded validator dispatch.",
-      "requiredRepair": "Update the Manifest to identify the stable candidate and current validation status without claiming release readiness."
-    }
-  ],
-  "planSha256": "6061cab0b052facbb42c16a83b4cf568930ed99c25f8e7e55bd7f7694b2a9321",
+  "verdict": "PASS",
+  "unresolvedFindings": [],
+  "planSha256": "48f5cbdec2e399a4954a986fb248c192ecfbd7e8d477c7cd56a32cbb804a5cbd",
   "artifactSha256": {
-    "output/pdf/Carbon-Disclosure-Reconciliation-Desk.pdf": "fc89ac7dab39adb4668c77264b5b40f4ebef6196c552b9d8642a74c9db46f6ab",
+    "output/pdf/Carbon-Disclosure-Reconciliation-Desk.pdf": "f9d62ee9ba51c18b2db618f1f094d442b81efedc141fccd19f8f2b9f3a3dc0b0",
     "projects/WS-004-corporate-carbon-disclosure-reconciler/.vercelignore": "87738120afb757c88b42d36fde1c9c47b49576c1bc96db6ce90df3e7868f0fdd",
     "projects/WS-004-corporate-carbon-disclosure-reconciler/app.py": "05a0b57300daf6954db74fd5daa08620d52e83483e705023df8236f43fd0f440",
     "projects/WS-004-corporate-carbon-disclosure-reconciler/demo/app.js": "052af73398e370aeb7862bc26a8aa1e629f7b787bdd775a4eec39bbd49493da1",
     "projects/WS-004-corporate-carbon-disclosure-reconciler/demo/index.html": "aaf59b78daea400e306bed9a08155927a772ded6e604b95480fa53e37ec8e05f",
     "projects/WS-004-corporate-carbon-disclosure-reconciler/demo/style.css": "2d0aa9f652663d924a9f87d19d10a84bcc2c67b9532a39bcb14dc80c5bd1d269",
-    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/BUILDER_TEST_LOG.md": "f3cae46ef37a314a26a8f7edba3a9875b8f5f64279384838b8ebb714416500bb",
-    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/changed_input_run.csv": "c163754e4468ec121f67befb266f1109d6a0c1c93a651edd118e138392118590",
-    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/changed_input_run.json": "d84ceb1045fa80d699e98d438be1105857e79232bb9f0b4819562e5b4eebd1b8",
-    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/evaluated_run.csv": "2a775b6a7aefd1ed1823a4d9824e6690444008e2b28336e98dcea41c08926192",
-    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/evaluated_run.json": "3269edba3df27ecc0d0f428c6cdbbd518636d62f748014331b60c9e21b7176eb",
-    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/factors/ghg_factors_2025.json": "8e55b4c1f1c35c3f1cf26d517b48dc5d1725642604d30946d13ab65aa59372a0",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/BUILDER_TEST_LOG.md": "80f6c97e9d1b57ed4833d17d7442ecc2d1c55bd15dbfe0addb851cb0208cc533",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/changed_input_run.csv": "f7b197ee2f5b2f1684adce15e8de0b0160b80920ddfe6e8f79a67a89f67d77c7",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/changed_input_run.json": "c5458e187b01710a1a5c6ce2b60a67732540f5277acc4b09009b77d352c6ea77",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/evaluated_run.csv": "b570332866f1f8817a89fa0952f8411b7b809b78b6df05f186fc2055882e9f86",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/evaluated_run.json": "abaf0f298cb513b5045eb4d28e74383080fa169a2da263c52370ca3ccdb6c6b9",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/factors/ghg_factors_2025.json": "61ad0e9b125f6a072a39414ba5cfc2ebe29d57b0b6d555bb3713c3ea86f75903",
     "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/fixtures/benchmark_oracle.json": "5aa2035a05d8398104fca23fbcd423e6c6efe24ce1c0916d04e175af15480f92",
     "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/fixtures/disclosure_cases.json": "14f9b7833eaca2b0308f27a0618d765a5f4c7f38df3c01be527ecead1c350005",
-    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/PROOF_REPORT.md": "7d12246f8683d1aa177cd60aaee65b4f9d6d349c7b1d897e3071120e974c8afa",
-    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/reviewer/changed-input-demo.png": "e98ad5b8cc758e71bff7d34c8cf38ca5db118d1bdf30917c4529a0fa42b5d4ca",
-    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/reviewer/PDF_QA.md": "56f36d602ed25eeb9e318461d0471dfcb937f10cabc48b418bc80fd5af4b7443",
-    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/reviewer/SCREENSHOT_PROVENANCE.md": "0dc211e3eae4c9b0461e2b276d57b3565a70148f38322c0c87166de3a329e5ca",
-    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/reviewer/working-demo.png": "4db4217cee253272a5b1d706fe26eee940883c668d5d6e40ecda06605c461544",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/PROOF_REPORT.md": "cf137001794692f289ce811f66f6f872a804a6d847e07aeb1b55bea2cd4c9e06",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/reviewer/changed-input-demo.png": "d61d9c9f60ca6cc71f3c46760d60792895652b28f67f15c2b9bed82641cfb20e",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/reviewer/PDF_QA.md": "7c5f3994750a92569745bfe83c27bf79d27b3de39a3f8572a0641c77aab37a2f",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/reviewer/SCREENSHOT_PROVENANCE.md": "9a4cd133221faaf08a5c4ce1b96fc8ee2bffa7b4e3a98eaef58b2d4cc714bea2",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/reviewer/working-demo.png": "7b52ba4b7166fc2a1b5c302eb7889dc1fe225a5cfcf84147942e948119abd9ad",
     "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/SOURCE_SELECTION.json": "3f3d82f0c94208d9b33ee3ec0248d250d8abb8543ae1242b208e718aca515873",
-    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/VALIDATION_PLAN.json": "6061cab0b052facbb42c16a83b4cf568930ed99c25f8e7e55bd7f7694b2a9321",
-    "projects/WS-004-corporate-carbon-disclosure-reconciler/PROJECT_MANIFEST.md": "1835ca8b5c8abdec76d6dde6ccea040fdaae8a43a09a576fde4d89bf5b993c0a",
-    "projects/WS-004-corporate-carbon-disclosure-reconciler/README.md": "a4f186b381aeddc7b57a107f1115fcdb915237a2d21b7bae6c0a9370d6f1d8b4",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/VALIDATION_PLAN.json": "48f5cbdec2e399a4954a986fb248c192ecfbd7e8d477c7cd56a32cbb804a5cbd",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/PROJECT_MANIFEST.md": "c395660eaf492aeb413dc47651f3c05377bc098844a96457d68a41f39f1f942f",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/README.md": "daabb2056aa2f0161ccd6156fc283dfdb24a4ec20cd16b0e74b785076ac94587",
     "projects/WS-004-corporate-carbon-disclosure-reconciler/requirements.txt": "6979faed9b4726634bb0ff2b36f3e5a080e4d89a162dc1f264fce99bae332a8a",
     "projects/WS-004-corporate-carbon-disclosure-reconciler/SOURCE_CONTRACT.md": "b845edb312367c45fa33697e3fa538c0818bd3d42a991a2199e58cd67968bae3",
-    "projects/WS-004-corporate-carbon-disclosure-reconciler/src/demo_server.py": "a5f408a414e818b667b47dbfb1f2e6ab76e674706edf5a15605eea0be0a20a21",
-    "projects/WS-004-corporate-carbon-disclosure-reconciler/src/reconcile.py": "2c7b6930672a817775e0fef76cedb5523e7bf9ce76a3a981f741328bb7c125da",
-    "projects/WS-004-corporate-carbon-disclosure-reconciler/tests/test_app.py": "88a9b9a91f382d58ffc5bd2ea217f66337a1beaf296c442f81a6e0589555679f",
-    "projects/WS-004-corporate-carbon-disclosure-reconciler/tests/test_reconcile.py": "3307209dcd68115cd45ee488934c2338b6114f097264916becb58916671a58b1",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/src/demo_server.py": "48f68f12335fa7c1c86cedcc500f4ca17ed526953d7f28a9fed93809fc0f5875",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/src/reconcile.py": "220b84d987648689d7b92ffaa068ddcf2fe5a6516abdb007abe35fbcc0e7f3a4",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/tests/test_app.py": "29e331be1d34ff70c1bfbe5ff5c04e6ded1994ac43a0765ce1f829fa3970f1ab",
+    "projects/WS-004-corporate-carbon-disclosure-reconciler/tests/test_reconcile.py": "63d4ad50c9faaaddb265816a11a111b2ab18cfc86f67d7b2606e7fff69c8d61e",
     "projects/WS-004-corporate-carbon-disclosure-reconciler/vercel.json": "3f9d4d80d28d71cb3bfb6a75aebaf18377fe6de44b54b7cdae5c07bc961d7291",
-    "scripts/build_ws004_work_sample.py": "a7e6f43af01c631c3ae687806ea05c9df8beb1d0d6a35605c0b9b37dd3595dd3"
+    "scripts/build_ws004_work_sample.py": "d1729a3772799234526fe0de52fd76eb495aacb4b652c9daa8807b1e38003225"
   },
   "checks": [
     {
       "id": "check_automated_tests",
       "status": "PASS",
-      "observed": "The exact frozen command passed independently with 23 tests, 0 failures, and 0 errors after an initial sandbox-only temporary-directory denial was reproduced and isolated. Nominal coverage is meaningful, but it omits the adversarial category and digest cases reported elsewhere.",
-      "evidencePath": "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/validation-runs/2026-09-13-independent/test-run.md",
-      "evidenceSha256": "f0b0d2523b3d3a0675a65a3eb5fd8a9ad9031c02bb7f742ea28f9eb980c652d2"
+      "observed": "The exact frozen command passed independently with 27 tests, 0 failures, and 0 errors. Named regressions cover activity/factor category compatibility and malformed source digests in both engine and API paths, cross-format run identity, the exact six-case oracle, deterministic arithmetic and hashes, fail-closed evidence cases, privacy exclusions, and request boundaries.",
+      "evidencePath": "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/validation-runs/2026-09-13-recheck-c624ea5/test-run.md",
+      "evidenceSha256": "209e48be5bd9c05bc8134c91774daf9319a4ec9bc09c190117718c7ef46eb98f"
     },
     {
       "id": "check_reviewer_demo",
       "status": "PASS",
-      "observed": "The local Flask UI automatically produced the six-case 2/1/3 run. Operating the Case 02 preset changed 1,000 MWh to 1,000 kWh, normalized activity 1,000,000 to 1,000 kWh, recomputed emissions 177 to 0.177 tCO2e, input/run hash, and RECONCILED to MISMATCH while source/factor/engine hashes stayed stable.",
-      "evidencePath": "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/validation-runs/2026-09-13-independent/demo-browser.md",
-      "evidenceSha256": "6215ad7097b92a9f380efd1b9b0145ea8588c869242d75dd0b346ab258bd250e"
+      "observed": "The live local Flask UI automatically produced run ws004-6fd5836905285efd with six cases and exactly 2 RECONCILED, 1 MISMATCH, and 3 REVIEW_REQUIRED. Operating the Case 02 preset changed 1,000 MWh to 1,000 kWh, normalized activity 1,000,000 to 1,000 kWh, recomputed emissions 177 to 0.177 tCO2e, input/run identity, and RECONCILED to MISMATCH while source/factor/engine hashes stayed stable.",
+      "evidencePath": "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/validation-runs/2026-09-13-recheck-c624ea5/demo-browser.md",
+      "evidenceSha256": "f9cb23badbc03074a7997b81a59e94cb8102f5e70642b5acad99d39955a4690d"
     },
     {
       "id": "check_insufficient_evidence_edge",
-      "status": "FAIL",
-      "observed": "All four prescribed fail-closed cases returned the expected REVIEW_REQUIRED reason codes with no computed result. An added incompatible activity-category check failed closedness: diesel plus the electricity factor returned RECONCILED. A malformed supplied source digest was also accepted into a RECONCILED result.",
-      "evidencePath": "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/validation-runs/2026-09-13-independent/edge-and-adversarial.md",
-      "evidenceSha256": "b8b4310445278b45b7bb37d99bcf26abfbb81b33965a2e40ce902200e584d6ef"
+      "status": "PASS",
+      "observed": "All prescribed fail-closed cases returned their exact review reason codes with no computed assurance result. Added engine/API adversarial checks confirmed diesel plus the electricity factor returns FACTOR_ACTIVITY_CATEGORY_CONFLICT with no arithmetic result, while malformed supplied source digests are rejected before a run is produced. Original finding WS004-IV-001 and WS004-IV-003 are resolved.",
+      "evidencePath": "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/validation-runs/2026-09-13-recheck-c624ea5/edge-and-repair-recheck.md",
+      "evidenceSha256": "c2da6fc1c7e53a60fb1d08b36af44817c2584a72e131c0e22f57a53f63c4fca2"
     },
     {
       "id": "check_exports",
-      "status": "FAIL",
-      "observed": "Independent default and changed executions are byte-identical to committed JSON/CSV evidence, and per-result fields agree. The CSV contains no runId column, so the frozen requirement to compare run identity across both exports is unmet.",
-      "evidencePath": "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/validation-runs/2026-09-13-independent/exports.md",
-      "evidenceSha256": "cc05c6be8b8efa7b22e9dfb4860256308e06ca0a6fbee9a8e58540e58b822c90"
+      "status": "PASS",
+      "observed": "Independent default and changed CLI executions were byte-identical to the committed JSON/CSV evidence. Default JSON run ws004-6fd5836905285efd matches the runId on all six CSV rows with zero field differences. The changed Case 02 export preserves numeric value 1000, changes MWh to kWh, yields 0.177 tCO2e and MISMATCH, changes input/run identity, and preserves source/factor/engine hashes. Original finding WS004-IV-002 is resolved.",
+      "evidencePath": "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/validation-runs/2026-09-13-recheck-c624ea5/exports.md",
+      "evidenceSha256": "f85be22aeada0b816a2485ce9af8b936bb401bd7ded2623319cdca98511af565"
     },
     {
       "id": "check_pdf_visual",
       "status": "PASS",
-      "observed": "Exactly three Letter pages rendered at 150 DPI and were independently inspected. All pages are readable and unclipped with no overlaps; page 1 shows the actual default result, page 2 shows the real factor-vintage correction and implemented code, and page 3 shows 2/1/3 proof, the unit change, tests, limitations, and two link annotations.",
-      "evidencePath": "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/validation-runs/2026-09-13-independent/pdf-visual.md",
-      "evidenceSha256": "16b3e8fd0892df428682e7af7f066504104c66caa29378b8095f7f29f76d3a3c"
+      "observed": "Exactly three Letter pages rendered at 150 DPI and were independently inspected at original detail. All pages are readable, unclipped, and free of overlap; page 1 shows the actual repaired default result, page 2 shows the real factor-vintage correction and fail-closed implementation, and page 3 shows the unit change, 27/27 tests, limitations, run IDs, and working local/repository link targets.",
+      "evidencePath": "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/validation-runs/2026-09-13-recheck-c624ea5/pdf-visual.md",
+      "evidenceSha256": "a2130d7d45165ca385d37b34febbc00a3f0ea42feb934053fcd6716903e1f429"
     },
     {
       "id": "check_claims",
-      "status": "FAIL",
-      "observed": "The 2/1/3 benchmark, unit-change values, source/workbook hashes, factor rows, and stated limitations trace correctly. However, the claim that incompatible factor evidence is refused is contradicted by the RECONCILED category-conflict run, and the Manifest incorrectly says no stable candidate or validator dispatch exists.",
-      "evidencePath": "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/validation-runs/2026-09-13-independent/claims-and-boundaries.md",
-      "evidenceSha256": "75316fb2b08052f0ab7a661cc8f7e443ff82a96ce933cd495fcd50527ea0190d"
+      "status": "PASS",
+      "observed": "The PDF, README, repaired Manifest, proof report, oracle, executed outputs, test log, source contract, selected-source record, factor subset, screenshots, and source/workbook hashes agree on the bounded 2/1/3 benchmark, controlled unit change, 27/27 result, and limitations. Recorded facts and controlled scenarios are distinguished and no prohibited compliance, assurance, truth, performance, savings, exhaustive-coverage, or production-accuracy claim appears. Original finding WS004-IV-004 is resolved.",
+      "evidencePath": "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/validation-runs/2026-09-13-recheck-c624ea5/claims.md",
+      "evidenceSha256": "9db310e1f8146d06c5b4697b4cc322ab3496b56dbed05d4235efc6ac4b131008"
     },
     {
       "id": "check_boundaries",
-      "status": "FAIL",
-      "observed": "Committed source/privacy scope, ignored raw-source handling, local-only routes, and role separation were confirmed. The malformed-digest acceptance violates the traceability boundary, the activity-category conflict violates exact compatible-factor resolution, and a release-stage gate cannot pass while this FAIL report has unresolved findings.",
-      "evidencePath": "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/validation-runs/2026-09-13-independent/claims-and-boundaries.md",
-      "evidenceSha256": "75316fb2b08052f0ab7a661cc8f7e443ff82a96ce933cd495fcd50527ea0190d"
+      "status": "PASS",
+      "observed": "Archive, workbook, selected-entry, factor-row, privacy, API, repository-history, and role-separation boundaries were independently verified. Raw sources remain ignored and uncommitted, minimized evidence contains no prohibited fields or secrets, and no arbitrary source access, live write, hosting, release, or publication occurred. The normalized artifact map covers all 31 required project/shared artifacts, and the release-stage gate simulation accepts this non-builder PASS with zero unresolved findings.",
+      "evidencePath": "projects/WS-004-corporate-carbon-disclosure-reconciler/evidence/validation-runs/2026-09-13-recheck-c624ea5/boundaries.md",
+      "evidenceSha256": "5e774b7cae663f849a1ed1ca55edb6adca82c8df65f30a26fa78f42446dac588"
     }
   ]
 }
