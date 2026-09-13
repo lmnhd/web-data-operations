@@ -1,5 +1,14 @@
 # Portfolio Tracking Log
 
+## 2026-09-12 - WS-004 concept approved; source contract recorded before acquisition
+
+- **Approval:** The user replied `Approved!`, authorizing Candidate A and the four-turn delegated-agent ceiling for the bounded source-contract check and vertical proof only. Expansion, hosting, publication, paid services, production use, compliance claims, and audit assurance remain unauthorized.
+- **State:** WS-004 transitioned `AWAITING_APPROVAL -> APPROVED`. No implementation has begun.
+- **Source-path correction:** Official review identified the Companies House Free Accounts Data Product as a better bounded proof source than the key-authenticated Document API. It provides free daily iXBRL/XBRL archives intended for data manipulation and avoids new credentials. The proof is limited to one archive no larger than 100 MiB and at most three source documents.
+- **Use boundary:** Companies House says it imposes no register-use rules while placing data-protection/copyright responsibility on users. The contract therefore prohibits committing or republishing full filings and excludes personal names, signatures, contacts, addresses, and unrelated narrative. Only minimized attributed company-level metrics and hashes may enter fixtures.
+- **Pre-acquisition record:** `projects/WS-004-corporate-carbon-disclosure-reconciler/SOURCE_CONTRACT.md` and `iterations/ws-004/CODEX_VERTICAL_PROOF_BRIEF.md` are recorded before any archive or factor workbook acquisition. If one permitted archive does not yield three usable SECR documents, the work stops rather than widening automatically.
+- **Validation/delegation:** The seven-category plan still must be frozen in the project and committed before implementation. 0 of 4 delegated turns used; the independent validator and one repair recheck remain reserved.
+
 ## 2026-09-12 - WS-004 initialized at concept-approval boundary
 
 - **Prior release preserved:** WS-003 remains RELEASED with its final state, validator PASS, 29-artifact SHA-256 map, GitHub release, Vercel deployment, and user-confirmed Upwork publication unchanged in `iterations/ws-003/` and its release artifacts.
